@@ -1,0 +1,38 @@
+<div class="threeColumns-1">
+    <h1>Payments</h1>
+    <h1>RSVP</h1>
+    <div class="notice">
+      Thank you for your interest in Cleveland 20/30 Club, your account has been created. Our club membership requiers a yearly dues that gives you acess to all club discounts, website access and connections to Cleveland's talented and dedicated Young Profesionals.
+    </div>
+    <div class="notice">
+      Thank you for your interest in $Event_name. Please specify how many people will be attending with you.
+    </div>
+    <div class="notice">
+      Thank you for your interest in $Event_name. This event requiers a payment for registration. Please specify how many people will be attending with you.
+    </div>
+    <form>
+      <fieldset>
+        <legend><span><strong class="for-price">Total</strong><strong>&nbsp;</strong></span></legend>
+        <div class="form-node">
+          <span class="for-price">$70.00</span>
+          <span class="label-like">Membership Dues</span>
+        </div>
+        <div class="form-node">
+          <span class="for-price"><input type="text" value="1" ></span>
+          <span class="label-like">Number of Attendees</span>
+        </div>
+        <div class="form-node hr">&nbsp;</div>
+        <div class="form-node">
+          <span class="for-price price">$70.00</span>
+          <span class="for-price txt-r">Subtotal:</span>
+        </div>
+      </fieldset>
+      <div class="formAction clear for-price">
+        <input id="account_submit" name="commit" type="submit" value="RSVP">
+      </div>
+      <div class="formAction clear">
+        <%= link_to image_tag('https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif'), :action => 'checkout' %>
+      </div>
+    </form>
+  </div>
+</div>

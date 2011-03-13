@@ -1,0 +1,2 @@
+class ClevelandplusController < ApplicationController
+end

@@ -1,0 +1,49 @@
+<% form_for @guest, :url => {:controller => 'guests', :action => 'create'}, :html => {:class => 'rsvp'} do |guest| %>
+  <%= hidden_field_tag 'event_id', @event.id %>  
+
+  <fieldset>
+    <legend>
+	    <span>
+		    <strong>Register for this Event </strong>
+	    </span>
+    </legend>
+    <div class="form-node disabled first">
+      <input type="radio" name="member" value="true" disabled id="members" class="radio" /> 
+      <label for="members" class="radio member">Register as a Member <%= number_to_currency(event.club_price)%></label>
+    </div>
+    <div class="form-node">
+      <p class="notice">You must <%= link_to "log in", new_user_session_path %> before you can register as a member!</p>
+    </div>
+		<%if @event.id != 45 %>    		
+    <div class="form-node">
+      <input type="radio" name="member" value="false" checked id="nonmembers" class="radio"/> 
+      <label for="nonmembers" class="radio non-member">Register as a Non-Member <%= number_to_currency(event.standard_price)%></label>
+    </div>
+
+		<div class="form-node">
+      <%= guest.label :first_name %>
+	    <%= guest.text_field :first_name %>
+    </div>
+    <div class="form-node">
+      <%= guest.label :last_name %>
+      <%= guest.text_field :last_name %>
+    </div>
+    <div class="form-node">
+      <%= guest.label :email %>
+      <%= guest.text_field :email %>
+    </div>
+    <div class="formAction">
+      <%= guest.submit "Continue" %>
+    </div>
+		<% else %>
+		<div class="formAction">		<input type="radio" name="member" value="false" checked id="nonmembers" class="radio"/>     
+		<label for="nonmembers" class="radio non-member">Register as a Non-Member or as a Friend of the Club </label>
+		</div>
+		<div class="formAction">
+			
+			<a href="https://sites.google.com/a/cleveland2030.org/25under35/services" target="_blank" style="color:#000;margin:10px 0 10px 80px;background-color:#ccc; border: 1px solid #6C6C6C;padding:5px 10px;">Continue</a>
+      <%#= guest.submit "Continue" %>
+    </div>
+		<% end %>
+  </fieldset>
+<% end %>

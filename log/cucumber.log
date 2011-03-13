@@ -1,0 +1,1775 @@
+# Logfile created on Thu Oct 07 23:51:37 -0400 2010  [4;36;1mState Create (0.6ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Alabama', 'AL')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Alaska', 'AK')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Arizona', 'AZ')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Arkansas', 'AR')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('California', 'CA')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Colorado', 'CO')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Connecticut', 'CT')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Delaware', 'DE')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('District Of Columbia', 'DC')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Florida', 'FL')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Georgia', 'GA')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Hawaii', 'HI')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Idaho', 'ID')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Illinois', 'IL')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Indiana', 'IN')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Iowa', 'IA')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Kansas', 'KS')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Kentucky', 'KY')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Louisiana', 'LA')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Maine', 'ME')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Maryland', 'MD')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Massachusetts', 'MA')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Michigan', 'MI')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Minnesota', 'MN')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Mississippi', 'MS')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Missouri', 'MO')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Montana', 'MT')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Nebraska', 'NE')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Nevada', 'NV')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('New Hampshire', 'NH')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('New Jersey', 'NJ')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('New Mexico', 'NM')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('New York', 'NY')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('North Carolina', 'NC')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('North Dakota', 'ND')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Ohio', 'OH')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Oklahoma', 'OK')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Oregon', 'OR')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Pennsylvania', 'PA')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Rhode Island', 'RI')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('South Carolina', 'SC')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('South Dakota', 'SD')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Tennessee', 'TN')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Texas', 'TX')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Utah', 'UT')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Vermont', 'VT')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Virginia', 'VA')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Washington', 'WA')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('West Virginia', 'WV')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Wisconsin', 'WI')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Wyoming', 'WY')[0m
+  [4;35;1mMembership Create (0.3ms)[0m   [0mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2010-10-08 03:57:55', '2010-10-08 03:57:55')[0m
+  [4;36;1mItem Create (0.3ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard membership', 70.0, 'Membership', '2010-10-08 03:57:55', 1, '2010-10-08 03:57:55')[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-07 23:57:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.6ms)
+Completed in 20ms (View: 13, DB: 15) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-07 23:57:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://example.org/]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-07 23:57:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-07 23:57:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://example.org/]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-07 23:57:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://example.org/]
+  [4;36;1mUserAddress Create (0.4ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-10-08 03:57:55', '46751', '2010-10-08 03:57:55', 1, 1, 'OH', 't')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1cc2ac1e055f562c2747ff0e1d26f6ba84c69bac8289c87ab8d78f93ce22cdeece2e9481a224e0a0d64273719771a784c38221cf76bdf27fe657a9dcb38c547e') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'vNVn2bcZx4C_x9bs8Bhl') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'vNVn2bcZx4C_x9bs8Bhl', NULL, NULL, '2010-10-08 03:57:56', '5a5346d382f235e0158f10ae6d6ff3225d000c34517a38756c44d9638e0c6aaad64b8a4f2b423d7d2adcd6d021d43e4a892c8be7a9536c5a6d4fd425d3342168', NULL, '_x448iAVfz6O050wIUWE', '2010-10-08 03:57:56', 0, NULL, 'xC6Y52JhE6RiSmJr00gn', NULL, 'Doe', NULL, '1cc2ac1e055f562c2747ff0e1d26f6ba84c69bac8289c87ab8d78f93ce22cdeece2e9481a224e0a0d64273719771a784c38221cf76bdf27fe657a9dcb38c547e', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;35;1mUserProfile Create (0.1ms)[0m   [0mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-10-08 03:57:56', NULL, '2010-10-08 03:57:56', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mUserAddress Create (0.1ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-10-08 03:57:56', '46751', '2010-10-08 03:57:56', NULL, 1, 'OH', 't')[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 's0BFdF2jFVJfTHmCEo9S' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = '75gkbygTbdrDuzhKb-ws', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 11ms (View: 7, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-07 23:57:56) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'XR4MS5fyQaI_bqcCOQKN', "last_request_at" = '2010-10-08 03:57:56', "current_login_at" = '2010-10-08 03:57:56' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 13ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'jQz8jqaiv_ZMLYYP0nQn', "last_request_at" = '2010-10-08 03:57:56' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" [0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://example.org/user]
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Fun Times', NULL, NULL, '2010-10-08 03:57:56', '2010-10-08 04:27:56', '2010-10-08 03:57:56', '2010-10-08 03:57:56', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 15.0, 'Event', '2010-10-08 03:57:56', 1, '2010-10-08 03:57:56')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 25.0, 'Event', '2010-10-08 03:57:56', 1, '2010-10-08 03:57:56')[0m
+[paperclip] Saving attachments.
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calendar"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'reuB7Jp43rMGfsXGm8AG', "last_request_at" = '2010-10-08 03:57:56' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM "events" WHERE (('2010-09-26 04:00:00' <= end_at) AND (start_at< '2010-11-07 04:00:00')) ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering calendar/index
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 28ms (View: 17, DB: 2) | 200 OK [http://example.org/calendar]
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"events"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'jSaSl_y8L5KB7V-d3n0K', "last_request_at" = '2010-10-08 03:57:56' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Event') [0m
+Rendered events/_member_registration (2.2ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://example.org/events/1]
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."name" = 'Fun Times') LIMIT 1[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-07 23:57:56) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>""}, "action"=>"create", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://example.org/user_session]
+  [4;36;1mUser Delete all (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-07 23:57:56) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://example.org/user_session]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-10-08 03:57:56', '46751', '2010-10-08 03:57:56', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a800f9c48af45ba5091ccedcb32bd76f9c78891ea736680d22c0c21e5a7829ac8807cb108abd0630d5a96e05d9c3f8366e45a921b5012c0ab6568cd4a900c1d4') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'eS9I4W79-dTd4lZlid_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'eS9I4W79-dTd4lZlid_1', NULL, NULL, '2010-10-08 03:57:56', '6eee4442a8329eb5074c9e82de5363577eafd78e3fe33e7fb305a5f6c35cfb9f09846d8b1af9a2d1d9d8ca3a81665373f0ff840cdc11acc407b559123d83596d', NULL, '936k7fJBHeThirByQMPj', '2010-10-08 03:57:56', 0, NULL, 'hzCZR-DP5hnzwRC91bU5', NULL, 'Doe', NULL, 'a800f9c48af45ba5091ccedcb32bd76f9c78891ea736680d22c0c21e5a7829ac8807cb108abd0630d5a96e05d9c3f8366e45a921b5012c0ab6568cd4a900c1d4', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.1ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-10-08 03:57:56', NULL, '2010-10-08 03:57:56', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-10-08 03:57:56', '46751', '2010-10-08 03:57:56', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = '9ABhnOr74tJfhUJvfk0O' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'ZFOegbeJ-4bS4NyidXpM', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 8ms (View: 6, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-07 23:57:56) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'O4IwqoRR08cSehRXwrwy', "last_request_at" = '2010-10-08 03:57:56', "current_login_at" = '2010-10-08 03:57:56' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 11ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = '6zrb48UGm-pHlXGp6_YA', "last_request_at" = '2010-10-08 03:57:56' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" [0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://example.org/user]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-10-08 03:57:56', '46751', '2010-10-08 03:57:56', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '27704bebe2b423d054602cd305c5686747f053fb100d4722f199f43a2b5fdac60fd63a905bffa7d98cd949b11e1de2ff78b53bc82bf27505deaf4d2c0ca2ced2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '4LWmMTD9F90Ri8D8_nPW') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, '4LWmMTD9F90Ri8D8_nPW', NULL, NULL, '2010-10-08 03:57:56', 'de89dff008e1bb9aa18abdc3f3ed8653a719dbf8976e85cc5759c3b9add19d1b88c3455b5a6c6beed2bf3cde0f0bbd84189e1d5d39d7e51f98c3154039c41ab1', NULL, 'lDXBQBVF6RdbO-M_Fnfx', '2010-10-08 03:57:56', 0, NULL, 'P6v0hi7vOHVTrHV49I3f', NULL, 'Doe', NULL, '27704bebe2b423d054602cd305c5686747f053fb100d4722f199f43a2b5fdac60fd63a905bffa7d98cd949b11e1de2ff78b53bc82bf27505deaf4d2c0ca2ced2', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.3ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-10-08 03:57:56', NULL, '2010-10-08 03:57:56', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-10-08 03:57:56', '46751', '2010-10-08 03:57:56', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'VImdIlyebWB9nLcilmKQ' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'tctkKZX8nAkI1BU8yDIH', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'wFni8Zj1uWhqYGVGQtAv', "activated" = 'f' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-07 23:57:56) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."customer_id" = 1) LIMIT 1[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Membership') [0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-10-08 03:57:56', NULL, NULL, '2010-10-08 03:57:56', 70.0, 'User', 'f', 1)[0m
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-10-08 03:57:56', 1, 1, '2010-10-08 03:57:56', 1)[0m
+Redirected to http://example.org/orders/new
+Completed in 17ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://example.org/orders/new]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-10-08 03:57:56', '46751', '2010-10-08 03:57:56', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7b673508b0f8fcc76e444dfa761ee7a2490c139910c7bc03e97e38dca28342fe0cf5e75529045563c2420eb2a214e0f4abbb637916e542f0af0ee310a65c4140') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'WpHD0yfWWFwToIe7mOAp') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'WpHD0yfWWFwToIe7mOAp', NULL, NULL, '2010-10-08 03:57:56', '955375b39150febd8c2924b8e36718aa99a7184d06eff69f4778d18ef46e365271a5d50fbaa08768d1cc7a2dc98aa9117401e53b63d2e8fa8b272febefafdd6b', NULL, 'RTVLfPFNkNmZHkt4nl2l', '2010-10-08 03:57:56', 0, NULL, '-4krRf1dCQPbiAC4Pa3h', NULL, 'Smith', NULL, '7b673508b0f8fcc76e444dfa761ee7a2490c139910c7bc03e97e38dca28342fe0cf5e75529045563c2420eb2a214e0f4abbb637916e542f0af0ee310a65c4140', 0, NULL, 'f', NULL, 'Jane', 'jsmith@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.1ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-10-08 03:57:56', NULL, '2010-10-08 03:57:56', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-10-08 03:57:56', '46751', '2010-10-08 03:57:56', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'ZcRLXsbD6yPUoSgjcPTh' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = '2D7gBE8b33bwxUFEGd-3', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 7ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-07 23:57:56) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jsmith@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (75.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'kANkm8nyc30EFudzv2si', "last_request_at" = '2010-10-08 03:57:56', "current_login_at" = '2010-10-08 03:57:56' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 86ms (DB: 76) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'mpGHvXWf7cB00Laq6tVS', "last_request_at" = '2010-10-08 03:57:56' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" [0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://example.org/user]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-07 23:57:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:56', "perishable_token" = 'cbu9in1KgxWqi-l3qTlE', "last_request_at" = '2010-10-08 03:57:56' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:57:54' AND '2010-10-21 23:57:54')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-10-07 23:57:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-10-07 23:57:57) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"", "address"=>"", "zip"=>"", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"", "last_name"=>"", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"", "email"=>"", "about2030"=>"", "state"=>"AL", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;36;1mState Load (0.8ms)[0m   [0;1mSELECT * FROM "states" [0m
+Completed in 34ms (View: 31, DB: 1) | 200 OK [http://example.org/registration]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-10-07 23:57:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;36;1mState Load (0.9ms)[0m   [0;1mSELECT * FROM "states" [0m
+Completed in 15ms (View: 12, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-10-07 23:57:57) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"Mayfield Heights", "address"=>"243 Cedar", "zip"=>"44124", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"651-342-3987", "last_name"=>"Doe", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"John", "email"=>"jdoe@gmail.com", "about2030"=>"", "state"=>"OH", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 16ms (View: 13, DB: 1) | 200 OK [http://example.org/registration]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-10-07 23:57:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (1.0ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-10-07 23:57:57) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"Mayfield Heights", "address"=>"243 Cedar", "zip"=>"44124", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"651-342-3987", "last_name"=>"Doe", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"John", "email"=>"jdoe@gmail.com", "about2030"=>"", "state"=>"OH", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+  [4;36;1mRegistration Create (0.4ms)[0m   [0;1mINSERT INTO "registrations" ("address", "city", "address2", "zip", "created_at", "updated_at", "user_id", "phone_number", "last_name", "employer", "email", "first_name", "state", "profession", "education", "about2030") VALUES('243 Cedar', 'Mayfield Heights', '', '44124', '2010-10-08 03:57:57', '2010-10-08 03:57:57', NULL, '651-342-3987', 'Doe', '', 'jdoe@gmail.com', 'John', 'OH', '', '', '')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5223c052b27b4f0df933f2d1236ad5c16dc75a2cf051214a3aba62077ed11acb8d22175726fb9a1aebadea6d5b5855a1c5a8eb7ed9b0211b5a2dd1fdf7e4b2a1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'vXh7xc5gtnwiaU2gn5xR') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'vXh7xc5gtnwiaU2gn5xR', NULL, NULL, '2010-10-08 03:57:57', '5277cc9eb19fe08607bb95ec292626f8c0e074cacf21c2d8fe544b0dc50126bc8e1678a17ea2cb29d2f363d72e4b8a3b0c6e177cdc62a5eb39d455e79483e686', NULL, 'LUgG6a1SEVYbZy7bJIk2', '2010-10-08 03:57:57', 0, NULL, 'BbHgDB2hSvAaN6QQgC07', NULL, 'Doe', NULL, '5223c052b27b4f0df933f2d1236ad5c16dc75a2cf051214a3aba62077ed11acb8d22175726fb9a1aebadea6d5b5855a1c5a8eb7ed9b0211b5a2dd1fdf7e4b2a1', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;35;1mUserProfile Create (0.1ms)[0m   [0mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-10-08 03:57:57', NULL, '2010-10-08 03:57:57', NULL, 1, '651-342-3987', NULL, '', NULL, NULL, '', '', '', NULL)[0m
+  [4;36;1mUserAddress Create (0.1ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('243 Cedar', 'Mayfield Heights', '', 1, '2010-10-08 03:57:57', '44124', '2010-10-08 03:57:57', NULL, 1, 'OH', 't')[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 03:57:57', "perishable_token" = '4jHxAiRIjVyGOcLWml-n' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mMembership Load (0.1ms)[0m   [0;1mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') LIMIT 1[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Membership') [0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-10-08 03:57:57', NULL, NULL, '2010-10-08 03:57:57', 70.0, 'User', 'f', 1)[0m
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-10-08 03:57:57', 1, 1, '2010-10-08 03:57:57', 1)[0m
+Redirected to http://example.org/orders/new
+Completed in 22ms (DB: 2) | 302 Found [http://example.org/registration]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-10-07 23:57:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 1) LIMIT 1[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mMembership Load (0.1ms)[0m   [0;1mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://example.org/orders/new]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mState Create (0.7ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Alabama', 'AL')[0m
+  [4;35;1mState Create (0.5ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Alaska', 'AK')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Arizona', 'AZ')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Arkansas', 'AR')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('California', 'CA')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Colorado', 'CO')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Connecticut', 'CT')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Delaware', 'DE')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('District Of Columbia', 'DC')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Florida', 'FL')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Georgia', 'GA')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Hawaii', 'HI')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Idaho', 'ID')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Illinois', 'IL')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Indiana', 'IN')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Iowa', 'IA')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Kansas', 'KS')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Kentucky', 'KY')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Louisiana', 'LA')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Maine', 'ME')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Maryland', 'MD')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Massachusetts', 'MA')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Michigan', 'MI')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Minnesota', 'MN')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Mississippi', 'MS')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Missouri', 'MO')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Montana', 'MT')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Nebraska', 'NE')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Nevada', 'NV')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('New Hampshire', 'NH')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('New Jersey', 'NJ')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('New Mexico', 'NM')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('New York', 'NY')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('North Carolina', 'NC')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('North Dakota', 'ND')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Ohio', 'OH')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Oklahoma', 'OK')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Oregon', 'OR')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Pennsylvania', 'PA')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Rhode Island', 'RI')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('South Carolina', 'SC')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('South Dakota', 'SD')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Tennessee', 'TN')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Texas', 'TX')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Utah', 'UT')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Vermont', 'VT')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Virginia', 'VA')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Washington', 'WA')[0m
+  [4;36;1mState Create (0.5ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('West Virginia', 'WV')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Wisconsin', 'WI')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Wyoming', 'WY')[0m
+  [4;35;1mMembership Create (0.3ms)[0m   [0mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2010-11-30 23:48:43', '2010-11-30 23:48:43')[0m
+  [4;36;1mItem Create (0.3ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard membership', 70.0, 'Membership', '2010-11-30 23:48:43', 1, '2010-11-30 23:48:43')[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 18:48:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.6ms)
+Completed in 19ms (View: 12, DB: 16) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 18:48:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://example.org/]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://example.org/]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://example.org/]
+  [4;36;1mUserAddress Create (0.4ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-11-30 23:48:44', '46751', '2010-11-30 23:48:44', 1, 1, 'OH', 't')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd4e53cd31c6277f4c002f7dce3dafccaa3773361262526dd8533a35ad48391ba57ce2e383675991b946a8bf21858f22f190cebb02b3f7f77ec8e1d2e2921ea59') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'fmLBFAEEM0j6nsGfZtHr') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'fmLBFAEEM0j6nsGfZtHr', NULL, NULL, '2010-11-30 23:48:44', 'e92d9a1e8ffd64aac63c5500979c711a8b80ca8da6b078d5687223c8f12ec2c91134f137e505201b5291dbd57e83611548208dd5eabfe0a455459f1ac1981b39', NULL, 'LRpQPCcTNHPOW_edl3Px', '2010-11-30 23:48:44', 0, NULL, 'dMPIKB67h9-QeVuunydu', NULL, 'Doe', NULL, 'd4e53cd31c6277f4c002f7dce3dafccaa3773361262526dd8533a35ad48391ba57ce2e383675991b946a8bf21858f22f190cebb02b3f7f77ec8e1d2e2921ea59', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;35;1mUserProfile Create (0.2ms)[0m   [0mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-11-30 23:48:44', NULL, '2010-11-30 23:48:44', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mUserAddress Create (0.1ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-11-30 23:48:44', '46751', '2010-11-30 23:48:44', NULL, 1, 'OH', 't')[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'Q80Bkj7xSB4tlYRHbur7' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'fTAFMLguANeSfERD7bbf', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-11-30 18:48:44) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'LrnFcdiHDozeiCxqA_Mn', "last_request_at" = '2010-11-30 23:48:44', "current_login_at" = '2010-11-30 23:48:44' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 12ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'fz1jqtEURinpT0N2rztb', "last_request_at" = '2010-11-30 23:48:44' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://example.org/user]
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Fun Times', NULL, NULL, '2010-11-30 23:48:44', '2010-12-01 00:18:44', '2010-11-30 23:48:44', '2010-11-30 23:48:44', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 15.0, 'Event', '2010-11-30 23:48:44', 1, '2010-11-30 23:48:44')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 25.0, 'Event', '2010-11-30 23:48:44', 1, '2010-11-30 23:48:44')[0m
+[paperclip] Saving attachments.
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calendar"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'E2q4qHuV0owuhNg2LQdC', "last_request_at" = '2010-11-30 23:48:44' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (('2010-10-31 04:00:00' <= end_at) AND (start_at< '2010-12-05 05:00:00')) ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering calendar/index
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://example.org/calendar]
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"events"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'Psxi8jwxeVZdA3WhrF8y', "last_request_at" = '2010-11-30 23:48:44' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Event') [0m
+Rendered events/_member_registration (2.2ms)
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://example.org/events/1]
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."name" = 'Fun Times') LIMIT 1[0m
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-11-30 18:48:44) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>""}, "action"=>"create", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://example.org/user_session]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-11-30 18:48:44) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://example.org/user_session]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-11-30 23:48:44', '46751', '2010-11-30 23:48:44', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '943ba5dc3c9604e3c785f9725b5c2e3b4cd876bef59c2bf78bf2f560f9f7209d674110fad2c87752005064c6863248581e0c289c335cf05dbb3f3c4d84181295') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'olpkN8bkygwCy86Aw_8-') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'olpkN8bkygwCy86Aw_8-', NULL, NULL, '2010-11-30 23:48:44', '86a7c2d520a2a061c85f38e24cded1208cf1c43b3f67e31d17e5f3c093811cbe1183fe64afa3116560359c837217f4787a92f1532d48e704469d75f323e2d493', NULL, 'R5MCIL1tP1EzmmOBMBO9', '2010-11-30 23:48:44', 0, NULL, 'mNSUtQ8S49G0CvlSaq6B', NULL, 'Doe', NULL, '943ba5dc3c9604e3c785f9725b5c2e3b4cd876bef59c2bf78bf2f560f9f7209d674110fad2c87752005064c6863248581e0c289c335cf05dbb3f3c4d84181295', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.2ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-11-30 23:48:44', NULL, '2010-11-30 23:48:44', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-11-30 23:48:44', '46751', '2010-11-30 23:48:44', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'XhF1WgqBbBw7RzDx3aN4' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'tbIcxQqWf7lDYQec9GlP', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-11-30 18:48:44) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2010-11-30 23:48:44', "perishable_token" = '33khV_ft3WVscev0bJBg', "last_request_at" = '2010-11-30 23:48:44', "current_login_at" = '2010-11-30 23:48:44' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 10ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'W6iDwW0NV6rjGLABzFdX', "last_request_at" = '2010-11-30 23:48:44' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://example.org/user]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-11-30 23:48:44', '46751', '2010-11-30 23:48:44', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4af7a84178f3563188d74c16d2b332343bc95d09dd1522b226653a9574146e0de7d3af64c1e986aa0a694511b31c0ab5e031c33187a9f7f0b5efa72136c1c465') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'vDKjDX3vAblUXP8GTXlv') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'vDKjDX3vAblUXP8GTXlv', NULL, NULL, '2010-11-30 23:48:44', '17d38eb7553c807e7987e9a358275b6c77348774c2ea0da6dac1f2d1bba82153b90a4995d214bb49b5367428c9b5131ab6327e358e10fdc8a37fb5c51a19d7e4', NULL, 'Q3j-rNoZFj38o7y1oalv', '2010-11-30 23:48:44', 0, NULL, 'khpQEiiZBCtgwMQd5e3p', NULL, 'Doe', NULL, '4af7a84178f3563188d74c16d2b332343bc95d09dd1522b226653a9574146e0de7d3af64c1e986aa0a694511b31c0ab5e031c33187a9f7f0b5efa72136c1c465', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.1ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-11-30 23:48:44', NULL, '2010-11-30 23:48:44', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-11-30 23:48:44', '46751', '2010-11-30 23:48:44', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'G6OEnaVKT6GJ2n9s8smX' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'a8eSqPePjtQqkRiFaNTc', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'iVZS5yE0tT7vYjZow-WQ', "activated" = 'f' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 87ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-11-30 18:48:44) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."customer_id" = 1) LIMIT 1[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Membership') [0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-11-30 23:48:44', NULL, NULL, '2010-11-30 23:48:44', 70.0, 'User', 'f', 1)[0m
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-30 23:48:44', 1, 1, '2010-11-30 23:48:44', 1)[0m
+Redirected to http://example.org/orders/new
+Completed in 16ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://example.org/orders/new]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-11-30 23:48:44', '46751', '2010-11-30 23:48:44', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f9b29821f8c0a71731432c33a4a919cc70573dd5b9ee1ab0638e9f501f3d016d296acaa0473ec12fe596801dfc136d335b89b8948c4030573359f4aebd53ee7c') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '_Fwaa3w6ALfD1EvSxigk') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, '_Fwaa3w6ALfD1EvSxigk', NULL, NULL, '2010-11-30 23:48:44', 'b90e3a050347e2e229a5883e191d9696cdf94548001ed41b25ebc0c91db7881db8714a693cf3df642c2a14aee5e8af715311c41066531ce36183141e83dd2c06', NULL, 'ri2qWTFWAVJLCMHuSSbZ', '2010-11-30 23:48:44', 0, NULL, '0j8_eXMzWhfOCSWStRgB', NULL, 'Smith', NULL, 'f9b29821f8c0a71731432c33a4a919cc70573dd5b9ee1ab0638e9f501f3d016d296acaa0473ec12fe596801dfc136d335b89b8948c4030573359f4aebd53ee7c', 0, NULL, 'f', NULL, 'Jane', 'jsmith@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.1ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-11-30 23:48:44', NULL, '2010-11-30 23:48:44', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2010-11-30 23:48:44', '46751', '2010-11-30 23:48:44', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = '3si5BldJFizDmhSkIaNv' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:44', "perishable_token" = 'BriL9QmZ8puWs_ta0rhW', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-11-30 18:48:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-11-30 18:48:45) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jsmith@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2010-11-30 23:48:45', "perishable_token" = 'iCbuO2lUeookoh9zCPTY', "last_request_at" = '2010-11-30 23:48:45', "current_login_at" = '2010-11-30 23:48:45' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 11ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-11-30 18:48:45) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:45', "perishable_token" = 'TttMMhpCVCD6VEz0PyZz', "last_request_at" = '2010-11-30 23:48:45' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://example.org/user]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 18:48:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:45', "perishable_token" = 'fn7bQpHrLRRFBOTWGxaa', "last_request_at" = '2010-11-30 23:48:45' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:48:42' AND '2010-12-14 18:48:42')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-11-30 18:48:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 20ms (View: 16, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-11-30 18:48:45) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"", "address"=>"", "zip"=>"", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"", "last_name"=>"", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"", "email"=>"", "about2030"=>"", "state"=>"AL", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;36;1mState Load (0.9ms)[0m   [0;1mSELECT * FROM "states" [0m
+Completed in 33ms (View: 30, DB: 1) | 200 OK [http://example.org/registration]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-11-30 18:48:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;36;1mState Load (0.8ms)[0m   [0;1mSELECT * FROM "states" [0m
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-11-30 18:48:45) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"Mayfield Heights", "address"=>"243 Cedar", "zip"=>"44124", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"651-342-3987", "last_name"=>"Doe", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"John", "email"=>"jdoe@gmail.com", "about2030"=>"", "state"=>"OH", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://example.org/registration]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-11-30 18:48:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-11-30 18:48:45) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"Mayfield Heights", "address"=>"243 Cedar", "zip"=>"44124", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"651-342-3987", "last_name"=>"Doe", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"John", "email"=>"jdoe@gmail.com", "about2030"=>"", "state"=>"OH", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+  [4;36;1mRegistration Create (0.4ms)[0m   [0;1mINSERT INTO "registrations" ("address", "city", "address2", "zip", "created_at", "updated_at", "user_id", "phone_number", "last_name", "employer", "email", "first_name", "state", "profession", "education", "about2030") VALUES('243 Cedar', 'Mayfield Heights', '', '44124', '2010-11-30 23:48:45', '2010-11-30 23:48:45', NULL, '651-342-3987', 'Doe', '', 'jdoe@gmail.com', 'John', 'OH', '', '', '')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7f04b43a3ac94d9784804190506852d0985c6cce36225db8b60665c952292d60d38ba85fe0dc68104eff5c515eb85fe55d92945aca2b703482d20693eb067e00') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'TbJX02FEaVn__2SKy0K3') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'TbJX02FEaVn__2SKy0K3', NULL, NULL, '2010-11-30 23:48:45', '1bbb967b6a1ec3a6fbaecbb77978961cbfb72856346b30387672bf9b87fc319dc3e23cd4f08947b140137c8727d2b9fc82680fa52f06c78990dde5d850890226', NULL, 'KUdfr7u1oY2dCS_3Oit3', '2010-11-30 23:48:45', 0, NULL, 'NmwAEu9QwYgO8U779YC-', NULL, 'Doe', NULL, '7f04b43a3ac94d9784804190506852d0985c6cce36225db8b60665c952292d60d38ba85fe0dc68104eff5c515eb85fe55d92945aca2b703482d20693eb067e00', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;35;1mUserProfile Create (0.1ms)[0m   [0mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2010-11-30 23:48:45', NULL, '2010-11-30 23:48:45', NULL, 1, '651-342-3987', NULL, '', NULL, NULL, '', '', '', NULL)[0m
+  [4;36;1mUserAddress Create (0.1ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('243 Cedar', 'Mayfield Heights', '', 1, '2010-11-30 23:48:45', '44124', '2010-11-30 23:48:45', NULL, 1, 'OH', 't')[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-11-30 23:48:45', "perishable_token" = '_FiQRZoApiD_HEHLap58' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mMembership Load (0.2ms)[0m   [0;1mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') LIMIT 1[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Membership') [0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-11-30 23:48:45', NULL, NULL, '2010-11-30 23:48:45', 70.0, 'User', 'f', 1)[0m
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-30 23:48:45', 1, 1, '2010-11-30 23:48:45', 1)[0m
+Redirected to http://example.org/orders/new
+Completed in 22ms (DB: 2) | 302 Found [http://example.org/registration]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2010-11-30 18:48:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 1) LIMIT 1[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mMembership Load (0.1ms)[0m   [0;1mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://example.org/orders/new]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mState Create (0.5ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Alabama', 'AL')[0m
+  [4;35;1mState Create (0.5ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Alaska', 'AK')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Arizona', 'AZ')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Arkansas', 'AR')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('California', 'CA')[0m
+  [4;35;1mState Create (0.5ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Colorado', 'CO')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Connecticut', 'CT')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Delaware', 'DE')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('District Of Columbia', 'DC')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Florida', 'FL')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Georgia', 'GA')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Hawaii', 'HI')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Idaho', 'ID')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Illinois', 'IL')[0m
+  [4;36;1mState Create (0.5ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Indiana', 'IN')[0m
+  [4;35;1mState Create (0.6ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Iowa', 'IA')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Kansas', 'KS')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Kentucky', 'KY')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Louisiana', 'LA')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Maine', 'ME')[0m
+  [4;36;1mState Create (0.5ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Maryland', 'MD')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Massachusetts', 'MA')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Michigan', 'MI')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Minnesota', 'MN')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Mississippi', 'MS')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Missouri', 'MO')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Montana', 'MT')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Nebraska', 'NE')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Nevada', 'NV')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('New Hampshire', 'NH')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('New Jersey', 'NJ')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('New Mexico', 'NM')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('New York', 'NY')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('North Carolina', 'NC')[0m
+  [4;36;1mState Create (0.5ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('North Dakota', 'ND')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Ohio', 'OH')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Oklahoma', 'OK')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Oregon', 'OR')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Pennsylvania', 'PA')[0m
+  [4;35;1mState Create (0.5ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Rhode Island', 'RI')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('South Carolina', 'SC')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('South Dakota', 'SD')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Tennessee', 'TN')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Texas', 'TX')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Utah', 'UT')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Vermont', 'VT')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Virginia', 'VA')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Washington', 'WA')[0m
+  [4;36;1mState Create (0.5ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('West Virginia', 'WV')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Wisconsin', 'WI')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Wyoming', 'WY')[0m
+  [4;35;1mMembership Create (0.4ms)[0m   [0mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2011-01-28 17:19:48', '2011-01-28 17:19:48')[0m
+  [4;36;1mItem Create (0.5ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard membership', 70.0, 'Membership', '2011-01-28 17:19:48', 1, '2011-01-28 17:19:48')[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-01-28 12:19:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.7ms)
+Completed in 56ms (View: 48, DB: 20) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-01-28 12:19:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://example.org/]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-01-28 12:19:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-01-28 12:19:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://example.org/]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-01-28 12:19:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://example.org/]
+  [4;36;1mUserAddress Create (0.5ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-01-28 17:19:49', '46751', '2011-01-28 17:19:49', 1, 1, 'OH', 't')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e8d8d83d6e94c0fb336dcb7b04b1a1524516c9b19acbbc4e2743fb97c06e5af24a1148bda8eb8b67ef84e0e0d6d4545fe7ce89a2a61f65f89b95e7bc74be4405') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '4VftyW307_sSBVVqCmXj') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, '4VftyW307_sSBVVqCmXj', NULL, NULL, '2011-01-28 17:19:49', '6128c88a06c1d9e3f4006fba08e823615b14b8aad20a62326adfd0d45a2dfbef202da5f32f32ce879408dad76c5db7153b393d2142fe811ed7c346515ace5205', NULL, 'wvlgwtcricd-PH474tbG', '2011-01-28 17:19:49', 0, NULL, 'HbfDJkkWoz1QoBtzsRLB', NULL, 'Doe', NULL, 'e8d8d83d6e94c0fb336dcb7b04b1a1524516c9b19acbbc4e2743fb97c06e5af24a1148bda8eb8b67ef84e0e0d6d4545fe7ce89a2a61f65f89b95e7bc74be4405', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;35;1mUserProfile Create (0.3ms)[0m   [0mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-01-28 17:19:49', NULL, '2011-01-28 17:19:49', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mUserAddress Create (0.1ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-01-28 17:19:49', '46751', '2011-01-28 17:19:49', NULL, 1, 'OH', 't')[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:49', "perishable_token" = 'p0ww9KmEN89HfLVlA55s' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:49', "perishable_token" = 'oBU20Ychy7AuebnatM9T', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-01-28 12:19:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 11ms (View: 7, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-01-28 12:19:49) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2011-01-28 17:19:49', "perishable_token" = 'LjVQtG09BlbwUH_7vKRS', "last_request_at" = '2011-01-28 17:19:49', "current_login_at" = '2011-01-28 17:19:49' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 19ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-01-28 12:19:49) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:49', "perishable_token" = 'Xy6MNkhbJleEBXShGaRe', "last_request_at" = '2011-01-28 17:19:49' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://example.org/user]
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Fun Times', NULL, NULL, '2011-01-28 17:19:49', '2011-01-28 17:49:49', '2011-01-28 17:19:49', '2011-01-28 17:19:49', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 15.0, 'Event', '2011-01-28 17:19:49', 1, '2011-01-28 17:19:49')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 25.0, 'Event', '2011-01-28 17:19:49', 1, '2011-01-28 17:19:49')[0m
+[paperclip] Saving attachments.
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2011-01-28 12:19:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calendar"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:49', "perishable_token" = 'oYN5Kb-PGzHBap4k-A3i', "last_request_at" = '2011-01-28 17:19:49' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM "events" WHERE (('2010-12-26 05:00:00' <= end_at) AND (start_at< '2011-02-06 05:00:00')) ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering calendar/index
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendered shared/_additional_marketing (0.2ms)
+Completed in 41ms (View: 27, DB: 2) | 200 OK [http://example.org/calendar]
+
+
+Processing EventsController#show (for 127.0.0.1 at 2011-01-28 12:19:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"events"}
+  [4;36;1mUser Load (4.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:49', "perishable_token" = 'iLJWDP9iMlv6iqVEw7Mb', "last_request_at" = '2011-01-28 17:19:49' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Event') [0m
+Rendered events/_member_registration (3.3ms)
+Completed in 97ms (View: 17, DB: 6) | 200 OK [http://example.org/events/1]
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."name" = 'Fun Times') LIMIT 1[0m
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-01-28 12:19:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 8ms (View: 7, DB: 1) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-01-28 12:19:49) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>""}, "action"=>"create", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://example.org/user_session]
+  [4;36;1mUser Delete all (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-01-28 12:19:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-01-28 12:19:49) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://example.org/user_session]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+  [4;35;1mUserAddress Create (0.5ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-01-28 17:19:49', '46751', '2011-01-28 17:19:49', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7af5ce2b2cf677362fef8e5f024e1a98506dc88bcdf5be192d1cccf50d1c44fa597d8c82e3c2e90a852df62fdb5b61e5147254f3d1d48592b11f500cba394337') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'x2KVcBqVfj0rhPNIGM7a') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'x2KVcBqVfj0rhPNIGM7a', NULL, NULL, '2011-01-28 17:19:49', 'bcfd5f42a3a1ad1125499e088388e10d10f75b3eaa98bc31040827bd52b19057a38afc17058d8c98b5e697fef8ae141f164b9af5717905cfab04ee1de0310800', NULL, 'Se6ncXPr9cUcR8uqPrCX', '2011-01-28 17:19:49', 0, NULL, 'o-sUNMKi4QpzmwOcLjsh', NULL, 'Doe', NULL, '7af5ce2b2cf677362fef8e5f024e1a98506dc88bcdf5be192d1cccf50d1c44fa597d8c82e3c2e90a852df62fdb5b61e5147254f3d1d48592b11f500cba394337', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.1ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-01-28 17:19:49', NULL, '2011-01-28 17:19:49', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.2ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-01-28 17:19:49', '46751', '2011-01-28 17:19:49', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:49', "perishable_token" = 'mao37AhAas6RSaEd_XJ-' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:49', "perishable_token" = '5VO3_eyRacsW5P5yG2YU', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-01-28 12:19:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-01-28 12:19:50) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'IuOJ00_qzTfxizbgA6Nd', "last_request_at" = '2011-01-28 17:19:50', "current_login_at" = '2011-01-28 17:19:50' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 12ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-01-28 12:19:50) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'U7O42K-bObF81-JGj3lQ', "last_request_at" = '2011-01-28 17:19:50' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://example.org/user]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUserAddress Create (0.4ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-01-28 17:19:50', '46751', '2011-01-28 17:19:50', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd257e4599f2413bc462bd2890da1e856fed868c5cbf7068dabbf1deaf7d2316694e694729d04ba92da036a70aba7b8a3c5fb93f2b04de6aef106464b1748dbe8') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '9Ie-SMz4a3QDBVVmvPLW') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, '9Ie-SMz4a3QDBVVmvPLW', NULL, NULL, '2011-01-28 17:19:50', 'f6fe173a4be55856ea345d8b51bf6aa91db04befb96b5ca0a9891641277b94dfe46c2d387e5cebc4eb01f768220416961f03fc6489b5d3824e1b0fdba685323d', NULL, '2CpPwF37CsK5o4NzaMw-', '2011-01-28 17:19:50', 0, NULL, 'jTPyhyZalK8DFezPc-2p', NULL, 'Doe', NULL, 'd257e4599f2413bc462bd2890da1e856fed868c5cbf7068dabbf1deaf7d2316694e694729d04ba92da036a70aba7b8a3c5fb93f2b04de6aef106464b1748dbe8', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.2ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-01-28 17:19:50', NULL, '2011-01-28 17:19:50', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-01-28 17:19:50', '46751', '2011-01-28 17:19:50', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'a-5urHh5ds0wyvfFnBB4' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'IdCGyqnLPwKg2mwBYfpj', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'K_p6TaTylfkSR3ckcjv-', "activated" = 'f' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-01-28 12:19:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 98ms (View: 7, DB: 3) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-01-28 12:19:50) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."customer_id" = 1) LIMIT 1[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Membership') [0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-01-28 17:19:50', NULL, NULL, '2011-01-28 17:19:50', 70.0, 'User', 'f', 1)[0m
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-01-28 17:19:50', 1, 1, '2011-01-28 17:19:50', 1)[0m
+Redirected to http://example.org/orders/new
+Completed in 20ms (DB: 2) | 302 Found [http://example.org/user_session]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2011-01-28 12:19:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://example.org/orders/new]
+  [4;36;1mUser Delete all (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-01-28 17:19:50', '46751', '2011-01-28 17:19:50', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e014258e7b8fe9be9006f63b242a0d3dc5113406babdd327103471189681344b685b1d013d4868b536dfcc058d686dd042150645baed1b85e22d089912e52f9f') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'ZCchcVrqTdSwhvu7MkWa') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'ZCchcVrqTdSwhvu7MkWa', NULL, NULL, '2011-01-28 17:19:50', '35f4b44ecb7160a3e8446e3faca6e41f5e125bcba12f02b7cbdae96acf1f0d3aea12f933cb599c313c8dacd834ed063eeaf8dea2ddf07a584eb457237bf62286', NULL, 'KD0-oUsBmvQJdT6OYHAy', '2011-01-28 17:19:50', 0, NULL, 'JRbfp-cp-OoMXTNiolJT', NULL, 'Smith', NULL, 'e014258e7b8fe9be9006f63b242a0d3dc5113406babdd327103471189681344b685b1d013d4868b536dfcc058d686dd042150645baed1b85e22d089912e52f9f', 0, NULL, 'f', NULL, 'Jane', 'jsmith@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.1ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-01-28 17:19:50', NULL, '2011-01-28 17:19:50', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-01-28 17:19:50', '46751', '2011-01-28 17:19:50', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'nEyr24QFzQKx_lFj6REC' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'ASV2F_wPb2VFkW7v5ND7', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-01-28 12:19:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-01-28 12:19:50) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jsmith@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'iHf3hdWDHRuOIrGqqSDz', "last_request_at" = '2011-01-28 17:19:50', "current_login_at" = '2011-01-28 17:19:50' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 14ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-01-28 12:19:50) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'qoYr4E04AiOXZiteTUhw', "last_request_at" = '2011-01-28 17:19:50' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://example.org/user]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-01-28 12:19:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:50', "perishable_token" = 'SYG0rhbouWeR935dC4U_', "last_request_at" = '2011-01-28 17:19:50' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:19:46' AND '2011-02-11 12:19:46')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2011-01-28 12:19:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.8ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 20ms (View: 16, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2011-01-28 12:19:50) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"", "address"=>"", "zip"=>"", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"", "last_name"=>"", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"", "email"=>"", "about2030"=>"", "state"=>"AL", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;36;1mState Load (1.6ms)[0m   [0;1mSELECT * FROM "states" [0m
+Completed in 83ms (View: 75, DB: 2) | 200 OK [http://example.org/registration]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2011-01-28 12:19:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;36;1mState Load (1.5ms)[0m   [0;1mSELECT * FROM "states" [0m
+Completed in 28ms (View: 25, DB: 2) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2011-01-28 12:19:51) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"Mayfield Heights", "address"=>"243 Cedar", "zip"=>"44124", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"651-342-3987", "last_name"=>"Doe", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"John", "email"=>"jdoe@gmail.com", "about2030"=>"", "state"=>"OH", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://example.org/registration]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2011-01-28 12:19:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 18ms (View: 15, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2011-01-28 12:19:51) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"Mayfield Heights", "address"=>"243 Cedar", "zip"=>"44124", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"651-342-3987", "last_name"=>"Doe", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"John", "email"=>"jdoe@gmail.com", "about2030"=>"", "state"=>"OH", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+  [4;36;1mRegistration Create (0.6ms)[0m   [0;1mINSERT INTO "registrations" ("address", "city", "address2", "zip", "created_at", "updated_at", "user_id", "phone_number", "last_name", "employer", "email", "first_name", "state", "profession", "education", "about2030") VALUES('243 Cedar', 'Mayfield Heights', '', '44124', '2011-01-28 17:19:51', '2011-01-28 17:19:51', NULL, '651-342-3987', 'Doe', '', 'jdoe@gmail.com', 'John', 'OH', '', '', '')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b08fb9716c852a3571a38b6feaa1604fd7711feb20f023f4afd3f35aa6ae9f9a1f797da563e4795ef8fea7719921afae38aa2820642006ca92826088af28383f') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'wHR9vCIfhGu-4NhfY3cm') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'wHR9vCIfhGu-4NhfY3cm', NULL, NULL, '2011-01-28 17:19:51', '60f83a92ab465d709edc19b920a6d558cafa8d817f1bb6cc538a9a62fd32b8c9df3ad9552693f4ee23b2c4aa615b234a3ff3fb8ecee5aa59b987bd62c830c567', NULL, 'Da6iUYAhGAEABmquKxqC', '2011-01-28 17:19:51', 0, NULL, 'ssywGmxmbk3Vh1xf8knh', NULL, 'Doe', NULL, 'b08fb9716c852a3571a38b6feaa1604fd7711feb20f023f4afd3f35aa6ae9f9a1f797da563e4795ef8fea7719921afae38aa2820642006ca92826088af28383f', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;35;1mUserProfile Create (0.3ms)[0m   [0mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-01-28 17:19:51', NULL, '2011-01-28 17:19:51', NULL, 1, '651-342-3987', NULL, '', NULL, NULL, '', '', '', NULL)[0m
+  [4;36;1mUserAddress Create (0.1ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('243 Cedar', 'Mayfield Heights', '', 1, '2011-01-28 17:19:51', '44124', '2011-01-28 17:19:51', NULL, 1, 'OH', 't')[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-01-28 17:19:51', "perishable_token" = '5Dc8dQr7WCJtSj1KNG2X' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mMembership Load (0.3ms)[0m   [0;1mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Membership') [0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-01-28 17:19:51', NULL, NULL, '2011-01-28 17:19:51', 70.0, 'User', 'f', 1)[0m
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-01-28 17:19:51', 1, 1, '2011-01-28 17:19:51', 1)[0m
+Redirected to http://example.org/orders/new
+Completed in 28ms (DB: 3) | 302 Found [http://example.org/registration]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2011-01-28 12:19:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 1) LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mMembership Load (0.2ms)[0m   [0;1mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://example.org/orders/new]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mState Create (0.5ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Alabama', 'AL')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Alaska', 'AK')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Arizona', 'AZ')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Arkansas', 'AR')[0m
+  [4;36;1mState Create (0.5ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('California', 'CA')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Colorado', 'CO')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Connecticut', 'CT')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Delaware', 'DE')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('District Of Columbia', 'DC')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Florida', 'FL')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Georgia', 'GA')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Hawaii', 'HI')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Idaho', 'ID')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Illinois', 'IL')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Indiana', 'IN')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Iowa', 'IA')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Kansas', 'KS')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Kentucky', 'KY')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Louisiana', 'LA')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Maine', 'ME')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Maryland', 'MD')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Massachusetts', 'MA')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Michigan', 'MI')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Minnesota', 'MN')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Mississippi', 'MS')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Missouri', 'MO')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Montana', 'MT')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Nebraska', 'NE')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Nevada', 'NV')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('New Hampshire', 'NH')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('New Jersey', 'NJ')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('New Mexico', 'NM')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('New York', 'NY')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('North Carolina', 'NC')[0m
+  [4;36;1mState Create (0.4ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('North Dakota', 'ND')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Ohio', 'OH')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Oklahoma', 'OK')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Oregon', 'OR')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Pennsylvania', 'PA')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Rhode Island', 'RI')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('South Carolina', 'SC')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('South Dakota', 'SD')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Tennessee', 'TN')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Texas', 'TX')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Utah', 'UT')[0m
+  [4;35;1mState Create (0.4ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Vermont', 'VT')[0m
+  [4;36;1mState Create (0.3ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Virginia', 'VA')[0m
+  [4;35;1mState Create (0.3ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Washington', 'WA')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('West Virginia', 'WV')[0m
+  [4;35;1mState Create (0.2ms)[0m   [0mINSERT INTO "states" ("title", "code") VALUES('Wisconsin', 'WI')[0m
+  [4;36;1mState Create (0.2ms)[0m   [0;1mINSERT INTO "states" ("title", "code") VALUES('Wyoming', 'WY')[0m
+  [4;35;1mMembership Create (0.4ms)[0m   [0mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2011-02-06 20:05:52', '2011-02-06 20:05:52')[0m
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard membership', 70.0, 'Membership', '2011-02-06 20:05:52', 1, '2011-02-06 20:05:52')[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-06 15:05:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.9ms)
+Completed in 88ms (View: 80, DB: 16) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-06 15:05:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://example.org/]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-06 15:05:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-06 15:05:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://example.org/]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-06 15:05:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://example.org/]
+  [4;36;1mUserAddress Create (0.7ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-02-06 20:05:52', '46751', '2011-02-06 20:05:52', 1, 1, 'OH', 't')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5968162149f97fae78ce940a5a54d6473df95fca3a01b5ec5d6346b35fa06ec357186538d9ce774670c874b04d50f3cd2c5b678538f4fd66b3201cbbb168e322') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'hJRr-2yROyfCdmaSzrjb') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'hJRr-2yROyfCdmaSzrjb', NULL, NULL, '2011-02-06 20:05:52', 'aeaf715d6802fd3e2dff191bca434b9564b8aa2212923e23e5bd4a9b165d92bbf0f0779c4f1e2679afe7c7f5c0642ccd1c3dd8cce86530af503e94b98d8e2616', NULL, 'mr4StH65Ajr4jUZwq99p', '2011-02-06 20:05:52', 0, NULL, 'aZTGiUITfL4Pz_1gPOBU', NULL, 'Doe', NULL, '5968162149f97fae78ce940a5a54d6473df95fca3a01b5ec5d6346b35fa06ec357186538d9ce774670c874b04d50f3cd2c5b678538f4fd66b3201cbbb168e322', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;35;1mUserProfile Create (0.2ms)[0m   [0mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-02-06 20:05:52', NULL, '2011-02-06 20:05:52', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mUserAddress Create (0.1ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-02-06 20:05:52', '46751', '2011-02-06 20:05:52', NULL, 1, 'OH', 't')[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:52', "perishable_token" = 'U1eIdRI8ZWYpCKYH85WU' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:52', "perishable_token" = '4CQI8pKV94Ei0XeWjS32', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-02-06 15:05:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-02-06 15:05:52) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2011-02-06 20:05:52', "perishable_token" = 'a3xLRSED0e-z7NK0yDHg', "last_request_at" = '2011-02-06 20:05:52', "current_login_at" = '2011-02-06 20:05:52' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 16ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-02-06 15:05:52) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:52', "perishable_token" = 'adeLqRbmYPO9KttSTbzM', "last_request_at" = '2011-02-06 20:05:52' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://example.org/user]
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Fun Times', NULL, NULL, '2011-02-06 20:05:52', '2011-02-06 20:35:52', '2011-02-06 20:05:52', '2011-02-06 20:05:52', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 15.0, 'Event', '2011-02-06 20:05:52', 1, '2011-02-06 20:05:52')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 25.0, 'Event', '2011-02-06 20:05:52', 1, '2011-02-06 20:05:52')[0m
+[paperclip] Saving attachments.
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calendar"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'ecBGO1x2JkMghA6e2Z11', "last_request_at" = '2011-02-06 20:05:53' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM "events" WHERE (('2011-01-30 05:00:00' <= end_at) AND (start_at< '2011-03-06 05:00:00')) ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering calendar/index
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 27ms (View: 16, DB: 2) | 200 OK [http://example.org/calendar]
+
+
+Processing EventsController#show (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"events"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'UtriyG9QcwEoFu_feThA', "last_request_at" = '2011-02-06 20:05:53' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Event') [0m
+Rendered events/_member_registration (2.5ms)
+Completed in 36ms (View: 26, DB: 1) | 200 OK [http://example.org/events/1]
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."name" = 'Fun Times') LIMIT 1[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-02-06 15:05:53) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>""}, "action"=>"create", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://example.org/user_session]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-02-06 15:05:53) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://example.org/user_session]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-02-06 20:05:53', '46751', '2011-02-06 20:05:53', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '105f15abed8c9faea638ec77c5202c6c80306a98f9e2262707cb22bdb572cb5b8a875de72a2a5974c7a5388e9ddb5dc41c25c0ddd82fbf0f735abe4ba5a1ce47') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'S6XneUBpJjwSzgnsFj3m') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'S6XneUBpJjwSzgnsFj3m', NULL, NULL, '2011-02-06 20:05:53', 'e2333b59355eb51d4961ad7740071738d71ce865dec0d5c966a6241733a89ad4e9f9262be8c4f179ae29425499a1c5f858ccda1f5d6554799deca4465143adb5', NULL, '9FSPJYU1Ybv_uA8L4auX', '2011-02-06 20:05:53', 0, NULL, 'EDadYSYmmDSa5IOdo-s6', NULL, 'Doe', NULL, '105f15abed8c9faea638ec77c5202c6c80306a98f9e2262707cb22bdb572cb5b8a875de72a2a5974c7a5388e9ddb5dc41c25c0ddd82fbf0f735abe4ba5a1ce47', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.1ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-02-06 20:05:53', NULL, '2011-02-06 20:05:53', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-02-06 20:05:53', '46751', '2011-02-06 20:05:53', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'HKHxSNCS8OS6eNWPQB2l' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'BL6qACP0JEUEmd88hM-0', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-02-06 15:05:53) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2011-02-06 20:05:53', "perishable_token" = '9paciYWRPnkBRBKSvmKv', "last_request_at" = '2011-02-06 20:05:53', "current_login_at" = '2011-02-06 20:05:53' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 10ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = '6-kAJs-K6c_dK0ZbWWM3', "last_request_at" = '2011-02-06 20:05:53' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://example.org/user]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-02-06 20:05:53', '46751', '2011-02-06 20:05:53', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f815c169f36b6f7ab217b71276f6dba6e4f6a9b06779e2bb14d14995deb5d266ad7fafad889d17c43b4f4645042fbaea08779a8ac9ed5a10f36a28069af945ad') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'iTu7fKCSfKKPyHymd8Ag') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'iTu7fKCSfKKPyHymd8Ag', NULL, NULL, '2011-02-06 20:05:53', 'ec4b2b53402e32dcb4651e7f826bd96d104a293dc11d3b0571b33ba3c1b0b0ebc38cb3f0457f3435685023a533128cd9a2bab99d63d034c644360321858bca07', NULL, '2T_11_7o0xr7025o1Eeb', '2011-02-06 20:05:53', 0, NULL, 'fH4vorQ37rmVCJ_YaMsA', NULL, 'Doe', NULL, 'f815c169f36b6f7ab217b71276f6dba6e4f6a9b06779e2bb14d14995deb5d266ad7fafad889d17c43b4f4645042fbaea08779a8ac9ed5a10f36a28069af945ad', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.1ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-02-06 20:05:53', NULL, '2011-02-06 20:05:53', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-02-06 20:05:53', '46751', '2011-02-06 20:05:53', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = '0EWGzBZc8pMS4FztSQ6I' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'X8aASCY61Nq0_cWY-V1s', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'w3Bg51o5pbWaY2tr-bww', "activated" = 'f' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-02-06 15:05:53) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jdoe@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."customer_id" = 1) LIMIT 1[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Membership') [0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-02-06 20:05:53', NULL, NULL, '2011-02-06 20:05:53', 70.0, 'User', 'f', 1)[0m
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-02-06 20:05:53', 1, 1, '2011-02-06 20:05:53', 1)[0m
+Redirected to http://example.org/orders/new
+Completed in 16ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) LIMIT 1[0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://example.org/orders/new]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+  [4;35;1mUserAddress Create (0.3ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-02-06 20:05:53', '46751', '2011-02-06 20:05:53', 1, 1, 'OH', 't')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9c611cd65f56a17ece7528e3ba0888afc05ba19384e67750bf4273cb37c446f7121470e55ffa4a142ce3377aea36b2239186647c40372e8e6447ef82a015be70') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'xGIn8sy_oahg9yy8YPmr') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'xGIn8sy_oahg9yy8YPmr', NULL, NULL, '2011-02-06 20:05:53', 'dbc61f6e8737e8ddf0bca8738aba33137c758cf0c875a412c378330c9f5894a648bfb72e14269c6ffa49ca475a5b74b73bf10d2e8a0239a199d6f09b328f1f25', NULL, '9XgOr17N_6-03A1T5p3t', '2011-02-06 20:05:53', 0, NULL, 'YHi0WEBB8p0nS7MLhA8Z', NULL, 'Smith', NULL, '9c611cd65f56a17ece7528e3ba0888afc05ba19384e67750bf4273cb37c446f7121470e55ffa4a142ce3377aea36b2239186647c40372e8e6447ef82a015be70', 0, NULL, 'f', NULL, 'Jane', 'jsmith@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;36;1mUserProfile Create (0.2ms)[0m   [0;1mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-02-06 20:05:53', NULL, '2011-02-06 20:05:53', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mUserAddress Create (0.1ms)[0m   [0mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('111 Cleveland Avenue', 'Cleveland', NULL, 1, '2011-02-06 20:05:53', '46751', '2011-02-06 20:05:53', NULL, 1, 'OH', 't')[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'UW49w4Dtzh9M4QwMTHB5' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.1ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'CG3dWewWN9MBth-Y2IPr', "activated" = 't' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://example.org/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2011-02-06 15:05:53) [POST]
+  Parameters: {"commit"=>"Log In", "user_session"=>{"password"=>"[FILTERED]", "email"=>"jsmith@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".email) = 'jsmith@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "login_count" = 1, "current_login_ip" = '127.0.0.1', "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'NCmEY7HLyeN5kUxJZyKH', "last_request_at" = '2011-02-06 20:05:53', "current_login_at" = '2011-02-06 20:05:53' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://example.org/user
+Completed in 10ms (DB: 1) | 302 Found [http://example.org/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'Lgjk1c5h4NiLL-JS8Lm3', "last_request_at" = '2011-02-06 20:05:53' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://example.org/user]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.1ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:53', "perishable_token" = 'pvTVxDWK1LjT29NGo1Of', "last_request_at" = '2011-02-06 20:05:53' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48') ORDER BY start_at ASC[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:05:48' AND '2011-02-20 15:05:48')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_additional_marketing (0.1ms)
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://example.org/]
+  [4;36;1mUser Delete all (0.3ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 19ms (View: 15, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2011-02-06 15:05:53) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"", "address"=>"", "zip"=>"", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"", "last_name"=>"", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"", "email"=>"", "about2030"=>"", "state"=>"AL", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;36;1mState Load (0.9ms)[0m   [0;1mSELECT * FROM "states" [0m
+Completed in 32ms (View: 29, DB: 1) | 200 OK [http://example.org/registration]
+  [4;35;1mUser Delete all (0.1ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2011-02-06 15:05:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;36;1mState Load (0.9ms)[0m   [0;1mSELECT * FROM "states" [0m
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2011-02-06 15:05:54) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"Mayfield Heights", "address"=>"243 Cedar", "zip"=>"44124", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"651-342-3987", "last_name"=>"Doe", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"John", "email"=>"jdoe@gmail.com", "about2030"=>"", "state"=>"OH", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 91ms (View: 87, DB: 1) | 200 OK [http://example.org/registration]
+  [4;36;1mUser Delete all (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE 1=1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2011-02-06 15:05:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://example.org/registration/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2011-02-06 15:05:54) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"Mayfield Heights", "address"=>"243 Cedar", "zip"=>"44124", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"651-342-3987", "last_name"=>"Doe", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"John", "email"=>"jdoe@gmail.com", "about2030"=>"", "state"=>"OH", "education"=>"", "profession"=>""}, "controller"=>"registrations"}
+  [4;36;1mRegistration Create (0.4ms)[0m   [0;1mINSERT INTO "registrations" ("address", "city", "address2", "zip", "created_at", "updated_at", "user_id", "phone_number", "last_name", "employer", "email", "first_name", "state", "profession", "education", "about2030") VALUES('243 Cedar', 'Mayfield Heights', '', '44124', '2011-02-06 20:05:54', '2011-02-06 20:05:54', NULL, '651-342-3987', 'Doe', '', 'jdoe@gmail.com', 'John', 'OH', '', '', '')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a099dac137cf3b07dee96114827bebc3b29a0687f7f272429a963c102fe949e303277b9f0081c3f62e8985b39e244459b4aa2111395f1abe2ee464b1ae1bfba6') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'xzkDieQIwa_rnpXMmzX2') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'xzkDieQIwa_rnpXMmzX2', NULL, NULL, '2011-02-06 20:05:54', 'cb8add71e5f113c23bca1553a37fc2193ca82f08fb062dc7e77f007b771f5e8723e0a9ac2700782d1f9ceab75b99c88637220d72c0ee892d67ccedcdbe58c607', NULL, 'Ito6aqwcX4dUbNDNH8uT', '2011-02-06 20:05:54', 0, NULL, '2lIC6MGJVJgTsW06uyEQ', NULL, 'Doe', NULL, 'a099dac137cf3b07dee96114827bebc3b29a0687f7f272429a963c102fe949e303277b9f0081c3f62e8985b39e244459b4aa2111395f1abe2ee464b1ae1bfba6', 0, NULL, 'f', NULL, 'John', 'jdoe@gmail.com', 't')[0m
+[paperclip] Saving attachments.
+  [4;35;1mUserProfile Create (0.2ms)[0m   [0mINSERT INTO "user_profiles" ("avatar_file_name", "avatar_file_size", "created_at", "birthdate", "updated_at", "gender", "user_id", "phone_number", "avatar_content_type", "employer", "bio", "avatar_updated_at", "profession", "education", "about2030", "member_notes") VALUES(NULL, NULL, '2011-02-06 20:05:54', NULL, '2011-02-06 20:05:54', NULL, 1, '651-342-3987', NULL, '', NULL, NULL, '', '', '', NULL)[0m
+  [4;36;1mUserAddress Create (0.1ms)[0m   [0;1mINSERT INTO "user_addresses" ("address", "city", "address2", "address_type_id", "created_at", "zip", "updated_at", "sort_order", "user_id", "state_code", "is_primary") VALUES('243 Cedar', 'Mayfield Heights', '', 1, '2011-02-06 20:05:54', '44124', '2011-02-06 20:05:54', NULL, 1, 'OH', 't')[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-02-06 20:05:54', "perishable_token" = 'r1QqiiuFbuZ4SH-0gxPH' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+  [4;36;1mMembership Load (0.2ms)[0m   [0;1mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') LIMIT 1[0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT * FROM "items" WHERE ("items".product_id = 1 AND "items".product_type = 'Membership') [0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-02-06 20:05:54', NULL, NULL, '2011-02-06 20:05:54', 70.0, 'User', 'f', 1)[0m
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-02-06 20:05:54', 1, 1, '2011-02-06 20:05:54', 1)[0m
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2011-02-06 15:05:54) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "registration"=>{"city"=>"Mayfield Heights", "address"=>"243 Cedar", "zip"=>"44124", "address2"=>"", "password_confirmation"=>"[FILTERED]", "phone_number"=>"651-342-3987", "last_name"=>"Doe", "employer"=>"", "password"=>"[FILTERED]", "first_name"=>"John", "email"=>"jdoe@gmail.com", "about2030"=>"", "state"=>"OH", "education"=>"", "profession"=>""}, "controller"=>"registrations"}

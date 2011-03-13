@@ -1,0 +1,86 @@
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag 'members2030' %>
+<% end %>
+<h1>Reports</h1>
+	
+  <% if @current_user and @current_user.logged_in? %>
+		<div class="section">
+		<div class="search-members">
+			<form method="get" action="/reports">
+				<lable class="activated"><input type="checkbox" name="activated" value="true"> Show Only Active Members</lable><br>
+				<lable class="small">Search Name / Email:</lable>
+				<input type="text" name="search">
+				<input type="submit" value="search"><br>
+				<lable class="small">Last Renewed:</lable>
+				<select name="mo">
+					<option value="" selected>Month</option>
+					<option value="01">Jan</option>
+					<option value="02">Feb</option>
+					<option value="03">Mar</option>
+					<option value="04">Apr</option>
+					<option value="05">May</option>
+					<option value="06">Jun</option>
+					<option value="07">Jul</option>
+					<option value="08">Aug</option>
+					<option value="09">Sep</option>
+					<option value="10">Oct</option>
+					<option value="11">Nov</option>
+					<option value="12">Dec</option>
+				</select>
+				<select name="yr">
+					<option value="" selected>Year</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+				</select>
+			</form>
+		</div>
+		<%= page_entries_info @members, :entry_name => 'Members' %> <%= "for <strong>"+ params[:search] +"</strong>" unless params[:search] == "" or params[:search] == nil %> <%= "- <strong>only active members</strong> - " unless params[:activated] == "" or params[:activated] == nil %> <%= "where last renewed in <strong>"+ @date +"</strong>" unless @date == "-" or @date == nil %>
+		<hr />
+		<table class="reports-member-list">
+			<tr>
+				<th>Member</th>
+				<th align="center">Active</th>
+				<th align="center">Member Since</th>
+				<th align="center">Last Renewed</th>
+				<th>Email</th>
+			</tr>
+			<%= render :partial => "members_list", 
+		  		:collection => @members,
+		   		:as => :member %>
+		</table>
+		<%= will_paginate(@members) %>
+		<p class="right"><%#= link_to "Download list as a CSV file", "/reports.csv?activated="+ params[:activated].to_s %></p>
+		<% activated = params[:activated].to_s
+		search = params[:search].to_s
+		mo = params[:mo].to_s
+		yr = params[:yr].to_s
+		%>
+		<p class="right" style="margin-top:20px;"><%= link_to "Download list as a CSV file", "/reports.csv?activated="+ activated +"&search="+ search +"&mo="+ mo +"&yr="+ yr, {:style => "background-color: rgb(4, 131, 211); background-image: url('/images/cle2030-intro-but-bg_re.png'); background-repeat: repeat-x; background-position: center bottom; border: 1px solid rgb(4, 131, 211); color: rgb(255, 255, 255); text-decoration: none; font-weight: normal; margin-bottom: 0.1em; -moz-border-radius: 5px 5px 5px 5px; padding: 10px;"} %></p>
+	</div>		   		
+	<% else %>
+	<div id="loginSection" class="notice">
+		<p>You must be logged in to see the members list. You can <%= link_to "log in here", new_user_session_path%>.</p>
+		
+		<h4>Not a Member?</h4>
+		<p>We would love for you to get to know us more. <a href="/about">learn about us</a> | <a href="/benefits">how to get involved</a> | <a href="registration/new">become a member</a>.</p>
+	</div>
+	<% end %>

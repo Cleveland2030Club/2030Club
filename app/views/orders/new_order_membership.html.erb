@@ -1,0 +1,31 @@
+<div class="threeColumns-1">
+  <h1>Member Registration</h1>
+  <!-- begin comment - This section will be viewed only when a user tries to login without the account being active 
+  <div class="errorExplanation">
+    In order to access your account you must complete your membership dues payment through paypal. If you feel you are recieving this message by accident, please contact our <a href="mailto:membership@cleveland2030.org">Membership Director here</a>.
+  </div>-->
+  <!-- end comment -->
+  <div class="notice">
+    Thank you for your interest in Cleveland 20/30 Club, your account has been created. Our club membership requiers a yearly dues that gives you acess to all club discounts, website access and connections to Cleveland's talented and dedicated Young Profesionals.
+  </div>
+  <%- form_for :order, @order, :url => { :action => "checkout" } do |f| %>
+    <%= hidden_field_tag 'quantity', 1 %>
+    <fieldset>
+      <legend><span><strong class="for-price">Total</strong><strong>&nbsp;</strong></span></legend>
+      <div class="form-node">
+        <span class="for-price"><%= number_to_currency(@order.amount) %></span>
+        <span class="label-like">Membership Dues</span>
+      </div>
+      <div class="form-node hr">&nbsp;</div>
+      <div class="form-node">
+        <span class="for-price price"><%= number_to_currency(@order.amount) %></span>
+        <span class="for-price txt-r">Subtotal:</span>
+      </div>
+    </fieldset>
+    <div class="formAction clear">
+      <%= image_submit_tag('https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif', 
+                            :alt => "Btn_xpresscheckout",
+                            :class => "paypal") %>
+    </div>
+  <%- end %>
+</div>

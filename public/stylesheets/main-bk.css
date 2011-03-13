@@ -1,0 +1,687 @@
+/* 
+html5doctor.com Reset Stylesheet
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header, 
+hgroup, menu, nav, section,
+time, mark, audio, video {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+body {line-height:1;}
+article, aside, dialog, figure, footer, header, 
+hgroup, nav, section {display:block;}
+nav ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none;}
+a {margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;}
+ins {background-color:#ff9;color:#000;text-decoration:none;}
+mark {background-color:#ff9;color:#000; font-style:italic;font-weight:bold;}
+del {text-decoration: line-through;}
+abbr[title], dfn[title] {border-bottom:1px dotted #000;cursor:help;}
+table {border-collapse:collapse;border-spacing:0;}
+hr {display:block;height:1px;border:0;border-top:1px solid #cccccc;margin:1em 0;padding:0;}
+input, select {vertical-align:middle;}
+/* end reset */
+
+div.clear{clear:both;}
+
+
+/* Cleveland 2030 Styles start here */
+
+/* Font Styles */
+h1{font-size:180%;}
+h2{font-size:160%;}
+h3{font-size:140%;}
+h4{font-size:120%;}
+h5{font-size:100%;}
+
+h1 span {color:#0a4d8f}
+.small{font-size:84%;}
+
+/*generic formatting*/
+.right{float:right;}
+.left{float:left;}
+
+/* Structure Styles */
+body{font-family: Helvetica, Tahoma, Verdana, sans-serif;font-size:80%;position:relative;background:#fff url(../images/bg-strech.jpg) repeat-x top left;color:#333;}
+#container{width:100%;margin:0 auto;background:transparent url(../images/bg.jpg) no-repeat top center;}
+#container img.skyline{position:absolute;right:140px;top:107px;}
+#shadowContainer{width:960px;margin:0 auto;}
+#innerContainer{width:972px;margin:0 auto;}
+
+#header{height:145px;/*height:150px;background:transparent url(../images/cle2030-skyline.png) no-repeat 100% 85px;*/}
+#header #topHeader{/*height:20px;text-align:right;*/}
+#header a.logo{margin:0 0 0 15px;/*margin:5px 5px 5px 15px;*/display:block;float:left;/*width:300px;*/}
+#header #alertSection{float:left;width:345px;margin:0 5px;padding:8px;}
+#header #loginSection{float:right;width:300px;padding:28px 0 0 0;}
+
+nav {height:40px;padding:0;background:transparent url(../images/nav-bg.gif) repeat-x 0 3px;border-bottom:3px solid #2c2d2d;}
+nav div{overflow:hidden;height:45px;margin:0 auto;padding:0 3px;/*background:transparent url(../images/cle2030-skyline.png) no-repeat 100% -63px;*/}
+nav ul li{float:left;margin:0 3px;height:42px;}
+nav ul li a{font-size:115%;/*font-size:130%;*/text-decoration:none;font-weight:normal;/*font-weight:bold;*/color:#fff;display:block;height:24px;/*height:42px;*/padding:17px 5px 0;/*padding:14px 10px 0;*/}
+nav ul li a:hover{color:#ebebeb;}
+nav a.current{background:transparent url(../images/cle2030-menu_re.png) repeat-x 0 -50px;}
+
+#content{padding:10px;background:#fff;}
+footer{background:#2d2d2d;padding:10px;height:100px;color:#fff;}
+
+/* column styles */
+/* 2 column layout */
+div.twoColumns-0{float:left;/*width:695px;*/width:670px;}
+div.twoColumns-1{float:right;width:275px;}
+
+/* column styles end*/
+
+/* content styles */
+div.introContainer{position:relative;/*width:692px;*/height:240px;margin:0 0 10px 0;}
+div.intro{/*width:722px;*/ width:700px; height:240px;background:#044e8f url(../images/cle2030-intro-bg_re.png) repeat-x top left;position:absolute;top:0;left:-30px;}
+div.introContainer .corner{width:18px;height:9px;position:absolute;bottom:-9px;left:-29px;background:transparent url(../images/cle2030-intro-corner.png) no-repeat top left;}
+
+div.miniCalendar{width:274px;height:240px;background:#293239;}
+
+div.calendarHeader{overflow:hidden;height:30px;margin:10px 0 0 0;width:692px;}
+
+div.calendarHeader form{float:left;width:360px;height:40px;}
+div.calendarHeader form select{width:200px;}
+div.calendarHeader div{float:right;width:45%;text-align:right;height:40px;padding:0 6px 0 0;}
+div.calendarHeader div span.daySelected{display:block;float:right;padding:2px 5px;font-weight:bold;background:#0099ff;color:#fff;margin:4px;}
+div.calendarHeader div a{-moz-border-radius: 3px; -webkit-border-radius: 3px;text-decoration:none;font-size:130%;display:block;height:21px;width:32px;line-height:21px;padding:0 0 0 0;background:#000;color:#fff;float:right;margin:2px;text-align:center;}
+div.calendarHeader div a:hover{background:#666;}
+
+/*
+div.calendar{margin:10px 0 0 0;}
+div.calendar div.month {width:686px;overflow:hidden;border:1px solid #ccc;}
+div.calendar div.month div.weekTitles{height:30px;background:#000;}
+
+div.calendar div.month div.weekTitles div{width:96px;float:left;color:#fff;text-align:center;padding:8px 0;border:1px solid #000;border-right:1px solid #ccc;font-weight:bold;}
+div.calendar div.month div.weekRow{overflow:hidden;border-bottom:1px solid #ccc;clear:both;}
+div.calendar div.month div.weekRow div.day{height:64px;border:1px solid #fff;border-right:1px solid #ccc;float:left;width:96px;}
+div.calendar div.month div.weekTitles div.last,
+div.calendar div.month div.weekRow div.last{border-right:none;}
+div.calendar div.month div.weekRow div.day a.date{display:block;background:#c0e0ff;padding:1px 3px;font-size:85%;}
+div.calendar div.month div.weekRow div.day span.blank{background:#ebebeb;display:block;padding:1px 3px;font-size:85%;}
+div.calendar div.month div.weekRow div.day ul{list-style:none;}
+div.calendar div.month div.weekRow div.day ul li{padding:2px 0 1px 2px;overflow:hidden;}
+div.calendar div.month div.weekRow div.day ul li a{font-size:82%;padding:0 0 0 2px;white-space:nowrap;display:block;float:left;}
+div.calendar div.month div.weekRow div.day ul li span{width:5px;height:10px;margin:0 2px 1px 0;float:left;}
+div.calendar div.month div.weekRow div.current {border:1px solid #0099ff;}
+div.calendar div.month div.weekRow div.current a.date{background:#0099ff;color:#fff;}
+*/
+
+
+table#calendar{margin:0;}
+table#calendar {width:686px;overflow:hidden;border:1px solid #ccc;border-left:2px solid #ccc;border-collapse:separate;}
+table#calendar thead tr{background:#000;}
+
+table#calendar thead tr th{height:14px;background:#000;width:96px;color:#fff;text-align:center;padding:8px 0;border:1px solid #000;border-right:1px solid #ccc;font-weight:bold;}
+table#calendar tbody tr{overflow:hidden;border-bottom:1px solid #ccc;clear:both;}
+table#calendar tbody tr td{overflow:hidden;border-bottom:1px solid #ccc;height:64px;border:1px solid #fff;border-right:1px solid #ccc;width:96px;}
+table#calendar tbody tr td.weekend{background:#ebebeb;}
+table#calendar tbody tr td div.label{background:#c0e0ff;padding:1px 3px;font-size:85%;zoom:1;}
+table#calendar tbody tr td div.label a{display:block;width:95px;}
+
+table#calendar tbody tr td a.date{display:block;background:#c0e0ff;padding:1px 3px;font-size:85%;}
+table#calendar tbody tr td.notmonth div{background:#ebebeb;display:block;padding:1px 3px;font-size:85%;}
+table#calendar tbody tr td ul{list-style:none;}
+table#calendar tbody tr td ul li{padding:2px 0 1px 2px;overflow:hidden;}
+table#calendar tbody tr td ul li a{font-size:82%;padding:0 0 0 2px;white-space:nowrap;display:block;float:left;}
+table#calendar tbody tr td ul li span{width:5px;height:10px;margin:0 2px 1px 0;float:left;}
+table#calendar tbody tr td.today {border:1px solid #255683;}
+table#calendar tbody tr td.today div{background:#255683;font-weight:bold;color:#fff;}
+table#calendar tbody tr td.today div a{font-weight:bold;color:#fff;}
+table#calendar tbody tr td.current {border:1px solid #0099ff;}
+table#calendar tbody tr td.current div{font-weight:bold;background:#0099ff;color:#fff;}
+table#calendar tbody tr td.current div a{font-weight:bold;color:#fff;}
+
+div.miniCalendar{width:275px;height:240px;margin-top:0;padding-top:0;}
+div.miniCalendar div.calendarHeader form{float:none;margin:0 auto;}
+div.miniCalendar div.calendarHeader div{float:none;width:210px;margin: 0 auto;}
+div.miniCalendar div.calendarHeader div span.daySelected{background-color: transparent;color: #000;display:block;text-align:center;width:120px;}
+div.miniCalendar div.month{width: 273px;}
+div.miniCalendar div.month div.weekTitles div,
+div.miniCalendar div.month div.weekRow div.day{width: 37px;}
+div.miniCalendar div.month div.weekRow div.day,
+div.miniCalendar div.month div.weekTitles{height:30px;}
+div.miniCalendar div.month div.weekRow div.day ul{display:none;}
+div.miniCalendar div.month div.weekRow div.day a.date,
+div.miniCalendar div.month div.weekRow div.day span{display:block; height:28px}
+div.miniCalendar div.month div.weekRow.odd div.day a.date{background-color:#e9e9e9;}
+div.miniCalendar div.month div.weekRow.even div.day a.date{background-color:#f3f3f3;}
+div.miniCalendar div.month div.weekRow div.day:hover{border: 1px #0e93f1 solid;}
+div.miniCalendar div.month div.weekRow div.current a.date{color:#000;}
+div.miniCalendar div.month div.weekRow div.day span.blank{background:inherit}
+
+table#calendar{margin:0;}
+table#calendar {width:686px;overflow:hidden;border:1px solid #ccc;border-left:2px solid #ccc;border-collapse:separate;}
+table#calendar thead tr{background:#000;}
+
+table#calendar thead tr th{height:14px;background:#000;width:96px;color:#fff;text-align:center;padding:8px 0;border:1px solid #000;border-right:1px solid #ccc;font-weight:bold;}
+table#calendar tbody tr{overflow:hidden;border-bottom:1px solid #ccc;clear:both;}
+table#calendar tbody tr td{overflow:hidden;border-bottom:1px solid #ccc;height:64px;border:1px solid #fff;border-right:1px solid #ccc;width:96px;}
+table#calendar tbody tr td.weekend{background:#ebebeb;}
+table#calendar tbody tr td div.label{background:#c0e0ff;padding:1px 3px;font-size:85%;zoom:1;}
+table#calendar tbody tr td div.label a{display:block;width:95px;}
+
+table#calendar tbody tr td a.date{display:block;background:#c0e0ff;padding:1px 3px;font-size:85%;}
+table#calendar tbody tr td.notmonth div{background:#ebebeb;display:block;padding:1px 3px;font-size:85%;}
+table#calendar tbody tr td ul{list-style:none;}
+table#calendar tbody tr td ul li{padding:2px 0 1px 2px;overflow:hidden;}
+table#calendar tbody tr td ul li a{font-size:82%;padding:0 0 0 2px;white-space:nowrap;display:block;float:left;}
+table#calendar tbody tr td ul li span{width:5px;height:10px;margin:0 2px 1px 0;float:left;}
+table#calendar tbody tr td.today {border:1px solid #255683;}
+table#calendar tbody tr td.today div{background:#255683;font-weight:bold;color:#fff;}
+table#calendar tbody tr td.today div a{font-weight:bold;color:#fff;}
+table#calendar tbody tr td.current {border:1px solid #0099ff;}
+table#calendar tbody tr td.current div{font-weight:bold;background:#0099ff;color:#fff;}
+table#calendar tbody tr td.current div a{font-weight:bold;color:#fff;}
+
+
+ul li span.coupons{background:#cc66ff;}
+ul li span.social{background:#ff9933;}
+ul li span.networking{background:#cc3333;}
+ul li span.philanthropy{background:#00a651;}
+ul li span.educational{background:#66ccff;}
+ul li span.uncategorized{background:#aaaaaa;}
+
+div.dayEvents{margin:20px 0 0 0;}
+div.dayEvents h2{border-bottom:5px solid #ccc;padding:4px;}
+div.dayEvents span{color:#0a4d8f;}
+
+form.filters {margin:60px 0 0 0;}
+form.filters fieldset{width:248px;padding:0 0 20px 0;}
+form.filters fieldset label{font-weight:bold;clear:both;}
+form.filters fieldset ul{list-style:none;overflow:hidden;}
+form.filters fieldset ul li{overflow:hidden;width:240px;}
+form.filters fieldset ul li input{vertical-align:baseline;}
+form.filters fieldset ul li label{font-weight:normal;vertical-align:baseline;}
+form.filters fieldset ul li span{width:5px;height:12px;margin:0 2px 1px 0;display:block;float:left;margin:4px 0 0 0;}		
+form.filters fieldset input{margin:2px;}
+
+form.rsvp label{font-weight:bold;border-bottom:1px solid #ccc;display:block;padding:5px 0 8px 4px;}
+form.rsvp fieldset {background:#f0f0f0;padding:4px;-moz-border-radius: 5px; -webkit-border-radius: 5px;}
+form.rsvp fieldset div label{display:inline;border:0;padding:0;}
+form.rsvp fieldset div{padding:5px;}
+form.rsvp fieldset div.first{border-bottom:1px dotted #ccc;}
+form.rsvp fieldset div.disabled label{text-decoration:line-through;}
+form.rsvp fieldset div input {vertical-align:text-top;}
+form.rsvp fieldset div p {width:200px;margin:2px 0 2px 25px;color:#666;}
+form.rsvp fieldset div ul{list-style:none;}
+form.rsvp fieldset div ul li {margin:2px 0 0 25px;padding:2px;}
+form.rsvp fieldset div ul li label{display:block;padding:2px;font-weight:normal;}
+form.rsvp fieldset div ul li input{width:180px;}
+form.rsvp fieldset div.submit{padding:2px 0 3px 33px;}
+
+table.rsvpTable{margin:5px 0;width:100%;border:1px solid #ccc;border-collapse:separate;border-bottom:0;border-right:0;}
+table.rsvpTable tr th{background:#000;color:#fff;text-align:center;padding:8px 0;border:1px solid #000;border-right:1px solid #ccc;font-weight:bold;}
+table.rsvpTable tr td{width:96px;color:#666;padding:4px;border-bottom:1px solid #ccc;border-right:1px solid #ccc;font-weight:bold;}
+table.rsvpTable tr td.price{text-align:right;}
+table.rsvpTable tr th.items{width:150px;}
+table.rsvpTable tr td select{width:120px;}
+table.rsvpTable tr.subtotal td.subtotalLabel {border-top:3px solid #000;padding:10px;text-align:right;}
+table.rsvpTable tr.subtotal td.price {border-top:3px solid #000;padding:10px;font-size:120%;}
+
+div.eventRSVP h4{margin:10px 0 0 0;}
+div.eventRSVP table{margin:10px 0 0 0;}
+
+input.paypalSubmit {padding:5px;font-weight:bold;margin:10px auto;display:block;}
+
+div.eventTypesContainer{height:120px;padding:3px;overflow:auto;border:1px solid #ccc;}
+
+div.subintroContainer { margin-bottom: 15px; overflow: hidden;}
+div.subintroColumnLeft, div.subintroColumnRight { float: left; width: 460px; }
+div.subintroColumnRight { margin-left: 15px; width: 190px; }
+
+div.membership, div.recentnews, div.sponsor, div.flickr { margin-bottom: 30px; }
+div.membership h3, div.recentnews h3, div.sponsor h3, div.flickr h3 { text-transform: uppercase; font-size: 15px; margin-bottom: 5px; }
+
+div.membershipBody { background: #ebebeb; border: 5px solid #ebebeb; -moz-border-radius: 5px; -webkit-border-radius: 5px; overflow: hidden; padding: 3px; }
+	div.register { float: left; padding-right: 10px; text-align: center; }
+		div.register p a { color: #336799; font-family: Arial; }
+			p.becomeMember { margin: 24px 0 5px 0; }
+			p.becomeMember a { background: url(../images/becomeamember.jpg) no-repeat 0 0; display: block; height: 48px; text-indent: -9999px; width: 195px; }
+	div.testimonials { border-left: 5px solid #ccc; float: left; padding-left: 10px;}
+			div.testimonials h4 { float: left; margin-bottom:3px; }
+			div.testimonials a { background: #999 url(../images/testimonialsrightarrow.jpg) no-repeat 100% 0; color: #fff; display: block; float: right; font-size: 11px; font-weight: normal; line-height: 12px; margin-top:2px; padding-left: 6px; text-decoration: none; width: 34px; }
+		div.testimonialBody { border-top:1px solid #D4D8DB; padding: 8px; clear: both; }
+			div.testimonialBody p { font-size: 12px; }
+			div.testimonialBody p.testimonialAuthor { color: #666; margin-top: 30px; }
+			
+div.recentnewsBody ul { list-style: square; margin-left:20px; }
+	div.recentnewsBody ul li { font-size: 12px; line-height: 15px; padding-bottom:5px; }
+		div.recentnewsBody ul li a { color: #2c83b0; }
+		div.recentnewsBody ul li.recentnewsMore { list-style: none; padding-left: 5px; }
+			div.recentnewsBody ul li.recentnewsMore a { color: #676767; font-size: 10px; }
+
+div.flickrBody { margin-top: 8px; }
+div.flickrLeft, div.flickrImage, div.flickrRight { float: left; height: 145px; }
+div.flickrLeft a { display: block; background: url(../images/flickrLeft.jpg) no-repeat 0 0; width: 30px; height: 85px; margin: 32px 10px; }
+div.flickrRight a { display: block; background: url(../images/flickrRight.jpg) no-repeat 0 0; width: 30px; height: 85px; margin: 32px 10px; }
+
+/* Jon's Event */
+.event
+{
+	background-color: #0066b6;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	color: #fff;
+	margin: 6px 0;
+	position: relative;
+	text-align: center;
+	width: 200px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+}
+
+.event .date
+{
+	font-size: 140%;
+	font-variant: small-caps;
+	line-height: 150%;
+	padding: 10px 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+}
+
+.event .date span
+{
+	border-bottom: #fff solid 3px;
+}
+
+.event ul
+{
+	background-color: #fff;
+	border-left: #fff solid 1px;
+	height: 100%;
+	list-style: none;
+	margin: 0 0 0 60px;
+	padding: 0;
+	text-align: left;
+	width: 100%;
+}
+
+.event ul li
+{
+	border-left: transparent solid 8px;
+	color: #111;
+	display: block;
+	line-height: 140%;
+	padding: 5px 10px;
+}
+
+.event ul li:hover
+{
+	background-color: #f2f2f2;
+}
+
+.event ul li a
+{
+	display: block;
+}
+
+/* !Event Types */
+.event ul li.coupons
+{
+	border-left-color: #cc66ff;
+}
+.event ul li.social
+{
+	border-left-color: #ff9933;
+}
+.event ul li.networking
+{
+	border-left-color: #cc3333;
+}
+.event ul li.philanthropy
+{
+	border-left-color: #00a651;
+}
+.event ul li.educational
+{
+	border-left-color: #66ccff;
+}
+.event ul li.uncategorized
+{
+	border-left-color: #aaaaaa;
+}
+
+.event ul li.more
+{
+	background-color: #f2f2f2;
+}
+
+div.dayEvents .event
+{
+	background-color: transparent !important;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	margin: 3px 0 !important;
+	position: relative;
+	text-align: center;
+}
+
+div.dayEvents .event ul{margin: 0;}
+div.dayEvents .event ul li div.details {color:#666;padding:4px;overflow:hidden;}
+div.dayEvents .event ul li div.details a{display:inline;padding:1px 0 0 2px;}
+div.dayEvents .event ul li div.details span{display:inline;padding:1px 0 0 2px;color:#000;}
+div.dayEvents .event ul li div.details div.columns{background:transparent;width:150px;float:left;padding:3px;}
+div.eventDetails div.miniColumn  ul,
+div.dayEvents .event ul li div.details div.columns ul{list-style:none;background:transparent;border:0;}
+div.eventDetails div.miniColumn  ul li,
+div.dayEvents .event ul li div.details div.columns ul li{padding:2px 2px 0 15px;color:#666;margin:0;border:0;background:transparent url(../images/check_icon.png) no-repeat 0 5px;}
+div.dayEvents .sponsored ul li{border:0!important;overflow:hidden;}
+div.dayEvents .sponsored ul li img{display:block;float:left;margin:0 5px 0 0;}
+div.dayEvents .sponsored ul li div.details,
+div.dayEvents .sponsored ul li a{display:block;width:126px;float:right;}
+div.dayEvents .sponsored ul li div{padding:0!important;}
+div.twoColumns-1 div.eventDetails div.event ul {width:155px;}
+div.twoColumns-1 div.eventDetails div.event ul li{width:155px;}
+
+div.dayEvents .event{width: 690px;}
+div.dayEvents .sponsored{width: 240px;}
+div.flickrImage { width: 360px; text-align: center; }
+.uploadedEventLogo{width:200px; background-color:#eee;}
+
+div.eventDetails {overflow:hidden;}
+div.eventDetails div.columnsContainer{clear:both;padding:8px 5px;overflow:hidden;}
+div.eventDetails div.miniColumn{float:left;width:180px;margin:5px;}
+div.eventDetails div.miniColumn h3{margin:2px 0 3px 0;font-size:90%;}
+div.eventDetails div.miniColumn address{line-height:20px;}
+div.eventDetails div.miniColumn a{display:block;height:20px;}
+div.eventDetails div.miniColumn ul li{padding-bottom:3px;}
+div.eventDetails div.miniColumn dl{width:150px;overflow:hidden;}
+div.eventDetails div.miniColumn dl dt{clear:left;float:left;width:88px;}
+div.eventDetails div.miniColumn dl dd{float:left;width:40px;font-weight:bold;}
+div.eventDetails h1{display:inline;line-height:35px;}
+a.titleLink{white-space:nowrap;}
+div.eventDetails div.event {float:left;width:260px;}
+div.eventDetails div.event ul{width:200px;}
+div.eventDetails div.event ul li {width:170px;height:62px;background:#f0f0f0;-moz-border-radius-bottomright: 10px;-moz-border-radius-topright: 10px;-webkit-border-bottom-right-radius: 10px;-webkit-border-top-right-radius: 10px;}
+div.eventDetails div.event ul li dl{width:150px;overflow:hidden;}
+div.eventDetails div.event ul li dl dt{clear:left;float:left;width:68px;}
+div.eventDetails div.event ul li dl dd{float:left;width:82px;font-weight:bold;}
+div.eventDetails div.event ul li  span.weekday{font-weight:bold;color:#666;}
+div.eventDetails div.section {line-height:20px;padding:5px;clear:both;}
+div.eventDetails div.section  p{padding:5px;}
+div.eventDetails div.section h3{border-bottom:4px solid #ccc;font-size:90%;}
+div.eventDetails div.section h4{font-size:90%;}
+div.eventDetails div.section div.map{width:420px;float:left;margin:0 3px 0 0;}
+
+
+div.whoElse{margin:20px 0 5px 0;}
+div.whoElse p{margin:5px;line-height:20px;}
+div.whoElse h3{font-size:90%;}
+
+div.intro div{display:none;}
+div.intro div.current
+{
+	display:block;
+}
+div.intro a.learn
+{
+	background:#FFF url('../images/learn-more-background.jpg') 0 0 repeat-x;
+	border-radius:5px;
+	color:#294558;
+	display:block;
+	position:absolute;
+	bottom:20px;
+	right:20px;
+	font-size: 160%;
+	padding: 10px 15px;
+	text-decoration:none;
+	text-shadow:rgba(10, 10, 10, 0.2) 1px 2px 2px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+div.intro a.learn:hover{text-decoration:underline;}
+div.intro ul
+{
+	margin-top:14px;
+	margin-left:18px;
+	width:165px;
+}
+div.intro ul li
+{
+	display:block;height:100%;font-size:140%;line-height:230%;list-style:none;margin:4px 15px 4px 0;padding-right:15px;width:100%;
+}
+div.intro ul li a
+{
+	background-color:#1082e1;
+	color:#fff;
+	display:block;
+	height:38px;
+	margin-right: 15px;
+	padding-left: 20px;
+	text-decoration:none;
+}
+div.intro ul li.current, div.intro ul li:hover
+{
+	color:#000;
+}
+div.intro ul li.current
+{
+	background:transparent url('../images/intro-li-background.png') 0 0 no-repeat;
+}
+div.intro ul li:hover a, div.intro ul li.current a
+{
+	background-color:#fff;
+	color:#000;
+}
+div.intro div p
+{
+	color: #fff;
+	font-size: 240%;
+	position: absolute;
+	margin-right: 20px;
+	top: 25px;
+	left: 200px;
+}
+
+
+/* forms */
+.allPurposeForm legend {
+	font-size:1em;
+	text-transform:uppercase;
+}
+.allPurposeForm fieldset {
+	margin: 0 40px 0 0;
+	padding: 20px 0;
+}
+.allPurposeForm fieldset>fieldset {
+	padding: 0; margin: 0;
+}
+.allPurposeForm fieldset.oneCol {
+	float: left;
+	width: 500px;
+}
+.allPurposeForm fieldset.twoCol {
+	float: left;
+	width: 400px;
+}
+.allPurposeForm fieldset h2 {
+	font-size: 108%;
+	font-weight: bold;
+	color:#333;
+}
+.allPurposeForm fieldset>fieldset h2 {
+	font-size: 160%;
+}
+.allPurposeForm fieldset h2 a.login {
+	font-size: 50%;	
+}
+.allPurposeForm fieldset div {
+	margin: 16px 0;
+}
+.allPurposeForm fieldset div.form-node {
+	clear:left;
+	overflow:hidden;
+}
+.allPurposeForm fieldset label, .allPurposeForm fieldset .label-like {
+	text-align: right;
+	width: 170px;
+	display: block;
+	float: left;
+	margin: 6px 8px 0 0;
+	text-transform: uppercase;
+	font-size: 90%;
+	color: #6C6C6C;
+}
+.allPurposeForm fieldset .aside-label {
+	font-size:84%;
+	color:#a1a1a1;
+	display: block;
+}
+.allPurposeForm fieldset.checklist div {
+	margin: 5px 0;
+	padding: 0;	
+}
+.allPurposeForm fieldset.checklist label {
+	margin: 4px 8px 0 0;
+	padding: 0;
+}
+.allPurposeForm fieldset.checklist input[type="checkbox"] {
+	margin: 0;
+	padding: 4px 0 4px 4px;
+}
+.allPurposeForm fieldset label.checkbox {
+	text-align:left;
+	margin-left:1em;
+}
+.allPurposeForm fieldset input[type="checkbox"].checkbox {
+	float:left;
+}
+
+
+.allPurposeForm fieldset input[type="text"], .allPurposeForm fieldset input[type="password"], .allPurposeForm fieldset input[type="email"], .allPurposeForm fieldset select, .allPurposeForm fieldset textarea {
+	width: 200px;
+	display: block;
+	border: 1px solid #6c6c6c;
+	margin: 6px 8px 0 0;
+	padding: 4px 0 4px 4px;
+}
+.allPurposeForm fieldset input[type="file"]{
+	width: 200px;
+	margin: 6px 8px 0 0;
+	padding: 4px 0 4px 4px;
+}
+.allPurposeForm fieldset textarea.tall {
+	height:200px;
+}
+.allPurposeForm fieldset input[type="text"].twoFieldsinline, .allPurposeForm fieldset select.twoFieldsinline{
+	float:left;
+	width:95px;
+}
+.allPurposeForm fieldset input[name="address2"],
+.allPurposeForm fieldset input[name="localAddress2"],
+.allPurposeForm fieldset input[name="hqAddress2"] {
+	margin: 7px 0 0 178px;
+}
+.allPurposeForm fieldset input[name="zip"] {
+	width: 50px;
+}
+.allPurposeForm fieldset select.time
+{
+	width: 80px;
+	display: inline;
+	margin: 0;
+}
+
+.allPurposeForm fieldset input[name="phone1"], .allPurposeForm fieldset input[name="phone2"],
+.allPurposeForm fieldset input[name="taxID1"]{
+	width: 30px;
+	display: inline;
+	margin: 0;
+}
+.allPurposeForm fieldset input[name="taxID2"] {
+	width: 70px;
+	display: inline;
+	margin: 0;
+}
+.allPurposeForm fieldset input[name="phone3"] {
+	width: 40px;
+	float: none;
+	display: inline;
+	margin: 0;
+}
+.allPurposeForm fieldset div.formAction {
+	border-top: 3px solid #6c6c6c;
+	margin: 26px 0 0 0;
+	padding: 13px 0;
+	background-color: #ebebeb;
+	overflow: auto;
+}
+.allPurposeForm fieldset a.button {/* FORM BUTTON */
+	float: right;
+	margin: 0 13px 0 13px;
+}
+.allPurposeForm fieldset a.button, .allPurposeForm fieldset a.button:visited, .rsvp fieldset a.button {
+	background-color: #2799e9;
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff;
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+	font-size: 140%;
+}
+.allPurposeForm fieldset a.button:hover { background-color: #2181c3; color: #fff; }
+.allPurposeForm fieldset a.button:active { top: 1px; }
+.allPurposeForm fieldset .remove {
+	float:left;
+	display:block;
+	padding-left:15px;
+	margin:5px;
+	background:url("../images/remove-icon.gif") no-repeat left top;
+}
+.allPurposeForm fieldset div.no-logo
+{
+	border: 1px dashed #ccc;
+	height: 100px;
+	margin-left: 178px;
+	width: 300px;
+
+}
+
+.addPrice{
+	display:block;
+	margin:1em 0;
+}
+
+
+/* Sponsorship rotator on the home page */
+div.sponsor .sponsorBody,
+div.sponsor .sponsorBody .coda-slider-wrapper,
+div.sponsor .sponsorBody .coda-slider-wrapper .coda-slider,
+div.sponsor .sponsorBody .coda-slider-wrapper .coda-slider .panel-wrapper
+{
+	margin: 0;
+	padding: 0;
+	width: inherit;
+}
+
+div.sponsor .sponsorBody .coda-slider-wrapper .coda-slider
+{
+	background-color: inherit;
+}
+
+.coda-slider, .coda-slider .panel
+{
+	min-height: 220px;
+	width: 190px !important;
+}

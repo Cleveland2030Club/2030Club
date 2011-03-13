@@ -1,0 +1,18 @@
+<% if flash[:notice] %>
+  <div class="errorExplanation"><%= flash[:notice] %></div>
+<% end %>
+<div class="twoColumns-0">
+	<h1><span class="title">Forgot Your Password?</span> <a href="/user_sessions/new/" class="tiny right">Login to my account</a><a href="/registrations/new/" class="tiny right clear">Create a new account</a></h1>
+	<% form_tag password_resets_path do %>
+  <fieldset>
+ 		<legend><span><strong>Fill in your registered email and we will send you a link to reset your password.</strong></span></legend>
+    <div class="form-node">
+			<label>Email:</label>
+  		<%= text_field_tag "email" %>
+  	</div>
+  </fieldset>
+  <div class="formAction ">
+	  <%= submit_tag "Reset my password" %>
+  </div>
+  <% end %>
+</div>  

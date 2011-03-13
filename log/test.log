@@ -1,0 +1,1128 @@
+# Logfile created on Thu Oct 07 23:33:12 -0400 2010
+
+Processing EventsController#register_member (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"action"=>"register_member", "controller"=>"events"}
+
+
+Processing EventsController#register_member (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"event_id"=>"5", "action"=>"register_member", "controller"=>"events"}
+Redirected to http://test.host/orders/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/events/register_member?event_id=5]
+  [4;36;1mMembership Create (0.5ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2010-10-08 03:45:15', '2010-10-08 03:45:15')[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+  [4;36;1mMembership Create (0.3ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Some membership', '2010-10-08 03:45:15', '2010-10-08 03:45:15')[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+  [4;36;1mGuest Create (0.3ms)[0m   [0;1mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-10-08 03:45:15', '2010-10-08 03:45:15', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Redirected to http://test.host/orders/new
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/guests?event_id=1&guest=some+value]
+  [4;35;1mGuest Create (0.3ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-10-08 03:45:15', '2010-10-08 03:45:15', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Rendering template within layouts/application
+Rendering app/views/events/show.html.erb
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/guests?event_id=1&guest=some+value]
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-10-08 03:45:15', NULL, '2010-10-08 03:45:15', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-10-08 03:45:15', 1, '2010-10-08 03:45:15')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-10-08 03:45:15', NULL, '2010-10-08 03:45:15', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-10-08 03:45:15', 1, '2010-10-08 03:45:15')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-10-08 03:45:15', NULL, '2010-10-08 03:45:15', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Create (0.1ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test2', NULL, NULL, '2010-10-08 03:45:15', NULL, '2010-10-08 03:45:15', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.1ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test3', NULL, NULL, '2010-10-08 03:45:15', NULL, '2010-10-08 03:45:15', NULL, 'f', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."sponsored" = 't') [0m
+  [4;36;1mMembership Create (0.4ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2010-10-08 03:45:15', '2010-10-08 03:45:15')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Some item', 70.0, 'Membership', '2010-10-08 03:45:15', 1, '2010-10-08 03:45:15')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-10-08 03:45:15', 1, 112, '2010-10-08 03:45:15', 1)[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '71dff5a7a17ba7faa93a4f989184d23ccc644f4896d4868c8e13496731a8d0b46da04e9017fb869ed303b1d5b6c24c3cc19d551057b724b75e48e171ceb01ff0') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '8zMe1W_w1WaFkApYla1G') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, '8zMe1W_w1WaFkApYla1G', NULL, NULL, '2010-10-08 03:45:15', '99f1300b3054ff0381626446fd7c66def0dc086595b8cae41c2b2eeeb7ba0a6275db0e8104180db74b7e6549bbd071fb44b19d950080c66ba1941020a4137cfe', NULL, '3f6WxRN5rYF8a4sv6foB', '2010-10-08 03:45:15', 0, NULL, 'R5BfLVHGNil1gnxJG9pm', NULL, 'Plate', 'george_plate', '71dff5a7a17ba7faa93a4f989184d23ccc644f4896d4868c8e13496731a8d0b46da04e9017fb869ed303b1d5b6c24c3cc19d551057b724b75e48e171ceb01ff0', 0, NULL, 'f', NULL, 'George', 'jdoe@gmail.com', 'f')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrder Create (0.3ms)[0m   [0mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-10-08 03:45:15', NULL, NULL, '2010-10-08 03:45:15', 0.0, 'User', 'f', 1)[0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-10-08 03:45:15', NULL, '2010-10-08 03:45:15', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2010-10-08 03:45:15', 1, '2010-10-08 03:45:15')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-10-08 03:45:15', 1, '2010-10-08 03:45:15')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-10-08 03:45:15', 1, 1, '2010-10-08 03:45:15', 2)[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-10-08 03:45:15', '2010-10-08 03:45:15', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-10-08 03:45:15', NULL, NULL, '2010-10-08 03:45:15', 0.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-10-08 03:45:15', NULL, '2010-10-08 03:45:15', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2010-10-08 03:45:15', 1, '2010-10-08 03:45:15')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-10-08 03:45:15', 1, '2010-10-08 03:45:15')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-10-08 03:45:15', 2, 1, '2010-10-08 03:45:15', 1)[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.1ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-10-08 03:45:15', '2010-10-08 03:45:15', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-10-08 03:45:15', NULL, NULL, '2010-10-08 03:45:15', 20.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-10-08 03:45:15', NULL, '2010-10-08 03:45:15', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 10.0, 'Event', '2010-10-08 03:45:15', 1, '2010-10-08 03:45:15')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-10-08 03:45:15', 1, '2010-10-08 03:45:15')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-10-08 03:45:15', 2, 1, '2010-10-08 03:45:15', 1)[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.1ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"someemail@"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 3ms (View: 1, DB: 7) | 200 OK [http://test.host/users/send_password?email=someemail%40]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing RegistrationsController#new (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/registration/new]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/registration?registration%5Bemail%5D=jdoe%40gmail.com&registration%5Bfirst_name%5D=John&registration%5Blast_name%5D=Doe&registration%5Bpassword%5D=]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Redirected to http://test.host/orders/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/registration?registration%5Bemail%5D=jdoe%40gmail.com&registration%5Bfirst_name%5D=John&registration%5Blast_name%5D=Doe&registration%5Bpassword%5D=password]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"action"=>"complete", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"action"=>"confirm", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.4ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Redirected to http://test.host/orders/new
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/orders/confirm]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/confirm
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"checkout", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/checkout?quantity=0]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" IS NULL) LIMIT 1[0m
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" [0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-10-07 23:45:14' AND '2010-10-21 23:45:14')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering orders/complete
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2010-10-07 23:45:15) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"complete_rsvp", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete_rsvp?quantity=0]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2010-10-07 23:45:15) [GET]
+  Parameters: {"quantity"=>"3", "action"=>"complete_rsvp", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/complete_rsvp?quantity=3]
+Rendering orders/new_order_event.html.erb
+
+
+Processing EventsController#register_member (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"action"=>"register_member", "controller"=>"events"}
+
+
+Processing EventsController#register_member (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"event_id"=>"5", "action"=>"register_member", "controller"=>"events"}
+Redirected to http://test.host/orders/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/events/register_member?event_id=5]
+  [4;36;1mGuest Create (0.6ms)[0m   [0;1mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-11-19 02:12:34', '2010-11-19 02:12:34', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Redirected to http://test.host/orders/new
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/guests?event_id=1&guest=some+value]
+  [4;35;1mGuest Create (0.3ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-11-19 02:12:34', '2010-11-19 02:12:34', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Rendering template within layouts/application
+Rendering app/views/events/show.html.erb
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/guests?event_id=1&guest=some+value]
+  [4;36;1mMembership Create (0.3ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2010-11-19 02:12:34', '2010-11-19 02:12:34')[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+  [4;36;1mMembership Create (0.2ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Some membership', '2010-11-19 02:12:34', '2010-11-19 02:12:34')[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"action"=>"complete", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/orders/complete]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"action"=>"confirm", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Redirected to http://test.host/orders/new
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/confirm]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/confirm
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"checkout", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/checkout?quantity=0]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" IS NULL) LIMIT 1[0m
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" [0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-18 21:12:32' AND '2010-12-02 21:12:32')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering orders/complete
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"complete_rsvp", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete_rsvp?quantity=0]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"quantity"=>"3", "action"=>"complete_rsvp", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/complete_rsvp?quantity=3]
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-19 02:12:34', NULL, '2010-11-19 02:12:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-19 02:12:34', 1, '2010-11-19 02:12:34')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-19 02:12:34', NULL, '2010-11-19 02:12:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-19 02:12:34', 1, '2010-11-19 02:12:34')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-19 02:12:34', NULL, '2010-11-19 02:12:34', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Create (0.1ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test2', NULL, NULL, '2010-11-19 02:12:34', NULL, '2010-11-19 02:12:34', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.1ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test3', NULL, NULL, '2010-11-19 02:12:34', NULL, '2010-11-19 02:12:34', NULL, 'f', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."sponsored" = 't') [0m
+  [4;36;1mMembership Create (0.4ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2010-11-19 02:12:34', '2010-11-19 02:12:34')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Some item', 70.0, 'Membership', '2010-11-19 02:12:34', 1, '2010-11-19 02:12:34')[0m
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-19 02:12:34', 1, 112, '2010-11-19 02:12:34', 1)[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '624b916f1708afa36e4d40529f1dfe0add273589589c6c2b46a0fee6e6e60e048ca595c155588f8124232c4835af64937beb474b1ccbb683b592f3c3d6547f62') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '_ef5WU6y5AsedAl1SRUd') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, '_ef5WU6y5AsedAl1SRUd', NULL, NULL, '2010-11-19 02:12:34', 'c12857087201b3117786c105749eb1c93cd68391426d3c5a30d3489d1529463ac31b18e93d63ec275b355ae79043377f660df926abddf90d90f9c95f321ecc02', NULL, '6zjMRgw2izYjIjLyM0Nq', '2010-11-19 02:12:34', 0, NULL, 'q0PYBvgBqfdzhXC6Bycp', NULL, 'Plate', 'george_plate', '624b916f1708afa36e4d40529f1dfe0add273589589c6c2b46a0fee6e6e60e048ca595c155588f8124232c4835af64937beb474b1ccbb683b592f3c3d6547f62', 0, NULL, 'f', NULL, 'George', 'jdoe@gmail.com', 'f')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-11-19 02:12:34', NULL, NULL, '2010-11-19 02:12:34', 0.0, 'User', 'f', 1)[0m
+  [4;36;1mEvent Create (0.1ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-19 02:12:34', NULL, '2010-11-19 02:12:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2010-11-19 02:12:34', 1, '2010-11-19 02:12:34')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-19 02:12:34', 1, '2010-11-19 02:12:34')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-19 02:12:34', 1, 1, '2010-11-19 02:12:34', 2)[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-11-19 02:12:34', '2010-11-19 02:12:34', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-11-19 02:12:34', NULL, NULL, '2010-11-19 02:12:34', 0.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.1ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-19 02:12:34', NULL, '2010-11-19 02:12:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2010-11-19 02:12:34', 1, '2010-11-19 02:12:34')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-19 02:12:34', 1, '2010-11-19 02:12:34')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-19 02:12:34', 2, 1, '2010-11-19 02:12:34', 1)[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.1ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-11-19 02:12:34', '2010-11-19 02:12:34', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-11-19 02:12:34', NULL, NULL, '2010-11-19 02:12:34', 20.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.1ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-19 02:12:34', NULL, '2010-11-19 02:12:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 10.0, 'Event', '2010-11-19 02:12:34', 1, '2010-11-19 02:12:34')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-19 02:12:34', 1, '2010-11-19 02:12:34')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-19 02:12:34', 2, 1, '2010-11-19 02:12:34', 1)[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.1ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"someemail@"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 3ms (View: 1, DB: 7) | 200 OK [http://test.host/users/send_password?email=someemail%40]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing RegistrationsController#new (for 0.0.0.0 at 2010-11-18 21:12:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/registration/new]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/registration?registration%5Bemail%5D=jdoe%40gmail.com&registration%5Bfirst_name%5D=John&registration%5Blast_name%5D=Doe&registration%5Bpassword%5D=]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2010-11-18 21:12:34) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Redirected to http://test.host/orders/new
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/registration?registration%5Bemail%5D=jdoe%40gmail.com&registration%5Bfirst_name%5D=John&registration%5Blast_name%5D=Doe&registration%5Bpassword%5D=password]
+Rendering orders/new_order_event.html.erb
+
+
+Processing EventsController#register_member (for 0.0.0.0 at 2010-11-30 18:25:48) [POST]
+  Parameters: {"action"=>"register_member", "controller"=>"events"}
+
+
+Processing EventsController#register_member (for 0.0.0.0 at 2010-11-30 18:25:48) [POST]
+  Parameters: {"event_id"=>"5", "action"=>"register_member", "controller"=>"events"}
+Redirected to http://test.host/orders/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/events/register_member?event_id=5]
+  [4;36;1mGuest Create (0.6ms)[0m   [0;1mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-11-30 23:25:48', '2010-11-30 23:25:48', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2010-11-30 18:25:48) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Redirected to http://test.host/orders/new
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/guests?event_id=1&guest=some+value]
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-11-30 23:25:48', '2010-11-30 23:25:48', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2010-11-30 18:25:48) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Rendering template within layouts/application
+Rendering app/views/events/show.html.erb
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/guests?event_id=1&guest=some+value]
+  [4;36;1mMembership Create (0.4ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2010-11-30 23:25:48', '2010-11-30 23:25:48')[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+  [4;36;1mMembership Create (0.3ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Some membership', '2010-11-30 23:25:48', '2010-11-30 23:25:48')[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2010-11-30 18:25:48) [GET]
+  Parameters: {"action"=>"complete", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 4ms (View: 0, DB: 1) | 200 OK [http://test.host/orders/complete]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2010-11-30 18:25:48) [GET]
+  Parameters: {"action"=>"confirm", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Redirected to http://test.host/orders/new
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/confirm]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2010-11-30 18:25:48) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/confirm
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2010-11-30 18:25:48) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2010-11-30 18:25:48) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"checkout", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/checkout?quantity=0]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2010-11-30 18:25:48) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2010-11-30 18:25:48) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-11-30 18:25:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" IS NULL) LIMIT 1[0m
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-11-30 18:25:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-11-30 18:25:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2010-11-30 18:25:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2010-11-30 18:25:49) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" [0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2010-11-30 18:25:47' AND '2010-12-14 18:25:47')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering orders/complete
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2010-11-30 18:25:49) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2010-11-30 18:25:49) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"complete_rsvp", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete_rsvp?quantity=0]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2010-11-30 18:25:49) [GET]
+  Parameters: {"quantity"=>"3", "action"=>"complete_rsvp", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/complete_rsvp?quantity=3]
+  [4;36;1mEvent Create (0.5ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-30 23:25:49', NULL, '2010-11-30 23:25:49', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-30 23:25:49', 1, '2010-11-30 23:25:49')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-30 23:25:49', NULL, '2010-11-30 23:25:49', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-30 23:25:49', 1, '2010-11-30 23:25:49')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-30 23:25:49', NULL, '2010-11-30 23:25:49', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Create (0.1ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test2', NULL, NULL, '2010-11-30 23:25:49', NULL, '2010-11-30 23:25:49', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.1ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test3', NULL, NULL, '2010-11-30 23:25:49', NULL, '2010-11-30 23:25:49', NULL, 'f', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."sponsored" = 't') [0m
+  [4;36;1mMembership Create (0.4ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2010-11-30 23:25:49', '2010-11-30 23:25:49')[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Some item', 70.0, 'Membership', '2010-11-30 23:25:49', 1, '2010-11-30 23:25:49')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-30 23:25:49', 1, 112, '2010-11-30 23:25:49', 1)[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1e2a264d0d8338d0611d19f2fa1711519b3f137d256c9414d6d6e947926e2ccb345c2e668d37c7a8bbcb625cd812218d55cb7934e3808864fff0693bad02766b') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'E1edIUtYvhnRZBmo84kF') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'E1edIUtYvhnRZBmo84kF', NULL, NULL, '2010-11-30 23:25:49', 'a6277b00de17a3058776a95eaefed549db5358f0f52f5fdc1db46c5472400bc2285b7d9d0b0590883c7598f5186b091688ec20485358ae26e1bda2918a0ba741', NULL, 'mRvAwmXIK1dF4ZV47sw6', '2010-11-30 23:25:49', 0, NULL, 'sSjWHbc3iHZsXo0ISBye', NULL, 'Plate', 'george_plate', '1e2a264d0d8338d0611d19f2fa1711519b3f137d256c9414d6d6e947926e2ccb345c2e668d37c7a8bbcb625cd812218d55cb7934e3808864fff0693bad02766b', 0, NULL, 'f', NULL, 'George', 'jdoe@gmail.com', 'f')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-11-30 23:25:49', NULL, NULL, '2010-11-30 23:25:49', 0.0, 'User', 'f', 1)[0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-30 23:25:49', NULL, '2010-11-30 23:25:49', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2010-11-30 23:25:49', 1, '2010-11-30 23:25:49')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-30 23:25:49', 1, '2010-11-30 23:25:49')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-30 23:25:49', 1, 1, '2010-11-30 23:25:49', 2)[0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-11-30 23:25:49', '2010-11-30 23:25:49', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-11-30 23:25:49', NULL, NULL, '2010-11-30 23:25:49', 0.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-30 23:25:49', NULL, '2010-11-30 23:25:49', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2010-11-30 23:25:49', 1, '2010-11-30 23:25:49')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-30 23:25:49', 1, '2010-11-30 23:25:49')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-30 23:25:49', 2, 1, '2010-11-30 23:25:49', 1)[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.2ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.2ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+  [4;35;1mGuest Create (0.5ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2010-11-30 23:25:49', '2010-11-30 23:25:49', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2010-11-30 23:25:49', NULL, NULL, '2010-11-30 23:25:49', 20.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.3ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2010-11-30 23:25:49', NULL, '2010-11-30 23:25:49', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 10.0, 'Event', '2010-11-30 23:25:49', 1, '2010-11-30 23:25:49')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2010-11-30 23:25:49', 1, '2010-11-30 23:25:49')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2010-11-30 23:25:49', 2, 1, '2010-11-30 23:25:49', 1)[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.1ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2010-11-30 18:25:49) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"someemail@"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 4ms (View: 1, DB: 8) | 200 OK [http://test.host/users/send_password?email=someemail%40]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2010-11-30 18:25:49) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2010-11-30 18:25:49) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing RegistrationsController#new (for 0.0.0.0 at 2010-11-30 18:25:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/registration/new]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2010-11-30 18:25:49) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/registration?registration%5Bemail%5D=jdoe%40gmail.com&registration%5Bfirst_name%5D=John&registration%5Blast_name%5D=Doe&registration%5Bpassword%5D=]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2010-11-30 18:25:49) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Redirected to http://test.host/orders/new
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/registration?registration%5Bemail%5D=jdoe%40gmail.com&registration%5Bfirst_name%5D=John&registration%5Blast_name%5D=Doe&registration%5Bpassword%5D=password]
+Rendering orders/new_order_event.html.erb
+
+
+Processing EventsController#register_member (for 0.0.0.0 at 2011-01-28 12:18:44) [POST]
+  Parameters: {"action"=>"register_member", "controller"=>"events"}
+
+
+Processing EventsController#register_member (for 0.0.0.0 at 2011-01-28 12:18:44) [POST]
+  Parameters: {"event_id"=>"5", "action"=>"register_member", "controller"=>"events"}
+Redirected to http://test.host/orders/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/events/register_member?event_id=5]
+  [4;36;1mGuest Create (0.6ms)[0m   [0;1mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2011-01-28 17:18:44', '2011-01-28 17:18:44', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2011-01-28 12:18:44) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Redirected to http://test.host/orders/new
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/guests?event_id=1&guest=some+value]
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2011-01-28 17:18:44', '2011-01-28 17:18:44', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2011-01-28 12:18:44) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Rendering template within layouts/application
+Rendering app/views/events/show.html.erb
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/guests?event_id=1&guest=some+value]
+  [4;36;1mMembership Create (0.4ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2011-01-28 17:18:44', '2011-01-28 17:18:44')[0m
+  [4;35;1mMembership Load (0.2ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+  [4;36;1mMembership Create (0.3ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Some membership', '2011-01-28 17:18:44', '2011-01-28 17:18:44')[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2011-01-28 12:18:44) [GET]
+  Parameters: {"action"=>"complete", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 4ms (View: 0, DB: 1) | 200 OK [http://test.host/orders/complete]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2011-01-28 12:18:44) [GET]
+  Parameters: {"action"=>"confirm", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Redirected to http://test.host/orders/new
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/orders/confirm]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2011-01-28 12:18:44) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/confirm
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2011-01-28 12:18:44) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2011-01-28 12:18:44) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"checkout", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/checkout?quantity=0]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2011-01-28 12:18:44) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 3ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2011-01-28 12:18:44) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 72ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2011-01-28 12:18:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" IS NULL) LIMIT 1[0m
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2011-01-28 12:18:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2011-01-28 12:18:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2011-01-28 12:18:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2011-01-28 12:18:45) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM "events" [0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-01-28 12:18:43' AND '2011-02-11 12:18:43')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering orders/complete
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2011-01-28 12:18:45) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2011-01-28 12:18:45) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"complete_rsvp", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/orders/complete_rsvp?quantity=0]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2011-01-28 12:18:45) [GET]
+  Parameters: {"quantity"=>"3", "action"=>"complete_rsvp", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/complete_rsvp?quantity=3]
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-01-28 17:18:45', NULL, '2011-01-28 17:18:45', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-01-28 17:18:45', 1, '2011-01-28 17:18:45')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-01-28 17:18:45', NULL, '2011-01-28 17:18:45', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-01-28 17:18:45', 1, '2011-01-28 17:18:45')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-01-28 17:18:45', NULL, '2011-01-28 17:18:45', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Create (0.1ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test2', NULL, NULL, '2011-01-28 17:18:45', NULL, '2011-01-28 17:18:45', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.1ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test3', NULL, NULL, '2011-01-28 17:18:45', NULL, '2011-01-28 17:18:45', NULL, 'f', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."sponsored" = 't') [0m
+  [4;36;1mMembership Create (0.4ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2011-01-28 17:18:45', '2011-01-28 17:18:45')[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Some item', 70.0, 'Membership', '2011-01-28 17:18:45', 1, '2011-01-28 17:18:45')[0m
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-01-28 17:18:45', 1, 112, '2011-01-28 17:18:45', 1)[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e139dd3a83502b3b9054758cb0940316837e3290a7e5a648418de1a78d53aaba4d3a58b0e7541ec63007e595715703a99004f60e7cb91b54c0a302ae677d04b8') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'lIL-3HFgHeoCbiqNhLGN') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'lIL-3HFgHeoCbiqNhLGN', NULL, NULL, '2011-01-28 17:18:45', '92dca439e379cf82fa27995b1482dffac354602a3e031c66e09bd911559bcca8b8e7be49fc4338c65693f722c72e05f98bea17cd2c950ee3f55346888c052668', NULL, 'mUmv10AzpjZrd4F7Wjeb', '2011-01-28 17:18:45', 0, NULL, 'abAHKra-KPrXk6VkEjh8', NULL, 'Plate', 'george_plate', 'e139dd3a83502b3b9054758cb0940316837e3290a7e5a648418de1a78d53aaba4d3a58b0e7541ec63007e595715703a99004f60e7cb91b54c0a302ae677d04b8', 0, NULL, 'f', NULL, 'George', 'jdoe@gmail.com', 'f')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-01-28 17:18:45', NULL, NULL, '2011-01-28 17:18:45', 0.0, 'User', 'f', 1)[0m
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-01-28 17:18:45', NULL, '2011-01-28 17:18:45', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2011-01-28 17:18:45', 1, '2011-01-28 17:18:45')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-01-28 17:18:45', 1, '2011-01-28 17:18:45')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-01-28 17:18:45', 1, 1, '2011-01-28 17:18:45', 2)[0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;35;1mGuest Create (0.5ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2011-01-28 17:18:45', '2011-01-28 17:18:45', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-01-28 17:18:45', NULL, NULL, '2011-01-28 17:18:45', 0.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-01-28 17:18:45', NULL, '2011-01-28 17:18:45', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2011-01-28 17:18:45', 1, '2011-01-28 17:18:45')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-01-28 17:18:45', 1, '2011-01-28 17:18:45')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-01-28 17:18:45', 2, 1, '2011-01-28 17:18:45', 1)[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.1ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2011-01-28 17:18:45', '2011-01-28 17:18:45', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-01-28 17:18:45', NULL, NULL, '2011-01-28 17:18:45', 20.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-01-28 17:18:45', NULL, '2011-01-28 17:18:45', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 10.0, 'Event', '2011-01-28 17:18:45', 1, '2011-01-28 17:18:45')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-01-28 17:18:45', 1, '2011-01-28 17:18:45')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.2ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-01-28 17:18:45', 2, 1, '2011-01-28 17:18:45', 1)[0m
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.2ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2011-01-28 12:18:45) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"someemail@"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 4ms (View: 1, DB: 9) | 200 OK [http://test.host/users/send_password?email=someemail%40]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2011-01-28 12:18:45) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2011-01-28 12:18:45) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing RegistrationsController#new (for 0.0.0.0 at 2011-01-28 12:18:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://test.host/registration/new]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2011-01-28 12:18:45) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/registration?registration%5Bemail%5D=jdoe%40gmail.com&registration%5Bfirst_name%5D=John&registration%5Blast_name%5D=Doe&registration%5Bpassword%5D=]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2011-01-28 12:18:45) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Redirected to http://test.host/orders/new
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/registration?registration%5Bemail%5D=jdoe%40gmail.com&registration%5Bfirst_name%5D=John&registration%5Blast_name%5D=Doe&registration%5Bpassword%5D=password]
+Rendering orders/new_order_event.html.erb
+
+
+Processing EventsController#register_member (for 0.0.0.0 at 2011-02-06 15:06:36) [POST]
+  Parameters: {"action"=>"register_member", "controller"=>"events"}
+
+
+Processing EventsController#register_member (for 0.0.0.0 at 2011-02-06 15:06:36) [POST]
+  Parameters: {"event_id"=>"5", "action"=>"register_member", "controller"=>"events"}
+Redirected to http://test.host/orders/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/events/register_member?event_id=5]
+  [4;36;1mGuest Create (0.5ms)[0m   [0;1mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2011-02-06 20:06:36', '2011-02-06 20:06:36', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2011-02-06 15:06:36) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Redirected to http://test.host/orders/new
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/guests?event_id=1&guest=some+value]
+  [4;35;1mGuest Create (0.3ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2011-02-06 20:06:36', '2011-02-06 20:06:36', 'Doe', 'Jane', 'jane@email.com')[0m
+
+
+Processing GuestsController#create (for 0.0.0.0 at 2011-02-06 15:06:36) [POST]
+  Parameters: {"event_id"=>"1", "action"=>"create", "guest"=>"some value", "controller"=>"guests"}
+Rendering template within layouts/application
+Rendering app/views/events/show.html.erb
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/guests?event_id=1&guest=some+value]
+  [4;36;1mMembership Create (0.4ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2011-02-06 20:06:36', '2011-02-06 20:06:36')[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+  [4;36;1mMembership Create (0.2ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Some membership', '2011-02-06 20:06:36', '2011-02-06 20:06:36')[0m
+  [4;35;1mMembership Load (0.1ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."name" = 'Standard') [0m
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2011-02-06 15:06:36) [GET]
+  Parameters: {"action"=>"complete", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 4ms (View: 0, DB: 1) | 200 OK [http://test.host/orders/complete]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2011-02-06 15:06:36) [GET]
+  Parameters: {"action"=>"confirm", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Redirected to http://test.host/orders/new
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/confirm]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2011-02-06 15:06:36) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/confirm
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#confirm (for 0.0.0.0 at 2011-02-06 15:06:36) [GET]
+  Parameters: {"token"=>"POR456MKLF", "action"=>"confirm", "controller"=>"orders"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 243) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering orders/error
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/confirm?token=POR456MKLF]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2011-02-06 15:06:36) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"checkout", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/checkout?quantity=0]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2011-02-06 15:06:36) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#checkout (for 0.0.0.0 at 2011-02-06 15:06:36) [POST]
+  Parameters: {"quantity"=>"2", "action"=>"checkout", "controller"=>"orders"}
+Redirected to http://test.hostsome url
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/checkout?quantity=2]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2011-02-06 15:06:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" IS NULL) LIMIT 1[0m
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2011-02-06 15:06:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_membership
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2011-02-06 15:06:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_event
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2011-02-06 15:06:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/new]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2011-02-06 15:06:37) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM "events" [0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM "events" WHERE (("events"."sponsored" = 't') AND (start_at BETWEEN '2011-02-06 15:06:36' AND '2011-02-20 15:06:36')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering orders/complete
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete (for 0.0.0.0 at 2011-02-06 15:06:37) [GET]
+  Parameters: {"action"=>"complete", "payer_id"=>"2536", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/complete?payer_id=2536]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2011-02-06 15:06:37) [POST]
+  Parameters: {"quantity"=>"0", "action"=>"complete_rsvp", "controller"=>"orders"}
+Rendering template within layouts/application
+Rendering orders/new_order_rsvp
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/orders/complete_rsvp?quantity=0]
+
+
+Processing OrdersController#complete_rsvp (for 0.0.0.0 at 2011-02-06 15:06:37) [GET]
+  Parameters: {"quantity"=>"3", "action"=>"complete_rsvp", "controller"=>"orders"}
+Redirected to http://test.host/events/49
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/orders/complete_rsvp?quantity=3]
+  [4;36;1mEvent Create (0.4ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-02-06 20:06:37', NULL, '2011-02-06 20:06:37', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-02-06 20:06:37', 1, '2011-02-06 20:06:37')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-02-06 20:06:37', NULL, '2011-02-06 20:06:37', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-02-06 20:06:37', 1, '2011-02-06 20:06:37')[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-02-06 20:06:37', NULL, '2011-02-06 20:06:37', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Create (0.1ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test2', NULL, NULL, '2011-02-06 20:06:37', NULL, '2011-02-06 20:06:37', NULL, 't', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;36;1mEvent Create (0.1ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test3', NULL, NULL, '2011-02-06 20:06:37', NULL, '2011-02-06 20:06:37', NULL, 'f', NULL, NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."sponsored" = 't') [0m
+  [4;36;1mMembership Create (0.4ms)[0m   [0;1mINSERT INTO "memberships" ("name", "created_at", "updated_at") VALUES('Standard', '2011-02-06 20:06:37', '2011-02-06 20:06:37')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Some item', 70.0, 'Membership', '2011-02-06 20:06:37', 1, '2011-02-06 20:06:37')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-02-06 20:06:37', 1, 112, '2011-02-06 20:06:37', 1)[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jdoe@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7770c36828b62cb6bf0aa801ae3f932b120fd869ae1d1acc6d923a46bfdcdcdbd99b45f9c1d47c8a686e0913e803b82c274875d65c82a6817399caeab0198323') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'VEbMcy1VvW5fjOHXE2ph') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("joined_at", "single_access_token", "last_request_at", "activated_at", "created_at", "crypted_password", "expired_at", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "last_name", "url_friendly", "persistence_token", "login_count", "last_login_ip", "activated", "last_login_at", "first_name", "email", "active") VALUES(NULL, 'VEbMcy1VvW5fjOHXE2ph', NULL, NULL, '2011-02-06 20:06:37', 'ec25855e38e26b7f9c6841d0b4c2829dac0302965f87d99bb0cbbca6da84f9fea3f9ec245e9c1be4249a12969ceec6e653a010293b225b8e505c81e4e2ab8699', NULL, 'vCBwjlgaZomX5umKFm9g', '2011-02-06 20:06:37', 0, NULL, 'zXd7fytnfzZbWfSbhkyU', NULL, 'Plate', 'george_plate', '7770c36828b62cb6bf0aa801ae3f932b120fd869ae1d1acc6d923a46bfdcdcdbd99b45f9c1d47c8a686e0913e803b82c274875d65c82a6817399caeab0198323', 0, NULL, 'f', NULL, 'George', 'jdoe@gmail.com', 'f')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-02-06 20:06:37', NULL, NULL, '2011-02-06 20:06:37', 0.0, 'User', 'f', 1)[0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-02-06 20:06:37', NULL, '2011-02-06 20:06:37', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2011-02-06 20:06:37', 1, '2011-02-06 20:06:37')[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-02-06 20:06:37', 1, '2011-02-06 20:06:37')[0m
+[paperclip] Saving attachments.
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-02-06 20:06:37', 1, 1, '2011-02-06 20:06:37', 2)[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2011-02-06 20:06:37', '2011-02-06 20:06:37', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-02-06 20:06:37', NULL, NULL, '2011-02-06 20:06:37', 0.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-02-06 20:06:37', NULL, '2011-02-06 20:06:37', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 0.0, 'Event', '2011-02-06 20:06:37', 1, '2011-02-06 20:06:37')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-02-06 20:06:37', 1, '2011-02-06 20:06:37')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-02-06 20:06:37', 2, 1, '2011-02-06 20:06:37', 1)[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.1ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+  [4;35;1mGuest Create (0.4ms)[0m   [0mINSERT INTO "guests" ("created_at", "updated_at", "last_name", "first_name", "email") VALUES('2011-02-06 20:06:37', '2011-02-06 20:06:37', 'Doe', 'Jane', 'jane@email.com')[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO "orders" ("created_at", "express_payer_id", "express_token", "updated_at", "amount", "customer_type", "complete", "customer_id") VALUES('2011-02-06 20:06:37', NULL, NULL, '2011-02-06 20:06:37', 20.0, 'Guest', 'f', 1)[0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("name", "sponsor_file_name", "sponsor_file_size", "created_at", "end_at", "updated_at", "start_at", "sponsored", "max_attendance", "url_friendly", "sponsor_content_type", "description", "sponsor_updated_at") VALUES('Test', NULL, NULL, '2011-02-06 20:06:37', NULL, '2011-02-06 20:06:37', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mItem Create (0.1ms)[0m   [0;1mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Standard price', 10.0, 'Event', '2011-02-06 20:06:37', 1, '2011-02-06 20:06:37')[0m
+  [4;35;1mItem Create (0.1ms)[0m   [0mINSERT INTO "items" ("name", "price", "product_type", "created_at", "product_id", "updated_at") VALUES('Club price', 0.0, 'Event', '2011-02-06 20:06:37', 1, '2011-02-06 20:06:37')[0m
+[paperclip] Saving attachments.
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO "order_items" ("created_at", "quantity", "order_id", "updated_at", "item_id") VALUES('2011-02-06 20:06:37', 2, 1, '2011-02-06 20:06:37', 1)[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+  [4;36;1mGuest Load (0.1ms)[0m   [0;1mSELECT * FROM "guests" WHERE ("guests"."id" = 1) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT "items".* FROM "items" INNER JOIN "order_items" ON "items".id = "order_items".item_id WHERE (("order_items".order_id = 1)) [0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items".order_id = 1) LIMIT 1[0m
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2011-02-06 15:06:37) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"someemail@"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 3ms (View: 1, DB: 7) | 200 OK [http://test.host/users/send_password?email=someemail%40]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2011-02-06 15:06:37) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing UsersController#send_password (for 0.0.0.0 at 2011-02-06 15:06:37) [POST]
+  Parameters: {"action"=>"send_password", "controller"=>"users", "email"=>"johndoe@gmail.com"}
+Rendering template within layouts/application
+Rendering users/forgotten
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/users/send_password?email=johndoe%40gmail.com]
+
+
+Processing RegistrationsController#new (for 0.0.0.0 at 2011-02-06 15:06:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/registration/new]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2011-02-06 15:06:37) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Rendering template within layouts/application
+Rendering registrations/new
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/registration?registration%5Bemail%5D=jdoe%40gmail.com&registration%5Bfirst_name%5D=John&registration%5Blast_name%5D=Doe&registration%5Bpassword%5D=]
+
+
+Processing RegistrationsController#create (for 0.0.0.0 at 2011-02-06 15:06:37) [POST]
+  Parameters: {"action"=>"create", "registration"=>{"last_name"=>"Doe", "password"=>"[FILTERED]", "email"=>"jdoe@gmail.com", "first_name"=>"John"}, "controller"=>"registrations"}
+Rendering orders/new_order_event.html.erb

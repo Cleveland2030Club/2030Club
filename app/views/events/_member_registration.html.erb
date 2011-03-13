@@ -1,0 +1,12 @@
+<% form_tag({:action => 'register_member'}, :class => 'rsvp') do %>
+<%= hidden_field_tag 'event_id', @event.id %>
+  <fieldset>
+    <legend><span><strong>Register for this Event </strong></span></legend>
+    <div class="form-node member first">
+      <img src="/images/check_icon.png" class="checked"> <label for="members" class="radio member">Register as a Member <%= number_to_currency(event.club_price)%></label>
+    </div>
+    <div class="formAction">
+      <%= submit_tag "Continue" %>
+    </div>
+  </fieldset>
+<% end %>

@@ -1,0 +1,49 @@
+<div class="threeColumns-1">
+	<h1>Please Confirm Your Payment Details</h1>
+	<% form_tag :action => 'complete', :token => params[:token], :payer_id => params[:PayerID] do %>
+	  <fieldset>
+		  <legend><span><strong><%= @address['name'] %>'s order detail</strong></span></legend>
+			You will be charged <%= number_to_currency(@order.amount) %> through your Paypal account.			
+		</fieldset>
+		<div class="formAction clear">
+		  <%= submit_tag 'Complete Payment' %>
+		</div>	  
+	<% end %>
+</div>
+
+<!--<table>
+			  <tr><td>Name</td><td><%#= @address['name'] %></td></tr>
+			  <tr><td>Company</td><td><%#= @address['company'] %></td></tr>
+			  <tr><td>Address 1</td><td><%#= @address['address1'] %></td></tr>
+			  <tr><td>Address 2</td><td><%#= @address['address2'] %></td></tr>
+			  <tr><td>City</td><td><%#= @address['city'] %></td></tr>
+			  <tr><td>State</td><td><%#= @address['state'] %></td></tr>
+			  <tr><td>Country</td><td><%#= @address['country'] %></td></tr>
+			  <tr><td>Zip</td><td><%#= @address['zip'] %></td></tr>
+</table>-->
+<!--<div class="threeColumns-1">
+	<h1>Please Confirm Your Payment Details</h1>
+	<%# form_tag :action => 'complete', :token => params[:token], :payer_id => params[:PayerID] do %>
+    <fieldset>
+      <legend><span><strong><%#= @address['name'] %>'s order detail</strong></span></legend>
+      <div class="form-node">
+        <span class="for-price">
+        <%#= number_to_currency(@order.event.get_price(current_user)) %></span>
+        <span class="label-like"><%= @order.event.name %></span>
+      </div>
+      <div class="form-node">
+        <span class="for-price"><%#= @order_item.quantity %></span>
+        <span class="label-like">Number of Attendees</span>
+      </div>
+
+      <div class="form-node hr">&nbsp;</div>
+      <div class="form-node">
+        <span class="for-price price" id="total"><%#= number_to_currency(@order.amount) %></span>
+        <span class="for-price txt-r">Subtotal:</span>
+      </div>
+    </fieldset>
+    <div class="formAction clear">
+      <%#= submit_tag 'Complete Payment', :class => 'complete-order' %>
+    </div>
+  <%#- end %>
+</div>-->

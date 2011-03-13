@@ -1,0 +1,9 @@
+<% unless @members.empty? %>
+	<tr>
+		<td><%=link_to truncate(member.display_name), member_path(member) %></td>
+		<td align="center"><p class="small"><% unless !member.active %><img src="/images/check_icon.png"><% end %></p></td>
+		<td align="center"><p class="small"><%= member.joined_at.strftime('%m/%d/%y')  if member.joined_at %></p></td>
+		<td align="center"><p class="small"><%= member.activated_at.strftime('%m/%d/%y') if member.activated_at and current_user.admin? %></p></td>
+		<td><p class="small"><a href=mailto:<%= member.email if member.email %>><%= member.email if member.email %></a></p></td>
+	</tr>
+<% end %>

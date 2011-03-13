@@ -1,0 +1,35 @@
+<% content_for :scripts do %>
+  <%= javascript_include_tag 'TotalCalculator' %>
+<% end %>
+
+<div class="threeColumns-1">
+	<h1>Event Registration</h1>
+  <div class="notice">
+    Thank you for your interest in "<%=h @order.items[0].product.name %>". This event requires a payment for registration. Please specify how many people will be attending with you.
+  </div>
+  <%= error_messages_for 'order_item' %>
+  <%- form_for :order, @order, :url => { :action => "checkout" } do |f| %>
+    <fieldset>
+      <legend><span><strong class="for-price">Total</strong><strong>&nbsp;</strong></span></legend>
+      <div class="form-node">
+        <span class="for-price" id="event_price">
+        <%= number_to_currency(@order.event.get_price(current_user)) %></span>
+        <span class="label-like"><%= @order.event.name %></span>
+      </div>
+      <div class="form-node">
+        <span class="for-price"><%= text_field_tag('quantity', '1', :size => '4', :maxlenght => '4') %></span>
+        <span class="label-like">Number of Attendees</span>
+      </div>
+      <div class="form-node hr">&nbsp;</div>
+      <div class="form-node">
+        <span class="for-price price" id="total"><%= number_to_currency(@order.amount) %></span>
+        <span class="for-price txt-r">Subtotal:</span>
+      </div>
+    </fieldset>
+    <div class="formAction clear">
+      <%= image_submit_tag('https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif', 
+                            :alt => "Btn_xpresscheckout",
+                            :class => "paypal") %>
+    </div>
+  <%- end %>
+</div>

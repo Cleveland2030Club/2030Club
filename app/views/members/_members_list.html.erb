@@ -1,0 +1,18 @@
+<% unless @members.empty? %>
+		
+		<div class="memberInfo memberInfoList">
+			<%= image_tag member.avatar.url(:thumb), :class => "left thumb" %>		
+			<div>
+				<%=link_to truncate(member.display_name), member_path(member) %>
+				<p class="small">
+				<% unless !member.active %>
+					<%= "Member Since: "+ member.joined_at.strftime('%m/%d/%y')  if member.joined_at %><br>
+				<% else %>
+					not active<br>
+				<% end %>
+				<%= "Last Renewed: "+ member.activated_at.strftime('%m/%d/%y') if member.activated_at and current_user.admin? %>
+				</p>
+			</div>	
+		</div>
+		
+<% end %>

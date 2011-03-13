@@ -1,0 +1,7 @@
+<% form_for @member, :url => {:controller => 'members', :action => 'update'}, :html => {:multipart => true} do |f| %>
+	<%= f.error_messages %>
+	<%= render :partial => "/users/edit_form", :locals => {:f => f} %>
+	<div class="formAction clear">
+		<%= f.submit "Save" %>
+	</div>
+<% end %>

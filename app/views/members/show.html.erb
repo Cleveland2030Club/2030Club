@@ -1,0 +1,64 @@
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag 'members2030','event-teasers' %>
+<% end %>
+<% if @current_user and @current_user.logged_in? %>
+	<% if @member.nil? %>
+		<h1>Member Not Found</h1>
+	<% else %>
+		<h1>20/30 Member</h1>
+		<div class="twoColumns-0">
+			<div class="memberInfo">
+				<%= image_tag @member.avatar.url(:medium), :class => "left" %>
+				<div>
+					<h3><%= truncate(@member.display_name) %> 	
+						<% if @current_user == @member %>
+							<%=link_to "Edit your profile", edit_member_path(@current_user) %>
+						<% end %>
+					</h3>
+					<% unless !@member.active %>
+						<%= "<p class=""small"">Member Since:"+ @member.joined_at.strftime('%m/%d/%y') +"</p>" if @member.joined_at %>
+
+					<% else %>
+						<p class="small">not active</p> 
+					<% end %>
+					<% if current_user.admin? %>
+						<% form_for :user, @member, member_path(@member), :html =>{ :method => :put } do |member| %>
+							<%= member.label :active %>
+							<%= member.check_box :active %>
+							<%= member.submit %>
+						<% end %>
+						<ul class="edit-links">
+							<li><%= link_to "edit login", edit_login_member_path(@member) %></li>
+							<li><%= link_to "edit profile", edit_member_path(@member) %></li>
+						</ul>
+					<% end %>
+					<p>Occupation: <%= truncate(@member.user_profile.profession) %></p>
+					<p>Works for: <%= truncate(@member.user_profile.employer) %></p>
+					<p>Is an Alumni of: <%= truncate(@member.user_profile.education) %></p>
+					<p>Bio: <%= truncate(@member.user_profile.bio) %></p>
+				</div>	
+			</div>		
+		</div>
+		<% if current_user.admin? %>
+			<div class="twoColumns-1 events-attended">
+				<h4>Event Attendance History</h4>
+				<ul>
+					<li>
+						<div class="first">Date</div>
+						<div>Event</div>
+						<div class="last">Cost</div>
+					</li>
+					<% @events.each do |event| %>
+					<li>
+						<div class="first"><%= event.start_at.strftime('%m/%d/%y') %></div>
+						<div><%= event.name %></div>
+						<div class="last">$<%= event.get_price(@member) %></div>
+					</li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+	<% end %>
+<% else %>
+	<p>You must be logged in to see the members</p>	
+<% end %>

@@ -1,0 +1,66 @@
+ <p>
+	<%= f.label :active %>
+	<%= f.check_box :active %>
+ </p>
+ <p>
+   <%= f.label :name %><br />
+   <%= f.text_field :name %>
+ </p>
+ <p>
+   <%= f.label :start_at %><br />
+   <%= f.datetime_select :start_at %>
+ </p>
+ <p>
+   <%= f.label :end_at %><br />
+   <%= f.datetime_select :end_at %>
+ </p>
+<p class="yui-skin-sam">
+  <%= f.label :description %><br />
+  <%= f.text_area :description %>
+	<!-- Skin CSS file -->
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/assets/skins/sam/skin.css">
+	<!-- Utility Dependencies -->
+	<script src="http://yui.yahooapis.com/2.8.2r1/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
+	<script src="http://yui.yahooapis.com/2.8.2r1/build/element/element-min.js"></script> 
+	<!-- Needed for Menus, Buttons and Overlays used in the Toolbar -->
+	<script src="http://yui.yahooapis.com/2.8.2r1/build/container/container_core-min.js"></script>
+	<!-- Source file for Rich Text Editor-->
+	<script src="http://yui.yahooapis.com/2.8.2r1/build/editor/simpleeditor-min.js"></script>
+	<script>
+	var myEditor = new YAHOO.widget.SimpleEditor('event_description', {
+	    height: '500px',
+	    width: '70%',
+	    dompath: true //Turns on the bar at the bottom
+	});
+	myEditor.render();
+
+	YAHOO.util.Event.on('event_submit', 'click', function() {
+	    //Put the HTML back into the text area
+	    myEditor.saveHTML();
+
+	    //The var html will now have the contents of the textarea
+	    var html = myEditor.get('element').value;
+	});
+	</script>
+</p>
+ <p>
+	<%= f.label :sponsored, "Is the Event Sponsored" %><br />
+	<%= f.check_box :sponsored %>
+ </p>
+ <!-- <p>
+	<%= f.label :sponsor, "Upload Image"%><br />
+	<%= f.file_field :sponsor %>
+ </p> -->
+ <p>
+	<%= f.label :club_price, "Club Price"%><br />
+	<%= f.text_field :club_price %>
+ </p>
+ <p>
+	<%= f.label :standard_price, "Standard Price"%><br />
+	<%= f.text_field :standard_price %>
+ </p>
+ <p>
+	<%= f.label :max_attendance %><br />
+	<%= f.text_field :max_attendance %>
+ </p>
+ 

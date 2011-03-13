@@ -1,0 +1,17 @@
+<!-- Probably move the stylesheet to you layout. Also make sure you include the javascript. -->
+<%= stylesheet_link_tag "event_calendar", 'event-teasers', 'twitter-widget' %>
+
+<div class="twoColumns-0">
+	<h1>Calendar Events</h1>
+
+	<%= event_calendar %>
+
+</div>
+	
+<div class="twoColumns-1">
+	<h4>Sponsored Events</h4>
+	<%= render :partial => "shared/upcoming_sponsored_events", 
+			   :collection => @sponsored_events,
+			   :as => :event %>
+</div>
+<%= render :partial => '/shared/additional_marketing' %>

@@ -1,0 +1,51 @@
+<aside class="aditional-marketing">
+	<div class="twoColumns-0">
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 6000,
+  width: 'auto',
+  height: 110,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().setUser('CP2030').start();
+</script>
+	</div>
+	<div class="twoColumns-1">
+		<div class="sponsor">
+			<h1 class="tiny">Our Sponsors</h1>
+			<script type="text/javascript" language="javascript" SRC="/javascripts/swfobject.js"></script> 
+			<div id="flashcontent">put logo flash here</div> 
+			<script type="text/javascript"> 
+				// <![CDATA[
+				
+				var so = new SWFObject("/custom/SITE/HOMEPAGE/sponsors.swf", "sponsors", "226", "90", "8", "#f8f5e6");
+				so.write("flashcontent");
+				
+				// ]]>
+			</script> 
+		</div>
+	</div>
+</aside>

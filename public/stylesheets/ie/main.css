@@ -1,0 +1,5 @@
+*{zoom:1;}
+form legend{position:absolute;top:0;left:0;width:100%;}
+h1 .title {*float:left;}
+.rsvp legend {*left:15px;*top:-15px;*width:auto;}
+.rsvp fieldset div.first{margin-top:30px;}
