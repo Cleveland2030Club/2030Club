@@ -1,4 +1,4 @@
-require 'fastercsv'
+#require 'fastercsv'
 class ReportsController < ApplicationController
 
   before_filter :requires_admin, :except => []
@@ -15,30 +15,30 @@ class ReportsController < ApplicationController
     end
     respond_to do |format|
       format.html
-      format.csv { 
-        filename = I18n.l(Time.now, :format => :short) + "- Members.csv"
-        content = FasterCSV.generate do |csv|
-          csv << [
-            "First Name",
-            "Last Name",
-            "Activated",
-            "Member Since",
-            "Last Renewal",
-            "Email"
-          ]
-          @csv_members.each do |user|
-            csv << [
-              user.first_name,
-              user.last_name,
-              user.activated,
-              user.joined_at,
-              user.activated_at,
-              user.email
-            ]
-          end
-        end
-        content = BOM + Iconv.conv("utf-16le", "utf-8", content)
-        send_data content, :filename => filename
+      # format.csv { 
+      #         filename = I18n.l(Time.now, :format => :short) + "- Members.csv"
+      #         content = FasterCSV.generate do |csv|
+      #           csv << [
+      #             "First Name",
+      #             "Last Name",
+      #             "Activated",
+      #             "Member Since",
+      #             "Last Renewal",
+      #             "Email"
+      #           ]
+      #           @csv_members.each do |user|
+      #             csv << [
+      #               user.first_name,
+      #               user.last_name,
+      #               user.activated,
+      #               user.joined_at,
+      #               user.activated_at,
+      #               user.email
+      #             ]
+      #           end
+      #         end
+      #         content = BOM + Iconv.conv("utf-16le", "utf-8", content)
+      #         send_data content, :filename => filename
       }
     end
 	end	
