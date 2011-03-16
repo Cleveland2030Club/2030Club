@@ -70,17 +70,17 @@ class User < ActiveRecord::Base
   def self.search_active(search,date,page)
     unless date == "-" or date == nil
       paginate_all_by_active true, :per_page => 100, :page => page,
-               :conditions => ['(lower(last_name) like ? or lower(first_name) like ? or lower(email) like ?) and activated_at like ?', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
+               :conditions => ['(lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)) and activated_at like lower(?)', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     else
       paginate_all_by_active true, :per_page => 100, :page => page,
-               :conditions => ['lower(last_name) like ? or lower(first_name like) ? or lower(email) like ?', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
+               :conditions => ['lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     end
   end
   
   def self.search(search,date,page)
     unless date == "-" or date == nil
       paginate :per_page => 100, :page => page,
-               :conditions => ['(lower(last_name) like ? or lower(first_name) like ? or lower(email) like ?) and activated_at like ?', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
+               :conditions => ['(lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)) and activated_at like lower(?)', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     else
       paginate :per_page => 100, :page => page,
                :conditions => ['lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
@@ -90,20 +90,20 @@ class User < ActiveRecord::Base
   def self.csv_search_active(search,date)
     unless date == "-" or date == nil
       paginate_all_by_active true, :per_page => 30000, :page => 1,
-               :conditions => ['(lower(last_name) like ? or lower(first_name) like ? or lower(email) like ?) and activated_at like ?', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
+               :conditions => ['(lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)) and activated_at like lower(?)', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     else
       paginate_all_by_active true, :per_page => 30000, :page => 1,
-               :conditions => ['lower(last_name) like ? or lower(first_name) like ? or lower(email) like ?', "%#{search}.downcase%","%#{search}.downcase%","%#{search}.downcase%"], :order => 'Last_name ASC, first_name ASC, email ASC'
+               :conditions => ['lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     end
   end
   
   def self.csv_search(search,date)
     unless date == "-" or date == nil
       paginate :per_page => 30000, :page => 1,
-               :conditions => ['(lower(last_name) like ? or lower(first_name) like ? or lower(email) like ?) and activated_at like ?', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
+               :conditions => ['(lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)) and activated_at like lower(?)', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     else
       paginate :per_page => 30000, :page => 1,
-               :conditions => ['last_name like ? or lower(first_name) like ? or lower(email) like ?', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
+               :conditions => ['lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     end
   end
 

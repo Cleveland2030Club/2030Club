@@ -6,7 +6,7 @@ class ReportsController < ApplicationController
   
   def index
     @date = params[:yr] +"-"+ params[:mo] if params[:yr] and params[:mo]
-    unless params[:activated]
+    unless params[:activated] == "true"
       @members = User.search(params[:search],@date,params[:page])
       @csv_members = User.csv_search(params[:search],@date)
     else
