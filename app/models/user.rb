@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   end
   
   def admin?
-    admins = ['morcutt@within3.com', 'andrew.walleck@gmail.com', 'agbennett1@gmail.com', 'jprovins@cleveland.com', 'julie.fratus@gmail.com', 'eljeezee@yahoo.com', 'gautpai@gmail.com', 'radinm@hotmail.com', 'montalvo.a@gmail.com', 'christinannmiller@yahoo.com', 'raablc@gmail.com' ]
+    admins = ['morcutt@within3.com', 'kevin@detone8.com', 'agbennett1@gmail.com', 'jprovins@cleveland.com', 'julie.fratus@gmail.com', 'eljeezee@yahoo.com', 'gautpai@gmail.com', 'radinm@hotmail.com', 'montalvo.a@gmail.com', 'christinannmiller@yahoo.com', 'raablc@gmail.com' ]
     admins.include?(self.email)
   end
   
