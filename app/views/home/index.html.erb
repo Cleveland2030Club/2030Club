@@ -37,10 +37,6 @@
 				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 				<script src="/javascripts/aino-galleria-165c5d5/src/galleria.js"></script>
 				<script src="/javascripts/aino-galleria-165c5d5/src/plugins/galleria.flickr.js"></script>
-				<style>
-				    #galleria{width:100%;}
-				    .galleria-container{background:#044E8F url(/images/cle2030-intro-bg_re.png) repeat-x scroll left top}
-				</style>
 				<div id="galleria"></div>
 				<script>
 					// Load theme
@@ -52,6 +48,7 @@
 						size: 'medium'
 						}, function(data) {
 						$('#galleria').galleria({
+              autoplay:5000,
 							data_source:data
 						});
 					});
