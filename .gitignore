@@ -1,2 +1,9 @@
 .rvmrc
 log/
+db/*.sqlite3
+tmp/**/*
+*.cache
+*.pid
+*.sw?
+doc/
+
