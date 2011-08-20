@@ -36,6 +36,6 @@ config.after_initialize do
     )    
 end
 
-config.gem 'rspec-rails', :version => '>= 1.3.2', :lib => false unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
+config.gem 'rspec-rails', :version => '1.3.2', :lib => false unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
 config.gem "factory_girl", :lib => "factory_girl", :source => "http://gems.github.com" unless File.directory?(File.join(Rails.root, "vendor/plugins/factory_girl"))
 config.gem "thoughtbot-shoulda", :lib => false, :source => "http://gems.github.com" unless File.directory?(File.join(Rails.root, "vendor/plugins/thoughtbot-shoulda"))
