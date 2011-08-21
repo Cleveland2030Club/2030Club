@@ -168,7 +168,6 @@ div.rss_box ul { }
 	div.rss_box ul li {padding:5px 0;list-style:none;font-size:77%;}
 	div.rss_box ul li a{font-size:130%;}
 			
-
 div.flickrBody { margin-top: 8px; }
 div.flickrLeft, div.flickrImage, div.flickrRight { float: left; height: 145px; }
 div.flickrLeft a { display: block; background: url(/images/flickrLeft.jpg) no-repeat 0 0; width: 30px; height: 85px; margin: 32px 10px; }
@@ -236,6 +235,7 @@ form fieldset div.fieldWithErrors input[type="text"],form fieldset div.fieldWith
 /* 		Galleria					*/
 /* -------------------------------- */
 
+#galleria { height: 400px; }
 #galleria .galleria-container{background: #2D2D2D ;}
 
 /* -------------------------------- */
