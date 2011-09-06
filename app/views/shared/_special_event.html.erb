@@ -1,0 +1,15 @@
+<div class="event sponsored">
+  <div class="date">
+    <span class="day"><%= event.start_at.strftime("%d") %></span> 
+    <span class="month"><%= event.start_at.strftime("%b") %></span>
+  </div>	
+  <ul>
+    <li class="social">
+      <!--<%= image_tag event.sponsor.url(:thumb) %>-->
+      <div><%=link_to truncate(event.name, :length => 50), event_path(event) %></div>
+      <div class="details">
+        <p><%= event.start_at.strftime("%B %d, at %I:%M %p")%></p>
+      </div>
+    </li>
+  </ul>
+</div>
