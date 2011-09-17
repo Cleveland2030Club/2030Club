@@ -10,6 +10,10 @@ describe Participant do
     it { should respond_to(:instructions) }
     it { should respond_to(:logo) }
   end
+  
+  describe "Participant relationships" do
+    it { should respond_to(:category) }
+  end
 
   describe "a valid Participant requires" do
     before do

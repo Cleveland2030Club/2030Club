@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110917200204) do
+ActiveRecord::Schema.define(:version => 20110917202048) do
 
   create_table "accounts", :force => true do |t|
     t.string   "email",                                  :null => false
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(:version => 20110917200204) do
     t.boolean  "active",              :default => false
     t.boolean  "activated",           :default => false
     t.datetime "activated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "email_addresses", :force => true do |t|
@@ -113,6 +119,7 @@ ActiveRecord::Schema.define(:version => 20110917200204) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.integer  "category_id"
   end
 
   create_table "registrations", :force => true do |t|
