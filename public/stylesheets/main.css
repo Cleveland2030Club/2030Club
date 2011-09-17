@@ -272,5 +272,9 @@ div.for-price input[type="submit"] {margin-left:0;}
 .beta-flag { background:url(/images/beta-banner.png) no-repeat top right; width:75px; height:75px; position:fixed; right:0; z-index:3; }
 
 /* -------------------------------- */
-/* 		Beta Banner					*/
+/* 		Social Media Links					*/
 /* -------------------------------- */
+.social-media-links { overflow:hidden;}
+.social-media-links p{ background-color:#d2eaf7;font-weight:bold;margin:10px 0 40px;padding:5px 10px;}
+.social-media-links .links{ float:right;margin-right:10px; }
+.social-media-links a:hover{ border:0;background:transparent; }
