@@ -91,7 +91,7 @@ body{font-family:"lucida grande",lucida,tahoma,helvetica,arial,sans-serif !impor
 #header #topHeader{/*height:20px;text-align:right;*/}
 #header a.logo{margin:0 0 0 40px;display:block;float:left;-moz-box-shadow:2px 2px 2px #D2D2D2;-webkit-box-shadow: #D2D2D2 2px 2px 2px;border:0 !important;}
 #header #alertSection{float:left;width:345px;margin:0 5px;padding:8px;}
-#header #loginSection{float:right;width:300px;padding:28px 0 0 0;}
+#header #loginSection{float:right;width:300px;padding:28px 35px 0 0;}
 
 nav {height:40px;padding:0;background:transparent url(/images/nav-bg.gif) repeat-x 0 3px;border-bottom:3px solid #2c2d2d;}
 nav div{overflow:hidden;height:45px;margin:0 auto;padding:0 3px;/*background:transparent url(/images/cle2030-skyline.png) no-repeat 100% -63px;*/}
