@@ -25,4 +25,14 @@ class Admin::ParticipantsController < Admin::AdminController
     @participant = Participant.find(params[:id])
   end
   
+  def update
+    @participant = Participant.find(params[:id])
+    if @participant.update_attributes(params[:participant])
+      flash[:message] = "Participant updated successfully."
+      redirect_to admin_participant_path(@participant)
+    else
+      render 'edit'
+    end
+  end
+  
 end

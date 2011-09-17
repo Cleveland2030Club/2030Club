@@ -31,5 +31,12 @@ module Admin
         { :get => '/admin/participants/1/edit' }.should route_to(:controller => 'admin/participants', :action => 'edit', :id => '1')
       end
     end
+    
+    describe "put #update" do
+      it "recognizes and routes PUT /admin/participants/:id to ParticipantsController#update" do
+        { :put => '/admin/participants/1' }.should route_to(:controller => 'admin/participants', :action => 'update', :id => '1')
+      end
+    end
+    
   end
 end

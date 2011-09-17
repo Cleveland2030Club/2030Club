@@ -4,8 +4,8 @@ module Admin
   describe ParticipantsController do
     describe "get #index" do
       before do
-        @participants = [mock_model(::Participant)]
-        ::Participant.should_receive(:find).with(:all).and_return(@participants)
+        @participants = [mock_model(Participant)]
+        Participant.should_receive(:find).with(:all).and_return(@participants)
         get :index      
       end
       
@@ -20,8 +20,8 @@ module Admin
     
     describe "get #new" do
       before do
-        @participant = mock_model(::Participant)
-        ::Participant.should_receive(:new).and_return(@participant)
+        @participant = mock_model(Participant)
+        Participant.should_receive(:new).and_return(@participant)
         get :new        
       end
       
@@ -95,9 +95,9 @@ module Admin
     describe "get #edit" do
       
       before do
-        @participant = mock_model(::Participant, :id => 1)
+        @participant = mock_model(Participant, :id => 1)
         Participant.should_receive(:find).with('1').and_return(@participant)
-        get :edit, :id => '1'
+        get :edit, :id => 1
       end
       
       it "assigns a specific instance of Participang to participant" do
@@ -109,5 +109,45 @@ module Admin
       end
     end
     
+    describe "put #update" do
+      before do
+        @participant = mock_model(Participant, :id => 1)
+        Participant.should_receive(:find).with('1').and_return(@participant)
+      end
+      
+      context "when record is valid" do      
+        it "finds a specific instance of Participant" do
+          @participant.stub(:update_attributes)
+          put :update, :id => 1
+          assigns(:participant).should == @participant
+        end
+        
+        it "update the attributes for the participant" do
+          @participant.should_receive(:update_attributes).and_return(true)
+          put :update, :id => 1
+        end
+        
+        it "provides flash notice update has been received successfully" do
+          @participant.stub(:update_attributes).and_return(true)
+          put :update, :id => 1
+          flash[:message].should == "Participant updated successfully."
+        end
+        
+        it "redirect to the particpant show page" do
+          @participant.stub(:update_attributes).and_return(true)
+          put :update, :id => 1
+          response.should redirect_to admin_participant_path(@participant)
+        end
+      end
+      
+      context "when record is invalid" do
+        it "renders edit template" do
+          @participant.should_receive(:update_attributes).and_return(false)
+          put :update, :id => 1
+          response.should render_template 'admin/participants/edit'
+        end
+      end
+    end
+  
   end
 end
