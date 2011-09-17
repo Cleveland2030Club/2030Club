@@ -8,6 +8,7 @@ describe Participant do
     it { should respond_to(:bio) }
     it { should respond_to(:benefit) }
     it { should respond_to(:instructions) }
+    it { should respond_to(:logo) }
   end
 
 end
