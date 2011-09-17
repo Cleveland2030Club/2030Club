@@ -38,5 +38,11 @@ module Admin
       end
     end
     
+     describe "delete #destroy" do
+        it "recognizes and routes DELETE /admin/participants/:id to ParticipantsController#destroy" do
+          { :delete => '/admin/participants/1' }.should route_to(:controller => 'admin/participants', :action => 'destroy', :id => '1')
+        end
+      end
+    
   end
 end

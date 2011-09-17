@@ -100,7 +100,7 @@ module Admin
         get :edit, :id => 1
       end
       
-      it "assigns a specific instance of Participang to participant" do
+      it "assigns a specific instance of Participant to participant" do
         assigns(:participant).should == @participant
       end
       
@@ -148,6 +148,31 @@ module Admin
         end
       end
     end
-  
+    
+    describe "delete #destroy" do
+      
+      before do
+        @participant = mock_model(Participant, :id => 1)
+        Participant.should_receive(:find).with('1').and_return(@participant)
+      end
+      
+      it "assigns a specific instance of participant" do
+        @participant.stub(:destroy)
+        delete :destroy, :id => 1
+        assigns(:participant).should == @participant
+      end
+      
+      it "destroys the record" do
+        @participant.should_receive(:destroy)
+        delete :destroy, :id => 1
+      end
+      
+      it "redirects to index" do
+        @participant.stub(:destroy)
+        delete :destroy, :id => 1
+        response.should redirect_to admin_participants_path
+      end
+      
+    end
   end
 end

@@ -35,4 +35,10 @@ class Admin::ParticipantsController < Admin::AdminController
     end
   end
   
+  def destroy
+    @participant = Participant.find(params[:id])
+    @participant.destroy
+    redirect_to admin_participants_path
+  end
+  
 end
