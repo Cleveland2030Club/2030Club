@@ -50,9 +50,9 @@
                 <li><%= current_link 'Home', root_path, :title => 'Home' %></li>
                 <li><%= current_link 'Member Benefits', {:controller => 'benefits', :action => 'involved'}, :title => 'Member Benefits' %></li>
                 <li><%= current_link 'Calendar Events', calendar_url, :title => 'Calendar Events' %></li>
-                <li><%=current_link '20/30 Members', members_url, :title => '20/30 Members'%></li>
-                <li><%=current_link 'Cleveland<strong>+</strong>', cleveland_plus_url, :title => 'Cleveland Plus'%></li>
-                <li><%=current_link 'About 20/30', about_url, :title => "About 20/30"%></li>
+                <li><%= current_link '20/30 Members', members_url, :title => '20/30 Members'%></li>
+                <li><%= current_link 'Cleveland<strong>+</strong>', cleveland_plus_url, :title => 'Cleveland Plus'%></li>
+                <li><%= current_link 'About 20/30', about_url, :title => "About 20/30"%></li>
               </ul>
           </nav>
           <div id="content">
@@ -60,7 +60,13 @@
           </div>
 
           <footer>
-          	The Cleveland Professional 20/30 Club, 668 Euclid, #10	Cleveland, OH 44114 &nbsp;<a href="mailto:info@cleveland2030.org?cc=technology@cleveland2030.org">info@cleveland2030.org</a></footer>
+          	The Cleveland Professional 20/30 Club, 668 Euclid, #10	Cleveland, OH 44114 &nbsp;<a href="mailto:info@cleveland2030.org?cc=technology@cleveland2030.org">info@cleveland2030.org</a>
+          	<div id="social_footer">
+            	<a href="https://www.facebook.com/CP2030"><%= image_tag("facebook.png", :alt => "Facebook") %></a>
+            	<a href="http://twitter.com/CP2030"><%= image_tag("twitter.png", :alt => "Twitter")%></a>
+            	<a href="http://www.linkedin.com/groups?home=&gid=122184"><%= image_tag("linkedin.png", :alt => "LinkedIn")%></a>
+            </div>
+          </footer>
         </div>
       </div>
     </div>
