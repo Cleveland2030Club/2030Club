@@ -4,6 +4,8 @@ div.twoColumns-0, { width:auto; }
 .sub-nav { padding:20px 60px 20px 15px; background-image:url("/images/subnav-background2.gif"); background-repeat:no-repeat; background-position:0 top; }
 .sub-nav li { list-style-type:none; } 
 .sub-nav li a { display:block; padding:6px 0 6px 12px;}
-.board dt{font-weight: bold;margin-bottom:0;}
-.board dd{border-bottom:1px dashed #aaa;}
+.board ul {list-style:none;}
+.board li{border-bottom:1px dashed #aaa;clear:left;overflow:hidden;margin:0 0 10px;padding:0 0 10px;}
 .board-email{float:right;}
+.board-photo{float:left;margin-right:20px;}
+.board-memeber-info {margin-top:20px;}
