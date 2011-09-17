@@ -19,6 +19,10 @@ ActionController::Routing::Routes.draw do |map|
   map.about_directors 'about/directors', :controller => 'about', :action => 'directors'
   map.about_corporate 'about/corporate', :controller => 'about', :action => 'corporate'
   
+  map.namespace(:admin) do |admin|
+    admin.resources :dashboard, :only => [:index]
+  end
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
