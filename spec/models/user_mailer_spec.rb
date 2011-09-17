@@ -11,13 +11,12 @@ describe UserMailer do
   describe "UserMailer.welcome_email" do
     before(:each) do
       @user = mock_model(User, :email => 'test@gmail.com')
-      @events = [mock_model(Event, :name => 'Awesome Event', :start_at => Time.now + (7*24*60*60))]
+      @events = [mock_model(Event, :name => 'Awesome Event', :start_at => Time.now + (7*24*60*60)), mock_model(Event, :name => 'Sweet Event', :start_at => Time.now + (14*24*60*60))]
       Event.should_receive(:find).and_return(@events)
       @mailer = UserMailer.deliver_welcome_email(@user)
     end
     
     it "will add user email to the mailer" do
-      puts @mailer.body
       @mailer.body.should =~ /Welcome test@gmail.com/
     end  
     
@@ -26,8 +25,8 @@ describe UserMailer do
     end  
         
     it "will add upcoming events to the mailer" do
-       @mailer.body.should =~ /<li>Awesome Event \d{1,2}\/\d{1,2}\/\d{4} \d{1,2}:\d{1,2}[A|P]M<\/li>/
-    end
+      @mailer.body.should =~ /Awesome Event/
+    end  
   
     it "will deliver successfully" do
       lambda { UserMailer.deliver(@mailer) }.should_not raise_error
