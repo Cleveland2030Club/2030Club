@@ -25,5 +25,11 @@ module Admin
         { :post => '/admin/participants' }.should route_to(:controller => 'admin/participants', :action => 'create')
       end
     end
+    
+    describe "get #edit" do
+      it "recognizes and routes /admin/participants/:id/edit to ParticipantsController#edit" do
+        { :get => '/admin/participants/1/edit' }.should route_to(:controller => 'admin/participants', :action => 'edit', :id => '1')
+      end
+    end
   end
 end

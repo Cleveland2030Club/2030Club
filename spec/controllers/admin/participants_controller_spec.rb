@@ -91,5 +91,23 @@ module Admin
         end
       end
     end
+    
+    describe "get #edit" do
+      
+      before do
+        @participant = mock_model(::Participant, :id => 1)
+        Participant.should_receive(:find).with('1').and_return(@participant)
+        get :edit, :id => '1'
+      end
+      
+      it "assigns a specific instance of Participang to participant" do
+        assigns(:participant).should == @participant
+      end
+      
+      it "renders the edit view" do
+        response.should render_template 'edit'
+      end
+    end
+    
   end
 end

@@ -20,4 +20,9 @@ class Admin::ParticipantsController < Admin::AdminController
       render 'new'
     end
   end
+  
+  def edit
+    @participant = Participant.find(params[:id])
+  end
+  
 end
