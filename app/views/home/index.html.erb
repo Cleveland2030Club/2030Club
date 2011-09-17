@@ -44,16 +44,14 @@
 					// intiialize flickr plugin
 					var flickr = new Galleria.Flickr('9005c2c39147fac3ffca9964197671c5');				    
 					// inject a photset into galleria
-					flickr.getSet('72157624191939250', { 
-						size: 'medium'
-						}, function(data) {
-						$('#galleria').galleria({
-              autoplay:5000,
-							data_source:data,
+					flickr.set('72157624191939250', function(data) {
+          $('#galleria').galleria({
+              autoplay: 5000,
+							data_source: data,
 							height: '400px'
 						});
 					});
-				</script>          
+				</script>
 			</div>
     	<div class="membership">
         <div class="membershipBody">
@@ -90,8 +88,6 @@
 	</div>
 	<div class="sponsored-events">
 		<h4>Sponsored Events</h4>
-
-		<%= render :partial => "shared/special_event", :locals => { :event => @special_event } %>
 		
 		<%= render :partial => "shared/upcoming_sponsored_events", 
 	  			   :collection => @sponsored_events,
