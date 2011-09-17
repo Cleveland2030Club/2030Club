@@ -12,8 +12,21 @@
     <![endif]-->
   </head>
   <body>
-    <div id="container">
-      <header></header>
+    <div class="container">
+      <header>
+        <h1>Admin</h1>
+        <nav>
+          <ul>
+            <li><%= link_to 'Dashboard', admin_dashboard_index_path %></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Member Benefits</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="main">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
