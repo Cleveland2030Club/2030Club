@@ -7,9 +7,19 @@
     <h2>Welcome <%= @user.email %> to the Cleveland 2030 Club!</h2>
     <p>
       Your account has been activated.<br/>
-      Please visit <%= @url %> and log on with your email and password.<br /%>
+      Please visit <a href="<%= @url %>"><%= @url %></a> and log on with your email and password.<br />
       Enjoy being a member of the 2030 Club.<br />
     </p>
+	<% if @events.size > 0 %>
+	<h4>Upcoming Events</h4>
+	<p>
+		<ul>
+			<% @events.each do |event| %>
+			<li><%= "#{event.name} #{event.start_at.strftime("%m/%d/%Y%l:%M%p")}" %></li>
+			<% end%>
+		</ul>
+	</p>
+	<% end %>
     <p>
       Regards:<br/>
       The Cleveland 2030 Club Committee

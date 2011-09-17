@@ -3,12 +3,14 @@ class UserMailer < ActionMailer::Base
   default_url_options[:host] = "www.cleveland2030.org"
 
   def welcome_email(user)
+    events = Event.all(:conditions => ["start_at > DATE(?)", Time.now], :order => "start_at ASC", :limit => 5)
+    
     recipients  user.email
     bcc         "technology@cleveland2030.org, info@cleveland2030.org"
     from        "Cleveland2030 Club <do_not_reply@cleveland2030.org>"
     subject     "Welcome to The Cleveland 2030 Club!"
     sent_on     Time.now
-    body        :user => user, :url => "http://cleveland2030.org/login"
+    body        :user => user, :url => "http://cleveland2030.org/user_sessions/new", :events => events
   end
 
   def event_registration_email(user, event)
