@@ -49,5 +49,47 @@ module Admin
         response.should render_template 'show'
       end
     end
+    
+    describe "post #create" do
+      before do
+        @participant = mock_model(Participant, :id => 1)
+        Participant.stub(:new).and_return(@participant)
+      end
+      
+      it "builds a new Participant with post params" do
+        participant = mock_model(Participant)
+        Participant.should_receive(:new).and_return(participant)
+        participant.stub(:save)
+        post :create
+        assigns(:participant).should == participant
+      end
+      
+      context "when valid" do
+        it "saves the new Participant" do  
+          @participant.should_receive(:save).and_return(true)
+          post :create
+        end
+        
+        it "sets a flash message" do
+          @participant.stub(:save).and_return(true)
+          post :create
+          flash[:message].should == "Participant has been registered."
+        end
+        
+        it "redirects to participants show page" do
+          @participant.stub(:save).and_return(true)
+          post :create
+          response.should redirect_to admin_participant_path(@participant)
+        end
+      end
+      
+      context "when invalid" do
+        it "renders the new template" do
+          @participant.stub(:save).and_return(false)
+          post :create
+          response.should render_template 'new'
+        end
+      end
+    end
   end
 end

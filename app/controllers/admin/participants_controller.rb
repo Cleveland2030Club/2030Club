@@ -10,4 +10,14 @@ class Admin::ParticipantsController < Admin::AdminController
   def show
     @participant = Participant.find(params[:id])
   end
+  
+  def create
+    @participant = Participant.new(params[:participant])
+    if @participant.save
+      flash[:message] = "Participant has been registered."
+      redirect_to admin_participant_path(@participant)
+    else
+      render 'new'
+    end
+  end
 end
