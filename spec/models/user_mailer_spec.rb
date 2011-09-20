@@ -21,7 +21,7 @@ describe UserMailer do
     end  
     
     it "will add user logon url to the mailer" do
-      @mailer.body.should =~ /http:\/\/cleveland2030.org\/user_sessions\/new/      
+      @mailer.body.should =~ /http:\/\/cleveland2030.org\/login/      
     end  
         
     it "will add upcoming events to the mailer" do
