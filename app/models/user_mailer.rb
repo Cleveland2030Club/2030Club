@@ -10,7 +10,7 @@ class UserMailer < ActionMailer::Base
     from        "Cleveland2030 Club <do_not_reply@cleveland2030.org>"
     subject     "Welcome to The Cleveland 2030 Club!"
     sent_on     Time.now
-    body        :user => user, :url => "http://cleveland2030.org/user_sessions/new", :events => events
+    body        :user => user, :url => "http://cleveland2030.org/login", :events => events
   end
 
   def event_registration_email(user, event)

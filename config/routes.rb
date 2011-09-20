@@ -19,6 +19,8 @@ ActionController::Routing::Routes.draw do |map|
   map.about_directors 'about/directors', :controller => 'about', :action => 'directors'
   map.about_corporate 'about/corporate', :controller => 'about', :action => 'corporate'
   
+  map.login 'login', :controller => 'user_sessions', :action => 'new'
+  
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
