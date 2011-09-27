@@ -4,19 +4,21 @@ module Admin
 
   describe LocationsController do
 
+    before do
+      @participant = mock_model(Participant, :id => 1)
+      Participant.stub(:find).and_return(@participant)
+    end
+
     describe "GET #new" do
       it "assigns a specific participant to @participant" do
-        participant = mock_model(Participant)
-        Participant.should_receive(:find).and_return(participant)
+        Participant.should_receive(:find).and_return(@participant)
 
         get :new, :participant_id => 1
-        assigns(:participant).should == participant
+        assigns(:participant).should == @participant
       end
 
       it "assigns a new instance of Location to @location" do
-        participant = mock_model(Participant)
         location = mock_model(Location)
-        Participant.stub(:find) { participant }
         Location.should_receive(:new).and_return(location)
 
         get :new, :participant_id => 1
@@ -24,9 +26,7 @@ module Admin
       end
 
       it "renders the new template" do
-        participant = mock_model(Participant)
         location = mock_model(Location)
-        Participant.stub(:find) { participant }
         Location.stub(:new).and_return(location)
 
         get :new, :participant_id => 1
@@ -36,11 +36,6 @@ module Admin
     end
 
     describe "POST #create" do
-
-      before do
-        @participant = mock_model(Participant, :id => 1)
-        Participant.should_receive(:find).and_return(@participant)
-      end
 
       it "assigns a participant to @participant" do
         post :create, :participant_id => 1, :location => {:address => '1 Main St' }

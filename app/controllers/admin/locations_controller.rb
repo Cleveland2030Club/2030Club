@@ -1,12 +1,23 @@
 class Admin::LocationsController < Admin::AdminController
 
+  before_filter :set_participant
+
   def new
-    @participant = Participant.find(params[:participant_id])
     @location = Location.new
   end
 
   def create
-    @participant = Participant.find(params[:participant_id])
+  end
+
+
+  private
+
+  def set_participant
+    if params.has_key?(:participant_id)
+      @participant = Participant.find(params[:participant_id])
+    else
+      redirect_to admin_participants_path
+    end
   end
 
 end
