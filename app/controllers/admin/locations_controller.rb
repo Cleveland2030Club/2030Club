@@ -5,4 +5,8 @@ class Admin::LocationsController < Admin::AdminController
     @location = Location.new
   end
 
+  def create
+    @participant = Participant.find(params[:participant_id])
+  end
+
 end

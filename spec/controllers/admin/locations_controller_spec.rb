@@ -34,6 +34,31 @@ module Admin
       end
 
     end
+
+    describe "POST #create" do
+
+      before do
+        @participant = mock_model(Participant, :id => 1)
+        Participant.should_receive(:find).and_return(@participant)
+      end
+
+      it "assigns a participant to @participant" do
+        post :create, :participant_id => 1, :location => {:address => '1 Main St' }
+        assigns(:participant).should == @participant
+      end
+      
+      context "Valid location" do
+
+        it "assigns a new location to @location"
+
+        it "saves the new location"
+
+        it "sets the flash notice to 'Thank you for adding the location'"
+
+        it "redirects to participant show page"
+      end
+
+    end
   end
 
 end
