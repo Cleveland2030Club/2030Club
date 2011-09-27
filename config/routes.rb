@@ -21,7 +21,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.namespace(:admin) do |admin|
     admin.resources :dashboard, :only => [:index]
-    admin.resources :participants
+    admin.resources :participants do |participant|
+      participant.resources :locations, :except => [:index, :show]
+    end
   end
 
   #map.connect ':controller/:action/:id'
