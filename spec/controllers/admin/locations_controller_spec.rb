@@ -37,20 +37,38 @@ module Admin
 
     describe "POST #create" do
 
+      before do
+        @location = mock_model(Location)
+        @location.stub(:save).and_return(true)
+        @participant.stub_chain(:locations, :build).and_return(@location)
+      end
+
       it "assigns a participant to @participant" do
-        post :create, :participant_id => 1, :location => {:address => '1 Main St' }
+        post :create, :participant_id => 1
         assigns(:participant).should == @participant
       end
       
       context "Valid location" do
 
-        it "assigns a new location to @location"
+        it "assigns a new location to @location" do
+          post :create, :participant_id => 1
+          assigns(:location).should == @location 
+        end
 
-        it "saves the new location"
+        it "saves the new location" do
+          @location.should_receive(:save).and_return(true)
+          post :create, :participant_id => 1
+        end
 
-        it "sets the flash notice to 'Thank you for adding the location'"
+        it "sets the flash notice to 'Thank you for adding the location'" do
+          post :create, :participant_id => 1
+          flash[:notice].should == "Thank you for adding the location"
+        end
 
-        it "redirects to participant show page"
+        it "redirects to participant show page" do
+          post :create, :participant_id => 1
+          response.should redirect_to(admin_participant_path(@participant))
+        end
       end
 
     end
