@@ -73,7 +73,7 @@ module Admin
         it "sets a flash message" do
           @participant.stub(:save).and_return(true)
           post :create
-          flash[:message].should == "Participant has been registered."
+          flash[:notice].should == "Participant has been registered."
         end
         
         it "redirects to participants show page" do
@@ -130,7 +130,7 @@ module Admin
         it "provides flash notice update has been received successfully" do
           @participant.stub(:update_attributes).and_return(true)
           put :update, :id => 1
-          flash[:message].should == "Participant updated successfully."
+          flash[:notice].should == "Participant updated successfully."
         end
         
         it "redirect to the particpant show page" do

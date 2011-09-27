@@ -1,4 +1,5 @@
 class Admin::ParticipantsController < Admin::AdminController
+
   def index
     @participants = Participant.find(:all)
   end
@@ -14,7 +15,7 @@ class Admin::ParticipantsController < Admin::AdminController
   def create
     @participant = Participant.new(params[:participant])
     if @participant.save
-      flash[:message] = "Participant has been registered."
+      flash[:notice] = "Participant has been registered."
       redirect_to admin_participant_path(@participant)
     else
       render 'new'
@@ -28,7 +29,7 @@ class Admin::ParticipantsController < Admin::AdminController
   def update
     @participant = Participant.find(params[:id])
     if @participant.update_attributes(params[:participant])
-      flash[:message] = "Participant updated successfully."
+      flash[:notice] = "Participant updated successfully."
       redirect_to admin_participant_path(@participant)
     else
       render 'edit'
