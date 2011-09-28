@@ -30,6 +30,12 @@ class Admin::LocationsController < Admin::AdminController
     end
   end
 
+  def destroy
+    @location = @participant.locations.find(params[:id])
+    @location.destroy
+    redirect_to admin_participant_path(@participant)
+  end
+
   private
 
   def set_participant

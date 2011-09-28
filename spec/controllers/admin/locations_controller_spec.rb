@@ -148,5 +148,24 @@ module Admin
       end
     end
 
+    describe "DELETE #destroy" do
+      it "deletes the location" do
+        location = mock_model(Location)
+        @participant.stub_chain(:locations, :find => location)
+        location.should_receive(:destroy)
+
+        delete :destroy, :participant_id => 1, :id => 1
+      end
+
+      it "redirects to the participant show page" do
+        location = mock_model(Location)
+        @participant.stub_chain(:locations, :find => location)
+        location.stub(:destroy)
+
+        delete :destroy, :participant_id => 1, :id => 1
+        response.should redirect_to admin_participant_path(@participant)
+      end
+    end
+
   end
 end
