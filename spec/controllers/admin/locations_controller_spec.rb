@@ -39,20 +39,23 @@ module Admin
 
       before do
         @location = mock_model(Location)
-        @location.stub(:save).and_return(true)
         @participant.stub_chain(:locations, :build).and_return(@location)
+        @location.stub(:save)
       end
 
       it "assigns a participant to @participant" do
         post :create, :participant_id => 1
         assigns(:participant).should == @participant
       end
+
+      it "assigns a new location to @location" do
+        post :create, :participant_id => 1
+        assigns(:location).should == @location 
+      end
       
       context "Valid location" do
-
-        it "assigns a new location to @location" do
-          post :create, :participant_id => 1
-          assigns(:location).should == @location 
+        before do
+          @location.stub(:save).and_return(true)
         end
 
         it "saves the new location" do
@@ -68,6 +71,17 @@ module Admin
         it "redirects to participant show page" do
           post :create, :participant_id => 1
           response.should redirect_to(admin_participant_path(@participant))
+        end
+      end
+
+      context "Invalid location" do
+        before do
+          @location.stub(:save).and_return(false)
+        end
+
+        it "renders the new template" do
+          post :create, :participant_id => 1
+          response.should render_template('/new')
         end
       end
 

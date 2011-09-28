@@ -8,9 +8,12 @@ class Admin::LocationsController < Admin::AdminController
 
   def create
     @location = @participant.locations.build(params[:location])
-    @location.save
-    flash[:notice] = "Thank you for adding the location"
-    redirect_to admin_participant_path(@participant)
+    if @location.save
+      flash[:notice] = "Thank you for adding the location"
+      redirect_to admin_participant_path(@participant)
+    else
+      render :new
+    end
   end
 
 
