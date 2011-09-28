@@ -16,6 +16,19 @@ class Admin::LocationsController < Admin::AdminController
     end
   end
 
+  def edit
+    @location = @participant.locations.find(params[:id])
+  end
+
+  def update
+    @location = @participant.locations.find(params[:id])
+    if @location.update_attributes(params[:location])
+      flash[:notice] = "Location has been updated"
+      redirect_to admin_participant_path(@participant)
+    else
+      render :edit
+    end
+  end
 
   private
 
