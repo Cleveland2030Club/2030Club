@@ -20,13 +20,19 @@ module Admin
     
     describe "get #new" do
       before do
+        @categories = [mock_model(Category)]
         @participant = mock_model(Participant)
         Participant.should_receive(:new).and_return(@participant)
+        Category.should_receive(:all).and_return(@categories)
         get :new        
       end
       
       it "assigns a new Participant to @participant" do
         assigns(:participant).should == @participant
+      end
+      
+      it "assigns a categories to @categories" do
+        assigns(:categories).should == @categories
       end
       
       it "renders the new view" do

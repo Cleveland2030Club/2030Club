@@ -1,0 +1,56 @@
+<h1>New Participant</h1>
+<% form_for [:admin, @participant], :html => {:multipart => true }  do | participant | %>
+  <div class="twoColumns-0">
+    <div class="mod">
+      <%= participant.error_messages %>
+      <fieldset>
+        <legend><span><strong>Company Information</strong></span></legend>
+        <div class="form-node">
+          <%= participant.label :name %>
+          <%= participant.text_field :name %>
+        </div>
+        <div class="form-node">
+          <%= participant.label :url %>
+          <%= participant.text_field :url %>
+        </div>
+        <div class="form-node">
+          <%= participant.label :bio %>
+          <%= participant.text_area :bio %>
+        </div>
+        <div class="form-node">
+          <%= participant.label :logo %>
+          <%= participant.file_field :logo %>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span><strong>Personal Information</strong></span></legend>
+        <div class="form-node">
+          <%= participant.label :benefit %>
+          <%= participant.text_area :benefit %>
+        </div>
+        <div class="form-node">
+          <%= participant.label :instructions, 'How to redeem' %>
+          <%= participant.text_area :instructions %>
+        </div>
+      </fieldset>
+
+    </div>
+  </div>
+  <div class="twoColumns-1">
+    <div class="mod">
+      <fieldset class="checklist">
+        <legend><span><strong>Select a Category</strong></span></legend>
+        <% @categories.each do | category | %>
+          <div class="form-node">
+            <%= participant.label :category_id, category.name %>
+            <%= participant.radio_button :category_id, category.id %>
+          </div>
+        <% end %>
+      </fieldset>
+    </div>
+  </div>
+  <div class="formAction clear">
+    <%= participant.submit %>
+  </div>
+<% end %>

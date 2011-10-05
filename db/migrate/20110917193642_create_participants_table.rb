@@ -6,6 +6,7 @@ class CreateParticipantsTable < ActiveRecord::Migration
       t.text   :bio
       t.string :benefit
       t.string :instructions
+      t.timestamps
     end
   end
 

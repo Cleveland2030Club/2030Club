@@ -6,6 +6,7 @@ class Admin::ParticipantsController < Admin::AdminController
   
   def new
     @participant = Participant.new
+    @categories = Category.all
   end
   
   def show
@@ -18,6 +19,7 @@ class Admin::ParticipantsController < Admin::AdminController
       flash[:notice] = "Participant has been registered."
       redirect_to admin_participant_path(@participant)
     else
+      @categories = Category.all
       render 'new'
     end
   end
