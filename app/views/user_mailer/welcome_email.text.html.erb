@@ -7,12 +7,35 @@
     <h2>Welcome <%= @user.email %> to the Cleveland 2030 Club!</h2>
     <p>
       Your account has been activated.<br/>
-      Please visit <%= @url %> and log on with your email and password.<br /%>
+      Please visit <a href="<%= @url %>"><%= @url %></a> and log on with your email and password.<br />
       Enjoy being a member of the 2030 Club.<br />
     </p>
-    <p>
-      Regards:<br/>
-      The Cleveland 2030 Club Committee
-    </p>
+	<% unless @events.empty? %>
+	<h4>Upcoming Events</h4>
+	<ul style="list-style-type:none; float: left; padding: 0; margin-top: 0;">
+		<% @events.each do |event| %>
+		<li style="clear: both;">
+			<div style="-moz-border-radius: 5px 5px 5px 5px; background-color: #0056A5; background-image: url('http://www.cleveland2030.org/images/btn-bg.gif'); color: #FFFFFF; float: left; height: 2em; margin-bottom: 8px; padding: 3px; position: relative; width: 3.4em;">
+				<span style="float: left; font-size: 200%; line-height: 1em;">
+					<%= event.start_at.strftime("%d") %>
+				</span> 
+				<span style="-moz-transform: rotate(-90deg); font-size: 65%; font-weight: bold; left: 4em; letter-spacing: 2px; position: absolute; top: 0.9em;">
+					<%= event.start_at.strftime("%b") %>
+				</span>
+			</div>				
+			<div style="float: left; padding-left: 4px;">
+				<%=link_to truncate(event.name, :length => 50), event_url(event), :style => "color: #377FB9; text-decoration: none;" %><br />
+				<%= event.start_at.strftime("%B %d, at %I:%M %p")%>
+			</div>
+		</li>
+		<% end%>
+	</ul>
+	<% end %>
+    <div style="clear: both;">
+		<p>
+	      Regards,<br/>
+	      The Cleveland 2030 Club Committee
+	    </p>
+	</div>
   </body>
 </html>
