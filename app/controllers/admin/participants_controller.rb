@@ -1,12 +1,13 @@
 class Admin::ParticipantsController < Admin::AdminController
 
+  before_filter :get_categories, :only => [:new, :create, :edit, :update]
+
   def index
     @participants = Participant.find(:all)
   end
   
   def new
     @participant = Participant.new
-    @categories = Category.all
   end
   
   def show
@@ -19,7 +20,6 @@ class Admin::ParticipantsController < Admin::AdminController
       flash[:notice] = "Participant has been registered."
       redirect_to admin_participant_path(@participant)
     else
-      @categories = Category.all
       render 'new'
     end
   end
@@ -42,6 +42,12 @@ class Admin::ParticipantsController < Admin::AdminController
     @participant = Participant.find(params[:id])
     @participant.destroy
     redirect_to admin_participants_path
+  end
+
+  protected
+
+  def get_categories
+    @categories = Category.all
   end
   
 end
