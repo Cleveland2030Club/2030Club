@@ -8,7 +8,7 @@ describe User do
   it { should have_one :user_profile }
   it { should have_one :registration }
   it "User#admin? returns true if user has been declared an admin" do
-    @user.email = 'morcutt@gmail.com'
+    @user.email = 'kevin@detone8.com'
     @user.admin?.should be_true
   end
   
