@@ -13,6 +13,7 @@ describe Participant do
   
   describe "Participant relationships" do
     it { should respond_to(:category) }
+    it { should respond_to(:locations) }
   end
 
   describe "a valid Participant requires" do

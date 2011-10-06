@@ -1,6 +1,7 @@
 class Participant < ActiveRecord::Base
   
   belongs_to :category
+  has_many :locations
   
   validates_presence_of :name, :bio, :benefit, :instructions
   
