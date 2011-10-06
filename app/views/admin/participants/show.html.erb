@@ -19,32 +19,34 @@
     <%= raw @participant.instructions %>
   </section>
 </section>
-<% unless @participant.locations.empty? %>
-  <table>
-    <thead>
-      <tr>
-        <th>Region</th>
-        <th>Address</th>
-        <th>Address Cont</th>
-        <th>City</th>
-        <th>Zip</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @paticipant.locations.each do |location| %>
+<div class="locations">
+  <% unless @participant.locations.empty? %>
+    <table>
+      <thead>
         <tr>
-          <td><%= location.region %></td>
-          <td><%= location.address %></td>
-          <td><%= location.address_cont %></td>
-          <td><%= location.city %></td>
-          <td><%= location.zip %></td>
-          <td><%= link_to "edit", edit_admin_participant_location_path(@participant, location) %></td>
-          <td><%= link_to "delete", admin_participant_location_path(@participant, location), :method => :delete, :confirm => 'Are you sure?' %></td>
+          <th>Region</th>
+          <th>Address</th>
+          <th>Address Cont</th>
+          <th>City</th>
+          <th>Zip</th>
+          <th></th>
+          <th></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-<% end %>
-<%= link_to 'add location', new_admin_participant_path(@participant) %>
+      </thead>
+      <tbody>
+        <% @paticipant.locations.each do |location| %>
+          <tr>
+            <td><%= location.region %></td>
+            <td><%= location.address %></td>
+            <td><%= location.address_cont %></td>
+            <td><%= location.city %></td>
+            <td><%= location.zip %></td>
+            <td><%= link_to "edit", edit_admin_participant_location_path(@participant, location) %></td>
+            <td><%= link_to "delete", admin_participant_location_path(@participant, location), :method => :delete, :confirm => 'Are you sure?' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+  <%= link_to 'add location', new_admin_participant_location_path(@participant) %>
+</div>
