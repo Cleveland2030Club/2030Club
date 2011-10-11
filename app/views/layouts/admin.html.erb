@@ -13,9 +13,9 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="admin">
         <h1>2030 Admin</h1>
-        <nav>
+        <nav class="admin">
           <ul>
             <li><%= link_to 'Dashboard', admin_dashboard_index_path %></li>
             <li><a href="#">Members</a></li>
@@ -24,7 +24,7 @@
           </ul>
         </nav>
       </header>
-      <div class="main">
+      <div class="main admin_content">
         <%= yield %>
       </div>
     </div>
