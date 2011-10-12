@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Cleveland 2030: Admin</title>
+    <%= stylesheet_link_tag 'main' %>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/trunk/ui/jquery.effects.core.js"></script>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/ie/main.css" />  
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <header class="admin">
+        <h1>2030 Admin</h1>
+        <nav class="admin">
+          <ul>
+            <li><%= link_to 'Dashboard', admin_root_path %></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Events</a></li>
+            <li><%= link_to 'Member Rewards', admin_participants_path %></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="main admin_content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
