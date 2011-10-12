@@ -86,7 +86,7 @@ private
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
   end
-  
+
   def requires_admin
     unless current_user && current_user.admin?
       redirect_to(new_user_session_path, :notice => 'You do not have access to this area')

@@ -5,6 +5,8 @@ module Admin
   describe LocationsController do
 
     before do
+      user = mock("User", :admin? => true)
+      @controller.stub(:requires_admin) { true }
       @participant = mock_model(Participant, :id => 1)
       Participant.stub(:find).and_return(@participant)
     end
