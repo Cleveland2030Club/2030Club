@@ -1,4 +1,4 @@
-<section class='participants'>
+<section class='admin_participants'>
 <% unless @participants.empty? %>
   <table>
     <thead>
@@ -27,3 +27,39 @@
   </table>
 <% end %>
 <%= link_to 'Add New Participant', new_admin_participant_path %>
+</section>
+<!-- This section needs to be made dynamic. -->
+<section class="admin_regions">
+  <table>
+    <thead>
+      <tr>
+        <th>Region</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Downtown</td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+      <tr>
+        <td>Coventry</td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+      <tr>
+        <td>Flats</td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+      <tr>
+        <td>Lakewood</td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="#">Add Region</a>
+</section>

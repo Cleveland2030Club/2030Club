@@ -114,7 +114,11 @@ nav.admin{height:40px;padding:0;background:transparent;border-bottom:3px solid #
 nav.admin ul{margin-left:2%;}
 nav.admin ul li{background:#000;margin:0 0 0 1px;}
 div.admin_content{margin:1% 2%;}
-
+section.admin_participants{float:left;width:75%;padding-right:2%;}
+section.admin_regions{float:right;width:20%;padding-right:2%;}
+section.admin_regions table{width:100%}
+section.admin_regions table thead tr th{font-size:1.3em;text-align:left;}
+section.admin_regions table tbody tr td{font-size:1.1em;}
 /* ------------------------------- */
 /* 		Colum Styles  		   	*/
 /* ------------------------------ */
