@@ -6,7 +6,7 @@ module Admin
 
     describe "get #index" do
       it "recoginizes and routes /admin/dashboard to DashboardController#index" do
-        { :get => "/admin/dashboard" }.should route_to(:controller => 'admin/dashboard', :action => 'index')
+        { :get => "/admin" }.should route_to(:controller => 'admin/dashboard', :action => 'index')
       end
     end
 
