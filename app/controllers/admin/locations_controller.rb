@@ -1,4 +1,4 @@
-class Admin::LocationsController < Admin::AdminController
+class Admin::LocationsController < Admin::BaseController
 
   before_filter :set_participant
 

@@ -1,4 +1,4 @@
-class Admin::ParticipantsController < Admin::AdminController
+class Admin::ParticipantsController < Admin::BaseController
 
   before_filter :get_categories, :only => [:new, :create, :edit, :update]
 
