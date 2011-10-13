@@ -22,6 +22,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.namespace(:admin) do |admin|
     admin.root :controller => 'dashboard', :action => 'index'
+    admin.resources :categories, :except => [:index, :show]
     admin.resources :participants do |participant|
       participant.resources :locations, :except => [:index, :show]
     end
