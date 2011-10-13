@@ -29,37 +29,73 @@
 <%= link_to 'Add New Participant', new_admin_participant_path %>
 </section>
 <!-- This section needs to be made dynamic. -->
-<section class="admin_regions">
-  <table>
-    <thead>
-      <tr>
-        <th>Region</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Downtown</td>
-        <td><a href="#">Edit</a></td>
-        <td><a href="#">Delete</a></td>
-      </tr>
-      <tr>
-        <td>Coventry</td>
-        <td><a href="#">Edit</a></td>
-        <td><a href="#">Delete</a></td>
-      </tr>
-      <tr>
-        <td>Flats</td>
-        <td><a href="#">Edit</a></td>
-        <td><a href="#">Delete</a></td>
-      </tr>
-      <tr>
-        <td>Lakewood</td>
-        <td><a href="#">Edit</a></td>
-        <td><a href="#">Delete</a></td>
-      </tr>
-    </tbody>
-  </table>
-  <a href="#">Add Region</a>
-</section>
+<div class="sidebar">
+  <section class="participant-filters">
+    <table>
+      <thead>
+        <tr>
+          <th>Region</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Downtown</td>
+          <td><a href="#">Edit</a></td>
+          <td><a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>Coventry</td>
+          <td><a href="#">Edit</a></td>
+          <td><a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>Flats</td>
+          <td><a href="#">Edit</a></td>
+          <td><a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>Lakewood</td>
+          <td><a href="#">Edit</a></td>
+          <td><a href="#">Delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="#">Add Region</a>
+  </section>
+  <section class="participant-filters">
+    <table>
+      <thead>
+        <tr>
+          <th>Categories</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Food and Drink</td>
+          <td><a href="#">Edit</a></td>
+          <td><a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>Arts and Culture</td>
+          <td><a href="#">Edit</a></td>
+          <td><a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>Housing</td>
+          <td><a href="#">Edit</a></td>
+          <td><a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>Recreation</td>
+          <td><a href="#">Edit</a></td>
+          <td><a href="#">Delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="#">Add Category</a>
+  </section>
+</div>
