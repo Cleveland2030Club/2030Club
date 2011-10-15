@@ -1,0 +1,12 @@
+<% form_for [:admin, @region] do |region| %>
+  <%= region.error_messages %>
+
+  <div>
+    <%= region.label :name %>
+    <%= region.text_field :name %>
+  </div>
+  <div>
+    <%= region.submit %>
+  </div>
+
+<% end %>
