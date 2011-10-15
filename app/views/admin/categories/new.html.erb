@@ -1,14 +1,5 @@
 <h1>Add a New Category</h1>
 
-<% form_for [:admin, @category] do |category| %>
-  <%= category.error_messages %>
+<%= render :partial => 'form' %>
 
-  <div>
-    <%= category.label :name %>
-    <%= category.text_field :name %>
-  </div>
-  <div>
-    <%= category.submit %>
-  </div>
-
-<% end %>
+<%= link_to "Back", admin_participants_path %>
