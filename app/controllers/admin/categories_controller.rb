@@ -29,6 +29,9 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    redirect_to admin_participants_path
   end
 
 end

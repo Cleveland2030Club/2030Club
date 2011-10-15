@@ -127,9 +127,27 @@ module Admin
     end
 
     describe "DELETE #destroy" do
-      it "finds the category"
-      it "deletes the category"
-      it "redirects to the participants page"
+      before do
+        @category = mock_model(Category, :id => 1, :name => "Food and Drink")
+        Category.stub(:find) { @category }
+        @category.stub(:destroy)
+      end
+
+      it "finds the category" do
+        Category.should_receive(:find).with('1').and_return(@category)
+        delete :destroy, :id => 1
+        assigns(:category).should == @category
+      end
+
+      it "deletes the category" do
+        @category.should_receive(:destroy)
+        delete :destroy, :id => 1
+      end
+
+      it "redirects to the participants page" do
+        delete :destroy, :id => 1
+        response.should redirect_to admin_participants_path
+      end
     end
   end
 end
