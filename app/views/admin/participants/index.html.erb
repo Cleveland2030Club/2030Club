@@ -1,0 +1,79 @@
+<section class='admin_participants'>
+  <table>
+    <thead>
+      <tr>
+        <th>Participant</th>
+        <th>Supporter Since</th>
+        <th>Category</th>
+        <th>Benefit Summary</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <% unless @participants.empty? %>
+      <tbody>
+        <% @participants.each do | participant | %>
+          <tr>
+            <td><%= link_to  participant.name, admin_participant_path(participant) %></td>
+            <td><%= participant.created_at.strftime('%m/%d/%Y') %></td>
+            <td><%= participant.category.name unless participant.category.nil? %></td>
+            <td><%= truncate(participant.benefit, :length => 50) %></td>
+            <td><%= link_to 'edit', edit_admin_participant_path(participant) %></td>
+            <td><%= link_to 'delete', admin_participant_path(participant), :method => :delete,
+              :confirm => 'Are you sure? This cannot be undone' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    <% end %>
+  </table>
+<%= link_to 'Add New Participant', new_admin_participant_path %>
+</section>
+<!-- This section needs to be made dynamic. -->
+<div class="sidebar">
+  <section class="participant-filters">
+    <table>
+      <thead>
+        <tr>
+          <th>Region</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <% unless @regions.empty? %>
+        <tbody>
+          <% @regions.each do |region| %>
+            <tr>
+              <td><%= region.name %></td>
+              <td><%= link_to "edit", edit_admin_region_path(region) %></td>
+              <td><%= link_to "delete", admin_region_path(region), :method => :delete, :confirm => "Are you sure?" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      <% end %>
+  </table>
+    <%= link_to "Add Region", new_admin_region_path %>
+  </section>
+  <section class="participant-filters">
+    <table>
+      <thead>
+        <tr>
+          <th>Categories</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <% unless @categories.empty? %>
+        <tbody>
+          <% @categories.each do |category| %>
+            <tr>
+              <td><%= category.name %></td>
+              <td><%= link_to "edit", edit_admin_category_path(category) %></td>
+              <td><%= link_to "delete", admin_category_path(category), :method => :delete, :confirm => "Are you sure?" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      <% end %>
+    </table>
+    <%= link_to "Add Category", new_admin_category_path %>
+  </section>
+</div>

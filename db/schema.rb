@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100928025043) do
+ActiveRecord::Schema.define(:version => 20111015184046) do
 
   create_table "accounts", :force => true do |t|
     t.string    "email",                                  :null => false
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(:version => 20100928025043) do
     t.boolean   "active",              :default => false
     t.boolean   "activated",           :default => false
     t.timestamp "activated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "email_addresses", :force => true do |t|
@@ -78,6 +84,18 @@ ActiveRecord::Schema.define(:version => 20100928025043) do
     t.timestamp "updated_at"
   end
 
+  create_table "locations", :force => true do |t|
+    t.integer "participant_id"
+    t.string  "address"
+    t.string  "address_cont"
+    t.string  "city"
+    t.string  "state"
+    t.string  "zip"
+    t.string  "phone"
+    t.integer "region_id"
+    t.string  "google_map_link"
+  end
+
   create_table "memberships", :force => true do |t|
     t.string    "name"
     t.timestamp "created_at"
@@ -101,6 +119,27 @@ ActiveRecord::Schema.define(:version => 20100928025043) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
     t.boolean   "complete",         :default => false
+  end
+
+  create_table "participants", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.text     "bio"
+    t.string   "benefit"
+    t.string   "instructions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.integer  "category_id"
+  end
+
+  create_table "regions", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "registrations", :force => true do |t|

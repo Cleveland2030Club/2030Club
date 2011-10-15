@@ -1,0 +1,34 @@
+<% form_for [:admin, :participant, @location] do |location| %>
+  <%= location.error_messages %>
+  <div class="form-node">
+    <%= location.label :region_id, "Select a Region" %>
+    <%= location.collection_select(:region_id, @regions, :id, :name, {:prompt => true}) %>
+  </div>
+  <div class="form-node">
+    <%= location.label :address %>
+    <%= location.text_field :address %>
+  </div>
+  <div class="form-node">
+    <%= location.label :address_cont %>
+    <%= location.text_field :address_cont %>
+  </div>
+  <div class="form-node">
+    <%= location.label :city %>
+    <%= location.text_field :city %>
+  </div>
+  <div class="form-node">
+    <%= location.label :zip %>
+    <%= location.text_field :zip %>
+  </div>
+  <div class="form-node">
+    <%= location.label :google_map_link, "Google Map URL" %>
+    <%= location.text_field :google_map_link %>
+  </div>
+  <div class="form-node">
+    <%= location.label :phone %>
+    <%= location.text_field :phone %>
+  </div>
+  <div class="form-node">
+    <%= location.submit  %>
+  </div>
+<% end %>

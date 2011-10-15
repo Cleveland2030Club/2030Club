@@ -12,15 +12,23 @@ ActionController::Routing::Routes.draw do |map|
 	map.resources :members, :member => {:edit_login => :get}
   map.resources :reports
 	map.resources :password_resets
-    
+
   map.cleveland_plus 'clevelandplus', :controller => 'clevelandplus', :action => 'index'
-  
+
   map.about 'about', :controller => 'about', :action => 'index'
   map.about_directors 'about/directors', :controller => 'about', :action => 'directors'
   map.about_corporate 'about/corporate', :controller => 'about', :action => 'corporate'
-  
   map.login 'login', :controller => 'user_sessions', :action => 'new'
-  
+
+  map.namespace(:admin) do |admin|
+    admin.root :controller => 'dashboard', :action => 'index'
+    admin.resources :categories, :except => [:index, :show]
+    admin.resources :regions, :except => [:index, :show]
+    admin.resources :participants do |participant|
+      participant.resources :locations, :except => [:index, :show]
+    end
+  end
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

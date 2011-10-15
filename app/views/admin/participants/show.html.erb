@@ -1,0 +1,56 @@
+<div class="admin-wrapper">
+  <section class="participant-details">
+    <header>
+    <h1>
+      <%= @participant.name %>
+    </h1>
+    <a href="<%= @participant.url %>"><%= @participant.url %></a>
+    <%= image_tag @participant.logo.url %>
+    </header>
+    <section>
+      <h2>Bio</h2>
+      <%= raw @participant.bio %>
+    </section>
+    <section>
+      <h2>Benefit</h2>
+      <%= raw @participant.benefit %>
+    </section>
+    <section>
+      <h2>How to redeem</h2>
+      <%= raw @participant.instructions %>
+    </section>
+  </section>
+  <div class="locations">
+    <% unless @participant.locations.empty? %>
+      <table>
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Address</th>
+            <th>Address Cont</th>
+            <th>City</th>
+            <th>Zip</th>
+            <th>Map it!</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @participant.locations.each do |location| %>
+            <tr>
+              <td><%= location.region.name %></td>
+              <td><%= location.address %></td>
+              <td><%= location.address_cont %></td>
+              <td><%= location.city %></td>
+              <td><%= location.zip %></td>
+              <td><%= link_to "Map", location.google_map_link %></td>
+              <td><%= link_to "edit", edit_admin_participant_location_path(@participant, location) %></td>
+              <td><%= link_to "delete", admin_participant_location_path(@participant, location), :method => :delete, :confirm => 'Are you sure?' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+    <%= link_to 'add location', new_admin_participant_location_path(@participant) %>
+  </div>
+</div>

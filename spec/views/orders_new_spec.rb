@@ -1,11 +1,9 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe "orders new" do
-  def setup
-    :activate_authlogic
-  end
-
   it "has all three fields needed for the TotalCalculator" do
+    @controller.stub(:current_user) { Factory.create(:user) }
+
     event = Factory.build(:event)
     order = Order.new
     order.items << event.items[0]
