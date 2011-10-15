@@ -13,12 +13,18 @@ module Admin
     describe "get #index" do
       before do
         @participants = [mock_model(Participant)]
+        @regions = [mock_model(Region)]
         Participant.should_receive(:find).with(:all).and_return(@participants)
+        Region.should_receive(:all).and_return(@regions)
         get :index
       end
 
       it "assigns Participants to @participants" do
         assigns(:participants).should == @participants
+      end
+
+      it "assigns Regions to @regions" do
+        assigns(:regions).should == @regions
       end
 
       it "renders the index view" do

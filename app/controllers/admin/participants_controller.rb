@@ -4,6 +4,7 @@ class Admin::ParticipantsController < Admin::BaseController
 
   def index
     @participants = Participant.find(:all)
+    @regions= Region.all
   end
 
   def new
