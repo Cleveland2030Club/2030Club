@@ -19,13 +19,47 @@ module Admin
 
     describe "POST #create" do
       context "When valid" do
-        it "creates a new instance of category with submitted attributes"
-        it "saves the record"
-        it "sets flash thanking the admin"
-        it "redirects to the particpants index page"
+
+        before do
+          @category = mock_model(Category, :name => "Food and Drink")
+          Category.stub(:new) { @category }
+          @category.stub(:save) { true }
+        end
+
+        it "creates a new instance of category with submitted attributes" do
+          Category.should_receive(:new).with("name" => "Food and Drink").and_return(@category)
+
+          post :create, :category => {:name => "Food and Drink"}
+          assigns(:category).should == @category
+        end
+
+        it "saves the record" do
+          @category.should_receive(:save)
+
+          post :create, :category => {:name => "Food and Drink"}
+        end
+
+        it "sets flash thanking the admin" do
+          post :create, :category => {:name => "Food and Drink"}
+          flash[:notice].should == "Thank you for adding a new category!"
+        end
+
+        it "redirects to the particpants index page" do
+          post :create, :category => {:name => "Food and Drink"}
+          response.should redirect_to(admin_participants_path)
+        end
       end
+
       context "Whan invalid" do
-        it "renders the new page"
+
+        it "renders the new page" do
+          category = mock_model(Category, :save => false)
+          Category.stub(:new).and_return(category)
+
+          post :create
+          response.should render_template(:new)
+        end
+
       end
     end
   end
