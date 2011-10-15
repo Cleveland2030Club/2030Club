@@ -18,4 +18,17 @@ class Admin::CategoriesController < Admin::BaseController
     @category = Category.find(params[:id])
   end
 
+  def update
+    @category = Category.find(params[:id])
+    if @category.update_attributes(params[:category])
+      flash[:notice] = "Category has been updated!"
+      redirect_to admin_participants_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+  end
+
 end

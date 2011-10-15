@@ -60,25 +60,76 @@ module Admin
           response.should render_template(:new)
         end
       end
+    end
 
-      describe "GET #edit"  do
+    describe "GET #edit"  do
 
-        let(:category) { mock_model(Category, :id => 1, :name => "Category Name") }
+      let(:category) { mock_model(Category, :id => 1, :name => "Category Name") }
 
-        it "finds the category" do
-          Category.should_receive(:find).with('1').and_return(category)
+      it "finds the category" do
+        Category.should_receive(:find).with('1').and_return(category)
 
-          get :edit, :id => 1
-          assigns(:category).should == category
+        get :edit, :id => 1
+        assigns(:category).should == category
+      end
+
+      it "renders the edit form" do
+        Category.stub(:find).with('1') { category }
+
+        get :edit, :id => 1
+        response.should render_template(:edit)
+      end
+    end
+
+    describe "PUT #update" do
+      context "When valid" do
+
+        before do
+          @category = mock_model(Category, :id => 1, :name => "Food and Drink")
+          Category.stub(:find) { @category }
+          @category.stub(:update_attributes) { true }
         end
 
-        it "renders the edit form" do
-          Category.stub(:find).with('1') { category }
+        it "creates a new instance of category with submitted attributes" do
+          Category.should_receive(:find).with("1").and_return(@category)
 
-          get :edit, :id => 1
+          put :update, :id => 1, :category => {:name => "Food and Drink"}
+          assigns(:category).should == @category
+        end
+
+        it "updates the record" do
+          @category.should_receive(:update_attributes).with("name" => "Food and Drink").and_return(true)
+
+          put :update, :id => 1, :category => {:name => "Food and Drink"}
+        end
+
+        it "sets flash thanking the admin" do
+          put :update, :id => 1, :category => {:name => "Food and Drink"}
+          flash[:notice].should == "Category has been updated!"
+        end
+
+        it "redirects to the particpants index page" do
+          put :update, :id => 1, :category => {:name => "Food and Drink"}
+          response.should redirect_to(admin_participants_path)
+        end
+      end
+
+      context "Whan invalid" do
+
+        it "renders the edit page" do
+          category = mock_model(Category, :update_attributes => false)
+          Category.stub(:find).and_return(category)
+
+          put :update, :id => 1
           response.should render_template(:edit)
         end
       end
+    end
+
+    describe "DELETE #destroy" do
+      it "finds the category"
+      it "deletes the category"
+      it "redirects to the participants page"
     end
   end
 end
