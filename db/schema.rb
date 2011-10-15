@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111015182248) do
+ActiveRecord::Schema.define(:version => 20111015184046) do
 
   create_table "accounts", :force => true do |t|
     t.string    "email",                                  :null => false
@@ -86,13 +86,14 @@ ActiveRecord::Schema.define(:version => 20111015182248) do
 
   create_table "locations", :force => true do |t|
     t.integer "participant_id"
-    t.string  "region"
     t.string  "address"
     t.string  "address_cont"
     t.string  "city"
     t.string  "state"
     t.string  "zip"
     t.string  "phone"
+    t.integer "region_id"
+    t.string  "google_map_link"
   end
 
   create_table "memberships", :force => true do |t|
