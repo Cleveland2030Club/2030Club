@@ -59,7 +59,25 @@ module Admin
           post :create
           response.should render_template(:new)
         end
+      end
 
+      describe "GET #edit"  do
+
+        let(:category) { mock_model(Category, :id => 1, :name => "Category Name") }
+
+        it "finds the category" do
+          Category.should_receive(:find).with('1').and_return(category)
+
+          get :edit, :id => 1
+          assigns(:category).should == category
+        end
+
+        it "renders the edit form" do
+          Category.stub(:find).with('1') { category }
+
+          get :edit, :id => 1
+          response.should render_template(:edit)
+        end
       end
     end
   end

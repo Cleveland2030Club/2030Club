@@ -14,4 +14,8 @@ class Admin::CategoriesController < Admin::BaseController
     end
   end
 
+  def edit
+    @category = Category.find(params[:id])
+  end
+
 end
