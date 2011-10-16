@@ -114,12 +114,12 @@ nav.admin{height:40px;padding:0;background:transparent;border-bottom:3px solid #
 nav.admin ul{margin-left:2%;}
 nav.admin ul li{background:#000;margin:0 0 0 1px;}
 div.admin_content{margin:1% 2%;}
-section.admin_participants{float:left;width:75%;padding-right:2%;}
-div.sidebar{float:right;width:20%;}
-section.participant-filters{width:100%;padding-right:2%;margin-bottom:20px;}
-section.participant-filters table{width:100%}
-section.participant-filters table thead tr th{font-size:1.3em;text-align:left;}
-section.participant-filters table tbody tr td{font-size:1.1em;}
+div.sidebar{float:right;width:25%;}
+section.admin-participants{background:#fff;float:left;padding: 2%;width:70%;}
+section.participant-filters{background:#fff;width:100%;padding:2%;margin-bottom:20px;}
+div.admin_content table{width:100%;margin-bottom:2%;}
+div.admin_content table thead tr th{font-size:1.3em;text-align:left;border-bottom:1px solid #000;}
+div.admin_content table tbody tr td{font-size:1.1em;line-height:1.5em;}
 /* ------------------------------- */
 /* 		Colum Styles  		   	*/
 /* ------------------------------ */
