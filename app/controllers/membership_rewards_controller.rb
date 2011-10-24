@@ -1,0 +1,2 @@
+class MembershipRewardsController < ApplicationController
+end
