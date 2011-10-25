@@ -1,7 +1,8 @@
 class MembershipRewardsController < ApplicationController
 
   def index
-    @categories = Category.all
+    @categories = Category.find(:all, :order => :name)
+    @participants = Participant.find(:all, :order => :name)
   end
 
 end
