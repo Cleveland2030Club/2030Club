@@ -5,5 +5,14 @@ class Participant < ActiveRecord::Base
   
   validates_presence_of :name, :bio, :benefit, :instructions
   
-  has_attached_file :logo, :styles => { :medium => "350x250>", :thumb => "175x125>" }
+  has_attached_file :logo, :styles => { :medium => "140x140", :thumb => "70x70" }
+
+  def regions
+    regions = []
+    self.locations.each do |location|
+      regions << location.region.name
+    end
+    regions
+  end
+
 end

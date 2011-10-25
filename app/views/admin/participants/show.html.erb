@@ -8,16 +8,20 @@
     <%= image_tag @participant.logo.url %>
     </header>
     <section>
+      <h2>Category</h2>
+      <%= @participant.category.name %>
+    </section>
+    <section>
       <h2>Bio</h2>
-      <%= raw @participant.bio %>
+      <%= RedCloth.new(@participant.bio).to_html %>
     </section>
     <section>
       <h2>Benefit</h2>
-      <%= raw @participant.benefit %>
+      <%= RedCloth.new(@participant.benefit).to_html %>
     </section>
     <section>
       <h2>How to redeem</h2>
-      <%= raw @participant.instructions %>
+      <%= RedCloth.new(@participant.instructions).to_html %>
     </section>
   </section>
   <div class="locations">
@@ -30,6 +34,7 @@
             <th>Address Cont</th>
             <th>City</th>
             <th>Zip</th>
+            <th>Map it!</th>
             <th></th>
             <th></th>
           </tr>
@@ -37,11 +42,12 @@
         <tbody>
           <% @participant.locations.each do |location| %>
             <tr>
-              <td><%= location.region %></td>
+              <td><%= location.region.name %></td>
               <td><%= location.address %></td>
               <td><%= location.address_cont %></td>
               <td><%= location.city %></td>
               <td><%= location.zip %></td>
+              <td><%= link_to "Map", location.google_map_link %></td>
               <td><%= link_to "edit", edit_admin_participant_location_path(@participant, location) %></td>
               <td><%= link_to "delete", admin_participant_location_path(@participant, location), :method => :delete, :confirm => 'Are you sure?' %></td>
             </tr>
@@ -50,5 +56,10 @@
       </table>
     <% end %>
     <%= link_to 'add location', new_admin_participant_location_path(@participant) %>
+  </div>
+  <div class="quick-links">
+    <%= link_to "Back", admin_participants_path %> |
+    <%= link_to "Edit", edit_admin_participant_path(@participant) %> |
+    <%= link_to "Delete", admin_participant_path(@particpant), :method => :delete, :confirm => "Are you sure?" %>
   </div>
 </div>

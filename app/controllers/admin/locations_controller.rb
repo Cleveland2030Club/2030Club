@@ -4,6 +4,7 @@ class Admin::LocationsController < Admin::BaseController
 
   def new
     @location = Location.new
+    @regions = Region.all
   end
 
   def create
@@ -18,6 +19,7 @@ class Admin::LocationsController < Admin::BaseController
 
   def edit
     @location = @participant.locations.find(params[:id])
+    @regions = Region.all
   end
 
   def update

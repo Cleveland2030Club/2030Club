@@ -19,6 +19,14 @@ module Admin
         assigns(:participant).should == @participant
       end
 
+      it "assigns a regions to @regions" do
+        regions = [mock_model(Region)]
+        Region.should_receive(:all).and_return(regions)
+
+        get :new, :participant_id => 1
+        assigns(:regions).should == regions
+      end
+
       it "assigns a new instance of Location to @location" do
         location = mock_model(Location)
         Location.should_receive(:new).and_return(location)
@@ -96,6 +104,15 @@ module Admin
         get :edit, :participant_id => 1, :id => 1
         assigns(:participant).should == @participant
       end
+
+      it "assigns a regions to @regions" do
+        regions = [mock_model(Region)]
+        Region.should_receive(:all).and_return(regions)
+
+        get :edit, :participant_id => 1, :id => 1
+        assigns(:regions).should == regions
+      end
+
 
       it "renders the edit template" do
         get :edit, :participant_id => 1, :id => 1

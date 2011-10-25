@@ -1,19 +1,20 @@
 class Admin::ParticipantsController < Admin::BaseController
 
-  before_filter :get_categories, :only => [:new, :create, :edit, :update]
+  before_filter :get_categories, :except => [:destroy, :show]
 
   def index
     @participants = Participant.find(:all)
+    @regions= Region.all
   end
-  
+
   def new
     @participant = Participant.new
   end
-  
+
   def show
     @participant = Participant.find(params[:id])
   end
-  
+
   def create
     @participant = Participant.new(params[:participant])
     if @participant.save
@@ -23,11 +24,11 @@ class Admin::ParticipantsController < Admin::BaseController
       render 'new'
     end
   end
-  
+
   def edit
     @participant = Participant.find(params[:id])
   end
-  
+
   def update
     @participant = Participant.find(params[:id])
     if @participant.update_attributes(params[:participant])
@@ -37,7 +38,7 @@ class Admin::ParticipantsController < Admin::BaseController
       render 'edit'
     end
   end
-  
+
   def destroy
     @participant = Participant.find(params[:id])
     @participant.destroy
@@ -49,5 +50,5 @@ class Admin::ParticipantsController < Admin::BaseController
   def get_categories
     @categories = Category.all
   end
-  
+
 end
