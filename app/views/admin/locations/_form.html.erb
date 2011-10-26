@@ -1,4 +1,4 @@
-<% form_for [:admin, :participant, @location] do |location| %>
+<% form_for [:admin, @participant, @location] do |location| %>
   <%= location.error_messages %>
   <div class="form-node">
     <%= location.label :region_id, "Select a Region" %>
