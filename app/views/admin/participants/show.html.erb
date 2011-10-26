@@ -9,7 +9,7 @@
     </header>
     <section>
       <h2>Category</h2>
-      <%= @participant.category.name %>
+      <%= @participant.category.name unless @participant.category.nil? %>
     </section>
     <section>
       <h2>Bio</h2>
@@ -42,7 +42,7 @@
         <tbody>
           <% @participant.locations.each do |location| %>
             <tr>
-              <td><%= location.region.name %></td>
+              <td><%= location.region.name unless location.region.nil? %></td>
               <td><%= location.address %></td>
               <td><%= location.address_cont %></td>
               <td><%= location.city %></td>
