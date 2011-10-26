@@ -10,8 +10,13 @@ div.twoColumns-0, { width:auto; }
 .sub-nav li a { display:block; padding:6px 10px 6px 12px; border-bottom:1px solid #fff; }
 .sub-nav li a.active {background-color:#e5f2f8;background-image:url('/images/arrows-right.gif');background-repeat:no-repeat;background-position:95% center;}
 h2{font-size:114%;background:#e5f2f8;padding:.4em 0 .4em 1em;display:block;-moz-border-radius:5px;-webkit-border-radius:5px;}
-.company-list {float:left;width:45%;margin-right:4%;}
-.company-list li{list-style-type:none;}
+.company-list {float:left;margin-right:4%;}
+.company-list li{
+float:left;
+list-style-type:none;
+width:45%;
+}
+.company-list li:nth-child(odd) { clear:left; }
 .company {margin:0 0 20px; padding:0;}
 .company:after, .bd:after {
 clear: both;

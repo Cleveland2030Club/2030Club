@@ -1,0 +1,27 @@
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag 'rewards', 'twitter-widget' %>
+<% end %>
+
+<%#= render :partial => 'nav' %>
+
+<div class="twoColumns-0">
+  <h1>Member Rewards</h1>
+  <ul class="company-list">
+      <li>
+        <div class="company">
+          <a href="#" class="company-logo"><%= image_tag @participant.logo.url(:thumb) %></a>
+          <div class="company-info">
+            <a href="#"><%= @participant.name %></a>
+            <div class="company-meta">
+              <div><strong>Deal</strong> <span class="company-info"><%= RedCloth.new(@participant.benefit).to_html %></span></div>
+              <div><strong>Located</strong> <span class="company-info"><%= @participant.regions.join(', ') %></span></div>
+            </div>
+          </div>
+        </div>
+      </li>
+    
+
+  </ul>
+</div>
+
+<%= render :partial => '/shared/additional_marketing' %>

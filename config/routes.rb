@@ -7,7 +7,6 @@ ActionController::Routing::Routes.draw do |map|
   map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :requirements => {:year => /d{4}/, :month => /d{1,2}/}, :year => nil, :month => nil
   map.cleveland_plus 'clevelandplus', :controller => 'clevelandplus', :action => 'index'
   map.login 'login', :controller => 'user_sessions', :action => 'new'
-  map.member_rewards 'member-rewards', :controller => 'membership_rewards', :action => 'index'
 
   #Resource Declared Routes
   map.resource    :alert
@@ -16,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources   :members, :member => {:edit_login => :get}
   map.resource    :orders
   map.resources   :password_resets
+  map.resources    :membership_rewards
   map.resource    :registration
   map.resources   :reports
   map.resource    :user
