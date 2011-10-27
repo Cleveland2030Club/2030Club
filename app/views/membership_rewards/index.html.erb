@@ -12,12 +12,12 @@
     <% @participants.each do |participant| %>
       <li>
         <div class="company">
-          <a href="#" class="company-logo"><%= image_tag participant.logo.url(:thumb) %></a>
+          <%= link_to image_tag(participant.logo.url(:thumb)), membership_reward_path(participant.id), :class => "company-logo" %>
           <div class="company-info">
-            <a href="#"><%= participant.name %></a>
+            <%= link_to participant.name, membership_reward_path(participant.id), :class => "company-name" %>
             <div class="company-meta">
-              <div><strong>Deal</strong> <span class="company-info"><%= RedCloth.new(participant.benefit).to_html %></span></div>
-              <div><strong>Located</strong> <span class="company-info"><%= participant.regions.join(', ') %></span></div>
+              <div class="deal"><strong>Deal</strong> <span class="company-info"><%= RedCloth.new(participant.benefit).to_html %></span></div>
+              <div class="located"><strong>Located</strong> <span class="company-info"><%= participant.regions.join(', ') %></span></div>
             </div>
           </div>
         </div>

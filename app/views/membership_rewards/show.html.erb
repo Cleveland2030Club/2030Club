@@ -5,23 +5,46 @@
 <%#= render :partial => 'nav' %>
 
 <div class="twoColumns-0">
-  <h1>Member Rewards</h1>
-  <ul class="company-list">
-      <li>
-        <div class="company">
-          <a href="#" class="company-logo"><%= image_tag @participant.logo.url(:thumb) %></a>
-          <div class="company-info">
-            <a href="#"><%= @participant.name %></a>
-            <div class="company-meta">
-              <div><strong>Deal</strong> <span class="company-info"><%= RedCloth.new(@participant.benefit).to_html %></span></div>
-              <div><strong>Located</strong> <span class="company-info"><%= @participant.regions.join(', ') %></span></div>
-            </div>
-          </div>
-        </div>
-      </li>
-    
-
-  </ul>
+  <%= link_to "&larr; Back to Rewards List", membership_rewards_path, :class => "tiny right" %>
+  <h1><%= @participant.name %></h1>
+  <div class="company">
+    <%= image_tag @participant.logo.url(:medium), :class => "company-logo" %>
+    <div class="company-info">
+      <div class="company-meta">
+        <div class="deal"><span class="company-info show"><%= RedCloth.new(@participant.bio).to_html %></span><br><br></div>
+        <div class="deal"><h2>Deal</h2> <span class="company-info show"><%= RedCloth.new(@participant.benefit).to_html %></span></div>
+        <div class="deal"><h2>How to Redeam</h2> <span class="company-info show"><%= RedCloth.new(@participant.instructions).to_html %></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="twoColumns-1">
+  <div class="company">
+    <h2>Contact info</h2>
+    <div class="company-meta">
+      <% unless @participant.url.blank? %>
+      <div class="located"><strong class="show">Website</strong> <span class="company-info show"><%= link_to @participant.url, format_participant_url(@participant), :target => "_blank" %></span></div>
+      <% end %>
+      <% unless @participant.locations.empty? %>
+      
+      <div class="located"><strong class="show">Located</strong>
+        <% @participant.locations.each do |location| %>
+        <span class="company-info show">
+          <p><%= location.address %><br>
+          <% unless location.address_cont.empty? %>
+          <%= location.address_cont %><br>
+          <% end %>
+          <%= location.city %>, OH <%= location.zip %><br>
+          &#9742; <%= location.phone %></p>
+        </span>
+        <span class="company-info show">
+        </span>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <!-- <div class="located"><span class="company-info show"><%= @participant.regions.join(', ') %></span></div> -->
 </div>
 
 <%= render :partial => '/shared/additional_marketing' %>
