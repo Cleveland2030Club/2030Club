@@ -15,7 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources   :members, :member => {:edit_login => :get}
   map.resource    :orders
   map.resources   :password_resets
-  map.resources    :membership_rewards
+  map.resources   :membership_rewards, :only => [:show, :index]
   map.resource    :registration
   map.resources   :reports
   map.resource    :user
