@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.cleveland_plus 'clevelandplus', :controller => 'clevelandplus', :action => 'index'
   map.login 'login', :controller => 'user_sessions', :action => 'new'
   map.logos 'logos', :controller => 'logos', :action => 'index'
+  map.membership_rewards_category 'membership_rewards/categories/:id', :controller => 'categories', :action => 'show'
+  map.membership_rewards_region 'membership_rewards/regions/:id', :controller => 'regions', :action => 'show'
 
   #Resource Declared Routes
   map.resource    :alert
