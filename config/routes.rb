@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :requirements => {:year => /d{4}/, :month => /d{1,2}/}, :year => nil, :month => nil
   map.cleveland_plus 'clevelandplus', :controller => 'clevelandplus', :action => 'index'
   map.login 'login', :controller => 'user_sessions', :action => 'new'
+  map.logos 'logos', :controller => 'logos', :action => 'index'
 
   #Resource Declared Routes
   map.resource    :alert
