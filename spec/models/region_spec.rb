@@ -8,7 +8,18 @@ describe Region do
 
   describe "Validations" do
     subject { Region.new }
-    it { should_not be_valid }
+
+    it "requires a name" do
+      subject.should_not be_valid
+    end
+
+    it "names must be unique" do
+      subject.name = "Recreation"
+      subject.save
+      new_region = Region.new(:name => "Recreation")
+      new_region.should_not be_valid
+    end
+
   end
 
   describe "Relationship" do
