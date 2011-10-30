@@ -4,12 +4,19 @@
     <a href="#" class="active">Category</a>
     <a href="#">Region</a>
   </div>
-	<div class="sub-nav">
+	<div class="sub-nav categories">
 		<ul>
-			<li><%=link_to "All", "#" %></li>
+			<li><%=link_to "All", membership_rewards_path %></li>
       <% @categories.each do |category| %>
         <li><%= link_to category.name, "#" %></li>
       <% end %>
 		</ul>
 	</div>
+  <div class="sub-nav regions hide">
+    <ul>
+      <% @regions.each do |region| %>
+        <li><%= link_to region.name, "#" %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

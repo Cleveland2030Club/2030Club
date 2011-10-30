@@ -3,6 +3,7 @@ class MembershipRewardsController < ApplicationController
   def index
     @categories = Category.find(:all, :order => :name)
     @participants = Participant.find(:all, :order => :name)
+    @regions = Region.find(:all, :order => :name)
   end
   
   def show

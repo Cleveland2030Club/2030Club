@@ -18,6 +18,14 @@ describe MembershipRewardsController do
       get :index
       assigns(:participants).should == participants
     end
+   
+    it "sets @regions" do
+      regions = [mock_model(Region)]
+      Region.should_receive(:find).with(:all, :order => :name).and_return(regions)
+
+      get :index
+      assigns(:regions).should == regions
+    end
 
   end
 end

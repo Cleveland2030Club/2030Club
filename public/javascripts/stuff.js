@@ -37,3 +37,15 @@ $(document).ready(function() {
 	});
 });
 
+//membership rewards scripts
+$(document).ready(function(){
+	var tabs = $('div.sub-tabs a');
+	var tabSelection = $('div.sub-nav');
+	tabs.click(function(event){
+		event.preventDefault();
+		if(!$(this).hasClass('active')){
+			tabs.toggleClass('active');
+			tabSelection.toggleClass('hide');
+		}
+	});
+});
