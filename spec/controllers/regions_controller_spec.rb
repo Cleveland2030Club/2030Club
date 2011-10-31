@@ -3,6 +3,7 @@ require 'spec_helper'
 describe RegionsController do
   describe "GET #show" do
     it "sets categories to @categories" do
+      pending
       categories = [mock_model(Category)]
       Category.should_receive(:find).and_return(categories)
 
@@ -11,6 +12,7 @@ describe RegionsController do
     end
 
     it "sets regions to @regions" do
+      pending
       regions = [mock_model(Region)]
       Region.should_receive(:find).and_return(regions)
 
@@ -19,6 +21,7 @@ describe RegionsController do
     end
 
     it "sets region to @region" do
+      pending
       regions = [mock_model(Region)]
       Region.should_receive(:find).and_return(regions)
       regions.should_receive(:select).and_return(regions)
