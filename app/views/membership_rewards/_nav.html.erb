@@ -1,21 +1,21 @@
 <div class="twoColumns-1">
   <div class="sub-tabs">
     <span class="tiny">Sort by:</span>
-    <a href="#" class="active">Category</a>
-    <a href="#">Region</a>
+    <a href="#" class="<%= "active" unless @region %>">Category</a>
+    <a href="#" class="<%= "active" if @region %>">Region</a>
   </div>
-	<div class="sub-nav categories">
+	<div class="sub-nav categories <%= "hide" if @region %>">
 		<ul>
 			<li><%=link_to "All", membership_rewards_path %></li>
       <% @categories.each do |category| %>
-        <li><%= link_to category.name, "#" %></li>
+        <li><%= link_to category.name, membership_rewards_category_path(category), :class=> category.id == @category.try(:id) ? "active":"" %></li>
       <% end %>
 		</ul>
 	</div>
-  <div class="sub-nav regions hide">
+  <div class="sub-nav regions <%= "hide" if @region.nil? %>">
     <ul>
       <% @regions.each do |region| %>
-        <li><%= link_to region.name, "#" %></li>
+        <li><%= link_to region.name, membership_rewards_region_path(region), :class=> region.id == @region.try(:id) ? "active":"" %></li>
       <% end %>
     </ul>
   </div>
