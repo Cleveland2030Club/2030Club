@@ -13,7 +13,17 @@
       <div class="company-meta">
         <div class="deal"><span class="company-info show"><%= RedCloth.new(@participant.bio).to_html %></span><br><br></div>
         <div class="deal"><h2>Deal</h2> <span class="company-info show"><%= RedCloth.new(@participant.benefit).to_html %></span></div>
-        <div class="deal"><h2>How to Redeam</h2> <span class="company-info show"><%= RedCloth.new(@participant.instructions).to_html %></span></div>
+        <% if current_user %>
+          <div class="deal"><h2>How to Redeem</h2> <span class="company-info show"><%= RedCloth.new(@participant.instructions).to_html %></span></div>
+        <% else %>
+          <div id="loginSection" class="notice">
+            <h2>How to Redeem</h2>
+            <p>You must be logged in to see how to redeem the offer. You can <%= link_to "log in here", new_user_session_path%>.</p>
+      
+            <h4>Not a Member?</h4>
+            <p>We would love for you to get to know us more. <a href="/about">learn about us</a> | <a href="/benefits">how to get involved</a> | <a href="registration/new">become a member</a>.</p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -30,11 +40,13 @@
       <div class="located"><strong class="show">Located</strong>
         <% @participant.locations.each do |location| %>
         <span class="company-info show">
-          <p><%= location.address %><br>
-          <% unless location.address_cont.empty? %>
-          <%= location.address_cont %><br>
-          <% end %>
-          <%= location.city %>, OH <%= location.zip %><br>
+          <a href="<%= location.google_map_link unless location.google_map_link.nil? %>">
+            <p><%= location.address %><br>
+            <% unless location.address_cont.empty? %>
+            <%= location.address_cont %><br>
+            <% end %>
+            <%= location.city %>, OH <%= location.zip %><br>
+          </a>
           &#9742; <%= location.phone %></p>
         </span>
         <span class="company-info show">
@@ -44,7 +56,6 @@
       <% end %>
     </div>
   </div>
-  <!-- <div class="located"><span class="company-info show"><%= @participant.regions.join(', ') %></span></div> -->
 </div>
 
 <%= render :partial => '/shared/additional_marketing' %>
