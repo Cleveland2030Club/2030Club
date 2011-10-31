@@ -1,3 +1,4 @@
+.DS*
 .rvmrc
 log/*
 db/*.sqlite3

@@ -4,7 +4,7 @@ class Admin::ParticipantsController < Admin::BaseController
 
   def index
     @participants = Participant.find(:all)
-    @regions= Region.all
+    @regions= Region.find(:all, :order => :name)
   end
 
   def new
@@ -48,7 +48,7 @@ class Admin::ParticipantsController < Admin::BaseController
   protected
 
   def get_categories
-    @categories = Category.all
+    @categories = Category.find(:all, :order => :name)
   end
 
 end
