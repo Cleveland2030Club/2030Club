@@ -53,7 +53,7 @@ describe Participant do
       subject.locations.build(:address => "123 Main St", :region_id => region1.id)
       subject.locations.build(:address => "456 Main St", :region_id => region2.id)
 
-      subject.regions.should == ["Region 1", "Region 2"]
+      subject.regions.should == [region1, region2]
     end
   end
 end

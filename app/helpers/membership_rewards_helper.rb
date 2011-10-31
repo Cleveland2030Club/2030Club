@@ -5,4 +5,11 @@ module MembershipRewardsHelper
     "http://#{participant.url}"
   end
 
+  def region_display(participant)
+    regions = participant.regions.map do |region|
+      link_to region.name, membership_rewards_region_path(region)
+    end
+    regions.join(', ')
+  end
+
 end

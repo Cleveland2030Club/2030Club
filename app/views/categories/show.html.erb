@@ -16,7 +16,7 @@
             <%= link_to participant.name, membership_reward_path(participant.id), :class => "company-name" %>
             <div class="company-meta">
               <div class="deal"><strong>Deal</strong> <span class="company-info"><%= RedCloth.new(participant.benefit).to_html %></span></div>
-              <div class="located"><strong>Located</strong> <span class="company-info"><%= participant.regions.join(', ') %></span></div>
+              <div class="located"><strong>Located</strong> <span class="company-info"><%= region_display(participant) %></span></div>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ class Participant < ActiveRecord::Base
   def regions
     regions = []
     self.locations.each do |location|
-      regions << location.region.name
+      regions << location.region
     end
     regions
   end
