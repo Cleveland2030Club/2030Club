@@ -13,4 +13,13 @@ describe MembershipRewardsHelper do
     end
   end
 
+  describe "#region_display(participant)" do
+    it "returns collection of urls for the participant" do
+      region = Region.new(:name => "Coventry")
+      participant = Participant.new
+      participant.stub(:regions).and_return([region])
+      helper.region_display(participant).should == "<a href=\"/membership_rewards/regions\">Coventry</a>"
+    end
+  end
+
 end

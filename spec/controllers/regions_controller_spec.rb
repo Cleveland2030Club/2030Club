@@ -28,5 +28,7 @@ describe RegionsController do
       assigns(:region).should == regions.first
     end
 
+    it "sets participants to @participants"
+
   end
 end
