@@ -7,4 +7,4 @@ tmp/**/*
 *.pid
 *.sw?
 doc/
-
+config/cleveland_2030_settings.yml

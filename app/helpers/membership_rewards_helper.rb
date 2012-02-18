@@ -6,7 +6,9 @@ module MembershipRewardsHelper
   end
 
   def region_display(participant)
-    regions = participant.regions.map do |region|
+    regions = participant.regions
+    return regions = '' if regions.empty?
+    regions.map! do |region|
       link_to region.name, membership_rewards_region_path(region)
     end
     regions.join(', ')

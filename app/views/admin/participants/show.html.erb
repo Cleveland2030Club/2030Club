@@ -5,7 +5,7 @@
       <%= @participant.name %>
     </h1>
     <a href="<%= @participant.url %>"><%= @participant.url %></a>
-    <%= image_tag @participant.logo.url %>
+    <%= image_tag @participant.logo.url(:thumb) %>
     </header>
     <section>
       <h2>Category</h2>

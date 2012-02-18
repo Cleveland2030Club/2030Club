@@ -15,7 +15,7 @@ h2{font-size:114%;background:#e5f2f8;padding:.4em 0 .4em 1em;display:block;-moz-
 float:left;
 list-style-type:none;
 margin-right:4%;
-width:45%;
+width:90%;
 }
 .company-list li:nth-child(odd) { clear:left; }
 .company-list li:nth-child(even) { margin-right:0; }

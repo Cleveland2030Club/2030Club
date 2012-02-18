@@ -5,3 +5,4 @@ activemerchant --version 1.7.1
 will_paginate --version 2.3.11
 fastercsv --version 1.5.4
 RedCloth
+aws-s3
