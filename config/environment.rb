@@ -46,6 +46,8 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 
+  # support yaml and heroku config vars, preferring ENV for heroku
+  SETTINGS = (YAML.load_file('config/cleveland_2030_settings.yml')[RAILS_ENV] rescue {}).merge(ENV)
 
   # ActionMailer settings
   config.action_mailer.delivery_method = :smtp
@@ -55,7 +57,7 @@ Rails::Initializer.run do |config|
     :port => 587,
     :authentication => :plain,
     :domain => 'cleveland2030.org',
-    :user_name => ENV['USER_NAME'],
-    :password => ENV['USER_PW']
+    :user_name => SETTINGS['USER_NAME'],
+    :password => SETTINGS['USER_PW']
   }
 end

@@ -7,10 +7,10 @@ class Participant < ActiveRecord::Base
   
   has_attached_file :logo, :styles => { :medium => "140x140", :thumb => "70x70" },
                            :storage => :s3,
-                           :bucket => Cleveland2030Settings.config['s3']['bucket'],
+                           :bucket => Cleveland2030Settings.config['S3_BUCKET'],
                            :s3_credentials => {
-                             :access_key_id => Cleveland2030Settings.config['s3']['access_key_id'],
-                             :secret_access_key => Cleveland2030Settings.config['s3']['secret_access_key']
+                             :access_key_id => Cleveland2030Settings.config['S3_KEY'],
+                             :secret_access_key => Cleveland2030Settings.config['S3_SECRET']
                            },
                            :path => "logos/:id/:style/:filename"
   def regions

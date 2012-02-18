@@ -1,17 +1,40 @@
+# you must keep all keys on one level so that the heroku:config rake task can turn them into environment variables
+
 development:
-  s3:
-    access_key_id: 'xxxxxx'
-    secret_access_key: 'xxxxxx'
-    bucket: 's3.bucket.name'
+  S3_KEY: xxxxxx
+  S3_SECRET: xxxxxx
+  S3_BUCKET: s3.bucket.name
+  DEV_PAYMENT_LOGIN: xxxxxx
+  DEV_PAYMENT_PASSWORD: xxxxxx
+  DEV_PAYMENT_SIGNATURE: xxxxxx
+  PROD_PAYMENT_LOGIN: xxxxxx
+  PROD_PAYMENT_PASSWORD: xxxxxx
+  PROD_PAYMENT_SIGNATURE: xxxxxx
+  USER_NAME: xxxxxx
+  USER_PW: xxxxxx
 
 test:
-  s3:
-    access_key_id: 'xxxxxx'
-    secret_access_key: 'xxxxxx'
-    bucket: 's3.bucket.name'
+  S3_KEY: xxxxxx
+  S3_SECRET: xxxxxx
+  S3_BUCKET: s3.bucket.name
+  DEV_PAYMENT_LOGIN: xxxxxx
+  DEV_PAYMENT_PASSWORD: xxxxxx
+  DEV_PAYMENT_SIGNATURE: xxxxxx
+  PROD_PAYMENT_LOGIN: xxxxxx
+  PROD_PAYMENT_PASSWORD: xxxxxx
+  PROD_PAYMENT_SIGNATURE: xxxxxx
+  USER_NAME: xxxxxx
+  USER_PW: xxxxxx
 
 production:
-  s3:
-    access_key_id: 'xxxxxx'
-    secret_access_key: 'xxxxxx'
-    bucket: 's3.bucket.name'
+  S3_KEY: xxxxxx
+  S3_SECRET: xxxxxx
+  S3_BUCKET: s3.bucket.name
+  DEV_PAYMENT_LOGIN: xxxxxx
+  DEV_PAYMENT_PASSWORD: xxxxxx
+  DEV_PAYMENT_SIGNATURE: xxxxxx
+  PROD_PAYMENT_LOGIN: xxxxxx
+  PROD_PAYMENT_PASSWORD: xxxxxx
+  PROD_PAYMENT_SIGNATURE: xxxxxx
+  USER_NAME: xxxxxx
+  USER_PW: xxxxxx
