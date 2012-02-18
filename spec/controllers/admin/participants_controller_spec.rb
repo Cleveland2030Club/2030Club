@@ -15,7 +15,7 @@ module Admin
         @participants = [mock_model(Participant)]
         @regions = [mock_model(Region)]
         Participant.should_receive(:find).with(:all).and_return(@participants)
-        Region.should_receive(:all).and_return(@regions)
+        Region.should_receive(:find).and_return(@regions)
         get :index
       end
 

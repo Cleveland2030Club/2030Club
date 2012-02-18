@@ -13,7 +13,7 @@ describe User do
   end
   
   it "activates a user account" do
-    time = Time.mktime(2010,1,1,12,0,0)
+    time = Time.now
     Time.stub!(:now).and_return(time)
     user = User.new
     user.stub!(:save)
@@ -23,5 +23,6 @@ describe User do
     user.should be_activated
     user.activated_at.should == time
     user.joined_at.should == time
+    user.expired_at.should == DateTime.new(user.activated_at.year + 1, user.activated_at.month, -1)
   end
 end

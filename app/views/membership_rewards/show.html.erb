@@ -1,0 +1,61 @@
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag 'rewards', 'twitter-widget' %>
+<% end %>
+
+<%#= render :partial => 'nav' %>
+
+<div class="twoColumns-0">
+  <%= link_to "&larr; Back to Rewards List", membership_rewards_path, :class => "tiny right" %>
+  <h1><%= @participant.name %></h1>
+  <div class="company">
+    <%= image_tag @participant.logo.url(:medium), :class => "company-logo" %>
+    <div class="company-info">
+      <div class="company-meta">
+        <div class="deal"><span class="company-info show"><%= RedCloth.new(@participant.bio).to_html %></span><br><br></div>
+        <div class="deal"><h2>Deal</h2> <span class="company-info show"><%= RedCloth.new(@participant.benefit).to_html %></span></div>
+        <% if current_user %>
+          <div class="deal"><h2>How to Redeem</h2> <span class="company-info show"><%= RedCloth.new(@participant.instructions).to_html %></span></div>
+        <% else %>
+          <div id="loginSection" class="notice">
+            <h2>How to Redeem</h2>
+            <p>You must be logged in to see how to redeem the offer. You can <%= link_to "log in here", new_user_session_path%>.</p>
+      
+            <h4>Not a Member?</h4>
+            <p>We would love for you to get to know us more. <a href="/about">learn about us</a> | <a href="/benefits">how to get involved</a> | <a href="registration/new">become a member</a>.</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="twoColumns-1">
+  <div class="company">
+    <h2>Contact info</h2>
+    <div class="company-meta">
+      <% unless @participant.url.blank? %>
+      <div class="located"><strong class="show">Website</strong> <span class="company-info show"><%= link_to @participant.url, format_participant_url(@participant), :target => "_blank" %></span></div>
+      <% end %>
+      <% unless @participant.locations.empty? %>
+      
+      <div class="located"><strong class="show">Located</strong>
+        <% @participant.locations.each do |location| %>
+        <span class="company-info show">
+          <a href="<%= location.google_map_link unless location.google_map_link.nil? %>">
+            <p><%= location.address %><br>
+            <% unless location.address_cont.empty? %>
+            <%= location.address_cont %><br>
+            <% end %>
+            <%= location.city %>, OH <%= location.zip %><br>
+          </a>
+          &#9742; <%= location.phone %></p>
+        </span>
+        <span class="company-info show">
+        </span>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render :partial => '/shared/additional_marketing' %>

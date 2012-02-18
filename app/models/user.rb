@@ -46,7 +46,7 @@ class User < ActiveRecord::Base
     self.activated = true
     self.activated_at = Time.now
     self.joined_at = self.activated_at
-    self.expired_at = Date.new(activated_at.year + 1, activated_at.month, -1)
+    self.expired_at = DateTime.new(activated_at.year + 1, activated_at.month, -1)
     self.save
   end
   
