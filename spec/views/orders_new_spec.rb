@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require 'spec_helper'
 
 describe "orders new" do
   it "has all three fields needed for the TotalCalculator" do

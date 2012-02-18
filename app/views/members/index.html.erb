@@ -4,7 +4,7 @@
 
 <h1>20/30 Members</h1>
 	
-  <% if @current_user and @current_user.logged_in? %>
+  <% if !current_user_expired? %>
 		<div class="section">
 			<div class="search-members-public">
 				<form method="get" action="/members">
