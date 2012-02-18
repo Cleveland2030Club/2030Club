@@ -29,11 +29,13 @@ config.action_mailer.raise_delivery_errors = false
 
 config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :production
-  if ENV['PROD_PAYMENT_LOGIN'] and ENV['PROD_PAYMENT_PASSWORD'] and ENV['PROD_PAYMENT_SIGNATURE']
+  if Cleveland2030Settings.config['PROD_PAYMENT_LOGIN'] and
+    Cleveland2030Settings.config['PROD_PAYMENT_PASSWORD'] and
+    Cleveland2030Settings.config['PROD_PAYMENT_SIGNATURE']
     ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(
-      :login => ENV['PROD_PAYMENT_LOGIN'],
-      :password => ENV['PROD_PAYMENT_PASSWORD'],
-      :signature => ENV['PROD_PAYMENT_SIGNATURE']
+      :login => Cleveland2030Settings.config['PROD_PAYMENT_LOGIN'],
+      :password => Cleveland2030Settings.config['PROD_PAYMENT_PASSWORD'],
+      :signature => Cleveland2030Settings.config['PROD_PAYMENT_SIGNATURE']
     )
   else
     Rails.logger.fatal('Paypal environment variables are not set!')

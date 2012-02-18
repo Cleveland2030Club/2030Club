@@ -30,10 +30,10 @@ config.action_mailer.delivery_method = :test
 config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :test
   ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(
-    :login => ENV['DEV_PAYMENT_LOGIN'],
-    :password => ENV['DEV_PAYMENT_PASSWORD'],
-    :signature => ENV['DEV_PAYMENT_SIGNATURE']
-    )    
+    :login => Cleveland2030Settings.config['DEV_PAYMENT_LOGIN'],
+    :password => Cleveland2030Settings.config['DEV_PAYMENT_PASSWORD'],
+    :signature => Cleveland2030Settings.config['DEV_PAYMENT_SIGNATURE']
+    )
 end
 
 config.gem 'rspec-rails', :version => '1.3.2', :lib => false unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
