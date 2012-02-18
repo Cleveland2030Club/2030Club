@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111102134044) do
+ActiveRecord::Schema.define(:version => 20120218205548) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -50,6 +50,9 @@ ActiveRecord::Schema.define(:version => 20111102134044) do
     t.datetime "updated_at"
   end
 
+  add_index "items", ["product_id"], :name => "index_items_on_product_id"
+  add_index "items", ["product_type"], :name => "index_items_on_product_type"
+
   create_table "locations", :force => true do |t|
     t.integer "participant_id"
     t.string  "address"
@@ -61,6 +64,9 @@ ActiveRecord::Schema.define(:version => 20111102134044) do
     t.integer "region_id"
     t.string  "google_map_link"
   end
+
+  add_index "locations", ["participant_id"], :name => "index_locations_on_participant_id"
+  add_index "locations", ["region_id"], :name => "index_locations_on_region_id"
 
   create_table "memberships", :force => true do |t|
     t.string   "name"
@@ -76,6 +82,9 @@ ActiveRecord::Schema.define(:version => 20111102134044) do
     t.datetime "updated_at"
   end
 
+  add_index "order_items", ["item_id"], :name => "index_order_items_on_item_id"
+  add_index "order_items", ["order_id"], :name => "index_order_items_on_order_id"
+
   create_table "orders", :force => true do |t|
     t.integer  "customer_id",                                                       :null => false
     t.string   "customer_type",                                                     :null => false
@@ -86,6 +95,10 @@ ActiveRecord::Schema.define(:version => 20111102134044) do
     t.datetime "updated_at"
     t.boolean  "complete",                                       :default => false
   end
+
+  add_index "orders", ["customer_id"], :name => "index_orders_on_customer_id"
+  add_index "orders", ["customer_type"], :name => "index_orders_on_customer_type"
+  add_index "orders", ["express_payer_id"], :name => "index_orders_on_express_payer_id"
 
   create_table "participants", :force => true do |t|
     t.string   "name"
@@ -126,6 +139,8 @@ ActiveRecord::Schema.define(:version => 20111102134044) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "registrations", ["user_id"], :name => "index_registrations_on_user_id"
 
   create_table "states", :force => true do |t|
     t.string "title", :limit => 50, :null => false
