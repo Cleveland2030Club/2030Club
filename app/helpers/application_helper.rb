@@ -9,4 +9,11 @@ module ApplicationHelper
     end
   end
 
+  def current_user_expired?
+    if current_user
+      current_user.expired?
+    else
+      true
+    end
+  end
 end

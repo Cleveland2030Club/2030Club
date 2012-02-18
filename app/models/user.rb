@@ -38,6 +38,10 @@ class User < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+  def expired?
+    expired_at.nil? or expired_at < Time.now
+  end
+
   def member_since
     self.created_at
   end

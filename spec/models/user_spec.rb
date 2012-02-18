@@ -25,4 +25,21 @@ describe User do
     user.joined_at.should == time
     user.expired_at.should == DateTime.new(user.activated_at.year + 1, user.activated_at.month, -1)
   end
+
+  context 'expiration' do
+    it 'returns true when user expired_at is before today' do
+      @user.expired_at = Time.now - 1.day
+      @user.expired?.should be_true
+    end
+
+    it 'returns false when user expired_at is after today' do
+      @user.expired_at = Time.now + 1.day
+      @user.expired?.should be_false
+    end
+
+    it 'returns true when user expired_at is nil' do
+      @user.expired_at = nil
+      @user.expired?.should be_true
+    end
+  end
 end
