@@ -1,6 +1,6 @@
 class MembershipStatus
 
-  attr_read :user, :status
+  attr_reader :user, :status
 
   def initialize(user)
     @user = user
@@ -12,15 +12,17 @@ class MembershipStatus
       update_expired_at
       set_status
     when (user.expired_at - 1.month) > Time.now
-      status = :current
+      @status = :current
     when user.expired_at > Time.now
-      status = :current_with_less_than_30_days
+      @ststus = :current_with_less_than_30_days
     when (user.expired_at + 1.month) > Time.now
-      status = :expired_with_less_than_30_days
+      @status = :expired_with_less_than_30_days
     else
-      status = :expired
+      @status = :expired
     end
   end
+
+  private
 
   def update_expired_at
     if user.joined_at
