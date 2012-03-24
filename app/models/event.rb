@@ -9,13 +9,17 @@ class Event < ActiveRecord::Base
   accepts_nested_attributes_for :items
 
   named_scope :with_sponsor, :conditions => {:sponsored => true}
-  named_scope :coming_soon, :conditions => ['start_at BETWEEN ? AND ?', 
+  named_scope :coming_soon, :conditions => ['start_at BETWEEN ? AND ?',
                              Time.now, Time.now.advance(:days =>14)],
                              :order => "start_at ASC"
 
+  def active?
+    Time.now < end_at
+  end
+
   #Method used to see if the member should rsvp or register for an event
   def club_price_item
-    get_item(PRICE_TYPES[:club])    
+    get_item(PRICE_TYPES[:club])
   end
 
   def club_price
@@ -41,18 +45,18 @@ class Event < ActiveRecord::Base
   def member_rsvp?
     club_price == 0
   end
-    
+
   def guest_rsvp?
     standard_price == 0
-  end  
-  
+  end
+
   def get_view_mode(current_user)
     return "member_rsvp" if current_user && club_price == 0
-    return "member_registration" if current_user && club_price > 0
-    return "/shared/guest_rsvp" if current_user.nil? && standard_price == 0
-    return "/shared/guest_registration" if current_user.nil? && standard_price > 0
+    return "member_registration" if current_user && !current_user.expired? && club_price > 0
+    return "/shared/guest_rsvp" if (current_user.nil? || current_user.expired?) && standard_price == 0
+    return "/shared/guest_registration" if (current_user.nil? || current_user.expired?) && standard_price > 0
   end
-  
+
   def get_price(current_user)
     if current_user
         club_price
@@ -81,6 +85,6 @@ private
 
     items << Item.new(:name => price_name, :price => value)
   end
-  
+
 
 end

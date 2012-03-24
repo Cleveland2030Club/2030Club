@@ -6,3 +6,7 @@ Factory.define(:user) do |f|
   f.password 'password'
   f.password_confirmation 'password'
 end
+
+Factory.define(:active_user, :parent=>:user) do |f|
+  f.expired_at Date.today + 1.year
+end
