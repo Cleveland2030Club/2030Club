@@ -3,7 +3,7 @@
 <% end %>
 
 <h1>20/30 Members</h1>
-	
+
   <% if !current_user_expired? %>
 		<div class="section">
 			<div class="search-members-public">
@@ -12,21 +12,20 @@
 					<input type="submit" value="search">
 				</form>
 			</div>
-		<%= page_entries_info @members, :entry_name => 'Members' %>
-		<hr />
-		<div class="member-list">
-		<%= render :partial => "members_list", 
-	  		:collection => @members,
-	   		:as => :member %>
+			<%= page_entries_info @members, :entry_name => 'Members' %>
+			<hr />
+			<div class="member-list">
+			<%= render :partial => "members_list",
+		  		:collection => @members,
+		   		:as => :member %>
+			</div>
+			<%= will_paginate %>
 		</div>
-		<%= will_paginate %>
-	</div>		   		
 	<% else %>
-	<div id="loginSection" class="notice">
-		<p>You must be logged in to see the members list. You can <%= link_to "log in here", new_user_session_path%>.</p>
-		
-		<h4>Not a Member?</h4>
-		<p>We would love for you to get to know us more. <a href="/about">learn about us</a> | <a href="/benefits">how to get involved</a> | <a href="registration/new">become a member</a>.</p>
-	</div>
-	<% end %>
+		<div id="loginSection" class="notice">
+			<p>You must be logged in and an active member to see the members list. You can <%= link_to "log in here", new_user_session_path%>.</p>
 
+			<h4>Not a Member?</h4>
+			<p>We would love for you to get to know us more. <a href="/about">learn about us</a> | <a href="/benefits">how to get involved</a> | <a href="registration/new">become a member</a>.</p>
+		</div>
+	<% end %>
