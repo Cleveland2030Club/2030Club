@@ -52,6 +52,7 @@ class UsersController < ApplicationController
 
   def renewal
     @membership_status = MembershipStatus.new(current_user).status
+    session[:order_id] = OrdersHelper.create_membership_order(current_user)
     render :action => "renewal"
   end
 
