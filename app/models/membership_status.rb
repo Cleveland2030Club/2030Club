@@ -31,6 +31,7 @@ class MembershipStatus
     else
       user.expired_at = user.created_at.end_of_month + 1.year
     end
+    user.save
   end
 
 end
