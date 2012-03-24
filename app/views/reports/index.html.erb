@@ -53,7 +53,7 @@
 				</select>
 			</form>
 		</div>
-		<%= page_entries_info @members, :entry_name => 'Members' %> <%= "for <strong>"+ params[:search] +"</strong>" unless params[:search] == "" or params[:search] == nil %> <%= "- <strong>only active members</strong> - " unless params[:activated] == "" or params[:activated] == nil %> <%= "where last renewed in <strong>"+ @date +"</strong>" unless @date == "-" or @date == nil %>
+		<%= page_entries_info @members, :model => 'Members' %> <%= "for <strong>"+ params[:search] +"</strong>" unless params[:search] == "" or params[:search] == nil %> <%= "- <strong>only active members</strong> - " unless params[:activated] == "" or params[:activated] == nil %> <%= "where last renewed in <strong>"+ @date +"</strong>" unless @date == "-" or @date == nil %>
 		<hr />
 		<table class="reports-member-list">
 			<tr>
