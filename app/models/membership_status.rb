@@ -4,18 +4,19 @@ class MembershipStatus
 
   def initialize(user)
     @user = user
+    #TODO Refactor later back into model
+    if user.expired_at.nil?
+      update_expired_at(user)
+    end
   end
 
-  def set_status
+  def status
     case 
-    when user.expired_at.nil?
-      update_expired_at
-      set_status
-    when (user.expired_at - 1.month) > Time.now
+    when (user.expired_at - 30.days) > Time.now
       @status = :current
     when user.expired_at > Time.now
       @ststus = :current_with_less_than_30_days
-    when (user.expired_at + 1.month) > Time.now
+    when (user.expired_at + 30.days) > Time.now
       @status = :expired_with_less_than_30_days
     else
       @status = :expired
@@ -24,7 +25,7 @@ class MembershipStatus
 
   private
 
-  def update_expired_at
+  def update_expired_at(user)
     if user.joined_at
       user.expired_at = user.joined_at.end_of_month + 1.year
     else
