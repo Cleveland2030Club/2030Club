@@ -9,23 +9,28 @@ class UserSessionsController < ApplicationController
   
   def create
     @user_session = UserSession.new(params[:user_session])
-    
-    @user_session.validate
-    if (@user_session.valid?)
-      user = User.find_by_email(@user_session.email)
-      unless user.activated?
-        set_order_id_in_session(user)
 
+    @user_session.validate
+    if(@user_session.valid? && @user_session.save)
+
+      user = User.find_by_email(@user_session.email)
+      membership_status = MembershipStatus.new(user)
+
+      if membership_status.status == :current
+        redirect_back_or_default user_url
+      elsif membership_status.status == :not_active
+        set_order_id_in_session(user)
         redirect_to new_orders_path, :notice => "You need to activate your account!"
-        return
+      else
+        redirect_to renewal_user_path
       end
-    end
-    
-    if @user_session.save
-      redirect_back_or_default user_url
+
     else
+
       render :action => :new
+
     end
+
   end
 
   def show
