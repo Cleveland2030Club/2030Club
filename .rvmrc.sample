@@ -1,0 +1,1 @@
+rvm --create use 1.8.7@cle2030 rubygems 1.5.3
