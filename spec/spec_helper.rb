@@ -6,7 +6,6 @@ require 'spec/autorun'
 require 'spec/rails'
 require 'shoulda'
 require 'factory_girl'
-Factory.find_definitions
 Dir.glob(File.join(File.dirname(__FILE__), 'spec/factories/*.rb')).each {|f| require f}
 
 # Uncomment the next line to use webrat's matchers
