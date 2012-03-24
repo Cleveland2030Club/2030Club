@@ -3,7 +3,7 @@ module OrdersHelper
   def self.create_membership_order(user)
     membership_status = MembershipStatus.new(user)
     membership = Membership.standard.first
-    membership_item = case members_status.status
+    membership_item = case membership_status.status
     when :current || :current_with_less_than_30_days
       membership.items.find_by_name("Early Renewal")
     when :expired_with_less_than_30_days

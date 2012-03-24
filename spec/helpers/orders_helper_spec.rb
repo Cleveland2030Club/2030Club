@@ -9,12 +9,13 @@ describe OrdersHelper do
     order = stub_model(Order, { :id => 112})
 
     Membership.stub!(:standard).and_return([membership])
+    Membership.stub!(:first).and_return(membership)
+    membership.stub_chain(:items, :find_by_name => Item.new(:name => "New Membership", :product_id => 1, :product_type => "Membership",
+                          :price => 50))
     Order.stub!(:new).and_return(order)
     order.stub!(:items).and_return([])
     order.stub!(:save!)
-    # order.stub!(:id).and_return(112)
     
-    # method under test
     order_id = OrdersHelper.create_membership_order(user)
     order_id.should == 112
   end
