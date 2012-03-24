@@ -13,7 +13,7 @@ class UserSessionsController < ApplicationController
     @user_session.validate
     if (@user_session.valid?)
       user = User.find_by_email(@user_session.email)
-      if user.activated? == false
+      unless user.activated?
         set_order_id_in_session(user)
 
         redirect_to new_orders_path, :notice => "You need to activate your account!"
