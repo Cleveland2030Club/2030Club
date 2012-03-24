@@ -2,7 +2,7 @@
 	<%= stylesheet_link_tag 'members2030' %>
 <% end %>
 <h1>Reports</h1>
-	
+
   <% if @current_user and @current_user.logged_in? %>
 		<div class="section">
 		<div class="search-members">
@@ -63,7 +63,7 @@
 				<th align="center">Last Renewed</th>
 				<th>Email</th>
 			</tr>
-			<%= render :partial => "members_list", 
+			<%= render :partial => "members_list",
 		  		:collection => @members,
 		   		:as => :member %>
 		</table>
@@ -75,12 +75,9 @@
 		yr = params[:yr].to_s
 		%>
 		<p class="right" style="margin-top:20px;"><%= link_to "Download list as a CSV file", "/reports.csv?activated="+ activated +"&search="+ search +"&mo="+ mo +"&yr="+ yr, {:style => "background-color: rgb(4, 131, 211); background-image: url('/images/cle2030-intro-but-bg_re.png'); background-repeat: repeat-x; background-position: center bottom; border: 1px solid rgb(4, 131, 211); color: rgb(255, 255, 255); text-decoration: none; font-weight: normal; margin-bottom: 0.1em; -moz-border-radius: 5px 5px 5px 5px; padding: 10px;"} %></p>
-	</div>		   		
+	</div>
 	<% else %>
 	<div id="loginSection" class="notice">
-		<p>You must be logged in to see the members list. You can <%= link_to "log in here", new_user_session_path%>.</p>
-		
-		<h4>Not a Member?</h4>
-		<p>We would love for you to get to know us more. <a href="/about">learn about us</a> | <a href="/benefits">how to get involved</a> | <a href="registration/new">become a member</a>.</p>
+		<%= render :partial => 'shared/not_a_member', :locals => { :thing_to_do => "see the members list" } %>
 	</div>
 	<% end %>
