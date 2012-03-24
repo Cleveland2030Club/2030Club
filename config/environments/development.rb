@@ -37,5 +37,5 @@ config.gem 'capybara',         :lib => false, :version => '0.3.5' unless File.di
 config.gem 'rspec',            :lib => false, :version => '1.3.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec'))
 config.gem 'rspec-rails',      :lib => false, :version => '1.3.2' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
 config.gem 'fastercsv'
-config.gem "factory_girl", :lib => "factory_girl", :source => "http://gems.github.com" unless File.directory?(File.join(Rails.root, "vendor/plugins/factory_girl"))
+config.gem "factory_girl", :lib => "factory_girl", :version => '2.0.4', :source => "http://gems.github.com" unless File.directory?(File.join(Rails.root, "vendor/plugins/factory_girl"))
 config.gem "thoughtbot-shoulda", :lib => false, :source => "http://gems.github.com" unless File.directory?(File.join(Rails.root, "vendor/plugins/thoughtbot-shoulda"))
