@@ -25,7 +25,10 @@ states.each{ |state| State.create(:title => state[0], :code => state[1]) }
 
 # Standard membership item
 membership = Membership.create(:name => 'Standard')
-Item.create(:name => 'Standard membership', :price => 70, :product => membership)
+Item.create(:name => 'New Membership', :price => 75, :product => membership)
+Item.create(:name => 'Early Renewal', :price => 50, :product => membership) #Renewing membership before expiration
+Item.create(:name => 'Grace Period Renewal', :price => 50, :product => membership) # Renew withing 30 of expiration
+Item.create(:name => 'Late Renewal', :price => 75, :product => membership) #Renew more than 30 days after expiration date
 
 def create_items_for_event(standard_price = 0, club_price = 0)
   [Item.new(:price => standard_price, :name => Event::PRICE_TYPES[:standard]),
