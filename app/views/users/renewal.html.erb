@@ -1,1 +1,13 @@
-<%= render :partial => @membership_status.to_s %>
+<div class="renewal">
+  <p>Hi <%= current_user.first_name %></p>
+  <%= render :partial => @membership_status.to_s %>
+  <% unless @membership_status == :current %>
+    <p>
+      If you feel our records are incorrect, please contact our membership director <%= mail_to("membership@cleveland2030.org", nil, :subject => "Membership Renewal") %>
+    </p>
+  <% end %>
+</div>
+
+<div class="renew_button">
+  <%= link_to "Renew Today!", new_orders_path %>
+</div>
