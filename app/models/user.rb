@@ -46,8 +46,18 @@ class User < ActiveRecord::Base
     self.activated = true
     self.activated_at = Time.now
     self.joined_at = self.activated_at
-    self.expired_at = DateTime.new(activated_at.year + 1, activated_at.month, -1)
+    self.expired_at = Time.now.end_of_month + 1.year
     self.save
+  end
+
+  def update_membership_expiration
+    if self.expired_at < Time.now
+      self.expired_at = (Time.now.end_of_month + 1.year)
+      self.save
+    else
+      self.expired_at = (self.expired_at + 1.year)
+      self.save
+    end
   end
   
   def admin?
