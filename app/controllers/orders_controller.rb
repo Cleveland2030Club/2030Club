@@ -85,7 +85,7 @@ class OrdersController < ApplicationController
 
       raise StandardError, "The object must be a User to continue" unless user.class == User
         
-      if @order.order_items[0].item.name == "New Membership"
+      if @order.order_items.first.item.name == "New Membership"
         user.activate_account!
         redirect_to new_user_session_path,
   					:notice => "Thank you for becoming a member. Your registration has been a success! " +  

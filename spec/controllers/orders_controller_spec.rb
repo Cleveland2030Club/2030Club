@@ -148,6 +148,7 @@ describe OrdersController do
   it "saves the payer_id and activates the user" do
     Order.stub!(:find_by_id).and_return(@membership_order)
     @membership_order.stub!(:save)
+    @membership_order.stub_chain(:order_items, :first, :item, :name => "New Membership")
 
     user = Factory.build(:user)
     user.stub!(:activate_account!)
@@ -159,7 +160,6 @@ describe OrdersController do
     @gateway.should_receive(:purchase).and_return(purchase)
 
     get :complete, {:payer_id => 2536}
-    response.should be_success
     session[:order_id].should be_nil
     @membership_order.complete.should be_true
   end
