@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218205548) do
+ActiveRecord::Schema.define(:version => 20120325182858) do
 
   create_table "accounts", :force => true do |t|
     t.string    "email",                                  :null => false
@@ -244,6 +244,7 @@ ActiveRecord::Schema.define(:version => 20120218205548) do
     t.boolean   "activated",           :default => false
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.datetime  "last_renewed_at"
   end
 
 end
