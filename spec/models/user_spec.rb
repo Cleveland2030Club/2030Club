@@ -23,7 +23,29 @@ describe User do
     user.should be_activated
     user.activated_at.should == time
     user.joined_at.should == time
-    user.expired_at.should == DateTime.new(user.activated_at.year + 1, user.activated_at.month, -1)
+    user.expired_at.should == (Time.now.end_of_month + 1.year)
+  end
+
+  describe "#update_membership_expiration" do
+    context "When the user's membership has already expired" do
+      it "set the new expiration date to 1 year from today and the end of the month" do
+        @user.expired_at = (Time.now - 60.days).end_of_month
+        @user.save
+
+        @user.update_membership_expiration
+        @user.expired_at.should == (Time.now.end_of_month + 1.year)
+      end
+    end
+    context "When the user's membership is still active" do
+      it "set the new expiration date to 1 year from the current expiration date" do
+        time = (Time.now + 60.days).end_of_month
+        @user.expired_at = time
+        @user.save
+
+        @user.update_membership_expiration
+        @user.expired_at.should == (time + 1.year)
+      end
+    end
   end
 
   context 'expiration' do

@@ -82,14 +82,21 @@ class OrdersController < ApplicationController
       session[:order_id] = nil
 
       user = @order.customer
+
+      raise StandardError, "The object must be a User to continue" unless user.class == User
         
-      if (user.respond_to?(:activate_account!))
-        if (user.activate_account!)
-	      	redirect_to new_user_session_path,
-							:notice => "Thank you for becoming a member. Your registration has been a success! " +  
-    				  "Please log in to begin using the site."  
-	      end
-	      UserMailer.deliver_welcome_email(user)
+      if @order.order_items.first.item.name == "New Membership"
+        user.activate_account!
+        redirect_to new_user_session_path,
+  					:notice => "Thank you for becoming a member. Your registration has been a success! " +  
+    			  "Please log in to begin using the site."  
+        UserMailer.deliver_welcome_email(user)
+      else
+        user.update_membership_expiration
+        flash[:notice] = "Thank you for your continued support!  Please take a few minutes to review your
+                          Account information to ensure everything is up-to-date"
+        redirect_to user_path
+        UserMailer.deliver_renewal_email(user)
       end
     end
 

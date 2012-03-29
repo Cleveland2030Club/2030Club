@@ -238,7 +238,11 @@ form fieldset div.fieldWithErrors label {color:#8A1F11;}
 form fieldset div.fieldWithErrors input[type="text"],form fieldset div.fieldWithErrors input[type="password"] {background:#FBE3E4 none repeat scroll 0 0;}
 .addPrice{display:block;margin:1em 0;}
 
+/* ------------------------------------ */
+/* 		Renewal Boxes             	   		*/
+/* ------------------------------------ */
 
+div.renewal {width: 60%; margin: 10% auto}
 
 /* -------------------------------- */
 /* 		Sponsorship rotator			*/
@@ -279,11 +283,6 @@ form .price{font-weight:bold;}
 form fieldset .remove {float:left;display:block;padding-left:15px;margin:5px;background:url("/images/remove-icon.gif") no-repeat left top;}
 form fieldset div.no-logo{border:1px dashed #ccc;height:100px;margin-left:178px;width:300px;}
 div.for-price input[type="submit"] {margin-left:0;}
-
-/* -------------------------------- */
-/* 		Beta Banner					*/
-/* -------------------------------- */
-.beta-flag { background:url(/images/beta-banner.png) no-repeat top right; width:75px; height:75px; position:fixed; right:0; z-index:3; }
 
 /* -------------------------------- */
 /* 		Social Media Links					*/
