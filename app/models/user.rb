@@ -68,15 +68,11 @@ class User < ActiveRecord::Base
   
   def admin?
     admins = ['jon@coffeeandcode.com',
-              'morcutt@within3.com',
               'kevin@detone8.com',
-              'agbennett1@gmail.com',
-              'eljeezee@yahoo.com',
               'gautpai@gmail.com',
-              'radinm@hotmail.com',
-              'montalvo.a@gmail.com',
-              'christinannmiller@yahoo.com',
-              'raablc@gmail.com'
+              'raablc@gmail.com',
+              'j.scott645@gmail.com',
+              'efig8503@yahoo.com'
               ]
     admins.include?(self.email)
   end
