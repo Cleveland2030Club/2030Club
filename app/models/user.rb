@@ -75,7 +75,8 @@ class User < ActiveRecord::Base
               'efig8503@yahoo.com',
               'walker.1138@gmail.com',
               'james.schleicher@wslife.com',
-              'leia.bradford@gmail.com'
+              'leia.bradford@gmail.com',
+              'tderosa7@gmail.com'
               ]
     admins.include?(self.email)
   end
