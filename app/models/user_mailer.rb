@@ -6,7 +6,7 @@ class UserMailer < ActionMailer::Base
     events = Event.all(:conditions => ["start_at > DATE(?)", Time.now], :order => "start_at ASC", :limit => 5)
     
     recipients  user.email
-    bcc         "technology@cleveland2030.org, info@cleveland2030.org"
+    bcc         "board@cleveland2030.org"
     from        "Cleveland2030 Club <do_not_reply@cleveland2030.org>"
     subject     "Welcome to The Cleveland 2030 Club!"
     sent_on     Time.now
@@ -15,7 +15,7 @@ class UserMailer < ActionMailer::Base
 
   def event_registration_email(user, event)
     recipients  user.email
-    bcc         "technology@cleveland2030.org, info@cleveland2030.org"
+    bcc         "board@cleveland2030.org"
     from        "Cleveland2030 Club <do_not_reply@cleveland2030.org>"
     subject     "Event registration successful"
     sent_on     Time.now
@@ -34,7 +34,7 @@ class UserMailer < ActionMailer::Base
     events = Event.all(:conditions => ["start_at > DATE(?)", Time.now], :order => "start_at ASC", :limit => 5)
     
     recipients  user.email
-    bcc         "technology@cleveland2030.org, info@cleveland2030.org"
+    bcc         "board@cleveland2030.org"
     from        "Cleveland2030 Club <do_not_reply@cleveland2030.org>"
     subject     "Membership Renewal"
     sent_on     Time.now
