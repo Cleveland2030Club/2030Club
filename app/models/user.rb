@@ -12,9 +12,6 @@ class User < ActiveRecord::Base
   has_one   :user_address, :dependent => :destroy
   has_many  :orders, :as => :customer
 
-  has_attached_file :avatar,
-                    :styles => { :medium => "100x100>", :thumb => "50x50" }
-
   acts_as_authentic do |c|
     c.session_class = UserSession
     c.logged_in_timeout = 4.hours
@@ -29,10 +26,6 @@ class User < ActiveRecord::Base
 
   attr_reader :per_page
   @@per_page = 3
-
-  def avatar_file_name
-
-  end
 
   def display_name
     "#{first_name} #{last_name}"
