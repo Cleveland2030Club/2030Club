@@ -1,6 +1,17 @@
 <fieldset>
 
   <legend><span><strong>Edit Account</strong></span></legend>
+
+  <div class="form-node">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="form-node">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
   <div class="form-node">
     <%= f.label :email %>
     <%= f.text_field :email %>
