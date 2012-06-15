@@ -1,10 +1,6 @@
 class MembersController < ApplicationController
   def index
-#    @members = User.all_members
-#		@members = User.paginate_all_by_last_name params[:search], :page => params[:page], :order => 'first_name ASC'
-#    @members = User.paginate_all_by_active true, :page => params[:page], :order => 'first_name ASC'
     @members = User.search_active(params[:search],@date,params[:page])
-#    logger.info("I am in index")
 	end	
 
   def show
