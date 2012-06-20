@@ -1,0 +1,18 @@
+<% form_for [current_user, @profile], :url => @profile.new_record? ? user_profiles_path : user_profile_path(@profile),
+                                      :method => @profile.new_record? ? :post : :put,
+                                      :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+
+    <div class="form-node">
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar %>
+    </div>
+
+  </fieldset>
+
+  <div class="formAction clear">
+    <%= f.submit %>
+  </div>
+
+<% end %>
