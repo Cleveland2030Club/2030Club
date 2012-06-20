@@ -3,16 +3,45 @@
 	<div class="twoColumns-0">
 	  <h1>Edit Profile</h1>
 	  <% form_for @user do |f| %>
-	  <%= f.error_messages %>
-	  <%= render "edit_form", :f => f %>
-	  <div class="formAction clear">
-	    <%= f.submit "Save" %>
-	  </div>
+		  <%= f.error_messages %>
+			<fieldset>
+
+			  <legend><span><strong>Edit Account</strong></span></legend>
+
+			  <div class="form-node">
+			    <%= f.label :first_name %>
+			    <%= f.text_field :first_name %>
+			  </div>
+
+			  <div class="form-node">
+			    <%= f.label :last_name %>
+			    <%= f.text_field :last_name %>
+			  </div>
+
+			  <div class="form-node">
+			    <%= f.label :email %>
+			    <%= f.text_field :email %>
+			  </div>
+
+			  <div class="form-node">
+			    <%= f.label :new_password %>
+			    <%= f.password_field :password %>
+			  </div>
+
+			  <div class="form-node">
+			    <%= f.label :new_password_confirmation, 'Verify new password' %>
+			    <%= f.password_field :password_confirmation %>
+			  </div>  
+			  
+			</fieldset>
+			
+		  <div class="formAction clear">
+		    <%= f.submit "Save" %>
+		  </div>
+
 	  <% end %>
+
 	</div>
-   		
 <% else %>
-
 	<p>You must be logged in to see your account</p>
-
 <% end %>

@@ -10,46 +10,12 @@
 		<h1>Welcome Back <%= truncate(@current_user.display_name) %></h1>
 	
 		<div id="content">
-				
 			<p><%=link_to "Edit your account", edit_user_path %></p>
-			<p><%=link_to "Edit your profile", edit_member_path(current_user) %></p>
-			<!--<p><%=link_to "Edit your privacy settings", edit_member_path(current_user) %></p>-->
-	
-		  <!--<div class="upcomming-events">
-				<h4><%#= truncate(@current_user.display_name) %>'s Upcoming Events</h4>
-					
-				<div class="event ">
-					<div class="date">
-						<span class="day">04</span> 
-						<span class="month">Sep</span>
-					</div>	
-					<ul>
-						<li class="social">
-							<div><a href="/events/3">Hackibou</a></div>
-							<div class="details">
-								<p>September 04, at 08:34 PM</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			
-				<div class="event ">
-					<div class="date">
-						<span class="day">21</span> 
-						<span class="month">Aug</span>
-					</div>	
-					<ul>
-						<li class="social">
-							<div><a href="/events/4">Clerb</a></div>
-							<div class="details">
-								<p>August 21, at 08:34 PM</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			
-			</div>-->
-	
+			<% if current_user.user_profile.nil? %>
+				<p><%=link_to "Create your profile", new_user_profile_path %></p>
+			<% else %>
+				<p><%=link_to "Edit your profile", edit_user_profile_path(current_user.user_profile) %></p>
+			<% end %>
 		</div>
 	   		
 	<% else %>

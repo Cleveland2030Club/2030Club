@@ -29,7 +29,6 @@
 						<% end %>
 						<ul class="edit-links">
 							<li><%= link_to "edit login", edit_login_member_path(@member) %></li>
-							<li><%= link_to "edit profile", edit_member_path(@member) %></li>
 						</ul>
 					<% end %>
 					<p>Occupation: <%= truncate(@member.user_profile.profession) %></p>
