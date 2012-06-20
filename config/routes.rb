@@ -15,7 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource    :alert
   map.resources   :events
   map.resources   :guests
-  map.resources   :members, :member => {:edit_login => :get}
+  map.resources   :members, :only => [:index, :show], :collection => { :search => :get }
   map.resource    :orders
   map.resources   :password_resets
   map.resources   :membership_rewards, :only => [:show, :index]
