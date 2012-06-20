@@ -21,7 +21,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources   :membership_rewards, :only => [:show, :index]
   map.resource    :registration
   map.resources   :reports
-  map.resource    :user, :member => { :renewal => :get }
+  map.resource    :user, :member => { :renewal => :get } do |user|
+    user.resources :profiles, :only => [:new, :create, :edit, :update, :show]
+  end 
   map.resource    :user_session
 
   #Namespaced Routes
