@@ -1,7 +1,7 @@
 <% unless @members.empty? %>
 		
 		<div class="memberInfo memberInfoList">
-			<%= image_tag member.user_profile.avatar.url(:thumb), :class => "left thumb" %>		
+			<%= image_tag member.avatar(:thumb), :class => "left thumb" %>		
 			<div>
 				<%=link_to truncate(member.display_name), member_path(member) %>
 				<p class="small">

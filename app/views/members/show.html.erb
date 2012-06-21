@@ -8,7 +8,7 @@
 		<h1>20/30 Member</h1>
 		<div class="twoColumns-0">
 			<div class="memberInfo">
-				<%= image_tag @member.avatar.url(:medium), :class => "left" %>
+				<%= image_tag @member.avatar(:medium), :class => "left" %>
 				<div>
 					<h3><%= truncate(@member.display_name) %> 	
 						<% if @current_user == @member %>
