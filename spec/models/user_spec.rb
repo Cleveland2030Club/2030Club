@@ -73,7 +73,7 @@ describe User do
     context "with a user_profile" do
       it "returns the avatar url for the profile" do
         @user.user_profile = UserProfile.new
-        user_profile.should_receive(:avatar).and_return(double("Avatar").as_null_object)
+        @user.user_profile.should_receive(:avatar).and_return(double("Avatar").as_null_object)
         @user.avatar(:thumb)
       end
     end
