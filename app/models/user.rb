@@ -84,11 +84,11 @@ class User < ActiveRecord::Base
   end
 
   def attendance
-      user_orders = self.orders.collect do |order|
-        order.events
-      end
-      user_orders.flatten
-
+    return [] if orders.empty?
+    user_orders = self.orders.collect do |order|
+      order.events
+    end
+    user_orders.flatten
   end
 
   def self.search_active(search,date,page)

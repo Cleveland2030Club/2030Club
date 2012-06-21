@@ -12,7 +12,7 @@
 				<div>
 					<h3><%= truncate(@member.display_name) %> 	
 						<% if @current_user == @member %>
-							<%=link_to "Edit your profile", edit_member_path(@current_user) %>
+							<%=link_to "Edit your profile", edit_user_profile_path(@current_user.user_profile) %>
 						<% end %>
 					</h3>
 					<% unless !@member.active %>
@@ -27,9 +27,6 @@
 							<%= member.check_box :active %>
 							<%= member.submit %>
 						<% end %>
-						<ul class="edit-links">
-							<li><%= link_to "edit login", edit_login_member_path(@member) %></li>
-						</ul>
 					<% end %>
 					<p>Occupation: <%= truncate(@member.user_profile.profession) %></p>
 					<p>Works for: <%= truncate(@member.user_profile.employer) %></p>

@@ -10,7 +10,7 @@
 				<% else %>
 					not active<br>
 				<% end %>
-				<%= "Last Renewed: "+ member.activated_at.strftime('%m/%d/%y') if member.activated_at and current_user.admin? %>
+				<%= "Last Renewed: "+ member.last_renewed_at.strftime('%m/%d/%y') if member.last_renewed_at and current_user.admin? %>
 				</p>
 			</div>	
 		</div>
