@@ -64,4 +64,24 @@ describe User do
       @user.expired?.should be_true
     end
   end
+
+  describe '#avatar(style)' do
+    before :each do
+      @user = Factory.build(:user)
+    end
+
+    context "with a user_profile" do
+      it "returns the avatar url for the profile" do
+        @user.user_profile = UserProfile.new
+        user_profile.should_receive(:avatar).and_return(double("Avatar").as_null_object)
+        @user.avatar(:thumb)
+      end
+    end
+
+    context "without a user_profile" do
+      it "returns the url for the default image" do
+        @user.avatar(:thumb).should == "/avatars/thumb/missing.png"
+      end
+    end
+  end
 end

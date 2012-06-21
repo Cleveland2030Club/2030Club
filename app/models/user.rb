@@ -31,6 +31,10 @@ class User < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+  def avatar(style)
+    user_profile ? user_profile.avatar.url(style) : "/avatars/#{style}/missing.png"
+  end
+
   def expired?
     expired_at.nil? or expired_at < Time.now
   end
