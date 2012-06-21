@@ -22,7 +22,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource    :registration
   map.resources   :reports
   map.resource    :user, :member => { :renewal => :get } do |user|
-    user.resources :profiles, :only => [:new, :create, :edit, :update, :show]
+    user.resources :profiles, :only => [:new, :create, :edit, :update]
   end 
   map.resource    :user_session
 

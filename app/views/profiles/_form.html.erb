@@ -5,6 +5,32 @@
   <fieldset>
 
     <div class="form-node">
+      <%= f.label :phone_number %>
+      <%= f.text_field :phone_number %>
+    </div>
+
+    <div class="form-node">
+      <%= f.label :profession, "Occupation" %>
+      <%= f.text_field :profession %>
+    </div>
+
+    <div class="form-node">
+      <%= f.label :employer %>
+      <%= f.text_field :employer %>
+    </div>
+
+    <div class="form-node">
+      <%= f.label :education, "Alma mater" %>
+      <%= f.text_field :education %>
+    </div>
+
+    <div class="form-node">
+      <%= f.label :bio %>
+      <%= f.text_area :bio %>
+    </div>
+
+    <%= image_tag(@profile.avatar.url(:thumb)) if @profile.avatar.exists? %>
+    <div class="form-node">
       <%= f.label :avatar %>
       <%= f.file_field :avatar %>
     </div>

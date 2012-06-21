@@ -18,12 +18,17 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    @profile = UserProfile.find(params[:id])
   end
 
   def update
-  end
-
-  def show
+    @profile = UserProfile.find(params[:id])
+    if @profile.update_attributes(params[:user_profile])
+      flash[:notice] = "Thank you for editing your profile"
+      redirect_to user_path
+    else
+      render :edit
+    end
   end
 
 end
