@@ -9,6 +9,7 @@ class UserProfile < ActiveRecord::Base
                       :access_key_id => Cleveland2030Settings.config['S3_KEY'],
                       :secret_access_key => Cleveland2030Settings.config['S3_SECRET']
                     },
-                    :path => "avatar/:id/:style/:filename"
+                    :path => "avatar/:id/:style/:filename",
+                    :default_url => "/avatars/:style/missing.png"
 
 end
