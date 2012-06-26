@@ -15,8 +15,8 @@
 				<p><%=link_to "Create your profile", new_user_profile_path %></p>
 			<% else %>
 				<p><%=link_to "Edit your profile", edit_user_profile_path(current_user.user_profile) %></p>
+				<p><%=link_to "View your profile", member_path(current_user) %></p>
 			<% end %>
-			<p><%=link_to "View your profile", member_path(current_user) %></p>
 		</div>
 	   		
 	<% else %>
