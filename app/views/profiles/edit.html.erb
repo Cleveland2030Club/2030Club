@@ -1,5 +1,6 @@
 <div class="twoColumns-0">
   <h1>Edit Your Profile</h1>
+  <%= image_tag(@profile.avatar.url(:medium), :class => "left") if @profile.avatar.exists? %>
   <%= render :partial => "form" %>
   <%= link_to "Back to Account", user_path %>
 </div>

@@ -3,6 +3,10 @@
                                       :html => {:multipart => true} do |f| %>
   <%= f.error_messages %>
   <fieldset>
+    <div class="form-node">
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar %>
+    </div>
 
     <div class="form-node">
       <%= f.label :phone_number %>
@@ -27,12 +31,6 @@
     <div class="form-node">
       <%= f.label :bio %>
       <%= f.text_area :bio %>
-    </div>
-
-    <%= image_tag(@profile.avatar.url(:thumb)) if @profile.avatar.exists? %>
-    <div class="form-node">
-      <%= f.label :avatar %>
-      <%= f.file_field :avatar %>
     </div>
 
   </fieldset>
