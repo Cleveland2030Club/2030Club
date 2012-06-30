@@ -1,45 +1,46 @@
-ActionController::Routing::Routes.draw do |map|
-  #Matched Routes
-  map.about 'about', :controller => 'about', :action => 'index'
-  map.about_corporate 'about/corporate', :controller => 'about', :action => 'corporate'
-  map.about_directors 'about/directors', :controller => 'about', :action => 'directors'
-  map.account_edit 'accounts/edit/:id', :controller => 'accounts', :action => 'edit'
-  map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :requirements => {:year => /d{4}/, :month => /d{1,2}/}, :year => nil, :month => nil
-  map.cleveland_plus 'clevelandplus', :controller => 'clevelandplus', :action => 'index'
-  map.login 'login', :controller => 'user_sessions', :action => 'new'
-  map.logos 'logos', :controller => 'logos', :action => 'index'
-  map.membership_rewards_category 'membership_rewards/categories/:id', :controller => 'categories', :action => 'show'
-  map.membership_rewards_region 'membership_rewards/regions/:id', :controller => 'regions', :action => 'show'
+Cle2030::Application.routes.draw do
+  get 'about' => 'about#index', :as => :about
+  get 'about/corporate' => 'about#corporate', :as => :about_corporate
+  get 'about/directors' => 'about#directors', :as => :about_directors
+  get 'accounts/edit/:id' => 'accounts#edit', :as => :account_edit
+  get '/calendar/:year/:month' => 'calendar#index', :as => :calendar, :month => , :year => , :constraints => { :month => /d{1,2}/, :year => /d{4}/ }
+  get 'clevelandplus' => 'clevelandplus#index', :as => :cleveland_plus
+  get 'login' => 'user_sessions#new', :as => :login
+  get 'logos' => 'logos#index', :as => :logos
+  get 'membership_rewards/categories/:id' => 'categories#show', :as => :membership_rewards_category
+  get 'membership_rewards/regions/:id' => 'regions#show', :as => :membership_rewards_region
 
-  #Resource Declared Routes
-  map.resource    :alert
-  map.resources   :events
-  map.resources   :guests
-  map.resources   :members, :only => [:index, :show], :collection => { :search => :get }
-  map.resource    :orders
-  map.resources   :password_resets
-  map.resources   :membership_rewards, :only => [:show, :index]
-  map.resource    :registration
-  map.resources   :reports
-  map.resource    :user, :member => { :renewal => :get } do |user|
-    user.resources :profiles, :only => [:new, :create, :edit, :update]
-  end 
-  map.resource    :user_session
-
-  #Namespaced Routes
-  map.namespace(:admin) do |admin|
-    admin.root :controller => 'dashboard', :action => 'index'
-    admin.resources :categories, :except => [:index, :show]
-    admin.resources :regions, :except => [:index, :show]
-    admin.resources :participants do |participant|
-      participant.resources :locations, :except => [:index, :show]
+  resource :alert
+  resources :events
+  resources :guests
+  resources :members, :only => [:index, :show] do
+    collection do
+      get :search
     end
   end
- 
-  #Home
-  map.root :controller => 'home'
 
-  #Nonrestful Routes
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  resource :orders
+  resources :password_resets
+  resources :membership_rewards, :only => [:show, :index]
+  resource :registration
+  resources :reports
+  resource :user do
+    member do
+      get :renewal
+    end
+    resources :profiles, :only => [:new, :create, :edit, :update]
+  end
+  resource :user_session
+  
+  namespace :admin do
+    match '/' => 'dashboard#index'
+    resources :categories, :except => [:index, :show]
+    resources :regions, :except => [:index, :show]
+    resources :participants do
+      resources :locations, :except => [:index, :show]
+    end
+  end
+
+  match '/' => 'home#index'
+  match '/:controller(/:action(/:id))'
 end
