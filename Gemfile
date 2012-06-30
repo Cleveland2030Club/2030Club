@@ -5,10 +5,10 @@ gem 'rails', '3.2.6'
 gem 'pg'
 gem 'json'
 gem 'authlogic'
-gem 'paperclic'
+gem 'paperclip'
 gem 'will_paginate'
 gem 'RedCloth'
-gem 'active_merchant'
+gem 'activemerchant'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
