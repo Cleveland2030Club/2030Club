@@ -1,8 +1,9 @@
 require 'authlogic'
 
 class ApplicationController < ActionController::Base
-  helper :all
   protect_from_forgery
+
+  helper :all
 
   helper_method :current_user_session, :current_user
   filter_parameter_logging :password, :password_confirmation
