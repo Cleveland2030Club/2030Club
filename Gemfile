@@ -1,17 +1,25 @@
-# Edit this Gemfile to bundle your application's dependencies.
-# This preamble is the current preamble for Rails 3 apps; edit as needed.
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-gem 'authlogic', '2.1.5'
-gem 'paperclip', '2.3.3'
-gem 'activemerchant', '1.7.1', :require => 'active_merchant'
 
-source 'http://gemcutter.org'
-gem 'will_paginate', '~> 2.3.11'
+gem 'pg'
+gem 'json'
+gem 'authlogic'
+gem 'paperclic'
+gem 'will_paginate'
 gem 'RedCloth'
+gem 'active_merchant'
 
-group :test, :development do
-  gem 'rspec-rails', '~>2.9'
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
+end
+
+gem 'jquery-rails'
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails'
   gem 'database_cleaner'
 end
