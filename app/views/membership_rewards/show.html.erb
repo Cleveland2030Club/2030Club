@@ -5,16 +5,16 @@
 <%#= render :partial => 'nav' %>
 
 <div class="twoColumns-0">
-  <%= link_to "&larr; Back to Rewards List", membership_rewards_path, :class => "tiny right" %>
+  <%= link_to "← Back to Rewards List", membership_rewards_path, :class => "tiny right" %>
   <h1><%= @participant.name %></h1>
   <div class="company">
     <%= image_tag @participant.logo.url(:medium), :class => "company-logo" %>
     <div class="company-info">
       <div class="company-meta">
-        <div class="deal"><span class="company-info show"><%= RedCloth.new(@participant.bio).to_html %></span><br><br></div>
-        <div class="deal"><h2>Deal</h2> <span class="company-info show"><%= RedCloth.new(@participant.benefit).to_html %></span></div>
+        <div class="deal"><span class="company-info show"><%= RedCloth.new(@participant.bio).to_html.html_safe %></span><br><br></div>
+        <div class="deal"><h2>Deal</h2> <span class="company-info show"><%= RedCloth.new(@participant.benefit).to_html.html_safe %></span></div>
         <% if !current_user_expired? %>
-          <div class="deal"><h2>How to Redeem</h2> <span class="company-info show"><%= RedCloth.new(@participant.instructions).to_html %></span></div>
+          <div class="deal"><h2>How to Redeem</h2> <span class="company-info show"><%= RedCloth.new(@participant.instructions).to_html.html_safe %></span></div>
         <% else %>
           <div id="loginSection" class="notice">
             <h2>How to Redeem</h2>
