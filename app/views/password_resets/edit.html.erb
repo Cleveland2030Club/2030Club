@@ -1,8 +1,14 @@
 <div class="twoColumns-0">
 	<h1>Reset My Password</h1>
 
-	<% form_for @user, :url => password_reset_path, :method => :put do |f| %>
-	  <%= f.error_messages %>
+	<%= form_for @user, :url => password_reset_path, :method => :put do |f| %>
+    <% if @user.errors.any? %>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    <% end %>
 		<fieldset>
  			<legend><span><strong>Please create a new password.</strong></span></legend>
 	    <div class="form-node">

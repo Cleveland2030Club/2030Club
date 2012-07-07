@@ -1,7 +1,13 @@
 <h1>Editing event</h1>
 
-<% form_for @event, :html => {:multipart => true} do |f| %>
-  <%= f.error_messages %>
+<%= form_for @event, :html => {:multipart => true} do |f| %>
+  <% if @event.errors.any? %>
+    <ul>
+    <% @event.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
 
   <%= render :partial => 'form', :locals => {:f => f} %>  
 
