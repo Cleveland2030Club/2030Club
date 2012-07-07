@@ -42,7 +42,7 @@ describe Event do
     @event.get_price(nil).should == 30.00
   end
 
-  context "Event named_scope :with_sponsor" do
+  context "Event scope :with_sponsor" do
     it "Filters Events creating an array with only sponsored events" do
       Event.create([
         {:name => "Test",  :sponsored => true},

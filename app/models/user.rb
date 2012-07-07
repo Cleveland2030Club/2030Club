@@ -19,7 +19,6 @@ class User < ActiveRecord::Base
   end
 
   scope :all_members
-  #named_scope :all_members, :order => :created_at
   scope :active_members, :conditions => ['users.id = ?', 1]
 
   attr_reader :per_page
