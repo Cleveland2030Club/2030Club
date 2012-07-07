@@ -1,6 +1,4 @@
 require 'authlogic'
-require 'paperclip'
-require 'lib/helper/string'
 
 class User < ActiveRecord::Base
   has_many  :email_addresses
@@ -20,9 +18,9 @@ class User < ActiveRecord::Base
     c.perishable_token_valid_for = 5.minutes
   end
 
-  named_scope :all_members
+  scope :all_members
   #named_scope :all_members, :order => :created_at
-  named_scope :active_members, :conditions => ['users.id = ?', 1]
+  scope :active_members, :conditions => ['users.id = ?', 1]
 
   attr_reader :per_page
   @@per_page = 3

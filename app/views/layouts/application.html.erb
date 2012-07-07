@@ -48,7 +48,7 @@
           <nav>
               <ul>
                 <li><%= current_link 'Home', root_path, :title => 'Home' %></li>
-                <li><%= current_link 'Calendar Events', calendar_url, :title => 'Calendar Events' %></li>
+                <li><%= current_link 'Calendar Events', calendar_path, :title => 'Calendar Events' %></li>
                 <li><%= current_link 'Get Involved', {:controller => 'involved', :action => 'index'}, :title => 'Get Involved' %></li>
                 <li><%= current_link 'Member Benefits', {:controller => 'benefits', :action => 'index'}, :title => 'Member Benefits' %></li>
                 <li><%= current_link 'Member Rewards', membership_rewards_path, :title => 'Member Rewards' %></li>

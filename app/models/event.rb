@@ -8,10 +8,10 @@ class Event < ActiveRecord::Base
   has_many :items, :as => :product
   accepts_nested_attributes_for :items
 
-  named_scope :with_sponsor, :conditions => {:sponsored => true}
-  named_scope :coming_soon, :conditions => ['start_at BETWEEN ? AND ?',
-                             Time.now, Time.now.advance(:days =>14)],
-                             :order => "start_at ASC"
+  scope :with_sponsor, where(:sponsored => true)
+  scope :coming_soon, where(['start_at BETWEEN ? AND ?',
+                             Time.now, Time.now.advance(:days =>14)]).
+                             order("start_at ASC")
 
   def active?
     Time.now < end_at

@@ -3,7 +3,8 @@ Cle2030::Application.routes.draw do
   get 'about/corporate' => 'about#corporate', :as => :about_corporate
   get 'about/directors' => 'about#directors', :as => :about_directors
   get 'accounts/edit/:id' => 'accounts#edit', :as => :account_edit
-  get '/calendar/:year/:month' => 'calendar#index', :as => :calendar, :month => , :year => , :constraints => { :month => /d{1,2}/, :year => /d{4}/ }
+  get '/calendar/:year/:month' => 'calendar#index', :as => :calendar, :constraints => { :month => /d{1,2}/, :year => /d{4}/ }
+  get '/calendar' => 'calendar#index', :as => :calendar
   get 'clevelandplus' => 'clevelandplus#index', :as => :cleveland_plus
   get 'login' => 'user_sessions#new', :as => :login
   get 'logos' => 'logos#index', :as => :logos
@@ -41,6 +42,6 @@ Cle2030::Application.routes.draw do
     end
   end
 
-  match '/' => 'home#index'
+  root :to => 'home#index'
   match '/:controller(/:action(/:id))'
 end
