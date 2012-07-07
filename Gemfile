@@ -9,6 +9,7 @@ gem 'paperclip'
 gem 'will_paginate'
 gem 'RedCloth'
 gem 'activemerchant'
+gem 'aws-sdk'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
