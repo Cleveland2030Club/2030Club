@@ -1,2 +1,2 @@
-class BenefitsController < ApplicationController        
+class Static::BenefitsController < ApplicationController        
 end

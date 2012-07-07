@@ -1,2 +1,2 @@
-class AboutController < ApplicationController
+class Static::AboutController < ApplicationController
 end

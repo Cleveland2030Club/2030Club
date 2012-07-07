@@ -1,2 +1,2 @@
-class InvolvedController < ApplicationController
+class Static::InvolvedController < ApplicationController
 end

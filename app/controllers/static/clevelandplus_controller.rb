@@ -1,2 +1,2 @@
-class ClevelandplusController < ApplicationController
+class Static::ClevelandplusController < ApplicationController
 end

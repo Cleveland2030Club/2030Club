@@ -1,2 +1,2 @@
-class LogosController < ApplicationController
+class Static::LogosController < ApplicationController
 end

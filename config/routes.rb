@@ -1,20 +1,20 @@
 Cle2030::Application.routes.draw do
 
 # Static Pages:
-  get 'about' => 'about#index', :as => :about
-  get 'about/corporate' => 'about#corporate', :as => :about_corporate
-  get 'about/directors' => 'about#directors', :as => :about_directors
-  get 'clevelandplus' => 'clevelandplus#index', :as => :cleveland_plus
-  get 'involved'                => 'involved#index',          :as => :involved
-  get 'involved/educational'    => 'involved#educational',    :as => :involved_educational
-  get 'involved/networking'     => 'involved#networking',     :as => :involved_networking
-  get 'involved/philanthropic'  => 'involved#philanthropic',  :as => :involved_philanthropic
-  get 'involved/social'         => 'involved#social',         :as => :involved_social
-  get 'logos' => 'logos#index', :as => :logos
+  get 'about'                   => 'static/about#index',             :as => :about
+  get 'about/corporate'         => 'static/about#corporate',         :as => :about_corporate
+  get 'about/directors'         => 'static/about#directors',         :as => :about_directors
+  get 'benefits'                => 'static/benefits#index',          :as => :benefits
+  get 'clevelandplus'           => 'static/clevelandplus#index',     :as => :cleveland_plus
+  get 'involved'                => 'static/involved#index',          :as => :involved
+  get 'involved/educational'    => 'static/involved#educational',    :as => :involved_educational
+  get 'involved/networking'     => 'static/involved#networking',     :as => :involved_networking
+  get 'involved/philanthropic'  => 'static/involved#philanthropic',  :as => :involved_philanthropic
+  get 'involved/social'         => 'static/involved#social',         :as => :involved_social
+  get 'logos'                   => 'static/logos#index',             :as => :logos
 
 # Match Routes
   get 'accounts/edit/:id' => 'accounts#edit', :as => :account_edit
-  get 'benefits'  => 'benefits#index',  :as => :benefits
   get '/calendar/:year/:month' => 'calendar#index', :as => :calendar, :constraints => { :month => /d{1,2}/, :year => /d{4}/ }
   get '/calendar' => 'calendar#index', :as => :calendar
   get 'login' => 'user_sessions#new', :as => :login
