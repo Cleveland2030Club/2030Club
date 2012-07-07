@@ -3,9 +3,15 @@ Cle2030::Application.routes.draw do
   get 'about/corporate' => 'about#corporate', :as => :about_corporate
   get 'about/directors' => 'about#directors', :as => :about_directors
   get 'accounts/edit/:id' => 'accounts#edit', :as => :account_edit
+  get 'benefits'  => 'benefits#index',  :as => :benefits
   get '/calendar/:year/:month' => 'calendar#index', :as => :calendar, :constraints => { :month => /d{1,2}/, :year => /d{4}/ }
   get '/calendar' => 'calendar#index', :as => :calendar
   get 'clevelandplus' => 'clevelandplus#index', :as => :cleveland_plus
+  get 'involved'                => 'involved#index',          :as => :involved
+  get 'involved/educational'    => 'involved#educational',    :as => :involved_educational
+  get 'involved/networking'     => 'involved#networking',     :as => :involved_networking
+  get 'involved/philanthropic'  => 'involved#philanthropic',  :as => :involved_philanthropic
+  get 'involved/social'         => 'involved#social',         :as => :involved_social
   get 'login' => 'user_sessions#new', :as => :login
   get 'logos' => 'logos#index', :as => :logos
   get 'membership_rewards/categories/:id' => 'categories#show', :as => :membership_rewards_category
@@ -32,7 +38,7 @@ Cle2030::Application.routes.draw do
     resources :profiles, :only => [:new, :create, :edit, :update]
   end
   resource :user_session
-  
+
   namespace :admin do
     match '/' => 'dashboard#index'
     resources :categories, :except => [:index, :show]
