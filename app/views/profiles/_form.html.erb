@@ -1,7 +1,14 @@
-<% form_for [current_user, @profile], :url => @profile.new_record? ? user_profiles_path : user_profile_path(@profile),
+<%= form_for [current_user, @profile], :url => @profile.new_record? ? user_profiles_path : user_profile_path(@profile),
                                       :method => @profile.new_record? ? :post : :put,
                                       :html => {:multipart => true} do |f| %>
-  <%= f.error_messages %>
+  <% if @profile.errors.any? %>
+    <ul>
+    <% @profile.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
   <fieldset>
     <div class="form-node">
       <%= f.label :avatar %>
