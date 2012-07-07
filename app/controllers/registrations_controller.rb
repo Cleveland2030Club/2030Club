@@ -4,6 +4,7 @@ class RegistrationsController < ApplicationController
 
   def new
     @registration ||= Registration.new
+    @error_messages = {}
   end
 
   def create

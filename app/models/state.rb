@@ -1,6 +1,8 @@
 class State < ActiveRecord::Base
   has_many :postal_codes, :dependent => :destroy
   
+  attr_accessible :title, :code
+  
   scope :by_name, lambda { |sname| { :conditions => ["LOWER(states.title) = ?", sname.downcase] }}
   scope :by_code, lambda { |code| { :conditions => ["LOWER(states.code) = ?", code.downcase] }}
   

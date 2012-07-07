@@ -3,6 +3,8 @@ class Order < ActiveRecord::Base
   has_many :order_items
   has_many :items, :through => :order_items, :validate => true #, :join_table => 'order_items' 
 
+  attr_accessible :customer, :amount
+  
   def paypal_amount
     amount * 100
   end
