@@ -14,19 +14,19 @@
 				<li class="educational"><a href="javascript: void(0)" id="link-educational">Educational</a></li>
 			</ul>
 			<div id="content-featured" class="intro-content">
-				<p>Enhancing the lives of Cleveland's young professionals by offering hundreds of opportunities each year to socialize, network, volunteer, and enjoy life in Cleveland. <%=link_to "Learn More", {:controller => 'involved', :action => 'index'}, :class => 'learn' %></p>
+				<p>Enhancing the lives of Cleveland's young professionals by offering hundreds of opportunities each year to socialize, network, volunteer, and enjoy life in Cleveland. <%=link_to "Learn More", involved_path, :class => 'learn' %></p>
 			</div>
-			<div id="content-social" class="intro-content hide">			
-				<p><strong>Make friends. Have fun.</strong><br> Whether you are new to Cleveland or a native, we can help you connect with like-minded young professionals to form lifelong friendships. <%=link_to "Learn More", {:controller => 'involved', :action => 'social'}, :class => 'learn' %></p>
+			<div id="content-social" class="intro-content hide">
+				<p><strong>Make friends. Have fun.</strong><br> Whether you are new to Cleveland or a native, we can help you connect with like-minded young professionals to form lifelong friendships. <%=link_to "Learn More", involved_social_path, :class => 'learn' %></p>
 			</div>
 			<div id="content-networking" class="intro-content hide">
-				<p><strong>Build relationships. Grow professionally.</strong><br> Build relationships with other professionals in the city who can enhance your personal and professional life. <%=link_to "Learn More", {:controller => 'involved', :action => 'networking'}, :class => 'learn' %></p>
+				<p><strong>Build relationships. Grow professionally.</strong><br> Build relationships with other professionals in the city who can enhance your personal and professional life. <%=link_to "Learn More", involved_networking_path, :class => 'learn' %></p>
 			</div>
 			<div id="content-philanthropic" class="intro-content hide">
-				<p><strong>Get involved. Improve your community.</strong><br> Be the change you want to see in our City. Volunteer with the countless organizations in Cleveland that help those in need and meet great people while doing it. <%=link_to "Learn More", {:controller => 'involved', :action => 'philanthropic'}, :class => 'learn' %></p>
+				<p><strong>Get involved. Improve your community.</strong><br> Be the change you want to see in our City. Volunteer with the countless organizations in Cleveland that help those in need and meet great people while doing it. <%=link_to "Learn More", involved_philanthropic_path, :class => 'learn' %></p>
 			</div>
 			<div id="content-educational" class="intro-content hide">
-				<p><strong>Gain knowledge. Unlock potential.</strong><br> With lessons and seminars on everything from sailing on Lake Erie to Small Business Needs we can help you gain power thru knowledge. <%=link_to "Learn More", {:controller => 'involved', :action => 'educational'}, :class => 'learn' %></p>
+				<p><strong>Gain knowledge. Unlock potential.</strong><br> With lessons and seminars on everything from sailing on Lake Erie to Small Business Needs we can help you gain power thru knowledge. <%=link_to "Learn More", involved_educational_path, :class => 'learn' %></p>
 			</div>
 		</div>
 	</div>
@@ -40,9 +40,9 @@
 				<div id="galleria"></div>
 				<script>
 					// Load theme
-					Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');				    
+					Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
 					// intiialize flickr plugin
-					var flickr = new Galleria.Flickr('9005c2c39147fac3ffca9964197671c5');				    
+					var flickr = new Galleria.Flickr('9005c2c39147fac3ffca9964197671c5');
 					// inject a photset into galleria
 					flickr.set('72157624191939250', function(data) {
           $('#galleria').galleria({
@@ -73,8 +73,8 @@
 				<h4>Cleveland YP News</h4>
 				<script language="JavaScript" src="http://itde.vccs.edu/rss2js/feed2js.php?src=http%3A%2F%2Fblog.cleveland.com%2Fentertainment%2Fatom.xml&chan=n&num=5&desc=50&date=n&targ=n" type="text/javascript"></script>
 				<br><div class="small">News provided by: &nbsp;<a href="http://cleveland.com"><img src="/images/sponsoreImage_small.png" style="width: 75px; height: 32px;vertical-align:middle;" border="0"></a></div>
-			</div>  
-		</div>                          
+			</div>
+		</div>
 	</div>
 </div>
 <div class="twoColumns-1">
@@ -88,7 +88,7 @@
 	</div>
 	<div class="sponsored-events">
 		<h4>Sponsored Events</h4>
-		<%= render :partial => "shared/upcoming_sponsored_events", 
+		<%= render :partial => "shared/upcoming_sponsored_events",
 	  			   :collection => @sponsored_events,
 	   			   :as => :event %>
 	</div>
