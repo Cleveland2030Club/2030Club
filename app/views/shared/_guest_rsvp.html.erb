@@ -1,4 +1,4 @@
-<% form_for @guest, :url => {:controller => 'guests', :action => 'create'}, :html => {:class => 'rsvp'} do |guest| %>
+<% form_for @guest, :url => guests_path, :html => {:class => 'rsvp'} do |guest| %>
   <%= hidden_field_tag 'event_id', @event.id %>
 
   <fieldset>
@@ -13,7 +13,12 @@
 
     <%= render :partial => 'events/notifications' %>
 
-    <%= guest.error_messages %>
+    <ul>
+      <% @guest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+
     <div class="form-node">
   	  <%= guest.label :first_name %>
 	    <%= guest.text_field :first_name %>

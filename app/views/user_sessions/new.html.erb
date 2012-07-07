@@ -5,8 +5,12 @@
   <h1><span class="title">Login</span> <a href="/registrations/new/" class="tiny right">Create a new account</a>
      <%=link_to "Forgot Your Password?", new_password_reset_path, :class => 'tiny right clear'%>
   </h1>
-  <% form_for @user_session, :url => user_session_path do |f| %>
-  <%= f.error_messages %>
+  <%= form_for @user_session, :url => user_session_path do |f| %>
+  <ul>
+    <% @user_session.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
   <fieldset>
   	<legend><span><strong>Welcome Back</strong></span></legend>
     <div class="form-node">

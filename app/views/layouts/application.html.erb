@@ -11,7 +11,7 @@
     <%= yield :scripts %>
     <!--[if lt IE 9]>
 	  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	  	<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/ie/main.css" />  
+	  	<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/ie/main.css" />
 		<![endif]-->
 	</head>
   <body>
@@ -21,7 +21,7 @@
         <div id="innerContainer">
           <div id="header">
             <a href="<%=root_url%>" title="The Cleveland 2030 Club home page" class="logo">
-                <img src="/images/logo2.gif" alt="The Cleveland 2030 Logo" border="0">
+                <%= image_tag("logo2.gif", :alt => "The Cleveland 2030 Logo", :border => "0")%>
             </a>
             <div id="loginSection">
               <% if @current_user && @current_user.logged_in? %>
@@ -39,7 +39,7 @@
 								Admin: <a href="/reports">Manage Members</a> | <a href="/registration/new">Create Member</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							</div>
 							<div class="admin-nav">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/calendar">Manage Events</a> | 
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/calendar">Manage Events</a> |
 								<a href="/events/new">Create Event</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							</div>
 							<% end %>
@@ -49,8 +49,8 @@
               <ul>
                 <li><%= current_link 'Home', root_path, :title => 'Home' %></li>
                 <li><%= current_link 'Calendar Events', calendar_path, :title => 'Calendar Events' %></li>
-                <li><%= current_link 'Get Involved', {:controller => 'involved', :action => 'index'}, :title => 'Get Involved' %></li>
-                <li><%= current_link 'Member Benefits', {:controller => 'benefits', :action => 'index'}, :title => 'Member Benefits' %></li>
+                <li><%= current_link 'Get Involved', involved_path, :title => 'Get Involved' %></li>
+                <li><%= current_link 'Member Benefits', benefits_path, :title => 'Member Benefits' %></li>
                 <li><%= current_link 'Member Rewards', membership_rewards_path, :title => 'Member Rewards' %></li>
                 <li><%= current_link '20/30 Members', members_url, :title => '20/30 Members'%></li>
                 <li><%= current_link  raw('Cleveland<strong>+</strong>'), cleveland_plus_url, :title => 'Cleveland Plus'%></li>
@@ -77,17 +77,17 @@
 	var uservoiceOptions = {
 	  /* required */
 	  key: 'cleveland2030',
-	  host: 'cleveland2030.uservoice.com', 
+	  host: 'cleveland2030.uservoice.com',
 	  forum: '78335',
-	  showTab: true,  
+	  showTab: true,
 	  /* optional */
 	  alignment: 'left',
-	  background_color:'#f00', 
+	  background_color:'#f00',
 	  text_color: 'white',
 	  hover_color: '#06C',
 	  lang: 'en'
 	};
-	
+
 	function _loadUserVoice() {
 	  var s = document.createElement('script');
 	  s.setAttribute('type', 'text/javascript');
