@@ -5,6 +5,8 @@ class OrderItem < ActiveRecord::Base
   validates_numericality_of :quantity
   validates_inclusion_of :quantity, :in => 1..100, :message => "can only be between 1 and 100"
 
+  attr_accessible :order, :item, :quantity
+  
   def item_type
     item.product_type if item
   end
