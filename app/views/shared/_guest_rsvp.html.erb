@@ -14,8 +14,8 @@
     <%= render :partial => 'events/notifications' %>
 
     <ul>
-      <% @guest.errors.full_messages.each do |error| %>
-        <li>error</li>
+      <% @guest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
     </ul>
 
