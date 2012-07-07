@@ -27,7 +27,9 @@ Cle2030::Application.routes.draw do
   resources :guests
   resources(:members, :only => [:index, :show]) { collection { get :search } }
   resources :membership_rewards, :only => [:show, :index]
-  resource  :orders
+  resource  :orders do
+    get :checkout, :on => :collection
+  end
   resources :password_resets
   resource  :registration
   resources :reports
@@ -36,7 +38,7 @@ Cle2030::Application.routes.draw do
     resources :profiles, :only => [:new, :create, :edit, :update]
   end
   resource :user_session
-  
+
 # Namespace Routes
   namespace :admin do
     resources :categories, :except => [:index, :show]
