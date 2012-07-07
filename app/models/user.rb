@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   end
 
   scope :all_members
-  scope :active_members, :conditions => ['users.id = ?', 1]
+  scope :active, -> { where({ active: true }) }
 
   attr_reader :per_page
   @@per_page = 3
@@ -59,7 +59,7 @@ class User < ActiveRecord::Base
       self.save
     end
   end
-  
+
   def admin?
     admins = ['jon@coffeeandcode.com',
               'kevin@detone8.com',
@@ -90,10 +90,10 @@ class User < ActiveRecord::Base
 
   def self.search_active(search,date,page)
     unless date == "-" or date == nil
-      paginate_all_by_active true, :per_page => 100, :page => page,
+      active.paginate :per_page => 100, :page => page,
                :conditions => ['(lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)) and cast(activated_at as text) like ?', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     else
-      paginate_all_by_active true, :per_page => 100, :page => page,
+      active.paginate :per_page => 100, :page => page,
                :conditions => ['lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     end
   end
@@ -110,10 +110,10 @@ class User < ActiveRecord::Base
 
   def self.csv_search_active(search,date)
     unless date == "-" or date == nil
-      paginate_all_by_active true, :per_page => 30000, :page => 1,
+      active.paginate true, :per_page => 30000, :page => 1,
                :conditions => ['(lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)) and cast(activated_at as text) like ?', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     else
-      paginate_all_by_active true, :per_page => 30000, :page => 1,
+      active.paginate true, :per_page => 30000, :page => 1,
                :conditions => ['lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     end
   end
