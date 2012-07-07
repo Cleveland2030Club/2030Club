@@ -20,6 +20,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'fastercsv'
   gem 'ruby-debug19'
   gem 'sqlite3'
   gem 'rspec-rails'
