@@ -81,8 +81,8 @@ a.learn:hover{background-color:#fff;color:#294558;border:0;}
 /* 		Structure Styles  		   */
 /* ------------------------------ */
 
-body{font-family:"lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;font-size:13px;position:relative;background:#fff url(/images/bg-strech.jpg) repeat-x top left;color:#333;}
-#container{width:100%;margin:0 auto;background:transparent url(/images/bg.jpg) no-repeat top center;}
+body{font-family:"lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;font-size:13px;position:relative;background:#fff url(<%= asset_path 'bg-strech.jpg' %>) repeat-x top left;color:#333;}
+#container{width:100%;margin:0 auto;background:transparent url(/assets/bg.jpg) no-repeat top center;}
 #container img.skyline{position:absolute;right:140px;top:107px;}
 #shadowContainer{width:960px;margin:0 auto;}
 #innerContainer{width:972px;margin:0 auto;}
@@ -93,11 +93,11 @@ body{font-family:"lucida grande",lucida,tahoma,helvetica,arial,sans-serif !impor
 #header #alertSection{float:left;width:345px;margin:0 5px;padding:8px;}
 #header #loginSection{float:right;width:300px;padding:28px 35px 0 0;}
 
-nav {height:40px;padding:0;background:transparent url(/images/nav-bg.gif) repeat-x 0 3px;border-bottom:3px solid #2c2d2d;}
+nav {height:40px;padding:0;background:transparent url(<%= asset_path 'nav-bg.gif' %>) repeat-x 0 3px;border-bottom:3px solid #2c2d2d;}
 nav div{overflow:hidden;height:45px;margin:0 auto;padding:0 3px;/*background:transparent url(/images/cle2030-skyline.png) no-repeat 100% -63px;*/}
 nav ul li{float:left;margin:0 3px;height:42px;}
 nav ul li a{font-size:116%;/*font-size:130%;*/text-decoration:none;font-weight:normal;/*font-weight:bold;*/color:#fff;display:block;height:24px;/*height:42px;*/padding:17px 5px 0;/*padding:14px 10px 0;*/}
-nav ul li a:hover, nav ul li a.current{color:#ebebeb; background:transparent url(/images/cle2030-menu_re.png) repeat-x 0 -50px; border-bottom:none;}
+nav ul li a:hover, nav ul li a.current{color:#ebebeb; background:transparent url(<%= asset_path 'cle2030-menu_re.png' %>) repeat-x 0 -50px; border-bottom:none;}
 nav ul li a strong {font-size:116%;height: inherit;}
 
 #content{padding:1em 2em .5em;background:#fff;overflow:hidden;min-height:400px;position:relative;}
@@ -129,7 +129,7 @@ div.twoColumns-0{ float:left;width:655px;padding: 1em 0;}
 div.twoColumns-1{float:right;width:245px;padding: 1em 0;}
 
 /* 3 colum layout */
-.threeColumns-0{background: transparent url('/images/subnav-background.jpg') 0 0 no-repeat;float: left;min-height: 249px;width: 162px;}
+.threeColumns-0{background: transparent url(<%= asset_path 'subnav-background.jpg' %>) 0 0 no-repeat;float: left;min-height: 249px;width: 162px;}
 .threeColumns-0 ul{font-size: 90%;list-style: none;margin-top: 25px;padding: 0 18px;}
 .threeColumns-0 ul li.current a{color: #000 !important;}
 .threeColumns-0 ul li{padding: 0 0 10px 0;}
@@ -141,7 +141,7 @@ div.twoColumns-1{float:right;width:245px;padding: 1em 0;}
 /* ------------------------------ */
 
 div.introContainer{margin-bottom:2em;}
-div.intro{overflow:hidden; width:104%;background:#044e8f url(/images/cle2030-intro-bg_re.png) repeat-x top left;margin-left:-26px;}
+div.intro{overflow:hidden; width:104%;background:#044e8f url(<%= asset_path 'cle2030-intro-bg_re.png' %>) repeat-x top left;margin-left:-26px;}
 div.intro .committees{width:33%;float:left;padding:3em 0;}
 div.intro .committees li{display:block;list-style:none;width:70%;margin:.1em auto;}
 div.intro .committees li a{background-color:#0056A5;font-size:116%; color:#fff;display:block;text-decoration:none;font-weight:normal;padding:.5em 2em;margin-bottom:.1em;-moz-border-radius:5px;-webkit-border-radius:5px; -moz-box-shadow: 0 5px 12px #0e3653; -webkit-box-shadow: 0 5px 15px #0e3653; }
@@ -165,18 +165,18 @@ div.membershipBody { background: #ebebeb; -moz-border-radius: 5px; -webkit-borde
 	div.register { float: left; text-align: center; width:46%; }
 		/*div.register p a { color: #336799; font-family: Arial; }*/
 			.becomeMember { width:70%;margin:3em auto 1em; }
-			.becomeMember a {background-color:#0483d3;background-image:url("/images/cle2030-intro-but-bg_re.png");background-repeat:repeat-x;background-position:bottom; border:1px solid #0483d3; font-size:116%; color:#fff;display:block;text-decoration:none;font-weight:normal;padding:.5em 0;margin-bottom:.1em;-moz-border-radius:5px;-webkit-border-radius:5px;}
+			.becomeMember a {background-color:#0483d3;background-image:url(<%= asset_path '/assets/cle2030-intro-but-bg_re.png' %>);background-repeat:repeat-x;background-position:bottom; border:1px solid #0483d3; font-size:116%; color:#fff;display:block;text-decoration:none;font-weight:normal;padding:.5em 0;margin-bottom:.1em;-moz-border-radius:5px;-webkit-border-radius:5px;}
 			.becomeMember a:hover {background-color:#0483d3; border:1px solid #0483d3;}
 	div.testimonials {float: left;width:54%;}
 			div.testimonials h4 { float: left; margin-top:1em; }
-			div.testimonials a { background: #999 url(/images/testimonialsrightarrow.jpg) no-repeat 100% 0; color: #fff; display: block; float: right; font-size: 11px; font-weight: normal; margin-top:2px; padding-left: 6px; text-decoration: none; width: 34px; }
+			div.testimonials a { background: #999 url(<%= asset_path 'testimonialsrightarrow.jpg' %>) no-repeat 100% 0; color: #fff; display: block; float: right; font-size: 11px; font-weight: normal; margin-top:2px; padding-left: 6px; text-decoration: none; width: 34px; }
 		div.testimonialBody {margin:1em 0; clear: both; }
 			div.testimonialBody p { }
 			div.testimonialBody p.testimonialAuthor strong {font-size:123%;}
 			div.testimonialBody p.testimonialAuthor { color: #666; margin-top: 1em; font-size:77%; }
 	div.header-registration { float: right; text-align: center; width:150px; margin-top: -5px; }
 			.becomeMember { width:70%; auto 1em; }
-			.becomeMember a {background-color:#0483d3;background-image:url("/images/cle2030-intro-but-bg_re.png");background-repeat:repeat-x;background-position:bottom; border:1px solid #0483d3; font-size:116%; color:#fff;display:block;text-decoration:none;font-weight:normal;padding:.5em 0;margin-bottom:.1em;-moz-border-radius:5px;-webkit-border-radius:5px;}
+			.becomeMember a {background-color:#0483d3;background-image:url(<%= asset_path "cle2030-intro-but-bg_re.png" %>);background-repeat:repeat-x;background-position:bottom; border:1px solid #0483d3; font-size:116%; color:#fff;display:block;text-decoration:none;font-weight:normal;padding:.5em 0;margin-bottom:.1em;-moz-border-radius:5px;-webkit-border-radius:5px;}
 			.becomeMember a:hover {background-color:#0483d3; border:1px solid #0483d3;}
 			
 div.rss_box ul { }
@@ -185,8 +185,8 @@ div.rss_box ul { }
 			
 div.flickrBody { margin-top: 8px; }
 div.flickrLeft, div.flickrImage, div.flickrRight { float: left; height: 145px; }
-div.flickrLeft a { display: block; background: url(/images/flickrLeft.jpg) no-repeat 0 0; width: 30px; height: 85px; margin: 32px 10px; }
-div.flickrRight a { display: block; background: url(/images/flickrRight.jpg) no-repeat 0 0; width: 30px; height: 85px; margin: 32px 10px; }
+div.flickrLeft a { display: block; background: url(<%= asset_path 'flickrLeft.jpg' %>) no-repeat 0 0; width: 30px; height: 85px; margin: 32px 10px; }
+div.flickrRight a { display: block; background: url(<%= asset_path 'flickrRight.jpg' %>) no-repeat 0 0; width: 30px; height: 85px; margin: 32px 10px; }
 
 /* ------------------------ */
 /* 		Foms	   			*/
@@ -280,7 +280,7 @@ form .for-price{width:140px;float:right;padding-left:20px;color:#6C6C6C;}
 form .for-price.txt-r{font-size:85%;}
 form .for-price input[type="text"] {width:30px;display:inline;margin:0 5px 0 0;}
 form .price{font-weight:bold;}
-form fieldset .remove {float:left;display:block;padding-left:15px;margin:5px;background:url("/images/remove-icon.gif") no-repeat left top;}
+form fieldset .remove {float:left;display:block;padding-left:15px;margin:5px;background:url(<%= asset_path 'remove-icon.gif' %>) no-repeat left top;}
 form fieldset div.no-logo{border:1px dashed #ccc;height:100px;margin-left:178px;width:300px;}
 div.for-price input[type="submit"] {margin-left:0;}
 
