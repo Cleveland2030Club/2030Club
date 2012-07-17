@@ -14,7 +14,6 @@ Cle2030::Application.routes.draw do
   get 'logos'                   => 'static/logos#index',             :as => :logos
 
 # Match Routes
-  get 'accounts/edit/:id' => 'accounts#edit', :as => :account_edit
   get '/calendar/:year/:month' => 'calendar#index', :as => :calendar, :constraints => { :month => /d{1,2}/, :year => /d{4}/ }
   get '/calendar' => 'calendar#index', :as => :calendar
   get 'login' => 'user_sessions#new', :as => :login
@@ -22,7 +21,6 @@ Cle2030::Application.routes.draw do
   get 'membership_rewards/regions/:id' => 'regions#show', :as => :membership_rewards_region
 
 # Resource Routes
-  resource  :alert
   resources :events
   resources :guests
   resources(:members, :only => [:index, :show]) { collection { get :search } }
