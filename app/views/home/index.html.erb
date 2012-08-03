@@ -36,13 +36,10 @@
 				<h4>Photos From Recent Events</h4>
 				<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"%>
 				<%= javascript_include_tag "application" %>
-        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script src="/javascripts/galleria/galleria.min.js"></script>
-        <script src="/javascripts/galleria/plugins/flickr/galleria.flickr.min.js"></script> -->
 				<div id="galleria"></div>
 				<script>
 					// Load theme
-					Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
+					Galleria.loadTheme('/assets/galleria/themes/classic/galleria.classic.min.js');
 					// intiialize flickr plugin
 					var flickr = new Galleria.Flickr('9005c2c39147fac3ffca9964197671c5');
 					// inject a photset into galleria
