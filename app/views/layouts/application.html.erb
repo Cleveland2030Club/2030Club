@@ -33,7 +33,7 @@
                 <a href="/user">Account</a> |
               <%= link_to "Sign out", user_session_url(@current_user), :method => :delete  %>
             <% else %>
-              <a href="/user_sessions/new/" title="login" class="login">Login</a> | New Here?
+              <%= link_to "Login", login_path, class: 'login' %> | New Here?
               <div class="header-registration becomeMember">
                 <a href="/registration/new/" title="register">Become A Member</a>
               </div>

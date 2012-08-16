@@ -1,5 +1,5 @@
 <div class="twoColumns-0">
-  <h1>Registration: Membership Dues <a href="/user_sessions/new/" class="tiny right">I already have an account</a></h1>
+  <h1>Registration: membership dues <%= link_to "I already have an account", login_path, class: "tiny right" %></h1>
   <form>
     <p style="font-weight: bold; color: #CC0000;"><%= flash[:notice] %></p>
     <%= render "review_form" %>

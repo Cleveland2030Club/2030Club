@@ -1,5 +1,5 @@
 <div class="twoColumns-0" >
-  <h1><span class="title">Registration</span> <a href="/user_sessions/new/" class="tiny right">I already have an account</a></h1>
+  <h1><span class="title">Registration</span> <%= link_to "I already have an account", login_path, class: "tiny right" %></h1>
   <%= form_for @registration, :url => registration_path do |f| %>
   <% if @registration.errors.any? %>
     <ul>
