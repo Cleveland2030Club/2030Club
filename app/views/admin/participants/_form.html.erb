@@ -1,7 +1,13 @@
-<% form_for [:admin, @participant], :html => {:multipart => true, :class=> "well form-horizontal" }  do | participant | %>
+<%= form_for [:admin, @participant], :html => {:multipart => true, :class=> "well form-horizontal" }  do | participant | %>
   <div>
     <div>
-      <%= participant.error_messages %>
+      <% if @participant.errors.any? %>
+        <ul>
+        <% @participant.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      <% end %>
       <fieldset>
         <legend><span><strong>Company Information</strong></span></legend>
         <div class="control-group">
