@@ -13,52 +13,18 @@
 
 ActiveRecord::Schema.define(:version => 20120325182858) do
 
-  create_table "accounts", :force => true do |t|
-    t.string   "email",                                  :null => false
-    t.string   "crypted_password",                       :null => false
-    t.string   "password_salt",                          :null => false
-    t.string   "persistence_token",                      :null => false
-    t.string   "single_access_token",                    :null => false
-    t.string   "perishable_token",                       :null => false
-    t.integer  "login_count",         :default => 0,     :null => false
-    t.integer  "failed_login_count",  :default => 0,     :null => false
-    t.datetime "last_request_at"
-    t.datetime "current_login_at"
-    t.datetime "last_login_at"
-    t.string   "current_login_ip"
-    t.string   "last_login_ip"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "joined_at"
-    t.datetime "expired_at"
-    t.boolean  "active",              :default => false
-    t.boolean  "activated",           :default => false
-    t.datetime "activated_at"
-  end
-
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "email_addresses", :force => true do |t|
-    t.string   "address"
-    t.integer  "user_id"
-    t.integer  "email_address_type_id"
-    t.boolean  "primary",               :default => true
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "events", :force => true do |t|
-    t.boolean  "active"
     t.string   "name"
     t.datetime "start_at"
     t.datetime "end_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.string   "url_friendly"
     t.text     "description"
     t.boolean  "sponsored"
@@ -73,17 +39,17 @@ ActiveRecord::Schema.define(:version => 20120325182858) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "items", :force => true do |t|
-    t.integer  "product_id",   :null => false
-    t.string   "product_type", :null => false
-    t.string   "name",         :null => false
-    t.decimal  "price",        :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "product_id",                                 :null => false
+    t.string   "product_type",                               :null => false
+    t.string   "name",                                       :null => false
+    t.decimal  "price",        :precision => 8, :scale => 2, :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
   add_index "items", ["product_id"], :name => "index_items_on_product_id"
@@ -106,30 +72,30 @@ ActiveRecord::Schema.define(:version => 20120325182858) do
 
   create_table "memberships", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "order_items", :force => true do |t|
     t.integer  "order_id",   :null => false
     t.integer  "item_id",    :null => false
     t.integer  "quantity",   :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "order_items", ["item_id"], :name => "index_order_items_on_item_id"
   add_index "order_items", ["order_id"], :name => "index_order_items_on_order_id"
 
   create_table "orders", :force => true do |t|
-    t.integer  "customer_id",                         :null => false
-    t.string   "customer_type",                       :null => false
-    t.decimal  "amount",                              :null => false
+    t.integer  "customer_id",                                                       :null => false
+    t.string   "customer_type",                                                     :null => false
+    t.decimal  "amount",           :precision => 8, :scale => 2,                    :null => false
     t.string   "express_token"
     t.string   "express_payer_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "complete",         :default => false
+    t.datetime "created_at",                                                        :null => false
+    t.datetime "updated_at",                                                        :null => false
+    t.boolean  "complete",                                       :default => false
   end
 
   add_index "orders", ["customer_id"], :name => "index_orders_on_customer_id"
@@ -142,8 +108,8 @@ ActiveRecord::Schema.define(:version => 20120325182858) do
     t.text     "bio"
     t.text     "benefit"
     t.text     "instructions"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
@@ -153,8 +119,8 @@ ActiveRecord::Schema.define(:version => 20120325182858) do
 
   create_table "regions", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "registrations", :force => true do |t|
@@ -172,8 +138,8 @@ ActiveRecord::Schema.define(:version => 20120325182858) do
     t.string   "employer"
     t.string   "education"
     t.string   "about2030"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   add_index "registrations", ["user_id"], :name => "index_registrations_on_user_id"
@@ -192,8 +158,8 @@ ActiveRecord::Schema.define(:version => 20120325182858) do
     t.integer  "address_type_id",                    :null => false
     t.boolean  "is_primary",      :default => false
     t.integer  "sort_order"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.string   "address",                            :null => false
     t.string   "city",                               :null => false
     t.string   "state_code",                         :null => false
@@ -216,8 +182,8 @@ ActiveRecord::Schema.define(:version => 20120325182858) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.string   "gender",              :limit => 1
     t.text     "member_notes"
   end
@@ -244,8 +210,8 @@ ActiveRecord::Schema.define(:version => 20120325182858) do
     t.datetime "activated_at"
     t.boolean  "active",              :default => false
     t.boolean  "activated",           :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
     t.datetime "last_renewed_at"
   end
 
