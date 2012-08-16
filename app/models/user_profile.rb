@@ -12,4 +12,6 @@ class UserProfile < ActiveRecord::Base
                     :path => "avatar/:id/:style/:filename",
                     :default_url => "/avatars/:style/missing.png"
 
+  attr_accessible :phone_number, :profession, :employer, :education, :bio
+
 end
