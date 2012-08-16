@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
     c.perishable_token_valid_for = 5.minutes
   end
 
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
+
   scope :all_members
   scope :active, -> { where({ active: true }) }
 

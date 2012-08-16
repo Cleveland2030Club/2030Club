@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  attr_accessible :name, :start_at, :end_at, :description, :sponsored, :club_price, :standard_price, :max_attendance
+
   PRICE_TYPES = {
     :standard => 'Standard price',
     :club => 'Club price'}
