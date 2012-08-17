@@ -8,16 +8,19 @@ class MembersController < ApplicationController
     @member = User.find_by_id(params[:id])
     @events = @member.attendance
   end
+
+  def update
+    @member = User.find(params[:id])
+    if @member.update_attributes(params[:user])
+      redirect_to member_path(@member)
+    else
+      flash[:error] = "The member was not updated...oops"
+      redirect_to member_path(@member)
+    end
+  end
   
   def search
     @members = User.all_members
 	end
 
-  private
-
-  def set_member
-    return @member = current_user if current_user.id == params[:id].to_i
-    return @member = User.find(params[:id]) if current_user.admin?
-  end
-  
 end

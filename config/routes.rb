@@ -23,7 +23,7 @@ Cle2030::Application.routes.draw do
 # Resource Routes
   resources :events
   resources :guests
-  resources(:members, :only => [:index, :show]) { collection { get :search } }
+  resources(:members, :only => [:index, :show, :update]) { collection { get :search } }
   resources :membership_rewards, :only => [:show, :index]
   resource  :orders do
     get :checkout, :on => :collection

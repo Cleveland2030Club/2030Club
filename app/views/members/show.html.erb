@@ -22,7 +22,7 @@
 						<p class="small">not active</p> 
 					<% end %>
 					<% if current_user.admin? %>
-						<% form_for :user, @member, member_path(@member), :html =>{ :method => :put } do |member| %>
+						<%= form_for [:user, @member], url: member_path(@member), :html =>{ :method => :put } do |member| %>
 							<%= member.label :active %>
 							<%= member.check_box :active %>
 							<%= member.submit %>
