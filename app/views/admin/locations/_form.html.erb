@@ -1,5 +1,11 @@
-<% form_for [:admin, @participant, @location] do |location| %>
-  <%= location.error_messages %>
+<%= form_for [:admin, @participant, @location] do |location| %>
+  <% if @location.errors.any? %>
+    <ul>
+    <% @location.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
   <div class="form-node">
     <%= location.label :region_id, "Select a Region" %>
     <%= location.collection_select(:region_id, @regions, :id, :name, {:prompt => true}) %>

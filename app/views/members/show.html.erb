@@ -10,7 +10,7 @@
 			<div class="memberInfo">
 				<%= image_tag @member.avatar(:medium), :class => "left" %>
 				<div>
-					<h3><%= truncate(@member.display_name) %> 	
+					<h3><%= truncate(@member.display_name) %>
 						<% if @current_user == @member %>
 							<%=link_to "Edit your profile", edit_user_profile_path(@current_user.user_profile) %>
 						<% end %>
@@ -19,7 +19,7 @@
 						<%= "<p class=""small"">Member Since:"+ @member.joined_at.strftime('%m/%d/%y') +"</p>" if @member.joined_at %>
 
 					<% else %>
-						<p class="small">not active</p> 
+						<p class="small">not active</p>
 					<% end %>
 					<% if current_user.admin? %>
 						<%= form_for [:user, @member], url: member_path(@member), :html =>{ :method => :put } do |member| %>
@@ -32,8 +32,8 @@
 					<p>Works for: <%= truncate(@member.user_profile.employer) %></p>
 					<p>Is an Alumni of: <%= truncate(@member.user_profile.education) %></p>
 					<p>Bio: <%= truncate(@member.user_profile.bio) %></p>
-				</div>	
-			</div>		
+				</div>
+			</div>
 		</div>
 		<% if current_user.admin? %>
 			<div class="twoColumns-1 events-attended">
@@ -56,5 +56,5 @@
 		<% end %>
 	<% end %>
 <% else %>
-	<p>You must be logged in to see the members</p>	
+	<p>You must be logged in to see the members</p>
 <% end %>

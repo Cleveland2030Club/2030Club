@@ -1,5 +1,11 @@
-<% form_for [:admin, @region] do |region| %>
-  <%= region.error_messages %>
+<%= form_for [:admin, @region] do |region| %>
+  <% if @region.errors.any? %>
+    <ul>
+    <% @region.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
 
   <div>
     <%= region.label :name %>
