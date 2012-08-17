@@ -15,9 +15,8 @@
 							<%=link_to "Edit your profile", edit_user_profile_path(@current_user.user_profile) %>
 						<% end %>
 					</h3>
-					<% unless !@member.active %>
-						<%= "<p class=""small"">Member Since:"+ @member.joined_at.strftime('%m/%d/%y') +"</p>" if @member.joined_at %>
-
+					<% if @member.active %>
+						<p class="small">Member Since: <%= @member.joined_at.strftime('%m/%d/%y') if @member.joined_at %></p>
 					<% else %>
 						<p class="small">not active</p>
 					<% end %>
