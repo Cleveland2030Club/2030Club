@@ -21,6 +21,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'heroku'
   gem 'fastercsv'
   gem 'debugger'
   gem 'sqlite3'
