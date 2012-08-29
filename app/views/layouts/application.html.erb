@@ -3,14 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Cleveland 2030</title>
-    <%= stylesheet_link_tag 'main' %>
-
-    <%= yield :stylesheets %>
+    <%= stylesheet_link_tag 'application' %>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/trunk/ui/jquery.effects.core.js"></script>
 
-    <%= javascript_include_tag 'stuff' %>
+    <%= javascript_include_tag 'application' %>
 
     <%= yield :scripts %>
     <!--[if lt IE 9]>
@@ -25,7 +23,7 @@
         <div id="innerContainer">
           <div id="header">
             <a href="<%=root_url%>" title="The Cleveland 2030 Club home page" class="logo">
-                <%= image_tag("logo2.gif", :alt => "The Cleveland 2030 Logo", :border => "0")%>
+                <%= image_tag("logo2.gif", :alt => "The Cleveland 2030 Logo")%>
             </a>
             <div id="loginSection">
               <% if @current_user && @current_user.logged_in? %>
