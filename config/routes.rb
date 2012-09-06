@@ -4,6 +4,7 @@ Cle2030::Application.routes.draw do
   get 'about'                   => 'static/about#index',             :as => :about
   get 'about/corporate'         => 'static/about#corporate',         :as => :about_corporate
   get 'about/directors'         => 'static/about#directors',         :as => :about_directors
+  get 'about/directors-past'    => 'static/about#directors-past',    :as => :about_directors_past
   get 'benefits'                => 'static/benefits#index',          :as => :benefits
   get 'clevelandplus'           => 'static/clevelandplus#index',     :as => :cleveland_plus
   get 'involved'                => 'static/involved#index',          :as => :involved
