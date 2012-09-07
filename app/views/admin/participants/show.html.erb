@@ -13,15 +13,15 @@
     </section>
     <section>
       <h2>Bio</h2>
-      <%= RedCloth.new(@participant.bio).to_html.html_safe %>
+      <%= raw RedCloth.new(@participant.bio).to_html %>
     </section>
     <section>
       <h2>Benefit</h2>
-      <%= RedCloth.new(@participant.benefit).to_html.html_safe %>
+      <%= raw RedCloth.new(@participant.benefit).to_html %>
     </section>
     <section>
       <h2>How to redeem</h2>
-      <%= RedCloth.new(@participant.instructions).to_html.html_safe %>
+      <%= raw RedCloth.new(@participant.instructions).to_html %>
     </section>
   </section>
   <div class="locations">
