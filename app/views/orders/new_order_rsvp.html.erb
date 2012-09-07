@@ -1,10 +1,9 @@
 <div class="threeColumns-1">
   <h1>RSVP</h1>
   <div class="notice">
-    Thank you for your interest in "<%=h @order.items[0].product.name %>". Please specify how many people will be attending with you.
+    Thank you for your interest in "<%= @order.items[0].product.name %>". Please specify how many people will be attending with you.
   </div>
-  <%= error_messages_for 'order_item' %>
-  <%- form_for :order, @order, :url => { :action => "complete_rsvp" } do |f| %>
+  <%- form_for [:order, @order], :url => { :action => "complete_rsvp" } do |f| %>
     <fieldset>
       <legend><span><strong class="for-price">Total</strong><strong>&nbsp;</strong></span></legend>
       <div class="form-node">
