@@ -1,4 +1,6 @@
 class Participant < ActiveRecord::Base
+
+  attr_accessible :category, :locations, :name, :bio, :benefit, :instructions, :logo, :url, :category_id
   
   belongs_to :category
   has_many :locations
