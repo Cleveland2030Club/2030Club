@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   def new
     # user = User.first
     # user.account.email = 'adomokos@gmail.com'
-    # UserMailer.deliver_welcome_email(user)
+    # UserMailer.welcome_email(user).deliver
     # session[:order_id] = 1
     @order = Order.find_by_id(session[:order_id])
 
@@ -41,11 +41,11 @@ class OrdersController < ApplicationController
 
   def confirm
     @order = Order.find_by_id(session[:order_id])
-    
+
     redirect_to :action => 'new' and return unless params[:token]
 
     details_response = GATEWAY.details_for(params[:token])
-          
+
     unless details_response.success?
       @message = details_response.message
       render :action => 'error'
@@ -84,19 +84,19 @@ class OrdersController < ApplicationController
       user = @order.customer
 
       raise StandardError, "The object must be a User to continue" unless user.class == User
-        
+
       if @order.order_items.first.item.name == "New Membership"
         user.activate_account!
         redirect_to new_user_session_path,
-  					:notice => "Thank you for becoming a member. Your registration has been a success! " +  
-    			  "Please log in to begin using the site."  
-        UserMailer.deliver_welcome_email(user)
+  					:notice => "Thank you for becoming a member. Your registration has been a success! " +
+    			  "Please log in to begin using the site."
+        UserMailer.welcome_email(user).deliver
       else
         user.update_membership_expiration
         flash[:notice] = "Thank you for your continued support!  Please take a few minutes to review your
                           Account information to ensure everything is up-to-date"
         redirect_to user_path
-        UserMailer.deliver_renewal_email(user)
+        UserMailer.renewal_email(user).deliver
       end
     end
 
@@ -123,16 +123,16 @@ private
   def complete_event_order_and_redirect
     @order.complete = true
     @order.save
-    
+
     event = @order.items[0].product
 
-    UserMailer.deliver_event_registration_email(@order.customer, event)
+    UserMailer.event_registration_email(@order.customer, event).deliver
     session[:order_id] = nil
 
     redirect_to event_path(event),
           :notice => "Thank you for registering for this event."
   end
-  
+
   def get_view_name(order)
     if (@order.event_order?)
       if (@order.amount == 0)

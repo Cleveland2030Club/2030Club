@@ -25,7 +25,7 @@ describe UsersController do
       user = Factory.build(:user)
       User.stub!(:find_by_email).and_return(user)
 
-      UserMailer.should_receive(:deliver_password_reminder_email).with(user)
+      UserMailer.should_receive(:password_reminder_email).with(user)
 
       email = 'johndoe@gmail.com'
 

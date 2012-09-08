@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user 
+    @user = current_user
     if @user.update_attributes(params[:user])
       redirect_to user_url
       flash[:notice] = "Thank you for updating your account."
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
       @user_email = email
       flash.now[:error] = 'The provided email was not found'
     else
-      UserMailer.deliver_password_reminder_email(user)
+      UserMailer.password_reminder_email(user).deliver
 
       flash.now[:notice] = 'An email has been sent with your password'
     end

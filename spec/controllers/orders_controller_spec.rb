@@ -7,9 +7,9 @@ describe OrdersController do
     membership = Factory.build(:membership)
     membership.items[0].price = 70
     @membership_order.items = [membership.items[0]]
-    @membership_order.order_items = 
+    @membership_order.order_items =
       [OrderItem.new(:order => @order, :item => membership.items[0], :quantity => 1)]
-    
+
     @event_order = Factory.build(:order)
     event = Factory.build(:event)
     event.id = 49
@@ -17,10 +17,10 @@ describe OrdersController do
     order_item = OrderItem.new(:order => @event_order, :item => event.items[0], :quantity => 1)
     @event_order.order_items = [order_item]
     @event_order.amount = order_item.quantity * order_item.item.price
-    
+
     session[:order_id] = 243
     @express_token = 'POR456MKLF'
-  
+
     @gateway = mock(ActiveMerchant::Billing::BogusGateway)
     # Yeah, I know - it's only a test
     silence_warnings { GATEWAY = @gateway }
@@ -28,9 +28,9 @@ describe OrdersController do
 
   context "- for new action -" do
     it "kicks me out with an exception when Order was not found" do
-      lambda do 
+      lambda do
         session[:order_id] = nil
-       get :new 
+       get :new
       end.should raise_error
     end
 
@@ -44,7 +44,7 @@ describe OrdersController do
     it "displays the event template when order is event order and amount > zero" do
       Order.stub!(:find_by_id).and_return(@event_order)
       @event_order.amount = 45
-      
+
       get :new
       response.should render_template 'new_order_event'
     end
@@ -52,7 +52,7 @@ describe OrdersController do
     it "displays the rsvp template when order is event order and amount is zero" do
       @event_order.amount = 0
       Order.stub!(:find_by_id).and_return(@event_order)
-      
+
       get :new
       response.should render_template "new_order_rsvp"
     end
@@ -122,9 +122,9 @@ describe OrdersController do
     it "handles the error received in the GATEWAY response" do
       error_message = 'Hey, error occurred'
       details_response = stub(:success? => false, :message => error_message)
-      
+
       @gateway.should_receive(:details_for).with(@express_token).and_return(details_response)
-    
+
       get :confirm, { :token => @express_token }
       response.should render_template 'error'
       assigns[:message].should == error_message
@@ -135,7 +135,7 @@ describe OrdersController do
     it "renders error when the purchase was not successfull" do
       error_message = 'Error occurred'
       Order.stub!(:find_by_id).and_return(@membership_order)
-      
+
       purchase = stub(:success? => false, :message => error_message)
       @gateway.should_receive(:purchase).and_return(purchase)
 
@@ -153,8 +153,8 @@ describe OrdersController do
     user = Factory.build(:user)
     user.stub!(:activate_account!)
     @membership_order.customer = user
-    
-    UserMailer.should_receive(:deliver_welcome_email).with(user)
+
+    UserMailer.should_receive(:welcome_email).with(user)
 
     purchase = stub(:success? => true)
     @gateway.should_receive(:purchase).and_return(purchase)
@@ -169,8 +169,8 @@ describe OrdersController do
     Order.stub!(:find_by_id).and_return(@event_order)
     @event_order.stub!(:save)
 
-    UserMailer.should_receive(:deliver_event_registration_email)
-  
+    UserMailer.should_receive(:event_registration_email)
+
     purchase = stub(:success? => true)
     @gateway.should_receive(:purchase).and_return(purchase)
 
@@ -195,7 +195,7 @@ describe OrdersController do
 
     event = @event_order.items[0].product
 
-    UserMailer.should_receive(:deliver_event_registration_email).with(@event_order.customer, event)
+    UserMailer.should_receive(:event_registration_email).with(@event_order.customer, event)
 
     get :complete_rsvp, {:quantity => 3}
 

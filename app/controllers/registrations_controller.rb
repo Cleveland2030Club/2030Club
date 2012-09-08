@@ -24,10 +24,10 @@ class RegistrationsController < ApplicationController
           if (user.respond_to?(:activate_account!))
             if (user.activate_account!)
               redirect_to new_user_session_path,
-                  :notice => "Thank you for becoming a member. Your registration has been a success! " +  
-                  "Please log in to begin using the site."  
+                  :notice => "Thank you for becoming a member. Your registration has been a success! " +
+                  "Please log in to begin using the site."
             end
-            UserMailer.deliver_welcome_email(user)
+            UserMailer.welcome_email(user).deliver
           end
         end
       end

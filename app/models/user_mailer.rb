@@ -1,44 +1,50 @@
 class UserMailer < ActionMailer::Base
-  
+  default :from => "Cleveland2030 Club <do_not_reply@cleveland2030.org>"
   default_url_options[:host] = "www.cleveland2030.org"
 
   def welcome_email(user)
-    events = Event.all(:conditions => ["start_at > DATE(?)", Time.now], :order => "start_at ASC", :limit => 5)
-    
-    recipients  user.email
-    bcc         "board@cleveland2030.org"
-    from        "Cleveland2030 Club <do_not_reply@cleveland2030.org>"
-    subject     "Welcome to The Cleveland 2030 Club!"
-    sent_on     Time.now
-    body        :user => user, :url => "http://cleveland2030.org/login", :events => events
+    @events = Event.all(:conditions => ["start_at > DATE(?)", Time.now], :order => "start_at ASC", :limit => 5)
+    @user = user
+    @url = "http://cleveland2030.org/login"
+
+    mail(
+      :to => user.email,
+      :subject => "Welcome to The Cleveland 2030 Club!",
+      :bcc => "board@cleveland2030.org"
+    )
   end
 
   def event_registration_email(user, event)
-    recipients  user.email
-    bcc         "board@cleveland2030.org"
-    from        "Cleveland2030 Club <do_not_reply@cleveland2030.org>"
-    subject     "Event registration successful"
-    sent_on     Time.now
-    body        :user => user, :url => "http://cleveland2030.org", :event => event
+    @event = event
+    @user = user
+    @url = "http://cleveland2030.org"
+
+    mail(
+      :to => user.email,
+      :subject => "Event registration successful",
+      :bcc => "board@cleveland2030.org"
+    )
   end
 
   def password_reset_instructions(user)
-    subject     "Password Reset Instructions"
-    from        "Cleveland2030 Club <do_not_reply@cleveland2030.org"
-    recipients  user.email
-    sent_on     Time.now
-    body        :edit_password_reset_url => edit_password_reset_url(user.perishable_token)
+    @edit_password_reset_url = edit_password_reset_url(user.perishable_token)
+
+    mail(
+      :to => user.email,
+      :subject => "Password Reset Instructions"
+    )
   end
 
   def renewal_email(user)
-    events = Event.all(:conditions => ["start_at > DATE(?)", Time.now], :order => "start_at ASC", :limit => 5)
-    
-    recipients  user.email
-    bcc         "board@cleveland2030.org"
-    from        "Cleveland2030 Club <do_not_reply@cleveland2030.org>"
-    subject     "Membership Renewal"
-    sent_on     Time.now
-    body        :user => user, :url => "http://cleveland2030.org/login", :events => events
+    @events = Event.all(:conditions => ["start_at > DATE(?)", Time.now], :order => "start_at ASC", :limit => 5)
+    @user = user
+    @url = "http://cleveland2030.org/login"
+
+    mail(
+      :to => user.email,
+      :subject => "Membership Renewal",
+      :bcc => "board@cleveland2030.org"
+    )
   end
 
 end
