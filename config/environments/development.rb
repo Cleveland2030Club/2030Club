@@ -34,4 +34,19 @@ Cle2030::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    if Cleveland2030Settings.config['DEV_PAYMENT_LOGIN'] and
+      Cleveland2030Settings.config['DEV_PAYMENT_PASSWORD'] and
+      Cleveland2030Settings.config['DEV_PAYMENT_SIGNATURE']
+      ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(
+        :login => Cleveland2030Settings.config['DEV_PAYMENT_LOGIN'],
+        :password => Cleveland2030Settings.config['DEV_PAYMENT_PASSWORD'],
+        :signature => Cleveland2030Settings.config['DEV_PAYMENT_SIGNATURE']
+      )
+    else
+      Rails.logger.warn('Paypal environment variables are not set!')
+    end
+  end
 end

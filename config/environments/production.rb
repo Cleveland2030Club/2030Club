@@ -64,4 +64,19 @@ Cle2030::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :production
+    if Cleveland2030Settings.config['PROD_PAYMENT_LOGIN'] and
+      Cleveland2030Settings.config['PROD_PAYMENT_PASSWORD'] and
+      Cleveland2030Settings.config['PROD_PAYMENT_SIGNATURE']
+      ::GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(
+        :login => Cleveland2030Settings.config['PROD_PAYMENT_LOGIN'],
+        :password => Cleveland2030Settings.config['PROD_PAYMENT_PASSWORD'],
+        :signature => Cleveland2030Settings.config['PROD_PAYMENT_SIGNATURE']
+      )
+    else
+      Rails.logger.fatal('Paypal environment variables are not set!')
+    end
+  end
 end

@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
     setup_response = GATEWAY.setup_purchase(@order.paypal_amount,
       :ip => request.remote_ip,
       :return_url => url_for(:action => 'confirm', :only_path => false),
-      :cancel_return_url => url_for(:action => 'index', :only_path => false),
+      :cancel_return_url => url_for(:action => 'new', :only_path => false),
       :description => @item.product_type+" -- "+@order.event.name+" -- qty: "+@order_item.quantity.to_s
     )
 
