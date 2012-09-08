@@ -14,16 +14,9 @@ $(document).ready(function() {
 	});
 });
 
-//hide for message
-$(document).ready(function() {
-	$(".beta-flag .close").click(function(e){
-		$(".beta-flag").slideToggle();
-	});
-});
-
 //home page content
 $(document).ready(function() {
-	
+
 	$("#link-social, #link-networking, #link-philanthropic, #link-educational").click(function(e){
 		$('.intro-content').each(function(index) {
     	if(!$(this).hasClass("hide")){
