@@ -37,6 +37,7 @@ div.whoElse h3{font-size:90%;}
 /* 		Register and RSVP	  		   */
 /* ------------------------------ */
 
+form.rsvp legend { position: relative; width: auto; }
 form.rsvp legend span{position:relative;}
 form.rsvp legend strong{font-size:108%;padding-right:10px}
 form.rsvp fieldset{background:#f0f0f0;-moz-border-radius: 10px;-webkit-border-radius: 10px;padding:20px;width:auto;}

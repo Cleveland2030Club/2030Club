@@ -1,7 +1,3 @@
-<% content_for :stylesheets do %>
-	<%= stylesheet_link_tag 'cleveland-plus' %>
-<% end %>
-
 <div class="threeColumns-1">
 	<h1>Cleveland: Part of the Plus</h1>
 	<p>Cleveland, the largest of Northeast Ohio's four urban centers, provides an enviable quality of life.  A city filled with friendly, genuine, and passionate citizens, Cleveland has big city amenities without the big city problems.  Exceptionally affordable, Cleveland is a place with world class cultural, recreational, and entertainment attractions. It's where lifestyles range from the rural to the suburban to the urban. It's right where you belong!</p>
@@ -22,7 +18,7 @@
 	<p>Our cost of living is low and our quality of life is high.</p>
 </div>
 <div class="twoColumns-1">
-	<img src="/images/clePlus.gif" border="0" />
+	<img src="<%= asset_path 'clePlus.gif' %>" border="0" />
 	<p>&nbsp;</p>
 	<ul class="rich-text">
 		<li><a href="http://www.clevelandplus.com/en/Living-Here/Diversity-and-Culture.aspx" target="_blank">Culture</a></li>
