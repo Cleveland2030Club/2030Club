@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require stuff
+//= require swfobject
+//= require event_calendar
+//= require galleria/galleria.min
+//= require galleria/plugins/flickr/galleria.flickr.min
+//= require TotalCalculator
