@@ -7,7 +7,6 @@ hr {margin-top: 4px;	margin-bottom: 20px;}
 .memberInfo div img {	margin-left: 6px; }
 .memberInfo div p {	margin-top: 4px; }
 .blueMemberName{ color: #0A4D8F; }
-#loginSection {text-align: center; }
 .pagination {margin-top:1em; padding-top:.5em; border-top:1px solid #ccc;}
 .events-attended li{list-style-type:none;clear:left;overflow:hidden;margin-bottom:10px;}
 .events-attended div{width:45%;float:left;}

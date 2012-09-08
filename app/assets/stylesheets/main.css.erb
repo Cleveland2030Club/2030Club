@@ -1,4 +1,4 @@
-/* 
+/*
 html5doctor.com Reset Stylesheet
 */
 html, body, div, span, object, iframe,
@@ -10,11 +10,11 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, dialog, figure, footer, header, 
+article, aside, dialog, figure, footer, header,
 hgroup, menu, nav, section,
 time, mark, audio, video {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
 body {line-height:1.3em;}
-article, aside, dialog, figure, footer, header, 
+article, aside, dialog, figure, footer, header,
 hgroup, nav, section {display:block;}
 nav ul {list-style:none;}
 blockquote, q {quotes:none;}
@@ -100,6 +100,10 @@ nav ul li a{font-size:116%;/*font-size:130%;*/text-decoration:none;font-weight:n
 nav ul li a:hover, nav ul li a.current{color:#ebebeb; background:transparent url(<%= asset_path 'cle2030-menu_re.png' %>) repeat-x 0 -50px; border-bottom:none;}
 nav ul li a strong {font-size:116%;height: inherit;}
 
+.sub-nav { padding:20px 60px 20px 15px; background-image:url(<%= asset_path 'subnav-background2.gif' %>); background-repeat:no-repeat; background-position:0 top; }
+.sub-nav li { list-style-type:none; }
+.sub-nav li a { display:block; padding:6px 0 6px 12px; border-bottom:1px solid #fff; }
+
 #content{padding:1em 2em .5em;background:#fff;overflow:hidden;min-height:400px;position:relative;}
 #content.home {padding:1em .5em .5em;}
 aside{overflow:hidden;*zoom:1;}
@@ -178,11 +182,11 @@ div.membershipBody { background: #ebebeb; -moz-border-radius: 5px; -webkit-borde
 			.becomeMember { width:70%; auto 1em; }
 			.becomeMember a {background-color:#0483d3;background-image:url(<%= asset_path "cle2030-intro-but-bg_re.png" %>);background-repeat:repeat-x;background-position:bottom; border:1px solid #0483d3; font-size:116%; color:#fff;display:block;text-decoration:none;font-weight:normal;padding:.5em 0;margin-bottom:.1em;-moz-border-radius:5px;-webkit-border-radius:5px;}
 			.becomeMember a:hover {background-color:#0483d3; border:1px solid #0483d3;}
-			
+
 div.rss_box ul { }
 	div.rss_box ul li {padding:5px 0;list-style:none;font-size:77%;}
 	div.rss_box ul li a{font-size:130%;}
-			
+
 div.flickrBody { margin-top: 8px; }
 div.flickrLeft, div.flickrImage, div.flickrRight { float: left; height: 145px; }
 div.flickrLeft a { display: block; background: url(<%= asset_path 'flickrLeft.jpg' %>) no-repeat 0 0; width: 30px; height: 85px; margin: 32px 10px; }
@@ -285,9 +289,24 @@ form fieldset div.no-logo{border:1px dashed #ccc;height:100px;margin-left:178px;
 div.for-price input[type="submit"] {margin-left:0;}
 
 /* -------------------------------- */
-/* 		Social Media Links					*/
+/* 	    Social Media Links          */
 /* -------------------------------- */
 .social-media-links { overflow:hidden;}
 .social-media-links p{ background-color:#d2eaf7;font-weight:bold;margin:10px 0 40px;padding:5px 10px;}
 .social-media-links .links{ float:right;margin-right:10px; }
 .social-media-links a:hover{ border:0;background:transparent; }
+
+
+/* -------------------------------- */
+/*      About                       */
+/* -------------------------------- */
+.board ul {list-style:none;}
+.board li{border-bottom:1px dashed #aaa;clear:left;overflow:hidden;margin:0 0 10px;padding:0 0 10px;}
+.board-email{float:right;}
+.board-photo{float:left;margin-right:20px;}
+.board-memeber-info {margin-top:20px;}
+
+.twoColumns-1-left {
+	float: left;
+	width: 200px;
+}

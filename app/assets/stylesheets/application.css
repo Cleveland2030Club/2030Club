@@ -10,17 +10,11 @@
  *
  *= require_self
  *= require_tree ./ie
- *= require about
- *= require benefits
+ *= require main
  *= require calendar
  *= require cleveland-plus
  *= require event-detail
  *= require event-teasers
  *= require event_calendar
- *= require main-bk
- *= require main
- *= require members2030
- *= require rewards
- *= require scaffold
  *= require twitter-widget
  */
