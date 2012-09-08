@@ -1,10 +1,6 @@
 class OrdersController < ApplicationController
 
   def new
-    # user = User.first
-    # user.account.email = 'adomokos@gmail.com'
-    # UserMailer.welcome_email(user).deliver
-    # session[:order_id] = 1
     @order = Order.find_by_id(session[:order_id])
 
     # Don't play with the URL

@@ -27,7 +27,7 @@ Cle2030::Application.routes.draw do
   resources(:members, :only => [:index, :show, :update]) { collection { get :search } }
   resources :membership_rewards, :only => [:show, :index]
   resource  :orders do
-    get  :checkout, :on => :collection
+    put  :checkout, :on => :collection
     put :complete_rsvp, :on => :member
   end
   resources :password_resets
