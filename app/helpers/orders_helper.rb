@@ -19,7 +19,7 @@ module OrdersHelper
     order = Order.new(
                   :customer => user,
                   :amount => membership_item.price)
-    order.order_items << OrderItem.new(:order => order, 
+    order.order_items << OrderItem.new(:order => order,
                                        :item => membership_item,
                                        :quantity => 1)
     order.save!
@@ -29,10 +29,10 @@ module OrdersHelper
   def self.create_event_order(user, event, quantity = 1)
     if user.class == Guest
       item = event.standard_price_item
-    else 
+    else
       item = event.club_price_item
     end
-    
+
     order = Order.new(
                   :customer => user,
                   :amount => item.price * quantity)

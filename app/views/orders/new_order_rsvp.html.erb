@@ -3,7 +3,7 @@
   <div class="notice">
     Thank you for your interest in "<%= @order.items[0].product.name %>". Please specify how many people will be attending with you.
   </div>
-  <%- form_for [:order, @order], :url => { :action => "complete_rsvp" } do |f| %>
+  <%= form_for [:order, @order], :url => { :action => "complete_rsvp" } do |f| %>
     <fieldset>
       <legend><span><strong class="for-price">Total</strong><strong>&nbsp;</strong></span></legend>
       <div class="form-node">
@@ -14,5 +14,5 @@
     <div class="formAction clear for-price">
       <%= f.submit "RSVP" %>
     </div>
-  <%- end -%>
+  <% end %>
 </div>
