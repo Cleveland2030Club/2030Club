@@ -47,9 +47,6 @@
 	    </dl>
 	  </div>
   <% end %>
-  <!--<aside class="sponsor-logo">
-    <%= image_tag(@event.sponsor.url(:thumb)) %>
-  </aside> /sponsored-logo -->
   </div>
     <div class="event-detail rich-text"><%= raw @event.description%></div>
   </div>
@@ -57,9 +54,5 @@
 <div class="twoColumns-1">
   <%= render :partial => "#{@event.get_view_mode(current_user)}", :locals => {:event => @event} %>
 
-  <!--  <div class="whoElse">
-      <h4>Who Elese is Going?</h4>
-      <p class="notice">You must <%= link_to "log in", new_user_session_path %> before you can see who else is attending!</p>
-    </div>-->
  </div>
 <% end %>
