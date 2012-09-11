@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   attr_reader :per_page
   @@per_page = 3
 
-  validates :first_name, :last_name, :email, :password, :presence => true
+  validates :first_name, :last_name, :email, presence: true
 
   def display_name
     "#{first_name} #{last_name}"
