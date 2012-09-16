@@ -2,7 +2,10 @@
   <div class="errorExplanation"><%= flash[:notice] %></div>
 <% end %>
 <div class="twoColumns-0">
-	<h1><span class="title">Forgot Your Password?</span> <%= link_to "Login to my account", login_path, class: "tiny right" %><a href="/registrations/new/" class="tiny right clear">Create a new account</a></h1>
+	<h1><span class="title">Forgot Your Password?</span>
+    <%= link_to "Login to my account", login_path, class: "tiny right" %>
+    <%= link_to "Create a new account", new_registration_path, class: "tiny right clear" %>
+  </h1>
 	<% form_tag password_resets_path do %>
   <fieldset>
  		<legend><span><strong>Fill in your registered email and we will send you a link to reset your password.</strong></span></legend>
@@ -15,4 +18,4 @@
 	  <%= submit_tag "Reset my password" %>
   </div>
   <% end %>
-</div>  
+</div>
