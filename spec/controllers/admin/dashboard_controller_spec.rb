@@ -4,7 +4,6 @@ module Admin
   describe DashboardController do
 
     before do
-      user = mock("User", :admin? => true)
       @controller.stub(:requires_admin) { true }
     end
 
@@ -12,12 +11,12 @@ module Admin
 
       it "renders the admin layout" do
         get :index
-        response.layout.should == 'layouts/admin'
+        response.should  render_template('layouts/admin')
       end
 
       it "renders the index view" do
         get :index
-        response.should render_template 'index'
+        response.should render_template('index')
       end
 
     end

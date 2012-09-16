@@ -8,7 +8,7 @@ class GuestsController < ApplicationController
       session[:order_id] = order_id
       redirect_to new_orders_path
     else
-      render 'app/views/events/show.html.erb'
+      render 'app/views/events/show'
       flash[:notice] = "Please fix the errors and try again."
     end
   end

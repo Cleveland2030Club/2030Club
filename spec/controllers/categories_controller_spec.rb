@@ -3,36 +3,31 @@ require 'spec_helper'
 describe CategoriesController do
   describe "GET #show" do
     before do
-      @category = mock_model(Category, :id => 1)
-      Category.stub_chain(:find => [@category], :select => [@category], :first => @category)
+      @category = FactoryGirl.create(:category_with_participant)
     end
 
     it "sets categories to @categories" do
-      Category.should_receive(:find).and_return([@category])
-
-      get :show, :id => 1
+      get :show, :id => @category
       assigns(:categories).should == [@category]
     end
 
     it "sets regions to @regions" do
+      pending "need to create location and region factories and instantiate them"
       regions = [mock_model(Region)]
       Region.should_receive(:find).and_return(regions)
 
-      get :show, :id => 1
+      get :show, :id => @category.id
       assigns(:regions).should == regions
     end
 
     it "sets category to @category" do
-      get :show, :id => 1
+      get :show, :id => @category.id
       assigns(:category).should == @category
     end
 
     it "sets participants to @participants" do
-      participants = [mock_model(Participant)]
-      Participant.should_receive(:find).and_return(participants)
-
-      get :show, :id => 1
-      assigns(:participants).should == participants
+      get :show, :id => @category.id
+      assigns(:participants).should == @category.participants.all
     end
 
   end

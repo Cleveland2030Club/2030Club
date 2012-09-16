@@ -3,7 +3,7 @@ require 'spec_helper'
 describe GuestsController do
   it "creates a Guest and Event Order" do
     event_id = 1
-    guest = Factory(:guest)
+    guest = FactoryGirl.build(:guest)
     Guest.stub!(:new).and_return(guest)
     guest.stub!(:save).and_return(true)
 
@@ -17,14 +17,13 @@ describe GuestsController do
   end
 
   it "sets flash message and renders events/show page when save fails" do
-    guest = Factory(:guest)
+    guest = FactoryGirl.build(:guest)
     Guest.stub!(:new).and_return guest
-    event = stub_model(Event)
-    Event.stub!(:find).and_return(event)
+    event = FactoryGirl.create(:event)
     guest.stub!(:save).and_return false
 
-    post 'create', {:guest => "some value", :event_id => 1}
+    post 'create', { :guest => "some value", :event_id => event.id }
     flash[:notice].should == "Please fix the errors and try again."
-    response.should be_success 
+    response.should be_success
   end
 end

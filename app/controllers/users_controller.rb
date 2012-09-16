@@ -28,28 +28,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def send_password
-    email = params[:email]
-    unless (valid_email?(email))
-      @user_email = email
-      flash.now[:error] = 'The provided email is invalid'
-      render 'forgotten' and return
-    end
-
-    user = User.find_by_email(email)
-
-    if (user == nil)
-      @user_email = email
-      flash.now[:error] = 'The provided email was not found'
-    else
-      UserMailer.password_reminder_email(user).deliver
-
-      flash.now[:notice] = 'An email has been sent with your password'
-    end
-
-    render :action => 'forgotten'
-  end
-
   def renewal
     @membership_status = MembershipStatus.new(current_user).status
     session[:order_id] = OrdersHelper.create_membership_order(current_user)

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe EventsController do
 
   it "raises an exception when current_user is null" do
-    lambda{ post :register_member }.should raise_error(ArgumentError)
+    lambda{ post :register_member, :id => 1 }.should raise_error(ArgumentError)
   end
 
   it "creates a new order when registering a member" do
@@ -16,10 +16,9 @@ describe EventsController do
     Event.stub!(:find).and_return(event)
     OrdersHelper.stub(:create_event_order).and_return(created_order_id)
 
-    post :register_member, {'event_id' => event_id}
+    post :register_member, :id => event_id, :event_id => event_id
 
     response.should be_redirect
     session[:order_id].should == created_order_id
   end
 end
-

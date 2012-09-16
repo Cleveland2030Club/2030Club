@@ -1,10 +1,10 @@
 class CategoriesController < ApplicationController
 
   def show
-    @categories = Category.find(:all, :order => :name)
-    @regions = Region.find(:all, :order => :name)
-    @category = @categories.select { |category| category.id == params[:id].to_i }.first
-    @participants = Participant.find(:all, :conditions =>{ :category_id => @category.id }, :order => :name)
+    @categories = Category.order(:name)
+    @regions = Region.order(:name)
+    @category = @categories.where(:id => params[:id].to_i).first
+    @participants = Participant.where(:category_id => @category.id).order(:name)
   end
 
 end
