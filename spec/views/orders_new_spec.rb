@@ -10,8 +10,8 @@ describe "orders/new_order_event" do
     assign(:order, order)
     render
 
-    rendered.should have_tag("span#event_price")
-    rendered.should have_tag("input#quantity")
-    rendered.should have_tag("span#total")
+    rendered.should have_selector("span#event_price")
+    rendered.should have_selector("input#quantity")
+    rendered.should have_selector("span#total")
   end
 end

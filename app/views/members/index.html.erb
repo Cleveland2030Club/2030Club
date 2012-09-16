@@ -19,7 +19,7 @@
 		  		:collection => @members,
 		   		:as => :member %>
 			</div>
-			<%= will_paginate %>
+			<%= will_paginate @members %>
 		</div>
 	<% else %>
 		<div id="loginSection" class="notice center">

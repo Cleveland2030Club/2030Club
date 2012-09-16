@@ -81,5 +81,5 @@ class EventsController < ApplicationController
     session[:order_id] = order_id
     redirect_to new_orders_path
   end
-  
+
 end
