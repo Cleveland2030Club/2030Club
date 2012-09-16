@@ -78,21 +78,20 @@ class OrdersController < ApplicationController
       session[:order_id] = nil
 
       user = @order.customer
-
       raise StandardError, "The object must be a User to continue" unless user.class == User
 
       if @order.order_items.first.item.name == "New Membership"
         user.activate_account!
+        UserMailer.welcome_email(user).deliver
         redirect_to new_user_session_path,
   					:notice => "Thank you for becoming a member. Your registration has been a success! " +
     			  "Please log in to begin using the site."
-        UserMailer.welcome_email(user).deliver
       else
         user.update_membership_expiration
+        UserMailer.renewal_email(user).deliver
         flash[:notice] = "Thank you for your continued support!  Please take a few minutes to review your
                           Account information to ensure everything is up-to-date"
         redirect_to user_path
-        UserMailer.renewal_email(user).deliver
       end
     end
 
@@ -125,8 +124,8 @@ private
     UserMailer.event_registration_email(@order.customer, event).deliver
     session[:order_id] = nil
 
-    redirect_to event_path(event),
-          :notice => "Thank you for registering for this event."
+    redirect_to event_path(event.id),
+      :notice => "Thank you for registering for this event."
   end
 
   def get_view_name(order)

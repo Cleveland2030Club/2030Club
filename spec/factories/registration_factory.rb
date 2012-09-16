@@ -1,7 +1,9 @@
-Factory.define :registration do |f|
-  f.first_name 'John'
-  f.last_name 'Doe'
-  f.email 'jdoe@gmail.com'
-  f.password 'password'
-  f.password_confirmation 'password'
+FactoryGirl.define do
+  factory :registration do
+    first_name 'John'
+    last_name 'Doe'
+    email 'jdoe@gmail.com'
+    password 'password'
+    password_confirmation 'password'
+  end
 end

@@ -1,7 +1,9 @@
-Factory.define :order do |f|
-  f.amount 70
-  f.after_build do |order|
-    order.customer = Factory.build(:user)
-    order.items << Factory.build(:item)
+FactoryGirl.define do
+  factory :order do
+    amount 70
+    after(:build) do |order|
+      order.customer = FactoryGirl.build(:user)
+      order.items << FactoryGirl.build(:item)
+    end
   end
 end

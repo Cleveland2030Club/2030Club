@@ -3,15 +3,15 @@ require 'spec_helper'
 describe OrdersController do
 
   before(:each) do
-    @membership_order = Factory.build(:order)
-    membership = Factory.build(:membership)
+    @membership_order = FactoryGirl.build(:order)
+    membership = FactoryGirl.build(:membership)
     membership.items[0].price = 70
     @membership_order.items = [membership.items[0]]
     @membership_order.order_items =
       [OrderItem.new(:order => @order, :item => membership.items[0], :quantity => 1)]
 
-    @event_order = Factory.build(:order)
-    event = Factory.build(:event)
+    @event_order = FactoryGirl.build(:order)
+    event = FactoryGirl.build(:event)
     event.id = 49
     @event_order.items = [event.items[0]]
     order_item = OrderItem.new(:order => @event_order, :item => event.items[0], :quantity => 1)
@@ -67,7 +67,7 @@ describe OrdersController do
       response.should be_success
       response.should render_template("new_order_event")
       @event_order.order_items[0].should_not be_valid
-      @event_order.order_items[0].errors.length.should == 1
+      @event_order.order_items[0].errors.size.should == 1
     end
 
     it "calls the gateway and redirects to it" do
@@ -150,11 +150,12 @@ describe OrdersController do
     @membership_order.stub!(:save)
     @membership_order.stub_chain(:order_items, :first, :item, :name => "New Membership")
 
-    user = Factory.build(:user)
+    user = FactoryGirl.build(:user)
     user.stub!(:activate_account!)
     @membership_order.customer = user
 
-    UserMailer.should_receive(:welcome_email).with(user)
+    UserMailer.should_receive(:welcome_email).with(user).
+      and_return(double("mailer", :deliver => true))
 
     purchase = stub(:success? => true)
     @gateway.should_receive(:purchase).and_return(purchase)
@@ -169,7 +170,8 @@ describe OrdersController do
     Order.stub!(:find_by_id).and_return(@event_order)
     @event_order.stub!(:save)
 
-    UserMailer.should_receive(:event_registration_email)
+    UserMailer.should_receive(:event_registration_email).
+      and_return(double("mailer", :deliver => true))
 
     purchase = stub(:success? => true)
     @gateway.should_receive(:purchase).and_return(purchase)
@@ -195,7 +197,9 @@ describe OrdersController do
 
     event = @event_order.items[0].product
 
-    UserMailer.should_receive(:event_registration_email).with(@event_order.customer, event)
+    UserMailer.should_receive(:event_registration_email).
+      with(@event_order.customer, event).
+      and_return(double("mailer", :deliver => true))
 
     get :complete_rsvp, {:quantity => 3}
 

@@ -22,7 +22,7 @@ describe UsersController do
     end
 
     it "sends an email with password reminder" do
-      user = Factory.build(:user)
+      user = FactoryGirl.build(:user)
       User.stub!(:find_by_email).and_return(user)
 
       UserMailer.should_receive(:password_reminder_email).with(user)

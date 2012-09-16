@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe User do
   before(:each) do
-    @user = Factory.build(:user)
+    @user = FactoryGirl.build(:user)
   end
 
   it { should have_one :user_profile }
@@ -11,7 +11,7 @@ describe User do
     @user.email = 'kevin@detone8.com'
     @user.admin?.should be_true
   end
-  
+
   it "activates a user account" do
     time = Time.now
     Time.stub!(:now).and_return(time)
@@ -67,7 +67,7 @@ describe User do
 
   describe '#avatar(style)' do
     before :each do
-      @user = Factory.build(:user)
+      @user = FactoryGirl.build(:user)
     end
 
     context "with a user_profile" do

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "events/show" do
 
   before(:each) do
-    assigns[:event] = Factory.create(:paid_event)
+    assigns[:event] = FactoryGirl.create(:paid_event)
     assigns[:guest] = Guest.new()
   end
 
@@ -17,7 +17,7 @@ describe "events/show" do
 
   context "when the user is logged in and expired" do
     it "should say 'to get the club price'" do
-      @controller.stub(:current_user => Factory.build(:user, :expired_at => Time.now - 1.day))
+      @controller.stub(:current_user => FactoryGirl.build(:user, :expired_at => Time.now - 1.day))
       render "/events/show"
       response.should include_text('to get the club price.')
     end
@@ -25,7 +25,7 @@ describe "events/show" do
 
   context "when the user is logged in and is current" do
     it "should say not a member" do
-      @controller.stub(:current_user => Factory.build(:user, :expired_at => Time.now + 1.day))
+      @controller.stub(:current_user => FactoryGirl.build(:user, :expired_at => Time.now + 1.day))
       render '/events/show'
       response.should_not include_text('Register as a Non-Member')
     end

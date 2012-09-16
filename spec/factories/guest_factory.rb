@@ -1,5 +1,7 @@
-Factory.define :guest do |f|
-  f.first_name 'Jane'
-  f.last_name  'Doe'
-  f.email      'jane@email.com'
+FactoryGirl.define do
+  factory :guest do
+    first_name 'Jane'
+    last_name  'Doe'
+    email      'jane@email.com'
+  end
 end

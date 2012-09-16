@@ -4,7 +4,7 @@ describe Event do
 
   context "has getters and setters for club- and standard price" do
     before (:each) do
-      @event = Factory.build(:event)
+      @event = FactoryGirl.build(:event)
     end
     it "sets the club price through an Item" do
       @event.club_price = 10
@@ -33,7 +33,7 @@ describe Event do
 
   it "returns club price when registered member is logged in" do
     @event.club_price, @event.standard_price = 20.00, 30.00
-    current_user = Factory.create(:active_user)
+    current_user = FactoryGirl.create(:active_user)
     @event.get_price(current_user).should == 20.00
   end
 
@@ -55,7 +55,7 @@ describe Event do
 
   describe "Event RSVP"
     before :each do
-      @event = Factory.build(:event)
+      @event = FactoryGirl.build(:event)
     end
     describe "Event#member_rsvp?" do
       it "Returns true if the member price is set to either 0 or nil" do
@@ -75,16 +75,16 @@ describe Event do
           @event = Event.create(:name => "Test", :club_price => 0)
         end
         it "Returns Member RSVP when club price is 0" do
-          @event.get_view_mode(Factory.create(:active_user)).should == "member_rsvp"
+          @event.get_view_mode(FactoryGirl.create(:active_user)).should == "member_rsvp"
         end
         it "Returns Member Registration when club price is greater than 0" do
           @event.club_price = 5
-          @event.get_view_mode(Factory.create(:active_user)).should == "member_registration"
+          @event.get_view_mode(FactoryGirl.create(:active_user)).should == "member_registration"
         end
       end
       context "Guest User" do
         before (:each) do
-          @event = Factory.build(:event)
+          @event = FactoryGirl.build(:event)
           #@event = Event.create(:name => "Test", :standard_price => 0)
         end
         it "Returns Guest RSVP when standard price is 0" do

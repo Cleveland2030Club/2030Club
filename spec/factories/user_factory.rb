@@ -1,12 +1,14 @@
-Factory.define(:user) do |f|
-  f.first_name 'George'
-  f.last_name 'Plate'
-  f.url_friendly 'george_plate'
-  f.email 'jdoe@gmail.com'
-  f.password 'password'
-  f.password_confirmation 'password'
-end
+FactoryGirl.define do
+  factory :user do
+    first_name 'George'
+    last_name 'Plate'
+    url_friendly 'george_plate'
+    email 'jdoe@gmail.com'
+    password 'password'
+    password_confirmation 'password'
+  end
 
-Factory.define(:active_user, :parent=>:user) do |f|
-  f.expired_at Date.today + 1.year
+  factory :active_user, :parent=>:user do
+    expired_at Date.today + 1.year
+  end
 end

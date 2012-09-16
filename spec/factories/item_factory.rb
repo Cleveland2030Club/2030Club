@@ -1,4 +1,6 @@
-Factory.define :item do |f|
-  f.name 'Some item'
-  f.price 70
+FactoryGirl.define do
+  factory :item do
+    name 'Some item'
+    price 70
+  end
 end

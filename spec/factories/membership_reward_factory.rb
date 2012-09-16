@@ -1,6 +1,8 @@
-Factory.define :membership_reward, :class => Participant do |f|
-  f.sequence(:name) { |i| "Participant #{i}" }
-  f.bio 'bio for particpant'
-  f.benefit 'free beer'
-  f.instructions 'sing a song to the doorman'
+FactoryGirl.define do
+  factory :membership_reward, :class => Participant do
+    sequence(:name) { |i| "Participant #{i}" }
+    bio 'bio for particpant'
+    benefit 'free beer'
+    instructions 'sing a song to the doorman'
+  end
 end

@@ -21,6 +21,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'factory_girl_rails'
   gem 'heroku'
   gem 'taps'
   gem 'fastercsv'
