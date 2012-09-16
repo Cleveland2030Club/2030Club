@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'spec_helper'
 
 describe UserMailer do
   before(:each) do
@@ -10,11 +10,8 @@ describe UserMailer do
 
   describe "UserMailer.welcome_email" do
     before(:each) do
-      @events = []
-      @events << mock_model(Event, :name => 'Awesome Event', :start_at => Time.now + (7*24*60*60))
-      @events << mock_model(Event, :name => 'Another Event', :start_at => Time.now + (14*24*60*60))
-      Event.should_receive(:find).and_return(@events)
-
+      FactoryGirl.create(:event, :name => 'Awesome Event', :start_at => Time.now + (7*24*60*60))
+      FactoryGirl.create(:event, :name => 'Another Event', :start_at => Time.now + (14*24*60*60))
       @mailer = UserMailer.welcome_email(@user)
     end
 
@@ -31,11 +28,11 @@ describe UserMailer do
     end
 
     it "will deliver successfully" do
-      lambda { UserMailer.deliver(@mailer) }.should_not raise_error
+      lambda { @mailer.deliver }.should_not raise_error
     end
 
     it "will be added to the delivery queue" do
-      lambda { UserMailer.deliver(@mailer) }.should change(ActionMailer::Base.deliveries,:size).by(1)
+      lambda { @mailer.deliver }.should change(ActionMailer::Base.deliveries,:size).by(1)
     end
   end
 
