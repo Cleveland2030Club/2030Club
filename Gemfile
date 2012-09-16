@@ -28,6 +28,7 @@ group :development, :test do
   gem 'debugger'
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'shoulda'
   gem 'database_cleaner'
   gem 'webrat'
 end

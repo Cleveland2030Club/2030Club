@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'spec_helper'
 
 describe Registration do
 
@@ -19,13 +19,13 @@ describe Registration do
     it { should_not allow_value("john_gmail.com").for(:email) }
     it { should_not allow_value("john@gmailcom").for(:email) }
     it { should_not allow_value("john@@gmail.com").for(:email) }
-    
+
     it { should_not allow_value("p").for(:password) }
 
     it "validates that password and password_confirm match" do
       registration = Registration.new(:password => 'password', :password_confirmation => 'password1')
       registration.valid?.should be_false
-      registration.errors[:password].should == 'and confirmation do not match'
+      registration.errors[:password].should include('and confirmation do not match')
     end
   end
 
