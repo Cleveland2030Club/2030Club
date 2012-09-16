@@ -160,6 +160,9 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.10.0)
+    rspec2-rails-views-matchers (0.2.2)
+      nokogiri (>= 1.4.4)
+      rspec (>= 2.0.0)
     rubyzip (0.9.9)
     sass (3.1.20)
     sass-rails (3.2.5)
@@ -212,6 +215,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.6)
   rspec-rails
+  rspec2-rails-views-matchers
   sass-rails (~> 3.2.3)
   sqlite3
   taps

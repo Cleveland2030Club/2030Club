@@ -1,19 +1,17 @@
 require 'spec_helper'
 
-describe "orders new" do
+describe "orders/new_order_event" do
   it "has all three fields needed for the TotalCalculator" do
-    @controller.stub(:current_user) { FactoryGirl.create(:user) }
-
+    view.stub(:current_user) { FactoryGirl.create(:user) }
     event = FactoryGirl.build(:event)
     order = Order.new
     order.items << event.items[0]
 
-    assigns[:order] = order
+    assign(:order, order)
+    render
 
-    render '/orders/new_order_event.html.erb'
-
-    response.should have_tag("span#event_price")
-    response.should have_tag("input#quantity")
-    response.should have_tag("span#total")
+    rendered.should have_tag("span#event_price")
+    rendered.should have_tag("input#quantity")
+    rendered.should have_tag("span#total")
   end
 end
