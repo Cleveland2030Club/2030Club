@@ -1,8 +1,9 @@
-# Steps required to get up and running #
+## Steps to get up and running:
 
-  1. ```cp .rvmrc.sample .rvmrc && source .rvmrc```
-  1. ```gem install -v=2.3.8 rails```
-  1. ```gem install sqlite3 -v=1.3.5```
-  1. ```gem install aws-s3 -v=0.6.2```
-  1. ```rake gems:install```
+1.  RVM install Ruby 1.9.3
+1.  cp .rvmrc.sample .rvmrc && source .rvmrc
+1.  gem install bundler --pre (This is to include the ruby version in the gemfile for heroku
+1.  bundle install
+1.  cp config/cleveland\_2030\_settings.sample.yml config/cleveland\_2030\_setings.yml
+
 
