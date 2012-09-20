@@ -1,4 +1,5 @@
-require 'fastercsv'
+require 'csv'
+
 class ReportsController < ApplicationController
 
   before_filter :requires_admin, :except => []
@@ -17,7 +18,7 @@ class ReportsController < ApplicationController
       format.html
       format.csv { 
         filename = I18n.l(Time.now, :format => :short) + "- Members.csv"
-        content = FasterCSV.generate do |csv|
+        content = CSV.generate do |csv|
           csv << [
             "First Name",
             "Last Name",
