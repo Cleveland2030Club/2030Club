@@ -12,6 +12,7 @@ gem 'RedCloth'
 gem 'activemerchant'
 gem 'aws-sdk'
 gem 'event-calendar', :require => 'event_calendar'
+gem 'airbrake'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
