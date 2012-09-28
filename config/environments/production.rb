@@ -25,8 +25,8 @@ Cle2030::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'baci.lindsaar.net',
-    :user_name            => Cleveland2030Settings.config['USER_NAME'],
-    :password             => Cleveland2030Settings.config['USER_PW'],
+    :user_name            => ENV['USER_NAME'],
+    :password             => ENV['USER_PW'],
     :authentication       => 'plain',
     :enable_starttls_auto => true
   }
