@@ -27,12 +27,6 @@ describe OrdersController do
   end
 
   context "- for new action -" do
-    it "kicks me out with an exception when Order was not found" do
-      lambda do
-        session[:order_id] = nil
-       get :new
-      end.should raise_error
-    end
 
     it "displays the membership template when Order is non-event order" do
       Order.stub!(:find_by_id).and_return(@membership_order)
