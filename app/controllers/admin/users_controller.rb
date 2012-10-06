@@ -1,5 +1,6 @@
-class Admin::MembersController < Admin::BaseController
+class Admin::UsersController < Admin::BaseController
   def index
+    @users = User.all
   end
 
   def new
@@ -10,7 +11,9 @@ class Admin::MembersController < Admin::BaseController
     @user = User.new(params[:user])
 
     if @user.save
-
+      redirect_to admin_users_path
+    else
+      render :new
     end
   end
 
