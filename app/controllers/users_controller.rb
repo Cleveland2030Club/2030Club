@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-  before_filter :require_no_or_admin_user, :only => [:new, :create, :forgotten]
   before_filter :require_user, :only => [:show, :edit, :update, :renewal]
 
   def new

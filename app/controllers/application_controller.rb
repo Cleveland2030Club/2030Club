@@ -7,8 +7,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_session, :current_user
 
-  before_filter :current_user
-
   def redirect_permanent(url)
     head :moved_permanently, :location => url
     return
@@ -57,26 +55,6 @@ private
       return false
     end
   end
-
-  def require_no_user
-    if current_user
-      store_location
-      redirect_to users_url
-      return false
-    end
-  end
-
-  def require_no_or_admin_user
-    if current_user
-      if current_user.admin?
-        return false
-      end
-      store_location
-      redirect_to users_url
-      return false
-    end
-  end
-
 
   def store_location
     session[:return_to] = request.fullpath
