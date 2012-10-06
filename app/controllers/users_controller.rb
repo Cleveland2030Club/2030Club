@@ -4,6 +4,21 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @user.build_user_address
+    @user.build_user_profile
+  end
+
+  def create
+    @user = User.new(params[:user])
+
+    if @user.save
+      order_id = OrdersHelper.create_membership_order(@user)
+      session[:order_id] = order_id
+
+      redirect_to new_orders_path
+    else
+      render :new
+    end
   end
 
   def show
