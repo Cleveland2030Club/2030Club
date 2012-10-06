@@ -4,7 +4,8 @@ class OrdersController < ApplicationController
     @order = Order.find_by_id(session[:order_id])
 
     # Don't play with the URL
-    raise "Invalid access, Order was not found for order_id: #{session[:order_id]}" if @order == nil
+    return redirect_to :back if @order.nil? && request.env["HTTP_REFERER"]
+    return redirect_to root_path if @order.nil?
 
     render get_view_name(@order)
   end
