@@ -11,6 +11,10 @@ class Admin::UsersController < Admin::BaseController
     @user = User.new(params[:user])
 
     if @user.save
+      @user.activate_account!
+
+      UserMailer.welcome_email(@user).deliver
+
       redirect_to admin_users_path
     else
       render :new
