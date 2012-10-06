@@ -44,6 +44,7 @@ Cle2030::Application.routes.draw do
 # Namespace Routes
   namespace :admin do
     resources :categories, :except => [:index, :show]
+    resources :members
     resources :regions, :except => [:index, :show]
     resources :participants do
       resources :locations, :except => [:index, :show]

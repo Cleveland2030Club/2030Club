@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :user_profile
   has_one   :registration, :dependent => :destroy
   has_one   :user_address, :dependent => :destroy
+  accepts_nested_attributes_for :user_address
   has_many  :orders, :as => :customer
 
   acts_as_authentic do |c|
@@ -19,6 +20,7 @@ class User < ActiveRecord::Base
   end
 
   attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :active
+  attr_accessible :user_address_attributes, :user_profile_attributes
 
   scope :all_members
   scope :active, -> { where({ active: true }) }
@@ -74,7 +76,8 @@ class User < ActiveRecord::Base
               'walker.1138@gmail.com',
               'james.schleicher@wslife.com',
               'leia.bradford@gmail.com',
-              'tderosa7@gmail.com'
+              'tderosa7@gmail.com',
+              'sireleo@gmail.com'
               ]
     admins.include?(self.email)
   end

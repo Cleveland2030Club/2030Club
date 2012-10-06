@@ -1,0 +1,105 @@
+<div class="twoColumns-0" >
+  <h1><span class="title">Registration</span> <%= link_to "I already have an account", login_path, class: "tiny right" %></h1>
+  <%= form_for @user, :url => user_path do |f| %>
+    <% unless @user.errors.empty? %>
+      <div class="errorExplanation">
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <fieldset>
+    <legend><span><strong>New Account</strong></span></legend>
+    <div class="form-node">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </div>
+
+    <div class="form-node">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+
+    <div class="form-node">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="form-node">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+
+    <div class="form-node">
+      <%= f.label :password_confirmation, 'Verify password' %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <%= f.fields_for :user_address do |a| %>
+      <legend><span><strong>Personal Information</strong></span></legend>
+      <div class="form-node">
+        <%= a.label :address %>
+        <%= a.text_field :address  %>
+      </div>
+      <div class="form-node">
+        <%= a.label :address2 %>
+        <%= a.text_field :address2 %>
+      </div>
+      <div class="form-node">
+        <%= a.label :city %>
+        <%= a.text_field :city %>
+      </div>
+      <div class="form-node">
+        <%= a.label :state_code, "State" %>
+        <%= a.select :state_code, State.all.collect { |s| [s.title, s.code] }, :include_blank => false %>
+      </div>
+      <div class="form-node">
+        <%= a.label :zip %>
+        <%= a.text_field :zip  %>
+      </div>
+    <% end %>
+
+    <%= f.fields_for :user_profile do |p| %>
+      <div class="form-node">
+        <%= p.label :phone_number %>
+        <%= p.text_field :phone_number %>
+      </div>
+    <% end %>
+  </fieldset>
+
+  <%= f.fields_for :user_profile do |p| %>
+    <fieldset>
+      <legend><span><strong>Profession and Education</strong></span></legend>
+      <div class="form-node">
+        <%= p.label :profession %><span class="optional">(optional)</span>
+        <%= p.text_field :profession %>
+      </div>
+      <div class="form-node">
+        <%= p.label :employer %><span class="optional">(optional)</span>
+        <%= p.text_field :employer %>
+      </div>
+      <div class="form-node">
+        <%= p.label :education %><span class="optional">(optional)</span>
+        <%= p.text_field :education %>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><span><strong>About Us</strong></span></legend>
+      <div class="form-node">
+        <%= p.label :about2030, "How did you hear about Cleveland 20/30?" %><span class="optional optional-two-lines">(optional)</span>
+        <%= p.text_area :about2030, :cols => "26", :rows => "4" %>
+      </div>
+    </fieldset>
+  <% end %>
+
+  <div class="formAction clear">
+    <%= f.submit "Submit" %>
+  </div>
+  <% end %>
+</div>
+
