@@ -25,17 +25,17 @@
                 <%= image_tag("logo2.gif", :alt => "The Cleveland 2030 Logo")%>
             </a>
             <div id="loginSection">
-              <% if @current_user && @current_user.logged_in? %>
-                <%= @current_user.email %> |
+              <% if current_user && current_user.logged_in? %>
+                <%= current_user.email %> |
                 <a href="/user">Account</a> |
-              <%= link_to "Sign out", user_session_url(@current_user), :method => :delete  %>
+              <%= link_to "Sign out", user_session_url(current_user), :method => :delete  %>
             <% else %>
               <%= link_to "Login", login_path, class: 'login' %> | New Here?
               <div class="header-registration becomeMember">
                 <a href="/registration/new/" title="register">Become A Member</a>
               </div>
             <% end %>
-						<% if @current_user && @current_user.logged_in? && @current_user.admin? %>
+						<% if current_user && current_user.logged_in? && current_user.admin? %>
 							<div class="admin-nav">
 								Admin: <a href="/reports">Manage Members</a> | <a href="/registration/new">Create Member</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							</div>

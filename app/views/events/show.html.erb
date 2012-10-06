@@ -10,7 +10,7 @@
 <div class="twoColumns-0">
   <div class="eventDetails">
 		<%= link_to "Back to Calendar", calendar_path, :class => 'bac-to-cali' %>
-		<% if @current_user && @current_user.logged_in? && @current_user.admin? %>
+		<% if current_user && current_user.logged_in? && current_user.admin? %>
 			<div style="float:right;clear:right;margin-top:20px;">Admin: <%= link_to "Edit this Event", edit_event_path(@event), :style => 'background-color:#0483d3;background-image:url("/images/cle2030-intro-but-bg_re.png");background-repeat:repeat-x;background-position:bottom; border:1px solid #0483d3; color:#fff;text-decoration:none;font-weight:normal;padding:.5em 0;margin-bottom:.1em;-moz-border-radius:5px;-webkit-border-radius:5px;padding:10px;' %></div>
 		<% end %>
     <h1><%= @event.name %></h1>

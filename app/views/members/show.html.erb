@@ -1,7 +1,7 @@
 <% content_for :stylesheets do %>
 	<%= stylesheet_link_tag 'members2030','event-teasers' %>
 <% end %>
-<% if @current_user and @current_user.logged_in? %>
+<% if current_user and current_user.logged_in? %>
 	<% if @member.nil? %>
 		<h1>Member Not Found</h1>
 	<% else %>
@@ -11,8 +11,8 @@
 				<%= image_tag @member.avatar(:medium), :class => "left" %>
 				<div>
 					<h3><%= truncate(@member.display_name) %>
-						<% if @current_user == @member %>
-							<%=link_to "Edit your profile", edit_user_profile_path(@current_user.user_profile) %>
+						<% if current_user == @member %>
+							<%=link_to "Edit your profile", edit_user_profile_path(current_user.user_profile) %>
 						<% end %>
 					</h3>
 					<% if @member.active %>

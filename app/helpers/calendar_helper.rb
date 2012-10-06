@@ -18,7 +18,6 @@ module CalendarHelper
     # args is an argument hash containing :event, :day, and :options
     calendar event_calendar_opts do |args|
       event = Event.find(args[:event])
-      current_user = @current_user
       if event.active?
         %(<a href="/events/#{event.id}" title="#{h(event.name)}">#{h(event.name)}</a>)
       elsif current_user
