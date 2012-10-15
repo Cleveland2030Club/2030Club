@@ -48,6 +48,7 @@ class User < ActiveRecord::Base
 
   def activate_account!
     self.activated = true
+    self.active = true
     self.activated_at = Time.now
     self.joined_at = self.activated_at
     self.expired_at = Time.now.end_of_month + 1.year
