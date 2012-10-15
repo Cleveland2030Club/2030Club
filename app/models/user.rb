@@ -1,15 +1,17 @@
 require 'authlogic'
 
 class User < ActiveRecord::Base
+
+  has_one   :user_address, :dependent => :destroy
+  has_one   :user_profile, :dependent => :destroy
+  
   has_many  :email_addresses
   has_many  :users_roles
   has_many  :roles, :through => :users_roles
-  has_one   :user_profile, :dependent => :destroy
-  accepts_nested_attributes_for :user_profile
-  has_one   :registration, :dependent => :destroy
-  has_one   :user_address, :dependent => :destroy
-  accepts_nested_attributes_for :user_address
   has_many  :orders, :as => :customer
+
+  accepts_nested_attributes_for :user_profile
+  accepts_nested_attributes_for :user_address
 
   acts_as_authentic do |c|
     c.session_class = UserSession
