@@ -36,11 +36,10 @@
               </div>
             <% end %>
 						<% if current_user && current_user.logged_in? && current_user.admin? %>
-							<div class="admin-nav">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/calendar">Manage Events</a> |
-								<a href="/events/new">Create Event</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							</div>
-							<% end %>
+              <div class="admin-link">
+                <%= link_to "Admin", admin_root_path %>
+              </div>
+  					<% end %>
             </div>
           </div>
           <nav>
