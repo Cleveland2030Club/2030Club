@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     @guest = Guest.new(params[:guest])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html 
       format.xml  { render :xml => @event }
     end
   end
