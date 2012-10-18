@@ -23,20 +23,24 @@ Cle2030::Application.routes.draw do
 
 # Resource Routes
 
-  resources :events do
-    match 'register_member', via: [:put, :post], on: :member
+  resources :events, only: [:show] do
+    match :register_member, on: :member, via: [:put, :post]
   end
+
   resources :guests
   resources(:members, :only => [:index, :show, :update]) { collection { get :search } }
   resources :membership_rewards, :only => [:show, :index]
+
   resource  :orders do
     put  :checkout, :on => :collection
     post :complete, :on => :collection
     put  :complete_rsvp, :on => :member
     get  :confirm
   end
+
   resources :password_resets
   resources :reports
+
   resource  :user do
     member { get :renewal }
     resources :profiles, :only => [:new, :create, :edit, :update]
