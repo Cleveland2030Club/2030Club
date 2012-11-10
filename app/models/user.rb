@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :user_profile
   accepts_nested_attributes_for :user_address
 
+  before_save :downcase_email
+
   acts_as_authentic do |c|
     c.session_class = UserSession
     c.logged_in_timeout = 4.hours
@@ -136,6 +138,12 @@ class User < ActiveRecord::Base
       paginate :per_page => 30000, :page => 1,
                :conditions => ['lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
     end
+  end
+
+  private
+
+  def downcase_email
+    self.email = self.email.downcase
   end
 
 end
