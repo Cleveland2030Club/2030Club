@@ -38,7 +38,7 @@ Cle2030::Application.routes.draw do
     member { get :renewal }
     resources :profiles, :only => [:new, :create, :edit, :update]
   end
-  resource :user_session
+  resource :user_session, :only => [:new, :create, :destroy]
 
 # Namespace Routes
   namespace :admin do
