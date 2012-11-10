@@ -12,7 +12,8 @@ class UserSessionsController < ApplicationController
     @user_session.validate
     if(@user_session.valid? && @user_session.save)
 
-      user = User.find_by_email(@user_session.email)
+      # Always downcase the email to match the field in the db
+      user = User.find_by_email(@user_session.email.downcase)
       membership_status = MembershipStatus.new(user)
 
       if membership_status.status == :current
