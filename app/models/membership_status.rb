@@ -5,8 +5,8 @@ class MembershipStatus
   def initialize(user)
     @user = user
     #TODO Refactor later back into model
-    if user.expired_at.nil?
-      update_expired_at(user)
+    if @user.expired_at.nil?
+      update_user_expired_at
     end
   end
 
@@ -27,7 +27,7 @@ class MembershipStatus
 
   private
 
-  def update_expired_at(user)
+  def update_user_expired_at
     return unless user.activated?
 
     if user.joined_at
