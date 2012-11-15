@@ -8,9 +8,9 @@ describe EventsController do
     end
   end
 
-  describe "POST events/:id/register_member" do
+  describe "PUT events/:id/register_member" do
     it "routes to events#show" do
-      post("events/1/register_member").should route_to(controller: "events", action: "register_member", id: "1")
+      put("events/1/register_member").should route_to(controller: "events", action: "register_member", id: "1")
     end
   end
 
