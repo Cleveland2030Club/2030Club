@@ -1,0 +1,33 @@
+<div class="row event span12">
+  <article class="span7 event-text">
+    <h1><%= @event.name %></h1>
+    <%= raw @event.description %>
+  </article>
+  <aside class="event-data span3">
+    <h2>Time and Date</h2>
+    <p>Date: <%=@event.start_at.strftime('%h %d, %Y') %></p>
+    <p>Starts: <%=@event.start_at.strftime('%I:%M %p') %></p>
+    <p>Ends: <%=@event.end_at.strftime('%I:%M %p') %></p>
+  </aside>
+  <section class="attendees span7">
+    <h2>Attendees</h2>
+    <table class="table table-rounded table-bordered">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @attendees.each do |attendee| %>
+          <tr>
+            <td><%= attendee.first_name %></td>
+            <td><%= attendee.last_name %></td>
+            <td><%= attendee.email %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </section>
+</div>
