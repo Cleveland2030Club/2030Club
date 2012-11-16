@@ -72,6 +72,7 @@ class Event < ActiveRecord::Base
     items = Item.includes(:order_items).where(product_type: 'Event', product_id: self.id)
     order_items = OrderItem.includes(:order).where(item_id: items)
     orders = order_items.map{|oi| oi.order }
+    orders.select!{ |o| o.complete? }
     customers = orders.map{|o| o.customer }
   end
 
