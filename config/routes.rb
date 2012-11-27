@@ -22,7 +22,10 @@ Cle2030::Application.routes.draw do
   get 'membership_rewards/regions/:id' => 'regions#show', :as => :membership_rewards_region
 
 # Resource Routes
-  resources(:events) { member { put :register_member } }
+
+  resources :events do
+    match 'register_member', via: [:put, :post], on: :member
+  end
   resources :guests
   resources(:members, :only => [:index, :show, :update]) { collection { get :search } }
   resources :membership_rewards, :only => [:show, :index]
