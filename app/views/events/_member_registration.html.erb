@@ -1,14 +1,18 @@
-<%= form_for(@event,
-  :url => { :action => 'register_member', :id => @event.id },
-  :html => { :class => 'rsvp' }) do |form| %>
-  <%= hidden_field_tag 'event_id', @event.id %>
-  <fieldset>
-    <legend><span><strong>Register for this Event </strong></span></legend>
-    <div class="form-node member first">
-      <%= image_tag "check_icon.png", class: "checked"%> <label for="members" class="radio member">Register as a Member <%= number_to_currency(@event.club_price)%></label>
-    </div>
-    <div class="formAction">
-      <%= form.submit "Continue" %>
-    </div>
-  </fieldset>
+<% if @event.full? %>
+  <%= render partial: "sold_out" %>
+<% else %>
+  <%= form_for(@event,
+    :url => { :action => 'register_member', :id => @event.id },
+    :html => { :class => 'rsvp' }) do |form| %>
+    <%= hidden_field_tag 'event_id', @event.id %>
+    <fieldset>
+      <legend><span><strong>Register for this Event </strong></span></legend>
+      <div class="form-node member first">
+        <%= image_tag "check_icon.png", class: "checked"%> <label for="members" class="radio member">Register as a Member <%= number_to_currency(@event.club_price)%></label>
+      </div>
+      <div class="formAction">
+        <%= form.submit "Continue" %>
+      </div>
+    </fieldset>
+  <% end %>
 <% end %>
