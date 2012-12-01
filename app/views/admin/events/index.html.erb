@@ -15,7 +15,7 @@
         <% @events.each do |event| %>
           <tr>
             <td><%= event.id %></td>
-            <td><%= link_to event.name, admin_event_path(event) %></td>
+            <td><%= link_to truncate(event.name, length: 50), admin_event_path(event) %></td>
             <td><%= event.start_at.strftime('%h %d, %Y') %></td>
             <td><%= event.max_attendance %></td>
             <td><%= event.attendee_count %></td>
