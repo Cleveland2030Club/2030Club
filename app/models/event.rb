@@ -81,6 +81,10 @@ class Event < ActiveRecord::Base
     self.save
   end
 
+  def full?
+    return attendee_count >= max_attendance
+  end
+
 private
 
   def get_item(name)

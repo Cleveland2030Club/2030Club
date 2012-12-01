@@ -103,4 +103,22 @@ describe Event do
       expect { event.increment_attendee_count }.to change { event.attendee_count }.from(0).to(1)
     end
   end
+
+  describe "#full?" do
+
+    context "attendee_count < max_attendance" do
+      it "returns false" do
+        event = Event.create(name: "new event", standard_price: 0, club_price: 0, max_attendance: 10)
+        event.should_not be_full
+      end
+    end
+
+    context "attendee_count > max_attendance" do
+      it "returns true" do
+        event = Event.create(name: "new event", standard_price: 0, club_price: 0, max_attendance: 0)
+        event.should be_full
+      end
+    end
+  end
+
 end
