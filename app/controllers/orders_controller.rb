@@ -121,6 +121,7 @@ private
     @order.save
 
     event = @order.items[0].product
+    event.increment_attendee_count
 
     UserMailer.event_registration_email(@order.customer, event).deliver
     session[:order_id] = nil

@@ -76,6 +76,11 @@ class Event < ActiveRecord::Base
     customers = orders.map{|o| o.customer }
   end
 
+  def increment_attendee_count
+    self.attendee_count += 1
+    self.save
+  end
+
 private
 
   def get_item(name)
