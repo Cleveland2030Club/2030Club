@@ -47,3 +47,11 @@ form.rsvp fieldset label.non-member{margin-bottom:1em;}
 form.rsvp fieldset input[type="text"]{width:100px;margin-left:80px;}
 form.rsvp div.formAction input[type="submit"] {margin-left:80px;}
 form.rsvp .notice, .whoElse .notice{margin-left:32px;margin-right:10px;font-size:77%; }
+
+
+/* ----------------------------- */
+/* Event Sold out */
+/* ----------------------------- */
+
+h1.event-sold-out { color: red; text-align: center;}
+
