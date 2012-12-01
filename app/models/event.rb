@@ -15,6 +15,8 @@ class Event < ActiveRecord::Base
                              Time.now, Time.now.advance(:days =>14)]).
                              order("start_at ASC")
 
+  validates :max_attendance, presence: true
+
   def active?
     Time.now < end_at
   end
