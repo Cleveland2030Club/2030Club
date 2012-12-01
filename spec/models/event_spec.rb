@@ -96,4 +96,11 @@ describe Event do
         end
       end
     end
+
+  describe "#increment_attendee_count" do
+    it "adds 1 to the attendee_count" do
+      event = Event.create(name: "new event", standard_price: 0, club_price: 0)
+      expect { event.increment_attendee_count }.to change { event.attendee_count }.from(0).to(1)
+    end
+  end
 end
