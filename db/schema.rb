@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121006161150) do
+ActiveRecord::Schema.define(:version => 20121201142752) do
 
   create_table "accounts", :force => true do |t|
     t.string    "email",                                  :null => false
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20121006161150) do
     t.string    "sponsor_content_type"
     t.integer   "sponsor_file_size"
     t.timestamp "sponsor_updated_at"
+    t.integer   "attendee_count"
   end
 
   create_table "guests", :force => true do |t|
@@ -166,15 +167,15 @@ ActiveRecord::Schema.define(:version => 20121006161150) do
   add_index "states", ["title"], :name => "index_states_on_title", :unique => true
 
   create_table "user_addresses", :force => true do |t|
-    t.integer  "user_id",    :null => false
-    t.text     "address2"
-    t.integer  "sort_order"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "address",    :null => false
-    t.string   "city",       :null => false
-    t.string   "state_code", :null => false
-    t.string   "zip",        :null => false
+    t.integer   "user_id",    :null => false
+    t.text      "address2"
+    t.integer   "sort_order"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "address",    :null => false
+    t.string    "city",       :null => false
+    t.string    "state_code", :null => false
+    t.string    "zip",        :null => false
   end
 
   add_index "user_addresses", ["user_id"], :name => "index_user_addresses_on_user_id"
