@@ -53,21 +53,21 @@ ActiveRecord::Schema.define(:version => 20121201142752) do
   end
 
   create_table "events", :force => true do |t|
-    t.boolean   "active"
-    t.string    "name"
-    t.timestamp "start_at"
-    t.timestamp "end_at"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "url_friendly"
-    t.text      "description"
-    t.boolean   "sponsored"
-    t.integer   "max_attendance"
-    t.string    "sponsor_file_name"
-    t.string    "sponsor_content_type"
-    t.integer   "sponsor_file_size"
-    t.timestamp "sponsor_updated_at"
-    t.integer   "attendee_count"
+    t.boolean  "active"
+    t.string   "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "url_friendly"
+    t.text     "description"
+    t.boolean  "sponsored"
+    t.integer  "max_attendance"
+    t.string   "sponsor_file_name"
+    t.string   "sponsor_content_type"
+    t.integer  "sponsor_file_size"
+    t.datetime "sponsor_updated_at"
+    t.integer  "attendee_count",       :default => 0, :null => false
   end
 
   create_table "guests", :force => true do |t|
