@@ -1,0 +1,68 @@
+<%= form_for [:admin, @event], html: { multipart: true, class: "well form-horizontal" } do |event| %>
+  <% if @event.errors.any? %>
+    <div class="errors">
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="control-group">
+    <div class="form-node">
+      <%= event.label :name %>
+      <%= event.text_field :name %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-node">
+      <%= event.label :max_attendance, "Max Attendance" %>
+      <%= event.text_field :max_attendance %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-node">
+      <%= event.label :standard_price %>
+      <%= event.text_field :standard_price %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-node">
+      <%= event.label :club_price %>
+      <%= event.text_field :club_price %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-node">
+      <%= event.label :start_at, "Start Date/Time" %>
+      <%= event.text_field :start_at, class: "anytime-picker" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-node">
+      <%= event.label :end_at, "End Date/Time" %>
+      <%= event.text_field :end_at, class: "anytime-picker" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div id="wysihtml5-toolbar" style="display: none;">
+      <a data-wysihtml5-command="bold">bold</a>
+      <a data-wysihtml5-command="italic">italic</a>
+      <a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red">red</a>
+      <a data-wysihtml5-command="createLink">insert link</a>
+      <div data-wysihtml5-dialog="createLink" style="display: none;">
+        <label>
+          Link:
+          <input data-wysihtml5-dialog-field="href" value="http://" class="text">
+        </label>
+        <a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>
+      </div>
+    </div>
+    <div class="form-node">
+      <%= event.text_area :description, id: "wysihtml5-textarea" %>
+    </div>
+  </div>
+  <div class="formAction clear">
+    <%= event.submit %>
+  </div>
+<% end %>

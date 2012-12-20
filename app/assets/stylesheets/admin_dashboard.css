@@ -11,5 +11,7 @@
  *= require_self
  *= require bootstrap.min
  *= require bootstrap-responsive.min
+ *= require jquery-ui-1.9.2.custom.min
+ *= require anytime
  */
 section.categories { margin-top: 20px; }
