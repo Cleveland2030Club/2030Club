@@ -50,6 +50,7 @@
       <a data-wysihtml5-command="italic">italic</a>
       <a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red">red</a>
       <a data-wysihtml5-command="createLink">insert link</a>
+      <a data-wysihtml5-command="insertImage">insert image</a>
       <div data-wysihtml5-dialog="createLink" style="display: none;">
         <label>
           Link:
@@ -57,9 +58,26 @@
         </label>
         <a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>
       </div>
+      <div data-wysihtml5-dialog="insertImage" style="display: none;">
+        <label>
+          Image:
+          <input data-wysihtml5-dialog-field="src" value="http://" class="text">
+        </label>
+        <a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>
+      </div>
     </div>
     <div class="form-node">
-      <%= event.text_area :description, id: "wysihtml5-textarea" %>
+      <%= event.text_area :description, id: "wysihtml5-textarea", class: "admin-text-area" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-node">
+      <label class="admin-label"><%= event.check_box :sponsored %> Sponsored</label>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-node">
+      <label class="admin-label"><%= event.check_box :active %> Active</label>
     </div>
   </div>
   <div class="formAction clear">
