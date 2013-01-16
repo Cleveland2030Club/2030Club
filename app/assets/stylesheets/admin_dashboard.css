@@ -15,3 +15,6 @@
  *= require anytime
  */
 section.categories { margin-top: 20px; }
+textarea.admin-text-area { width: 80%; }
+#wysihtml5-toolbar a { margin: 5px 10px; }
+.admin-label { line-height: 1.3em; padding-top: 6px; }
