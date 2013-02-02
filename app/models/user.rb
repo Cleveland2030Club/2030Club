@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   has_one   :user_address, :dependent => :destroy
   has_one   :user_profile, :dependent => :destroy
-  
+
   has_many  :email_addresses
   has_many  :users_roles
   has_many  :roles, :through => :users_roles
@@ -78,11 +78,9 @@ class User < ActiveRecord::Base
               'raablc@gmail.com',
               'j.scott645@gmail.com',
               'efig8503@yahoo.com',
-              'walker.1138@gmail.com',
-              'james.schleicher@wslife.com',
+              'mr.komer05@gmail.com',
               'leia.bradford@gmail.com',
               'tderosa7@gmail.com',
-              'sireleo@gmail.com'
               ]
     admins.include?(self.email)
   end
