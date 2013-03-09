@@ -6,7 +6,7 @@
     <%= link_to "Login to my account", login_path, class: "tiny right" %>
     <%= link_to "Create a new account", new_user_path, class: "tiny right clear" %>
   </h1>
-	<% form_tag password_resets_path do %>
+	<%= form_tag password_resets_path do %>
   <fieldset>
  		<legend><span><strong>Fill in your registered email and we will send you a link to reset your password.</strong></span></legend>
     <div class="form-node">
