@@ -17,7 +17,7 @@ module Admin
     def create
       @event = Event.new(params[:event])
       if @event.save
-        rediect_to admin_events_path, notice: "Thank you for creating a new event"
+        redirect_to admin_events_path, notice: "Thank you for creating a new event"
       else
         render :new
       end
