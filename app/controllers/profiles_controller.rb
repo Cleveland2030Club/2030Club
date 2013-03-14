@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
 
   before_filter :require_user
-  before_filter :verify_owner, :only => [:edit, :create]
+  before_filter :verify_owner, :only => [:edit, :update]
 
   def new
     @profile = UserProfile.new(params[:user_profile])
