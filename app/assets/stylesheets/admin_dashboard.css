@@ -18,3 +18,4 @@ section.categories { margin-top: 20px; }
 textarea.admin-text-area { width: 80%; }
 #wysihtml5-toolbar a { margin: 5px 10px; }
 .admin-label { line-height: 1.3em; padding-top: 6px; }
+div.notice { margin: 20px 0; background: #E77471; border: 5px solid #E41B17; color: white; text-align: center;}

@@ -1,5 +1,6 @@
 module Admin
   class UsersController < Admin::BaseController
+    # TODO: ALL THESE ROUTES NEED TESTS
 
     def index
       @users = User.all
@@ -24,6 +25,7 @@ module Admin
     end
 
     def show
+      @user = User.find(params[:id])
     end
 
     def edit
@@ -33,6 +35,15 @@ module Admin
     end
 
     def destroy
+    end
+
+    def search
+      @user = User.where(email: params[:email].downcase).pop
+      if @user
+        render :show
+      else
+        redirect_to admin_users_path, notice: "Could not find a user with #{params[:email]}"
+      end
     end
 
   end

@@ -1,1 +1,12 @@
+<% if flash[:notice] %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= form_tag search_admin_users_path, method: :get do %>
+  <label>Search for user by email</label>
+  <input type="email" name="email" placeholder="joe@example.com">
+  <input type="submit">
+<% end %>
 <%= link_to "Add New Member", new_admin_user_path, :class => 'btn btn-primary' %>

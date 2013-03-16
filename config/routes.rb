@@ -56,6 +56,7 @@ Cle2030::Application.routes.draw do
       resources :locations, except: [:index, :show]
     end
     resources :users do
+      get :search, on: :collection
       resources :membership_renewals, only: [:new, :create]
     end
     root to: 'dashboard#index'
