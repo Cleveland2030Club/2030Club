@@ -1,35 +1,39 @@
-class Admin::UsersController < Admin::BaseController
-  def index
-    @users = User.all
-  end
+module Admin
+  class UsersController < Admin::BaseController
 
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.new(params[:user])
-
-    if @user.save
-      @user.activate_account!
-
-      UserMailer.welcome_email(@user).deliver
-
-      redirect_to admin_users_path
-    else
-      render :new
+    def index
+      @users = User.all
     end
-  end
 
-  def show
-  end
+    def new
+      @user = User.new
+    end
 
-  def edit
-  end
+    def create
+      @user = User.new(params[:user])
 
-  def update
-  end
+      if @user.save
+        @user.activate_account!
 
-  def destroy
+        UserMailer.welcome_email(@user).deliver
+
+        redirect_to admin_users_path
+      else
+        render :new
+      end
+    end
+
+    def show
+    end
+
+    def edit
+    end
+
+    def update
+    end
+
+    def destroy
+    end
+
   end
 end
