@@ -15,11 +15,11 @@ Cle2030::Application.routes.draw do
   get 'logos'                   => 'static/logos#index',             :as => :logos
 
 # Match Routes
-  get '/calendar/:year/:month' => 'calendar#index', :as => :calendar, :constraints => { :month => /d{1,2}/, :year => /d{4}/ }
-  get '/calendar' => 'calendar#index', :as => :calendar
-  get 'login' => 'user_sessions#new', :as => :login
-  get 'membership_rewards/categories/:id' => 'categories#show', :as => :membership_rewards_category
-  get 'membership_rewards/regions/:id' => 'regions#show', :as => :membership_rewards_region
+  get '/calendar/:year/:month' => 'calendar#index', as: :calendar, constraints: { :month => /d{1,2}/, :year => /d{4}/ }
+  get '/calendar' => 'calendar#index', as: :calendar
+  get 'login' => 'user_sessions#new', as: :login
+  get 'membership_rewards/categories/:id' => 'categories#show', as: :membership_rewards_category
+  get 'membership_rewards/regions/:id' => 'regions#show', as: :membership_rewards_region
 
 # Resource Routes
 
@@ -28,13 +28,13 @@ Cle2030::Application.routes.draw do
   end
 
   resources :guests
-  resources(:members, :only => [:index, :show, :update]) { collection { get :search } }
-  resources :membership_rewards, :only => [:show, :index]
+  resources(:members, only: [:index, :show, :update]) { collection { get :search } }
+  resources :membership_rewards, only: [:show, :index]
 
   resource  :orders do
-    put  :checkout, :on => :collection
-    post :complete, :on => :collection
-    put  :complete_rsvp, :on => :member
+    put  :checkout, on: :collection
+    post :complete, on: :collection
+    put  :complete_rsvp, on: :member
     get  :confirm
   end
 
@@ -43,22 +43,24 @@ Cle2030::Application.routes.draw do
 
   resource  :user do
     member { get :renewal }
-    resources :profiles, :only => [:new, :create, :edit, :update]
+    resources :profiles, only: [:new, :create, :edit, :update]
   end
-  resource :user_session, :only => [:new, :create, :destroy]
+  resource :user_session, only: [:new, :create, :destroy]
 
 # Namespace Routes
   namespace :admin do
-    resources :categories, :except => [:index, :show]
+    resources :categories, except: [:index, :show]
     resources :events
-    resources :regions, :except => [:index, :show]
+    resources :regions, except: [:index, :show]
     resources :participants do
-      resources :locations, :except => [:index, :show]
+      resources :locations, except: [:index, :show]
     end
-    resources :users
-    root :to => 'dashboard#index'
+    resources :users do
+      resources :membership_renewals, only: [:new, :create]
+    end
+    root to: 'dashboard#index'
   end
 
 # Application Root
-  root :to => 'home#index'
+  root to: 'home#index'
 end
