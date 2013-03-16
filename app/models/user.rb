@@ -59,16 +59,10 @@ class User < ActiveRecord::Base
     self.save
   end
 
-  def update_membership_expiration
-    if self.expired_at < Time.now
-      self.expired_at = (Time.now.end_of_month + 1.year)
-      self.last_renewed_at = Time.now
-      self.save
-    else
-      self.expired_at = (self.expired_at + 1.year)
-      self.last_renewed_at = Time.now
-      self.save
-    end
+  def update_membership_expiration(time = Time.now)
+    update_expiration(time)
+    self.last_renewed_at = time
+    save
   end
 
   def admin?
@@ -142,6 +136,18 @@ class User < ActiveRecord::Base
 
   def downcase_email
     self.email = self.email.downcase
+  end
+
+  def update_expiration(time)
+    if membership_has_already_expired?(time)
+      self.expired_at = (time.utc.midnight + 1.year).end_of_month
+    else
+      self.expired_at = (expired_at.midnight + 1.year).end_of_month
+    end
+  end
+
+  def membership_has_already_expired?(time)
+    expired_at.nil? || expired_at < time
   end
 
 end

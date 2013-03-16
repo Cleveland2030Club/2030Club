@@ -28,21 +28,21 @@ describe User do
   describe "#update_membership_expiration" do
     context "When the user's membership has already expired" do
       it "set the new expiration date to 1 year from today and the end of the month" do
-        @user.expired_at = (Time.now - 60.days).end_of_month
+        @user.expired_at = (Time.now - 60.days)
         @user.save
 
         @user.update_membership_expiration
-        @user.expired_at.should == (Time.now.end_of_month + 1.year)
+        @user.expired_at.should == (Time.now.utc.midnight + 1.year).end_of_month
       end
     end
     context "When the user's membership is still active" do
       it "set the new expiration date to 1 year from the current expiration date" do
-        time = (Time.now + 60.days).end_of_month
+        time = (Time.now.midnight + 60.days)
         @user.expired_at = time
         @user.save
 
         @user.update_membership_expiration
-        @user.expired_at.should == (time + 1.year)
+        @user.expired_at.should == (time.utc.midnight + 1.year).end_of_month
       end
     end
   end
