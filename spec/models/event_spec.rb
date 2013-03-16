@@ -45,9 +45,9 @@ describe Event do
   context "Event scope :with_sponsor" do
     it "Filters Events creating an array with only sponsored events" do
       Event.create([
-        {:name => "Test",  :sponsored => true},
-        {:name => "Test2", :sponsored => true},
-        {:name => "Test3", :sponsored => false}])
+        {:name => "Test",  :sponsored => true,  max_attendance: 50},
+        {:name => "Test2", :sponsored => true,  max_attendance: 50},
+        {:name => "Test3", :sponsored => false, max_attendance: 50}])
       events = Event.with_sponsor
       events.length.should == 2
     end
