@@ -139,6 +139,7 @@ class User < ActiveRecord::Base
   end
 
   def update_expiration(time)
+    time = Time.parse(time) if time.is_a? String
     if membership_has_already_expired?(time)
       self.expired_at = (time.utc.midnight + 1.year).end_of_month
     else
