@@ -6,8 +6,6 @@ class User < ActiveRecord::Base
   has_one   :user_profile, :dependent => :destroy
 
   has_many  :email_addresses
-  has_many  :users_roles
-  has_many  :roles, :through => :users_roles
   has_many  :orders, :as => :customer
 
   accepts_nested_attributes_for :user_profile
@@ -23,10 +21,9 @@ class User < ActiveRecord::Base
     c.perishable_token_valid_for = 5.minutes
   end
 
-  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :active
-  attr_accessible :user_address_attributes, :user_profile_attributes
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :active,
+                  :user_address_attributes, :user_profile_attributes
 
-  scope :all_members
   scope :active, -> { where({ active: true }) }
 
   attr_reader :per_page
