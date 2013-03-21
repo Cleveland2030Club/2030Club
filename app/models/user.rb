@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :active,
                   :user_address_attributes, :user_profile_attributes
 
-  scope :active, -> { where({ active: true }) }
+  scope :active, lambda { where({ active: true }) }
 
   attr_reader :per_page
   @@per_page = 3
@@ -43,17 +43,13 @@ class User < ActiveRecord::Base
     expired_at.nil? or expired_at < Time.now
   end
 
-  def member_since
-    self.created_at
-  end
-
   def activate_account!
     self.activated = true
     self.active = true
     self.activated_at = Time.now
     self.joined_at = self.activated_at
-    self.expired_at = Time.now.end_of_month + 1.year
-    self.save
+    self.expired_at = (Time.now.end_of_month + 1.year).midnight
+    self.save!
   end
 
   def update_membership_expiration(time = Time.now)
