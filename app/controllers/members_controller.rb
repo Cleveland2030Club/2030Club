@@ -2,7 +2,7 @@ class MembersController < ApplicationController
 
   def index
     @members = User.search_active(params[:search],@date,params[:page])
-	end	
+	end
 
   def show
     @member = User.find_by_id(params[:id])
@@ -18,9 +18,9 @@ class MembersController < ApplicationController
       redirect_to member_path(@member)
     end
   end
-  
+
   def search
-    @members = User.all_members
+    @members = User.all
 	end
 
 end
