@@ -47,9 +47,9 @@ class User < ActiveRecord::Base
     self.activated = true
     self.active = true
     self.activated_at = Time.now
-    self.joined_at = self.activated_at
-    self.expired_at = (Time.now.end_of_month + 1.year).midnight
-    self.save!
+    self.joined_at = activated_at
+    self.expired_at = (Time.now.utc + 1.year).end_of_month
+    save!
   end
 
   def update_membership_expiration(time = Time.now)
@@ -105,25 +105,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  def self.csv_search_active(search,date)
-    unless date == "-" or date == nil
-      active.paginate true, :per_page => 30000, :page => 1,
-               :conditions => ['(lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)) and cast(activated_at as text) like ?', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
-    else
-      active.paginate true, :per_page => 30000, :page => 1,
-               :conditions => ['lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
-    end
-  end
-
-  def self.csv_search(search,date)
-    unless date == "-" or date == nil
-      paginate :per_page => 30000, :page => 1,
-               :conditions => ['(lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)) and cast(activated_at as text) like ?', "%#{search}%","%#{search}%","%#{search}%","%#{date}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
-    else
-      paginate :per_page => 30000, :page => 1,
-               :conditions => ['lower(last_name) like lower(?) or lower(first_name) like lower(?) or lower(email) like lower(?)', "%#{search}%","%#{search}%","%#{search}%"], :order => 'Last_name ASC, first_name ASC, email ASC'
-    end
-  end
 
   private
 

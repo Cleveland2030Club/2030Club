@@ -14,15 +14,14 @@ describe User do
   it "activates a user account" do
     time = Time.now
     Time.stub!(:now).and_return(time)
-    user = User.new
-    user.stub!(:save)
+    user = FactoryGirl.build(:user)
 
     user.activate_account!
 
     user.should be_activated
     user.activated_at.should == time
     user.joined_at.should == time
-    user.expired_at.should == (Time.now.end_of_month + 1.year)
+    user.expired_at.should <=> (Time.now + 1.year).end_of_month
   end
 
   describe "#update_membership_expiration" do
