@@ -39,7 +39,6 @@ Cle2030::Application.routes.draw do
   end
 
   resources :password_resets
-  resources :reports
 
   resource  :user do
     member { get :renewal }
