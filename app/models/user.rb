@@ -61,7 +61,7 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    current_position
+    current_board_position
   end
 
   def deliver_password_reset_instructions!
