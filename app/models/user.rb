@@ -2,11 +2,12 @@ require 'authlogic'
 
 class User < ActiveRecord::Base
 
-  has_one   :user_address, :dependent => :destroy
-  has_one   :user_profile, :dependent => :destroy
+  has_one   :user_address, dependent: :destroy
+  has_one   :user_profile, dependent: :destroy
 
+  has_many  :board_terms, dependent: :destroy
   has_many  :email_addresses
-  has_many  :orders, :as => :customer
+  has_many  :orders, as: :customer
 
   accepts_nested_attributes_for :user_profile
   accepts_nested_attributes_for :user_address
