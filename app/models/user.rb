@@ -2,6 +2,7 @@ require 'authlogic'
 
 class User < ActiveRecord::Base
 
+  has_one   :current_board_position, class_name: 'BoardTerm', conditions: ["end_at > ?", Time.now]
   has_one   :user_address, dependent: :destroy
   has_one   :user_profile, dependent: :destroy
 
@@ -60,17 +61,7 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    admins = ['jon@coffeeandcode.com',
-              'kevin@detone8.com',
-              'gautpai@gmail.com',
-              'raablc@gmail.com',
-              'j.scott645@gmail.com',
-              'efig8503@yahoo.com',
-              'mr.komer05@gmail.com',
-              'leia.bradford@gmail.com',
-              'tderosa7@gmail.com',
-              ]
-    admins.include?(self.email)
+    current_position
   end
 
   def deliver_password_reset_instructions!
