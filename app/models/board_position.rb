@@ -30,4 +30,11 @@ class BoardPosition
     12 => "generalcounsel@cleveland2030.org"
   }
 
+  attr_reader :title, :email
+
+  def initialize(position)
+    @title = TITLES[position]
+    @email = EMAILS[position]
+  end
+
 end
