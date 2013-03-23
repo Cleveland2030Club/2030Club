@@ -1,0 +1,30 @@
+<%= form_for [:admin, @user, @board_term], class: "well form-horizontal" do |term| %>
+  <div class="control-group">
+    <div class="form-node">
+      <%= term.label :position %>
+      <%= term.select :position, BoardPosition::TITLES.each_pair.map{|k,v| [v, k] },
+                                 prompt: true %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="form-node">
+      <%= term.label :start_at %>
+      <%= term.date_select :start_at, order: [:month, :day, :year] %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="form-node">
+      <%= term.label :end_at %>
+      <%= term.date_select :end_at, order: [:month, :day, :year] %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="form-node">
+      <%= term.submit %>
+    </div>
+  </div>
+
+<% end %>
