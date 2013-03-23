@@ -11,6 +11,7 @@
         <th>Position</th>
         <th>Start At</th>
         <th>End At</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,15 @@
           <td><%= BoardPosition.title(term.id) %></td>
           <td><%= term.start_at.strftime('%i %d, %Y') %></td>
           <td><%= term.end_at.strftime('%i %d, %Y')%></td>
+          <td>
+            <div class="btn-group">
+              <%= link_to 'edit', edit_admin_user_board_term_path(@user, term),
+                                  :class => "btn btn-primary" %>
+              <%= link_to 'delete', admin_user_board_term_path(@user, term),
+                                    :method => :delete, :confirm => 'Are you sure? This cannot be undone',
+                                    :class => 'btn btn-danger' %>
+            </div>
+          </td>
         </tr>
       <% end %>
     </tbody>
