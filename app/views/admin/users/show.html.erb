@@ -3,3 +3,25 @@
   <%= @user.last_renewed_at ? @user.last_renewed_at.strftime('%b %d, %Y') : "Has not renewed" %><br>
   <%= link_to "Renew Membership", new_admin_user_membership_renewal_path(@user) %>
 </div>
+<section class="board-service">
+  <h1>Board Service</h1>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Start At</th>
+        <th>End At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @user.board_terms.each do |term| %>
+        <tr>
+          <td><%= BoardPosition.title(term.id) %></td>
+          <td><%= term.start_at.strftime('%i %d, %Y') %></td>
+          <td><%= term.end_at.strftime('%i %d, %Y')%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "Add Board Term", new_admin_user_board_term_path(@user) %>
+</section>
