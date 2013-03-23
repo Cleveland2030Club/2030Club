@@ -3,13 +3,6 @@ require 'spec_helper'
 module Admin
   describe BoardTermsController do
 
-    describe 'GET admin/users/:user_id/board_terms' do
-      it 'routes to admin/board_terms#index' do
-        get('admin/users/1/board_terms').should route_to(controller: 'admin/board_terms',
-                                                         action: 'index', user_id: '1')
-      end
-    end
-
     describe 'GET admin/users/:user_id/board_terms/new' do
       it 'routes to admin/board_terms#new' do
         get('admin/users/1/board_terms/new').should route_to(controller: 'admin/board_terms',

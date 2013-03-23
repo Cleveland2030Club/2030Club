@@ -55,7 +55,7 @@ Cle2030::Application.routes.draw do
       resources :locations, except: [:index, :show]
     end
     resources :users do
-      resources :board_terms, except: [:show]
+      resources :board_terms, except: [:index, :show]
       get :search, on: :collection
       resources :membership_renewals, only: [:new, :create]
     end
