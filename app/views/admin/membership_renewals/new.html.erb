@@ -1,5 +1,5 @@
 <%= form_tag admin_user_membership_renewals_path(params[:user_id]) do %>
-  <label for="renew_date">Enter date or Renewal (leave blank if today)</label>
+  <label for="renew_date">Enter date for membership renewal (leave blank if today)</label>
   <input id="renew_date" class="anytime-picker" type="text" name="renew_date">
   <input type="submit">
 <% end %>
