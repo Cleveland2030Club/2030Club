@@ -61,7 +61,7 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    current_board_position
+    current_board_position or self.email == 'jon@coffeeandcode.com'
   end
 
   def deliver_password_reset_instructions!
