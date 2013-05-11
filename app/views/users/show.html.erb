@@ -1,14 +1,10 @@
-<% content_for :stylesheets do %>
-	<%= stylesheet_link_tag 'members2030','event-teasers', 'twitter-widget' %>
-<% end %>
-
 <div class="twoColumns-0">
 	<% if current_user && current_user.logged_in? %>
 	  <% if flash[:notice] %>
 	    <div class="success"><%= flash[:notice] %> </div>
-	  <% end %>	
+	  <% end %>
 		<h1>Welcome Back <%= truncate(current_user.display_name) %></h1>
-	
+
 		<div id="content">
 			<p><%=link_to "Edit your account", edit_user_path %></p>
 			<% if current_user.user_profile.nil? %>
@@ -18,18 +14,18 @@
 				<p><%=link_to "View your profile", member_path(current_user) %></p>
 			<% end %>
 		</div>
-	   		
+
 	<% else %>
-	
+
 		<p>You must be logged in to see your account</p>
-	
+
 	<% end %>
 </div>
 <div class="twoColumns-1">
 	<div class="sponsored-events">
 		<h4>Sponsored Events</h4>
-		
-		<%= render :partial => "shared/upcoming_sponsored_events", 
+
+		<%= render :partial => "shared/upcoming_sponsored_events",
 	  			   :collection => @sponsored_events,
 	   			   :as => :event %>
 	</div>

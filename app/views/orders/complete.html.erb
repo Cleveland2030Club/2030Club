@@ -1,7 +1,3 @@
-<% content_for :stylesheets do %>
-	<%= stylesheet_link_tag 'event-teasers' %>
-<% end %>
-
 <div class="twoColumns-0">
 	<h1>Payment Confirmation</h1>
 	<div class="success">
@@ -18,8 +14,8 @@
 <div class="twoColumns-1">
 	<div class="sponsored-events">
 		<h4>Sponsored Events</h4>
-		
-		<%= render :partial => "shared/upcoming_sponsored_events", 
+
+		<%= render :partial => "shared/upcoming_sponsored_events",
 	  			   :collection => @sponsored_events,
 	   			   :as => :event %>
 	</div>
