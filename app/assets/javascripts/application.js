@@ -17,3 +17,4 @@
 //= require galleria/galleria.min
 //= require galleria/plugins/flickr/galleria.flickr.min
 //= require TotalCalculator
+//= require swfobject
