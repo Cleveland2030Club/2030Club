@@ -4,6 +4,7 @@ module Admin
 
     def index
       @users = User.all
+      @active_user_count = User.where(activated: true, active: true).where("expired_at > ?", Time.now).count
     end
 
     def new
