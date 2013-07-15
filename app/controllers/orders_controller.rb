@@ -49,6 +49,13 @@ class OrdersController < ApplicationController
       return
     end
 
+    unless @order
+      @message = 'An error occured and this order cannot be completed. Please try again ' \
+        'and if it continues to happen please contact us.'
+      render :action => 'error'
+      return
+    end
+
     @address = details_response.address
   end
 

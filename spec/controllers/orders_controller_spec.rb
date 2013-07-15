@@ -103,9 +103,20 @@ describe OrdersController do
       response.should redirect_to '/orders/new'
     end
 
-    it "sets the address from the GATEWAY response" do
+    it "displays an error message if order cannot be found" do
+      error_message = 'An error occured and this order cannot be completed. Please try again and if it continues to happen please contact us.'
       details_response = stub(:success? => true, :address => 'Some address')
+      @gateway.should_receive(:details_for).with(@express_token).and_return(details_response)
 
+      get :confirm, { :token => @express_token }
+      response.should be_success
+      response.should render_template 'error'
+      assigns[:message].should == error_message
+    end
+
+    it "sets the address from the GATEWAY response" do
+      Order.stub!(:find_by_id).and_return(@membership_order)
+      details_response = stub(:success? => true, :address => 'Some address')
       @gateway.should_receive(:details_for).with(@express_token).and_return(details_response)
 
       get :confirm, { :token => @express_token }

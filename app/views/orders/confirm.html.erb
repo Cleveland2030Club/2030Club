@@ -3,11 +3,11 @@
 	<%= form_tag :action => 'complete', :token => params[:token], :payer_id => params[:PayerID] do %>
 	  <fieldset>
 		  <legend><span><strong><%= @address['name'] %>'s order detail</strong></span></legend>
-			You will be charged <%= number_to_currency(@order.amount) %> through your Paypal account.			
+			You will be charged <%= number_to_currency(@order.amount) %> through your Paypal account.
 		</fieldset>
 		<div class="formAction clear">
 		  <%= submit_tag 'Complete Payment' %>
-		</div>	  
+		</div>
 	<% end %>
 </div>
 
