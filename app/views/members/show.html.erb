@@ -24,7 +24,7 @@
 							<%= member.submit %>
 						<% end %>
 					<% end %>
-          <% if @member.user_profile.nil %>
+          <% if @member.user_profile.nil? %>
             <p>Unfortunately, this user's profile was not setup correctly.
               Please contact us if you believe this is incorrect.</p>
           <% else %>
