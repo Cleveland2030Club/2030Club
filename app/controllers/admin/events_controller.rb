@@ -2,7 +2,17 @@ module Admin
   class EventsController < Admin::BaseController
 
     def index
-      @events = Event.where(start_at: Time.now..(Time.now + 1.year)).order('start_at ASC')
+      @events = Event.where(start_at: (Time.now - 1.day)..(Time.now + 1.year)).order('start_at ASC')
+      @title = 'Upcoming Events'
+    end
+
+    def past
+      @events = Event.where(start_at: (Time.now - 3.months)..(Time.now)).order('start_at DESC')
+      @title = 'Past Events'
+
+      respond_to do |format|
+        format.html { render template: 'admin/events/index.html.erb' }
+      end
     end
 
     def show

@@ -17,10 +17,6 @@ class Event < ActiveRecord::Base
 
   validates :max_attendance, presence: true
 
-  def active?
-    Time.now < end_at
-  end
-
   #Method used to see if the member should rsvp or register for an event
   def club_price_item
     get_item(PRICE_TYPES[:club])
