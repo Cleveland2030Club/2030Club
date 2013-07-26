@@ -1,8 +1,12 @@
 <h1><%= @user.display_name %></h1>
 <%= link_to 'Delete', admin_user_path(@user), method: :delete, confirm: 'Are you sure?', class: 'btn btn-danger' %>
 <div class="membership-info">
-  <%= @user.last_renewed_at ? @user.last_renewed_at.strftime('%B %d, %Y') : "Has not renewed" %><br>
-  <%= link_to "Renew Membership", new_admin_user_membership_renewal_path(@user) %>
+  <p><%= @user.last_renewed_at ? @user.last_renewed_at.strftime('%B %d, %Y') : "Has not renewed" %></p>
+
+  <h3>Member Details</h3>
+  <p><%= @user.expired? ? "Expired#{expiration_text(@user)}." : "Account is active until #{@user.expired_at}." %>
+
+  <p><%= link_to "Renew Membership", new_admin_user_membership_renewal_path(@user) %></p>
 </div>
 <section class="board-service">
   <h1>Board Service</h1>
