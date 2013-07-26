@@ -1,13 +1,13 @@
 <div class="renewal notice">
-  <p>Hi <%= current_user.first_name %></p>
-  <%= render :partial => @membership_status.to_s %>
+  <p>Hi <%= current_user.first_name %>,</p>
+  <%= render :partial => @membership_status.to_s, locals: { membership_expiration: current_user.expired_at.strftime('%B %d, %Y') } %>
   <% unless @membership_status == :current %>
     <p>
-      If you feel our records are incorrect, please contact our membership director <%= mail_to("membership@cleveland2030.org", nil, :subject => "Membership Renewal") %>
+      If you feel our records are incorrect, please contact our membership director at <%= mail_to('membership@cleveland2030.org', 'membership@cleveland2030.org', :subject => 'Membership Renewal') %>
     </p>
   <% end %>
    <div class="renew_button">
-    <%= link_to "Renew Today!", new_orders_path %>
+    <%= link_to "Renew today!", new_orders_path %>
   </div>
 </div>
 
