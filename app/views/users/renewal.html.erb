@@ -1,6 +1,6 @@
 <div class="renewal notice">
   <p>Hi <%= current_user.first_name %>,</p>
-  <%= render :partial => @membership_status.to_s, locals: { membership_expiration: current_user.expired_at.strftime('%B %d, %Y') } %>
+  <%= render :partial => @membership_status.to_s, locals: { membership_expiration: expiration_text(current_user) } %>
   <% unless @membership_status == :current %>
     <p>
       If you feel our records are incorrect, please contact our membership director at <%= mail_to('membership@cleveland2030.org', 'membership@cleveland2030.org', :subject => 'Membership Renewal') %>
