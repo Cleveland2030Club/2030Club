@@ -111,6 +111,14 @@ class OrdersController < ApplicationController
   def complete_rsvp
     @order = Order.find_by_id(session[:order_id])
 
+    if @order.nil?
+      @message = 'An error occured and this order cannot be completed. Please ' \
+        'restart your browser and try again and if it continues to happen ' \
+        'please contact us.'
+      render :action => 'error'
+      return
+    end
+
     @order_item = @order.order_items[0]
     @order_item.quantity = params[:quantity].to_i
     if @order_item.valid?
