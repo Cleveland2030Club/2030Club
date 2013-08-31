@@ -17,7 +17,7 @@
 
     <div class="form-node">
       <%= f.label :phone_number %>
-      <%= f.text_field :phone_number %>
+      <%= f.text_field :phone_number, input_html: { maxlength: 255 } %>
     </div>
 
     <div class="form-node">

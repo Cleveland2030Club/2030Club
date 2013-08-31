@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130322031657) do
+ActiveRecord::Schema.define(:version => 20130831171844) do
 
   create_table "accounts", :force => true do |t|
     t.string    "email",                                  :null => false
@@ -38,12 +38,12 @@ ActiveRecord::Schema.define(:version => 20130322031657) do
   end
 
   create_table "board_terms", :force => true do |t|
-    t.integer  "user_id"
-    t.datetime "start_at"
-    t.datetime "end_at"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer   "user_id"
+    t.timestamp "start_at"
+    t.timestamp "end_at"
+    t.integer   "position"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
   add_index "board_terms", ["user_id"], :name => "index_board_terms_on_user_id"
@@ -169,6 +169,27 @@ ActiveRecord::Schema.define(:version => 20130322031657) do
     t.timestamp "updated_at"
   end
 
+  create_table "registrations", :force => true do |t|
+    t.integer   "user_id"
+    t.string    "email",        :null => false
+    t.string    "first_name",   :null => false
+    t.string    "last_name",    :null => false
+    t.string    "address"
+    t.string    "address2"
+    t.string    "city"
+    t.string    "state"
+    t.string    "zip"
+    t.string    "phone_number"
+    t.string    "profession"
+    t.string    "employer"
+    t.string    "education"
+    t.string    "about2030"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+  end
+
+  add_index "registrations", ["user_id"], :name => "index_registrations_on_user_id"
+
   create_table "states", :force => true do |t|
     t.string "title", :limit => 50, :null => false
     t.string "code",  :limit => 10, :null => false
@@ -192,22 +213,22 @@ ActiveRecord::Schema.define(:version => 20130322031657) do
   add_index "user_addresses", ["user_id"], :name => "index_user_addresses_on_user_id"
 
   create_table "user_profiles", :force => true do |t|
-    t.integer   "user_id"
-    t.string    "phone_number"
-    t.string    "profession"
-    t.string    "employer"
-    t.string    "education"
-    t.string    "about2030"
-    t.date      "birthdate"
-    t.text      "bio"
-    t.string    "avatar_file_name"
-    t.string    "avatar_content_type"
-    t.integer   "avatar_file_size"
-    t.timestamp "avatar_updated_at"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "gender",              :limit => 1
-    t.text      "member_notes"
+    t.integer  "user_id"
+    t.string   "phone_number"
+    t.text     "profession"
+    t.text     "employer"
+    t.text     "education"
+    t.text     "about2030"
+    t.date     "birthdate"
+    t.text     "bio"
+    t.text     "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "gender",              :limit => 1
+    t.text     "member_notes"
   end
 
   create_table "users", :force => true do |t|

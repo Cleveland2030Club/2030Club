@@ -13,5 +13,5 @@ class UserProfile < ActiveRecord::Base
                     :default_url => "/avatars/:style/missing.png"
 
   attr_accessible :phone_number, :profession, :employer, :education, :bio, :about2030
-
+  validates_length_of :phone_number, minimum: 10, maximum: 255, allow_blank: true
 end
