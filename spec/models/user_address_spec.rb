@@ -10,4 +10,28 @@ describe UserAddress do
   end
 
   it { should belong_to :user }
+
+  it 'will be invalid without a address' do
+    user_address = FactoryGirl.build(:user_address)
+    user_address.address = nil
+    user_address.should_not be_valid
+  end
+
+  it 'will be invalid without a city' do
+    user_address = FactoryGirl.build(:user_address)
+    user_address.city = nil
+    user_address.should_not be_valid
+  end
+
+  it 'will be invalid without a state_code' do
+    user_address = FactoryGirl.build(:user_address)
+    user_address.state_code = nil
+    user_address.should_not be_valid
+  end
+
+  it 'will be invalid without a zip' do
+    user_address = FactoryGirl.build(:user_address)
+    user_address.zip = nil
+    user_address.should_not be_valid
+  end
 end
