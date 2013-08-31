@@ -1,4 +1,5 @@
 require 'authlogic'
+require 'csv'
 
 class User < ActiveRecord::Base
 
@@ -97,8 +98,22 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.to_csv
+    columns = column_names - sensitive_column_names
+    CSV.generate do |csv|
+      csv << columns
+      all.each do |user|
+        csv << user.attributes.values_at(*columns)
+      end
+    end
+  end
+
 
   private
+
+  def self.sensitive_column_names
+    ['crypted_password', 'password_salt', 'persistence_token', 'single_access_token', 'perishable_token']
+  end
 
   def downcase_email
     self.email = self.email.downcase

@@ -41,6 +41,13 @@ module Admin
       redirect_to admin_users_path
     end
 
+    def export
+      respond_to do |format|
+        format.html { redirect_to admin_users_path }
+        format.csv { send_data User.to_csv }
+      end
+    end
+
     def search
       @user = User.where(email: params[:email].downcase).pop
       if @user

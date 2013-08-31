@@ -8,6 +8,7 @@
 <p>Currently Active Users: <strong><%= @active_user_count %></strong></p>
 <p>An active user is one that has an expiration date in the future
   and has "activated" and "active" set to true for their account.</p>
+<p><%= link_to 'Export User Data', export_admin_users_path(format: 'csv') %></p>
 
 <h3>Search</h3>
 <%= form_tag search_admin_users_path, method: :get do %>

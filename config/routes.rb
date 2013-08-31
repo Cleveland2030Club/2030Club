@@ -59,6 +59,7 @@ Cle2030::Application.routes.draw do
     resources :users do
       resources :board_terms, except: [:index, :show]
       get :search, on: :collection
+      get :export, on: :collection
       resources :membership_renewals, only: [:new, :create]
     end
     root to: 'dashboard#index'
